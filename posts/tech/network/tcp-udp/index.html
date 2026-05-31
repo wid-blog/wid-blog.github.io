@@ -1,0 +1,255 @@
+<!doctype html><html lang=ko dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>TCP와 UDP | wid's blog</title><meta name=keywords content="tcp,udp,네트워크,전송 프로토콜"><meta name=description content="백엔드 개발에서 자주 마주치는 두 전송 프로토콜, TCP와 UDP의 동작 원리를 정리한다. 연결 수립, 신뢰성 보장, 흐름/혼잡 제어 메커니즘과 선택 기준."><meta name=author content><link rel=canonical href=https://wid-blog.github.io/posts/tech/network/tcp-udp/><link crossorigin=anonymous href=/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as=style><link rel=icon href=https://wid-blog.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://wid-blog.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://wid-blog.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://wid-blog.github.io/apple-touch-icon.png><link rel=mask-icon href=https://wid-blog.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=ko href=https://wid-blog.github.io/posts/tech/network/tcp-udp/><link rel=alternate hreflang=en href=https://wid-blog.github.io/en/posts/tech/network/tcp-udp/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><style>:root{--main-width:min(1024px, 90vw)}.nav{display:flex;justify-content:space-between;align-items:center}.logo{display:flex;align-items:center;gap:.75rem}.header-right{display:flex;align-items:center;gap:.75rem}.header-right .lang-switch{display:flex;list-style:none;padding:0;margin:0;gap:.5rem}.header-right .lang-switch a{font-size:.875rem;color:var(--secondary)}.header-right .lang-switch a:hover{color:var(--primary)}.header-social{color:var(--secondary);display:flex;align-items:center}.header-social:hover{color:var(--primary)}.page-header h1{display:none}.post-entry,.first-entry{border:1px solid var(--border)!important;transition:border-color .15s}.post-entry:hover,.first-entry:hover{border-color:var(--primary)}.breadcrumbs{display:flex;align-items:center;gap:.5rem;font-size:.875rem}.breadcrumb-separator{color:var(--secondary);font-weight:400;user-select:none;font-size:1rem;line-height:1}.breadcrumb-current{font-weight:600;color:var(--primary)}.post-content h2{margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--border)}.post-content h3{margin-top:1.75rem}.layout-wrapper{display:flex;max-width:var(--main-width);margin:0 auto;padding:0 var(--gap)}.layout-wrapper .main{flex:1;min-width:0;margin:0;padding:0}.sidebar{position:sticky;top:var(--header-height,80px);align-self:flex-start;width:220px;flex-shrink:0;margin-right:2rem;padding-top:1rem;max-height:calc(100vh - var(--header-height,80px));overflow-y:auto}.sidebar-nav{font-size:.875rem;line-height:1.6}.sidebar-tree,.sidebar-children{list-style:none;padding:0;margin:0}.sidebar-children{padding-left:1rem;display:none}.sidebar-children.expanded{display:block}.sidebar-item-header{display:flex;align-items:center;gap:.25rem;padding:.2rem 0}.sidebar-toggle-btn{background:0 0;border:none;cursor:pointer;padding:2px;display:flex;align-items:center;color:var(--secondary);border-radius:4px;transition:background .15s}.sidebar-toggle-btn:hover{background:var(--code-bg)}.sidebar-chevron{transition:transform .2s ease}.sidebar-toggle-btn.open .sidebar-chevron{transform:rotate(90deg)}.sidebar-link{color:var(--secondary);text-decoration:none;transition:color .15s;display:flex;align-items:center;gap:.4rem}.sidebar-link:hover{color:var(--primary)}.sidebar-item.active>.sidebar-item-header .sidebar-link{color:var(--primary);font-weight:600}.sidebar-item.ancestor>.sidebar-item-header .sidebar-link{color:var(--primary)}.sidebar-count{display:inline-block;min-width:1.25rem;padding:.05rem .4rem;margin-left:.35rem;font-size:.7rem;font-weight:600;line-height:1.3;text-align:center;color:var(--primary);background:var(--code-bg);border-radius:.75rem}.sidebar-item.ancestor>.sidebar-item-header .sidebar-count,.sidebar-item.active>.sidebar-item-header .sidebar-count{color:var(--theme);background:var(--primary)}.sidebar-toggle{display:none;position:fixed;bottom:1.5rem;left:1.5rem;z-index:200;background:var(--theme);border:1px solid var(--border);border-radius:50%;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);color:var(--primary)}@media(max-width:768px){.layout-wrapper{display:block}.sidebar{position:fixed;top:0;left:0;width:260px;height:100vh;max-height:100vh;margin:0;padding:1rem;padding-top:calc(var(--header-height,80px) + 1rem);background:var(--theme);border-right:1px solid var(--border);z-index:100;transform:translateX(-100%);transition:transform .25s ease}.sidebar.open{transform:translateX(0)}.sidebar-toggle{display:flex}.sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:99;display:none}.sidebar-overlay.active{display:block}}.post-related{margin-top:40px}.post-related-title{font-size:1rem;font-weight:600;margin:0 0 14px;color:var(--primary)}.post-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.post-related-grid .post-related-entry{margin-bottom:0}.post-related-grid .post-related-entry .entry-header h2{font-size:18px;line-height:1.35}.post-related-grid .post-related-entry .entry-content{-webkit-line-clamp:3}@media(max-width:768px){.post-related-grid{grid-template-columns:1fr}}.post-header{padding-bottom:20px;margin-bottom:32px;border-bottom:1px solid var(--border)}.toc .toc-heading{margin-inline-start:10px;font-weight:500;user-select:none}.post-tags li{position:relative}.post-tags a{padding:0 14px 0 22px;border:none;border-radius:0 var(--radius)var(--radius)0;clip-path:polygon(10px 0,100% 0,100% 100%,10px 100%,0 50%)}.post-tags.entry-tags{position:relative;z-index:2;margin-top:14px;gap:8px}.post-tags.entry-tags a{font-size:12px;line-height:26px;padding:0 12px 0 20px}.post-tags li::before{content:"";position:absolute;left:8px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:var(--theme);z-index:1;pointer-events:none}.tag-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}.tag-chip{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .75rem;font-size:.8rem;line-height:1.4;color:var(--secondary);background:var(--code-bg);border:1px solid var(--border);border-radius:1rem;cursor:pointer;transition:all .15s;font-family:inherit}.tag-chip:hover{color:var(--primary);border-color:var(--primary)}.tag-chip.active{color:var(--theme);background:var(--primary);border-color:var(--primary)}.tag-chip-count{font-size:.7rem;opacity:.7}.tag-chip.active .tag-chip-count{opacity:.9}article.tag-hidden{display:none}</style><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".sidebar-toggle-btn").forEach(function(e){e.addEventListener("click",function(){var e,t=this.classList.toggle("open");this.setAttribute("aria-expanded",t),e=this.closest(".sidebar-item").querySelector(".sidebar-children"),e&&e.classList.toggle("expanded",t)})});var e,t,s,o,r,i=document.getElementById("sidebar-toggle"),n=document.getElementById("sidebar");if(i&&n){e=document.createElement("div"),e.className="sidebar-overlay",document.body.appendChild(e);function c(){n.classList.add("open"),e.classList.add("active")}function a(){n.classList.remove("open"),e.classList.remove("active")}i.addEventListener("click",function(){n.classList.contains("open")?a():c()}),e.addEventListener("click",a)}if(s=document.getElementById("tag-filter"),s){r=s.querySelectorAll(".tag-chip"),o=document.querySelectorAll("article[data-tags]"),t=new Set;function l(){if(t.size===0){o.forEach(function(e){e.classList.remove("tag-hidden")});return}o.forEach(function(e){var s=(e.getAttribute("data-tags")||"").split(","),n=!1;t.forEach(function(e){s.indexOf(e)!==-1&&(n=!0)}),e.classList.toggle("tag-hidden",!n)})}r.forEach(function(e){e.addEventListener("click",function(){var e=this.getAttribute("data-tag");t.has(e)?(t.delete(e),this.classList.remove("active")):(t.add(e),this.classList.add("active")),l()})})}})</script><meta property="og:url" content="https://wid-blog.github.io/posts/tech/network/tcp-udp/"><meta property="og:site_name" content="wid's blog"><meta property="og:title" content="TCP와 UDP"><meta property="og:description" content="백엔드 개발에서 자주 마주치는 두 전송 프로토콜, TCP와 UDP의 동작 원리를 정리한다. 연결 수립, 신뢰성 보장, 흐름/혼잡 제어 메커니즘과 선택 기준."><meta property="og:locale" content="ko"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-03-01T00:00:00+00:00"><meta property="article:modified_time" content="2022-03-01T00:00:00+00:00"><meta property="article:tag" content="Tcp"><meta property="article:tag" content="Udp"><meta property="article:tag" content="네트워크"><meta property="article:tag" content="전송 프로토콜"><meta name=twitter:card content="summary"><meta name=twitter:title content="TCP와 UDP"><meta name=twitter:description content="백엔드 개발에서 자주 마주치는 두 전송 프로토콜, TCP와 UDP의 동작 원리를 정리한다. 연결 수립, 신뢰성 보장, 흐름/혼잡 제어 메커니즘과 선택 기준."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"글","item":"https://wid-blog.github.io/posts/"},{"@type":"ListItem","position":2,"name":"기술","item":"https://wid-blog.github.io/posts/tech/"},{"@type":"ListItem","position":3,"name":"네트워크","item":"https://wid-blog.github.io/posts/tech/network/"},{"@type":"ListItem","position":4,"name":"TCP와 UDP","item":"https://wid-blog.github.io/posts/tech/network/tcp-udp/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"TCP와 UDP","name":"TCP와 UDP","description":"백엔드 개발에서 자주 마주치는 두 전송 프로토콜, TCP와 UDP의 동작 원리를 정리한다. 연결 수립, 신뢰성 보장, 흐름/혼잡 제어 메커니즘과 선택 기준.","keywords":["tcp","udp","네트워크","전송 프로토콜"],"articleBody":"백엔드 서버를 개발하다 보면 TCP와 UDP를 의식하지 않고 사용하는 경우가 많다. HTTP API와 WebSocket은 TCP 위에서 동작하고, 음성/영상 스트리밍이나 DNS에는 UDP가 쓰인다. 채팅 서버나 광고 서버처럼 성능과 신뢰성 요구가 다른 워크로드를 다루다 보면 전송 계층의 동작 원리를 정리할 필요가 생긴다.\n전송 계층 전송 계층은 애플리케이션 간 데이터 전달을 담당한다. IP가 호스트까지의 경로를 찾는다면, 전송 계층은 해당 호스트의 어떤 프로세스에 데이터를 전달할지 결정한다. 포트 번호가 이 역할을 한다.\nTCP와 UDP는 모두 IP 위에서 동작한다. 차이는 신뢰성과 속도 사이의 선택이다.\nTCP TCP(Transmission Control Protocol)는 연결 지향 프로토콜이다. 데이터를 보내기 전에 연결을 수립하고, 전송 중 유실이 발생하면 재전송한다.\n연결 수립 TCP는 3-way handshake로 연결을 수립한다.\nsequenceDiagram participant C as 클라이언트 participant S as 서버 C-\u003e\u003eS: SYN (seq=x) Note right of S: SYN 수신, 연결 준비 S-\u003e\u003eC: SYN-ACK (seq=y, ack=x+1) Note left of C: SYN-ACK 수신 C-\u003e\u003eS: ACK (ack=y+1) Note over C,S: 연결 수립 완료 클라이언트가 SYN 패킷과 함께 자신의 시퀀스 번호를 보낸다. 서버가 SYN-ACK로 응답하며 서버 측 시퀀스 번호를 전달한다. 클라이언트가 ACK를 보내면 연결이 성립된다. 양쪽이 교환한 시퀀스 번호는 이후 데이터 전송에서 순서를 추적하기 위한 기준점이다.\n연결 종료 연결 종료는 4-way handshake를 사용한다. TCP는 전이중(full-duplex) 통신이므로 양방향을 각각 종료해야 한다.\nsequenceDiagram participant A as 종료 요청 측 participant B as 상대 측 A-\u003e\u003eB: FIN Note right of B: FIN 수신, 수신 방향 종료 B-\u003e\u003eA: ACK Note over B: 남은 데이터 전송 완료 B-\u003e\u003eA: FIN Note left of A: FIN 수신, 송신 방향 종료 A-\u003e\u003eB: ACK Note over A: TIME_WAIT 상태 진입 Note over A,B: 연결 해제 완료 한쪽이 FIN을 보내면 “더 이상 보낼 데이터가 없다\"는 의미다. 상대는 ACK로 응답한 뒤 자신의 남은 데이터를 마저 보내고, 자기 쪽에서도 FIN을 보낸다. 최초 FIN을 보낸 측은 마지막 ACK를 보낸 후 TIME_WAIT 상태에 진입한다. 네트워크에 남아있을 수 있는 지연 패킷이 도착할 시간을 확보하기 위한 대기다.\n세그먼트 분할 애플리케이션이 보낸 데이터는 TCP가 세그먼트 단위로 분할하여 전송한다. 한 번의 send() 호출로 4KB를 보내도 TCP는 이를 MSS 크기에 맞춰 여러 세그먼트로 나눈다.\nflowchart LR A[\"애플리케이션\\n4KB 전달\"] --\u003e B[\"TCP\"] B --\u003e C[\"세그먼트 1\\nseq=1\\n1460 bytes\"] B --\u003e D[\"세그먼트 2\\nseq=1461\\n1460 bytes\"] B --\u003e E[\"세그먼트 3\\nseq=2921\\n1160 bytes\"] 수신 측 TCP는 도착한 세그먼트를 시퀀스 번호 순서대로 재조립하여 애플리케이션에 전달한다. 분할과 재조립은 TCP가 투명하게 처리하므로 애플리케이션은 원래의 연속된 바이트 스트림만 보게 된다.\n신뢰성 보장 세그먼트 단위로 분할된 데이터는 네트워크를 지나면서 유실되거나 순서가 뒤바뀔 수 있다. TCP는 두 가지 메커니즘으로 데이터 도착을 보장한다.\n순서 보장: 각 세그먼트에 시퀀스 번호가 부여되어 있다. 수신 측은 이 번호를 기준으로 데이터를 원래 순서대로 재조립한다. 세그먼트가 순서 없이 도착해도 애플리케이션에는 정렬된 데이터가 전달된다.\n재전송: 송신 측은 데이터를 보낸 후 ACK를 기다린다. 일정 시간, RTO(Retransmission Timeout) 내에 ACK가 오지 않으면 해당 데이터를 다시 보낸다.\nACK 번호는 누적 확인 방식이다. “ACK 3\"은 “3번 이전까지 모두 받았고, 다음에 3번을 기대한다\"는 의미다.\n정상 흐름 sequenceDiagram participant S as 송신 participant R as 수신 S-\u003e\u003eR: Segment 1 R-\u003e\u003eS: ACK 2 S-\u003e\u003eR: Segment 2 R-\u003e\u003eS: ACK 3 세그먼트가 순서대로 도착하면 수신 측은 다음 기대 번호를 ACK로 보낸다. ACK 2는 “1번 수신, 다음은 2번\"이라는 의미다.\n유실 시나리오 sequenceDiagram participant S as 송신 participant R as 수신 S-\u003e\u003eR: Segment 1, 2 S--xR: Segment 3 [유실] S-\u003e\u003eR: Segment 4 R-\u003e\u003eS: ACK 3 R-\u003e\u003eS: ACK 3 (중복) R-\u003e\u003eS: ACK 3 (중복) Note over S: 중복 3회 → 유실 판단 S-\u003e\u003eR: Segment 3 [재전송] R-\u003e\u003eS: ACK 5 Segment 4가 도착해도 3번이 빠져 있으므로 수신 측은 ACK 번호를 올리지 못하고 ACK 3을 반복한다. 송신 측은 같은 ACK가 3번 중복되면 타임아웃을 기다리지 않고 즉시 재전송한다. 수신 측은 재전송된 3번을 받으면 버퍼에 보관하고 있던 4번과 합쳐서 ACK 5를 보낸다.\n흐름 제어 수신 측의 처리 능력을 초과하면 데이터가 유실된다. TCP는 슬라이딩 윈도우 메커니즘으로 이를 방지한다.\n수신 측은 자신이 처리할 수 있는 버퍼 크기를 수신 윈도우(rwnd, receive window)로 송신 측에 알려준다. 송신 측은 ACK를 받지 않은 상태로 rwnd 크기 이상의 데이터를 보내지 않는다.\nACK 대기 중:\nblock-beta columns 10 block:window[\"송신 윈도우 (rwnd = 4)\"]:4 s3[\"3 전송\"] s4[\"4 전송\"] s5[\"5 대기\"] s6[\"6 대기\"] end s7[\"7\"] s8[\"8\"] s9[\"9\"] s10[\"10\"] s11[\"11\"] s12[\"12\"] style s3 fill:#4CAF50 style s4 fill:#4CAF50 style s5 fill:#42A5F5 style s6 fill:#42A5F5 3, 4는 전송 완료, 5, 6은 윈도우 안이지만 아직 전송하지 않은 세그먼트다. 7 이후는 윈도우 밖이라 보낼 수 없다.\nACK 3 수신 후 — 윈도우가 오른쪽으로 이동:\nblock-beta columns 10 s3[\"3 ✓\"] block:window[\"송신 윈도우 (rwnd = 4)\"]:4 s4[\"4 전송\"] s5[\"5 전송\"] s6[\"6 대기\"] s7[\"7 대기\"] end s8[\"8\"] s9[\"9\"] s10[\"10\"] s11[\"11\"] s12[\"12\"] style s3 fill:#9E9E9E style s4 fill:#4CAF50 style s5 fill:#4CAF50 style s6 fill:#42A5F5 style s7 fill:#42A5F5 3의 ACK가 돌아오면 윈도우가 한 칸 오른쪽으로 이동한다. 3은 완료되어 윈도우 밖으로 빠지고, 7이 새로 윈도우 안에 들어온다. ACK를 받을 때마다 이 과정이 반복된다. 수신 측의 버퍼가 가득 차면 rwnd를 0으로 보내서 송신을 일시 중단시킨다. 버퍼에 여유가 생기면 다시 윈도우 크기를 알려 송신을 재개한다.\n슬라이딩 윈도우는 Stop-and-Wait 방식의 한계를 극복한 기법이다. Stop-and-Wait는 패킷 하나를 보내고 ACK를 기다린 후 다음을 보낸다. 한 번에 하나만 전송하므로 링크 활용률이 낮다. 슬라이딩 윈도우는 ACK를 기다리는 동안에도 윈도우 범위 내의 여러 패킷을 연속으로 전송한다.\n재전송 방식도 두 가지다. Go-Back-N은 유실된 패킷 이후의 모든 패킷을 재전송한다. 구현이 간단하지만 불필요한 재전송이 발생한다. Selective Repeat는 유실된 패킷만 선택적으로 재전송한다. 수신 측 버퍼가 필요하지만 네트워크 효율이 높다. TCP는 Selective Repeat 방식을 사용한다. SACK 옵션이 이를 지원한다.\n혼잡 제어 흐름 제어가 수신 측의 처리 능력에 맞추는 것이라면, 혼잡 제어는 네트워크 경로의 처리 능력에 맞추는 것이다. 네트워크가 혼잡하면 라우터의 버퍼가 넘치고 패킷이 유실된다.\nTCP는 혼잡 윈도우(cwnd, congestion window)라는 변수를 관리한다. 실제 전송량은 rwnd와 cwnd 중 작은 값으로 결정된다.\n슬로우 스타트 연결 초기에는 네트워크 용량을 모른다. cwnd를 1 MSS로 시작하고, ACK가 정상적으로 돌아올 때마다 cwnd를 1 MSS씩 증가시킨다. RTT당 cwnd가 두 배로 늘어나므로 지수적 증가다.\n--- config: xyChart: xAxis: label: \"RTT\" yAxis: label: \"cwnd (MSS)\" --- xychart-beta x-axis [\"0\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\"] y-axis 0 --\u003e 40 line \"cwnd\" [1, 2, 4, 8, 16, 17, 18, 19, 20, 10, 11] cwnd가 ssthresh(slow start threshold)에 도달하면 혼잡 회피 단계로 전환된다. 위 그래프에서 RTT 4에서 ssthresh(=16)에 도달한 후 선형 증가로 바뀌고, RTT 9에서 패킷 유실이 감지되어 cwnd가 절반으로 줄어든다.\n혼잡 회피 ssthresh 이후에는 cwnd를 RTT당 1 MSS씩만 증가시킨다. 선형 증가다. 패킷 유실이 감지될 때까지 조금씩 전송량을 늘린다. AIMD, Additive Increase/Multiplicative Decrease 전략이다. 증가는 천천히, 감소는 급격히. 네트워크를 과도하게 사용하지 않으면서 가용 대역폭을 탐색한다.\n빠른 재전송 패킷 유실을 감지하는 방법은 두 가지다. 타임아웃(RTO 만료)과 중복 ACK다. 타임아웃은 수백 밀리초에서 수 초까지 걸릴 수 있어 느리다.\n빠른 재전송은 동일한 ACK가 3회 중복되면 타임아웃을 기다리지 않고 즉시 해당 세그먼트를 재전송한다. 중복 ACK 자체가 “해당 패킷 이후의 데이터는 도착하고 있지만 중간에 빠진 것이 있다\"는 신호이기 때문이다.\n빠른 복구 빠른 재전송 후 슬로우 스타트로 돌아가면 전송량이 급격히 떨어진다. 빠른 복구는 이를 방지한다. 패킷 유실이 감지되면 cwnd를 1로 떨어뜨리는 대신 절반으로 줄이고 혼잡 회피 단계에서 바로 시작한다.\n중복 ACK가 도착한다는 것은 네트워크가 완전히 막힌 것이 아니라 일부 패킷은 전달되고 있다는 의미다. 슬로우 스타트까지 후퇴할 필요가 없다.\nflowchart TD A[연결 시작] --\u003e B[슬로우 스타트cwnd 지수 증가] B --\u003e|cwnd \u003e= ssthresh| C[혼잡 회피cwnd 선형 증가] B --\u003e|타임아웃| D[ssthresh = cwnd/2cwnd = 1 MSS] C --\u003e|3회 중복 ACK| E[빠른 재전송 + 빠른 복구ssthresh = cwnd/2cwnd = ssthresh] C --\u003e|타임아웃| D D --\u003e B E --\u003e C 타임아웃이 발생하면 네트워크가 심각하게 혼잡한 것으로 판단하고 cwnd를 1 MSS로 초기화한다. 중복 ACK로 감지한 유실은 상대적으로 경미한 혼잡이므로 cwnd를 절반만 줄인다.\n구현체별 차이 위 4대 알고리즘의 기본 골격은 동일하지만, 구체적인 동작은 구현체마다 다르다.\nTCP Reno: 위에서 설명한 슬로우 스타트, 혼잡 회피, 빠른 재전송, 빠른 복구를 처음 통합한 구현이다. 한 번에 하나의 패킷 유실만 효율적으로 처리한다.\nTCP NewReno: Reno의 한계를 보완했다. 하나의 윈도우에서 여러 패킷이 유실된 경우, 부분 ACK에도 슬로우 스타트로 후퇴하지 않고 빠른 복구 상태를 유지하면서 유실된 패킷들을 순차적으로 재전송한다.\nTCP CUBIC: Linux의 기본 혼잡 제어 알고리즘이다. 혼잡 회피 단계에서 RTT에 비례하는 선형 증가 대신 3차 함수를 사용한다. 대역폭이 큰 장거리 네트워크에서 가용 대역폭을 빠르게 활용한다.\nBBR(Bottleneck Bandwidth and RTT): Google이 개발한 모델 기반 알고리즘이다. 패킷 유실이 아닌 측정된 대역폭과 RTT를 기반으로 전송 속도를 결정한다. 네트워크 경로의 실제 병목 대역폭을 추정하고, 라우터 버퍼를 과도하게 채우지 않으면서 최대 처리량을 달성한다. 인터넷 트래픽 중 상당 비중이 BBR을 사용하는 것으로 알려져 있다.\nUDP UDP(User Datagram Protocol)는 비연결 프로토콜이다. handshake 없이 데이터를 즉시 전송한다.\n구조 UDP 헤더는 8바이트다. 출발지 포트, 목적지 포트, 길이, 체크섬만 포함한다. TCP 헤더가 최소 20바이트인 것과 비교하면 오버헤드가 적다.\nblock-beta columns 4 block:tcp[\"TCP 헤더 (20+ 바이트)\"]:4 t1[\"출발지 포트\"] t2[\"목적지 포트\"] t3[\"시퀀스 번호\"] t4[\"ACK 번호\"] t5[\"플래그\"] t6[\"윈도우 크기\"] t7[\"체크섬\"] t8[\"옵션...\"] end space:4 block:udp[\"UDP 헤더 (8 바이트)\"]:4 u1[\"출발지 포트\"] u2[\"목적지 포트\"] u3[\"길이\"] u4[\"체크섬\"] end style tcp fill:#E3F2FD style udp fill:#E8F5E9 순서 보장이 없다. 재전송도 없다. 패킷이 유실되면 애플리케이션이 직접 처리해야 한다. 흐름 제어와 혼잡 제어도 제공하지 않는다.\n왜 필요한가 TCP의 신뢰성은 지연을 수반한다. 3-way handshake에 최소 1 RTT가 소요된다. 재전송은 추가 지연을 만든다. 혼잡 제어로 인해 전송 속도가 제한될 수도 있다.\n실시간성이 중요한 워크로드에서는 이 지연이 신뢰성보다 큰 문제가 된다. 음성 통화에서 0.5초 전 음성이 재전송으로 도착하면 대화 흐름이 깨진다. 게임에서 오래된 위치 정보가 뒤늦게 도착하면 의미가 없다. 이런 경우 유실된 데이터를 버리는 것이 재전송하는 것보다 낫다.\n비교 flowchart LR subgraph TCP direction TB tc1[연결 지향] tc2[순서 보장] tc3[재전송] tc4[흐름/혼잡 제어] tc5[20+ 바이트 헤더] end subgraph UDP direction TB uc1[비연결] uc2[순서 보장 없음] uc3[재전송 없음] uc4[제어 없음] uc5[8 바이트 헤더] end TCP --- 신뢰성 UDP --- 속도 선택 기준 TCP가 적합한 경우:\n데이터 무결성이 필수일 때: 웹 통신(HTTP/HTTPS), 파일 전송(FTP), 이메일(SMTP) DB 통신: 쿼리 결과가 정확히 도착해야 한다 API 호출: 요청과 응답이 유실되면 안 된다 UDP가 적합한 경우:\n실시간 스트리밍: 영상, 음성 통화(VoIP) 온라인 게임: 위치, 상태 업데이트 DNS: 작은 요청/응답을 빠르게 주고받는다 IoT 센서 데이터: 주기적 전송, 일부 유실 허용 QUIC: HTTP/3의 기반 프로토콜이다. UDP 위에서 TCP의 신뢰성, 재전송과 순서 보장, 그리고 TLS 암호화를 구현한다. TCP의 3-way handshake + TLS handshake 지연을 줄이면서도 신뢰성을 확보하려는 접근이다. TCP가 OS 커널에 구현되어 변경이 어려운 반면, QUIC는 애플리케이션 수준에서 동작하므로 빠른 개선이 가능하다.\n백엔드 개발에서 전송 계층을 의식하지 않고 지나치기 쉽다. 하지만 HTTP가 TCP 위에서 동작하는 이유, WebSocket이 TCP를 선택한 이유, DNS가 UDP를 쓰는 이유는 모두 여기서 출발한다. 워크로드가 프로토콜을 결정한다.\n","wordCount":"1595","inLanguage":"ko","datePublished":"2022-03-01T00:00:00Z","dateModified":"2022-03-01T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://wid-blog.github.io/posts/tech/network/tcp-udp/"},"publisher":{"@type":"Organization","name":"wid's blog","logo":{"@type":"ImageObject","url":"https://wid-blog.github.io/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://wid-blog.github.io/ accesskey=h title="wid's blog (Alt + H)">wid's blog</a>
+<a href=https://github.com/byunghak target=_blank rel="noopener noreferrer" aria-label=GitHub class=header-social><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
+</a><a href=https://www.linkedin.com/in/byunhak082/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn class=header-social><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div><div class=header-right><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><ul class=lang-switch><li><a href=https://wid-blog.github.io/en/posts/tech/network/tcp-udp/ title=English aria-label=English>En</a></li></ul></div></nav></header><div class=layout-wrapper><aside class=sidebar id=sidebar><button class=sidebar-toggle id=sidebar-toggle aria-label="메뉴 열기/닫기">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><nav class=sidebar-nav id=sidebar-nav><ul class=sidebar-tree><li class="sidebar-item has-children ancestor"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
+<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+</button>
+<a href=/posts/tech/ class=sidebar-link>기술
+<span class=sidebar-count>35</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/architecture/ class=sidebar-link>아키텍처
+<span class=sidebar-count>10</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/devenv/ class=sidebar-link>워크플로우
+<span class=sidebar-count>6</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/infra/ class=sidebar-link>인프라
+<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/security/ class=sidebar-link>보안
+<span class=sidebar-count>2</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/ml/ class=sidebar-link>머신러닝
+<span class=sidebar-count>3</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/language/ class=sidebar-link>언어
+<span class=sidebar-count>3</span></a></div></li><li class="sidebar-item ancestor"><div class=sidebar-item-header><a href=/posts/tech/network/ class=sidebar-link>네트워크
+<span class=sidebar-count>2</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/design-pattern/ class=sidebar-link>디자인 패턴
+<span class=sidebar-count>1</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/database/ class=sidebar-link>데이터베이스
+<span class=sidebar-count>1</span></a></div></li></ul></li><li class="sidebar-item has-children"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
+<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+</button>
+<a href=/posts/career/ class=sidebar-link>커리어
+<span class=sidebar-count>18</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/career/dable/ class=sidebar-link>데이블
+<span class=sidebar-count>10</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/career/personal/ class=sidebar-link>개인 프로젝트
+<span class=sidebar-count>4</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/career/startup/ class=sidebar-link>창업
+<span class=sidebar-count>2</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/career/hackathon/ class=sidebar-link>해커톤
+<span class=sidebar-count>2</span></a></div></li></ul></li><li class="sidebar-item has-children"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
+<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+</button>
+<a href=/posts/daily/ class=sidebar-link>일상
+<span class=sidebar-count>10</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/daily/investment/ class=sidebar-link>투자
+<span class=sidebar-count>10</span></a></div></li></ul></li></ul></nav></aside><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://wid-blog.github.io/posts/tech/>기술</a><span class=breadcrumb-separator aria-hidden=true>›</span><a href=https://wid-blog.github.io/posts/tech/network/>네트워크</a><span class=breadcrumb-separator aria-hidden=true>›</span><span class=breadcrumb-current>TCP와 UDP</span></div><h1 class="post-title entry-hint-parent">TCP와 UDP</h1><div class=post-meta><span title='2022-03-01 00:00:00 +0000 UTC'>2022년 3월 1일</span>&nbsp;·&nbsp;<span>약 8분 읽기</span></div></header><div class=toc><div class=toc-heading>목차</div><div class=inner><ul><li><a href=#%ec%a0%84%ec%86%a1-%ea%b3%84%ec%b8%b5 aria-label="전송 계층">전송 계층</a></li><li><a href=#tcp aria-label=TCP>TCP</a><ul><li><a href=#%ec%97%b0%ea%b2%b0-%ec%88%98%eb%a6%bd aria-label="연결 수립">연결 수립</a></li><li><a href=#%ec%97%b0%ea%b2%b0-%ec%a2%85%eb%a3%8c aria-label="연결 종료">연결 종료</a></li><li><a href=#%ec%84%b8%ea%b7%b8%eb%a8%bc%ed%8a%b8-%eb%b6%84%ed%95%a0 aria-label="세그먼트 분할">세그먼트 분할</a></li><li><a href=#%ec%8b%a0%eb%a2%b0%ec%84%b1-%eb%b3%b4%ec%9e%a5 aria-label="신뢰성 보장">신뢰성 보장</a><ul><li><a href=#%ec%a0%95%ec%83%81-%ed%9d%90%eb%a6%84 aria-label="정상 흐름">정상 흐름</a></li><li><a href=#%ec%9c%a0%ec%8b%a4-%ec%8b%9c%eb%82%98%eb%a6%ac%ec%98%a4 aria-label="유실 시나리오">유실 시나리오</a></li></ul></li><li><a href=#%ed%9d%90%eb%a6%84-%ec%a0%9c%ec%96%b4 aria-label="흐름 제어">흐름 제어</a></li><li><a href=#%ed%98%bc%ec%9e%a1-%ec%a0%9c%ec%96%b4 aria-label="혼잡 제어">혼잡 제어</a><ul><li><a href=#%ec%8a%ac%eb%a1%9c%ec%9a%b0-%ec%8a%a4%ed%83%80%ed%8a%b8 aria-label="슬로우 스타트">슬로우 스타트</a></li><li><a href=#%ed%98%bc%ec%9e%a1-%ed%9a%8c%ed%94%bc aria-label="혼잡 회피">혼잡 회피</a></li><li><a href=#%eb%b9%a0%eb%a5%b8-%ec%9e%ac%ec%a0%84%ec%86%a1 aria-label="빠른 재전송">빠른 재전송</a></li><li><a href=#%eb%b9%a0%eb%a5%b8-%eb%b3%b5%ea%b5%ac aria-label="빠른 복구">빠른 복구</a></li><li><a href=#%ea%b5%ac%ed%98%84%ec%b2%b4%eb%b3%84-%ec%b0%a8%ec%9d%b4 aria-label="구현체별 차이">구현체별 차이</a></li></ul></li></ul></li><li><a href=#udp aria-label=UDP>UDP</a><ul><li><a href=#%ea%b5%ac%ec%a1%b0 aria-label=구조>구조</a></li><li><a href=#%ec%99%9c-%ed%95%84%ec%9a%94%ed%95%9c%ea%b0%80 aria-label="왜 필요한가">왜 필요한가</a></li></ul></li><li><a href=#%eb%b9%84%ea%b5%90 aria-label=비교>비교</a></li><li><a href=#%ec%84%a0%ed%83%9d-%ea%b8%b0%ec%a4%80 aria-label="선택 기준">선택 기준</a></li></ul></div></div><div class=post-content><p>백엔드 서버를 개발하다 보면 TCP와 UDP를 의식하지 않고 사용하는 경우가 많다. HTTP API와 WebSocket은 TCP 위에서 동작하고, 음성/영상 스트리밍이나 DNS에는 UDP가 쓰인다. 채팅 서버나 광고 서버처럼 성능과 신뢰성 요구가 다른 워크로드를 다루다 보면 전송 계층의 동작 원리를 정리할 필요가 생긴다.</p><h2 id=전송-계층>전송 계층<a hidden class=anchor aria-hidden=true href=#전송-계층>#</a></h2><p>전송 계층은 애플리케이션 간 데이터 전달을 담당한다. IP가 호스트까지의 경로를 찾는다면, 전송 계층은 해당 호스트의 어떤 프로세스에 데이터를 전달할지 결정한다. 포트 번호가 이 역할을 한다.</p><p>TCP와 UDP는 모두 IP 위에서 동작한다. 차이는 신뢰성과 속도 사이의 선택이다.</p><h2 id=tcp>TCP<a hidden class=anchor aria-hidden=true href=#tcp>#</a></h2><p>TCP(Transmission Control Protocol)는 연결 지향 프로토콜이다. 데이터를 보내기 전에 연결을 수립하고, 전송 중 유실이 발생하면 재전송한다.</p><h3 id=연결-수립>연결 수립<a hidden class=anchor aria-hidden=true href=#연결-수립>#</a></h3><p>TCP는 3-way handshake로 연결을 수립한다.</p><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>sequenceDiagram
+    participant C as 클라이언트
+    participant S as 서버
+
+    C->>S: SYN (seq=x)
+    Note right of S: SYN 수신, 연결 준비
+    S->>C: SYN-ACK (seq=y, ack=x+1)
+    Note left of C: SYN-ACK 수신
+    C->>S: ACK (ack=y+1)
+    Note over C,S: 연결 수립 완료
+</pre></div><p>클라이언트가 SYN 패킷과 함께 자신의 시퀀스 번호를 보낸다. 서버가 SYN-ACK로 응답하며 서버 측 시퀀스 번호를 전달한다. 클라이언트가 ACK를 보내면 연결이 성립된다. 양쪽이 교환한 시퀀스 번호는 이후 데이터 전송에서 순서를 추적하기 위한 기준점이다.</p><h3 id=연결-종료>연결 종료<a hidden class=anchor aria-hidden=true href=#연결-종료>#</a></h3><p>연결 종료는 4-way handshake를 사용한다. TCP는 전이중(full-duplex) 통신이므로 양방향을 각각 종료해야 한다.</p><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>sequenceDiagram
+    participant A as 종료 요청 측
+    participant B as 상대 측
+
+    A->>B: FIN
+    Note right of B: FIN 수신, 수신 방향 종료
+    B->>A: ACK
+    Note over B: 남은 데이터 전송 완료
+    B->>A: FIN
+    Note left of A: FIN 수신, 송신 방향 종료
+    A->>B: ACK
+    Note over A: TIME_WAIT 상태 진입
+    Note over A,B: 연결 해제 완료
+</pre></div><p>한쪽이 FIN을 보내면 &ldquo;더 이상 보낼 데이터가 없다"는 의미다. 상대는 ACK로 응답한 뒤 자신의 남은 데이터를 마저 보내고, 자기 쪽에서도 FIN을 보낸다. 최초 FIN을 보낸 측은 마지막 ACK를 보낸 후 TIME_WAIT 상태에 진입한다. 네트워크에 남아있을 수 있는 지연 패킷이 도착할 시간을 확보하기 위한 대기다.</p><h3 id=세그먼트-분할>세그먼트 분할<a hidden class=anchor aria-hidden=true href=#세그먼트-분할>#</a></h3><p>애플리케이션이 보낸 데이터는 TCP가 <strong>세그먼트</strong> 단위로 분할하여 전송한다. 한 번의 <code>send()</code> 호출로 4KB를 보내도 TCP는 이를 MSS 크기에 맞춰 여러 세그먼트로 나눈다.</p><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>flowchart LR
+    A["애플리케이션\n4KB 전달"] --> B["TCP"]
+    B --> C["세그먼트 1\nseq=1\n1460 bytes"]
+    B --> D["세그먼트 2\nseq=1461\n1460 bytes"]
+    B --> E["세그먼트 3\nseq=2921\n1160 bytes"]
+</pre></div><p>수신 측 TCP는 도착한 세그먼트를 시퀀스 번호 순서대로 재조립하여 애플리케이션에 전달한다. 분할과 재조립은 TCP가 투명하게 처리하므로 애플리케이션은 원래의 연속된 바이트 스트림만 보게 된다.</p><h3 id=신뢰성-보장>신뢰성 보장<a hidden class=anchor aria-hidden=true href=#신뢰성-보장>#</a></h3><p>세그먼트 단위로 분할된 데이터는 네트워크를 지나면서 유실되거나 순서가 뒤바뀔 수 있다. TCP는 두 가지 메커니즘으로 데이터 도착을 보장한다.</p><p><strong>순서 보장</strong>: 각 세그먼트에 시퀀스 번호가 부여되어 있다. 수신 측은 이 번호를 기준으로 데이터를 원래 순서대로 재조립한다. 세그먼트가 순서 없이 도착해도 애플리케이션에는 정렬된 데이터가 전달된다.</p><p><strong>재전송</strong>: 송신 측은 데이터를 보낸 후 ACK를 기다린다. 일정 시간, RTO(Retransmission Timeout) 내에 ACK가 오지 않으면 해당 데이터를 다시 보낸다.</p><p>ACK 번호는 <strong>누적 확인</strong> 방식이다. &ldquo;ACK 3"은 &ldquo;3번 이전까지 모두 받았고, 다음에 3번을 기대한다"는 의미다.</p><h4 id=정상-흐름>정상 흐름<a hidden class=anchor aria-hidden=true href=#정상-흐름>#</a></h4><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>sequenceDiagram
+    participant S as 송신
+    participant R as 수신
+    S->>R: Segment 1
+    R->>S: ACK 2
+    S->>R: Segment 2
+    R->>S: ACK 3
+</pre></div><p>세그먼트가 순서대로 도착하면 수신 측은 다음 기대 번호를 ACK로 보낸다. ACK 2는 &ldquo;1번 수신, 다음은 2번"이라는 의미다.</p><h4 id=유실-시나리오>유실 시나리오<a hidden class=anchor aria-hidden=true href=#유실-시나리오>#</a></h4><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>sequenceDiagram
+    participant S as 송신
+    participant R as 수신
+    S->>R: Segment 1, 2
+    S--xR: Segment 3 [유실]
+    S->>R: Segment 4
+    R->>S: ACK 3
+    R->>S: ACK 3 (중복)
+    R->>S: ACK 3 (중복)
+    Note over S: 중복 3회 → 유실 판단
+    S->>R: Segment 3 [재전송]
+    R->>S: ACK 5
+</pre></div><p>Segment 4가 도착해도 3번이 빠져 있으므로 수신 측은 ACK 번호를 올리지 못하고 ACK 3을 반복한다. 송신 측은 같은 ACK가 3번 중복되면 타임아웃을 기다리지 않고 즉시 재전송한다. 수신 측은 재전송된 3번을 받으면 버퍼에 보관하고 있던 4번과 합쳐서 ACK 5를 보낸다.</p><h3 id=흐름-제어>흐름 제어<a hidden class=anchor aria-hidden=true href=#흐름-제어>#</a></h3><p>수신 측의 처리 능력을 초과하면 데이터가 유실된다. TCP는 <strong>슬라이딩 윈도우</strong> 메커니즘으로 이를 방지한다.</p><p>수신 측은 자신이 처리할 수 있는 버퍼 크기를 <strong>수신 윈도우</strong>(rwnd, receive window)로 송신 측에 알려준다. 송신 측은 ACK를 받지 않은 상태로 rwnd 크기 이상의 데이터를 보내지 않는다.</p><p><strong>ACK 대기 중:</strong></p><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>block-beta
+    columns 10
+    block:window["송신 윈도우 (rwnd = 4)"]:4
+        s3["3 전송"]
+        s4["4 전송"]
+        s5["5 대기"]
+        s6["6 대기"]
+    end
+    s7["7"]
+    s8["8"]
+    s9["9"]
+    s10["10"]
+    s11["11"]
+    s12["12"]
+
+    style s3 fill:#4CAF50
+    style s4 fill:#4CAF50
+    style s5 fill:#42A5F5
+    style s6 fill:#42A5F5
+</pre></div><p>3, 4는 전송 완료, 5, 6은 윈도우 안이지만 아직 전송하지 않은 세그먼트다. 7 이후는 윈도우 밖이라 보낼 수 없다.</p><p><strong>ACK 3 수신 후 — 윈도우가 오른쪽으로 이동:</strong></p><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>block-beta
+    columns 10
+    s3["3 ✓"]
+    block:window["송신 윈도우 (rwnd = 4)"]:4
+        s4["4 전송"]
+        s5["5 전송"]
+        s6["6 대기"]
+        s7["7 대기"]
+    end
+    s8["8"]
+    s9["9"]
+    s10["10"]
+    s11["11"]
+    s12["12"]
+
+    style s3 fill:#9E9E9E
+    style s4 fill:#4CAF50
+    style s5 fill:#4CAF50
+    style s6 fill:#42A5F5
+    style s7 fill:#42A5F5
+</pre></div><p>3의 ACK가 돌아오면 윈도우가 한 칸 오른쪽으로 이동한다. 3은 완료되어 윈도우 밖으로 빠지고, 7이 새로 윈도우 안에 들어온다. ACK를 받을 때마다 이 과정이 반복된다. 수신 측의 버퍼가 가득 차면 rwnd를 0으로 보내서 송신을 일시 중단시킨다. 버퍼에 여유가 생기면 다시 윈도우 크기를 알려 송신을 재개한다.</p><p>슬라이딩 윈도우는 Stop-and-Wait 방식의 한계를 극복한 기법이다. Stop-and-Wait는 패킷 하나를 보내고 ACK를 기다린 후 다음을 보낸다. 한 번에 하나만 전송하므로 링크 활용률이 낮다. 슬라이딩 윈도우는 ACK를 기다리는 동안에도 윈도우 범위 내의 여러 패킷을 연속으로 전송한다.</p><p>재전송 방식도 두 가지다. <strong>Go-Back-N</strong>은 유실된 패킷 이후의 모든 패킷을 재전송한다. 구현이 간단하지만 불필요한 재전송이 발생한다. <strong>Selective Repeat</strong>는 유실된 패킷만 선택적으로 재전송한다. 수신 측 버퍼가 필요하지만 네트워크 효율이 높다. TCP는 Selective Repeat 방식을 사용한다. SACK 옵션이 이를 지원한다.</p><h3 id=혼잡-제어>혼잡 제어<a hidden class=anchor aria-hidden=true href=#혼잡-제어>#</a></h3><p>흐름 제어가 수신 측의 처리 능력에 맞추는 것이라면, 혼잡 제어는 <strong>네트워크 경로의 처리 능력</strong>에 맞추는 것이다. 네트워크가 혼잡하면 라우터의 버퍼가 넘치고 패킷이 유실된다.</p><p>TCP는 <strong>혼잡 윈도우</strong>(cwnd, congestion window)라는 변수를 관리한다. 실제 전송량은 rwnd와 cwnd 중 작은 값으로 결정된다.</p><h4 id=슬로우-스타트>슬로우 스타트<a hidden class=anchor aria-hidden=true href=#슬로우-스타트>#</a></h4><p>연결 초기에는 네트워크 용량을 모른다. cwnd를 1 MSS로 시작하고, ACK가 정상적으로 돌아올 때마다 cwnd를 1 MSS씩 증가시킨다. RTT당 cwnd가 두 배로 늘어나므로 <strong>지수적 증가</strong>다.</p><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>---
+config:
+    xyChart:
+        xAxis:
+            label: "RTT"
+        yAxis:
+            label: "cwnd (MSS)"
+---
+xychart-beta
+    x-axis ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    y-axis 0 --> 40
+    line "cwnd" [1, 2, 4, 8, 16, 17, 18, 19, 20, 10, 11]
+</pre></div><p>cwnd가 <strong>ssthresh</strong>(slow start threshold)에 도달하면 혼잡 회피 단계로 전환된다. 위 그래프에서 RTT 4에서 ssthresh(=16)에 도달한 후 선형 증가로 바뀌고, RTT 9에서 패킷 유실이 감지되어 cwnd가 절반으로 줄어든다.</p><h4 id=혼잡-회피>혼잡 회피<a hidden class=anchor aria-hidden=true href=#혼잡-회피>#</a></h4><p>ssthresh 이후에는 cwnd를 RTT당 1 MSS씩만 증가시킨다. <strong>선형 증가</strong>다. 패킷 유실이 감지될 때까지 조금씩 전송량을 늘린다. AIMD, Additive Increase/Multiplicative Decrease 전략이다. 증가는 천천히, 감소는 급격히. 네트워크를 과도하게 사용하지 않으면서 가용 대역폭을 탐색한다.</p><h4 id=빠른-재전송>빠른 재전송<a hidden class=anchor aria-hidden=true href=#빠른-재전송>#</a></h4><p>패킷 유실을 감지하는 방법은 두 가지다. 타임아웃(RTO 만료)과 중복 ACK다. 타임아웃은 수백 밀리초에서 수 초까지 걸릴 수 있어 느리다.</p><p>빠른 재전송은 <strong>동일한 ACK가 3회 중복</strong>되면 타임아웃을 기다리지 않고 즉시 해당 세그먼트를 재전송한다. 중복 ACK 자체가 &ldquo;해당 패킷 이후의 데이터는 도착하고 있지만 중간에 빠진 것이 있다"는 신호이기 때문이다.</p><h4 id=빠른-복구>빠른 복구<a hidden class=anchor aria-hidden=true href=#빠른-복구>#</a></h4><p>빠른 재전송 후 슬로우 스타트로 돌아가면 전송량이 급격히 떨어진다. 빠른 복구는 이를 방지한다. 패킷 유실이 감지되면 cwnd를 1로 떨어뜨리는 대신 <strong>절반으로 줄이고</strong> 혼잡 회피 단계에서 바로 시작한다.</p><p>중복 ACK가 도착한다는 것은 네트워크가 완전히 막힌 것이 아니라 일부 패킷은 전달되고 있다는 의미다. 슬로우 스타트까지 후퇴할 필요가 없다.</p><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>flowchart TD
+    A[연결 시작] --> B[슬로우 스타트<br>cwnd 지수 증가]
+    B -->|cwnd >= ssthresh| C[혼잡 회피<br>cwnd 선형 증가]
+    B -->|타임아웃| D[ssthresh = cwnd/2<br>cwnd = 1 MSS]
+    C -->|3회 중복 ACK| E[빠른 재전송 + 빠른 복구<br>ssthresh = cwnd/2<br>cwnd = ssthresh]
+    C -->|타임아웃| D
+    D --> B
+    E --> C
+</pre></div><p>타임아웃이 발생하면 네트워크가 심각하게 혼잡한 것으로 판단하고 cwnd를 1 MSS로 초기화한다. 중복 ACK로 감지한 유실은 상대적으로 경미한 혼잡이므로 cwnd를 절반만 줄인다.</p><h4 id=구현체별-차이>구현체별 차이<a hidden class=anchor aria-hidden=true href=#구현체별-차이>#</a></h4><p>위 4대 알고리즘의 기본 골격은 동일하지만, 구체적인 동작은 구현체마다 다르다.</p><p><strong>TCP Reno</strong>: 위에서 설명한 슬로우 스타트, 혼잡 회피, 빠른 재전송, 빠른 복구를 처음 통합한 구현이다. 한 번에 하나의 패킷 유실만 효율적으로 처리한다.</p><p><strong>TCP NewReno</strong>: Reno의 한계를 보완했다. 하나의 윈도우에서 여러 패킷이 유실된 경우, 부분 ACK에도 슬로우 스타트로 후퇴하지 않고 빠른 복구 상태를 유지하면서 유실된 패킷들을 순차적으로 재전송한다.</p><p><strong>TCP CUBIC</strong>: Linux의 기본 혼잡 제어 알고리즘이다. 혼잡 회피 단계에서 RTT에 비례하는 선형 증가 대신 3차 함수를 사용한다. 대역폭이 큰 장거리 네트워크에서 가용 대역폭을 빠르게 활용한다.</p><p><strong>BBR</strong>(Bottleneck Bandwidth and RTT): Google이 개발한 모델 기반 알고리즘이다. 패킷 유실이 아닌 <strong>측정된 대역폭과 RTT</strong>를 기반으로 전송 속도를 결정한다. 네트워크 경로의 실제 병목 대역폭을 추정하고, 라우터 버퍼를 과도하게 채우지 않으면서 최대 처리량을 달성한다. 인터넷 트래픽 중 상당 비중이 BBR을 사용하는 것으로 알려져 있다.</p><h2 id=udp>UDP<a hidden class=anchor aria-hidden=true href=#udp>#</a></h2><p>UDP(User Datagram Protocol)는 비연결 프로토콜이다. handshake 없이 데이터를 즉시 전송한다.</p><h3 id=구조>구조<a hidden class=anchor aria-hidden=true href=#구조>#</a></h3><p>UDP 헤더는 8바이트다. 출발지 포트, 목적지 포트, 길이, 체크섬만 포함한다. TCP 헤더가 최소 20바이트인 것과 비교하면 오버헤드가 적다.</p><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>block-beta
+    columns 4
+    block:tcp["TCP 헤더 (20+ 바이트)"]:4
+        t1["출발지 포트"]
+        t2["목적지 포트"]
+        t3["시퀀스 번호"]
+        t4["ACK 번호"]
+        t5["플래그"]
+        t6["윈도우 크기"]
+        t7["체크섬"]
+        t8["옵션..."]
+    end
+
+    space:4
+
+    block:udp["UDP 헤더 (8 바이트)"]:4
+        u1["출발지 포트"]
+        u2["목적지 포트"]
+        u3["길이"]
+        u4["체크섬"]
+    end
+
+    style tcp fill:#E3F2FD
+    style udp fill:#E8F5E9
+</pre></div><p>순서 보장이 없다. 재전송도 없다. 패킷이 유실되면 애플리케이션이 직접 처리해야 한다. 흐름 제어와 혼잡 제어도 제공하지 않는다.</p><h3 id=왜-필요한가>왜 필요한가<a hidden class=anchor aria-hidden=true href=#왜-필요한가>#</a></h3><p>TCP의 신뢰성은 지연을 수반한다. 3-way handshake에 최소 1 RTT가 소요된다. 재전송은 추가 지연을 만든다. 혼잡 제어로 인해 전송 속도가 제한될 수도 있다.</p><p>실시간성이 중요한 워크로드에서는 이 지연이 신뢰성보다 큰 문제가 된다. 음성 통화에서 0.5초 전 음성이 재전송으로 도착하면 대화 흐름이 깨진다. 게임에서 오래된 위치 정보가 뒤늦게 도착하면 의미가 없다. 이런 경우 유실된 데이터를 버리는 것이 재전송하는 것보다 낫다.</p><h2 id=비교>비교<a hidden class=anchor aria-hidden=true href=#비교>#</a></h2><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>flowchart LR
+    subgraph TCP
+        direction TB
+        tc1[연결 지향]
+        tc2[순서 보장]
+        tc3[재전송]
+        tc4[흐름/혼잡 제어]
+        tc5[20+ 바이트 헤더]
+    end
+
+    subgraph UDP
+        direction TB
+        uc1[비연결]
+        uc2[순서 보장 없음]
+        uc3[재전송 없음]
+        uc4[제어 없음]
+        uc5[8 바이트 헤더]
+    end
+
+    TCP --- 신뢰성
+    UDP --- 속도
+</pre></div><h2 id=선택-기준>선택 기준<a hidden class=anchor aria-hidden=true href=#선택-기준>#</a></h2><p><strong>TCP가 적합한 경우:</strong></p><ul><li>데이터 무결성이 필수일 때: 웹 통신(HTTP/HTTPS), 파일 전송(FTP), 이메일(SMTP)</li><li>DB 통신: 쿼리 결과가 정확히 도착해야 한다</li><li>API 호출: 요청과 응답이 유실되면 안 된다</li></ul><p><strong>UDP가 적합한 경우:</strong></p><ul><li>실시간 스트리밍: 영상, 음성 통화(VoIP)</li><li>온라인 게임: 위치, 상태 업데이트</li><li>DNS: 작은 요청/응답을 빠르게 주고받는다</li><li>IoT 센서 데이터: 주기적 전송, 일부 유실 허용</li></ul><p><strong>QUIC</strong>: HTTP/3의 기반 프로토콜이다. UDP 위에서 TCP의 신뢰성, 재전송과 순서 보장, 그리고 TLS 암호화를 구현한다. TCP의 3-way handshake + TLS handshake 지연을 줄이면서도 신뢰성을 확보하려는 접근이다. TCP가 OS 커널에 구현되어 변경이 어려운 반면, QUIC는 애플리케이션 수준에서 동작하므로 빠른 개선이 가능하다.</p><p>백엔드 개발에서 전송 계층을 의식하지 않고 지나치기 쉽다. 하지만 HTTP가 TCP 위에서 동작하는 이유, WebSocket이 TCP를 선택한 이유, DNS가 UDP를 쓰는 이유는 모두 여기서 출발한다. 워크로드가 프로토콜을 결정한다.</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://wid-blog.github.io/tags/tcp/>Tcp</a></li><li><a href=https://wid-blog.github.io/tags/udp/>Udp</a></li><li><a href=https://wid-blog.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/>네트워크</a></li><li><a href=https://wid-blog.github.io/tags/%EC%A0%84%EC%86%A1-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C/>전송 프로토콜</a></li></ul><section class=post-related><h3 class=post-related-title>관련 글</h3><div class=post-related-grid><article class="post-entry post-related-entry"><header class=entry-header><h2>HTTP/1.1과 HTTP/2</h2></header><div class=entry-content><p>HTTP/1.1은 요청과 응답이 순차적이다. HTTP/2는 멀티플렉싱, 바이너리 프레이밍, 헤더 압축으로 이 구조를 바꿨다. 두 프로토콜의 차이와 HTTP/2 위에서 동작하는 gRPC의 특성을 정리한다.</p></div><footer class=entry-footer><span title='2024-03-20 00:00:00 +0000 UTC'>2024년 3월 20일</span>&nbsp;·&nbsp;<span>약 5분 읽기</span></footer><a class=entry-link aria-label="post link to HTTP/1.1과 HTTP/2" href=https://wid-blog.github.io/posts/tech/network/http1-vs-http2/></a></article></div></section></footer></article></main></div><footer class=footer><span>&copy; 2026 <a href=https://wid-blog.github.io/>wid's blog</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script type=module>
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  const isDark = document.documentElement.dataset.theme === "dark";
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: isDark ? "dark" : "default",
+    securityLevel: "strict",
+    flowchart: { useMaxWidth: false, htmlLabels: true },
+  });
+  await mermaid.run();
+
+  
+  document.querySelectorAll(".mermaid-wrapper").forEach((wrapper) => {
+    const svg = wrapper.querySelector("svg");
+    if (!svg) return;
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "mermaid-zoom-btn";
+    btn.setAttribute("aria-label", "확대하기");
+    btn.textContent = "⤢";
+    wrapper.appendChild(btn);
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openZoom(svg);
+    });
+  });
+
+  function openZoom(svg) {
+    const overlay = document.createElement("div");
+    overlay.className = "mermaid-zoom-overlay";
+
+    const inner = document.createElement("div");
+    inner.className = "mermaid-zoom-inner";
+
+    const clone = svg.cloneNode(true);
+    clone.removeAttribute("style");
+    clone.style.maxWidth = "100%";
+    clone.style.maxHeight = "100%";
+    clone.style.width = "auto";
+    clone.style.height = "auto";
+
+    const close = document.createElement("button");
+    close.type = "button";
+    close.className = "mermaid-zoom-close";
+    close.setAttribute("aria-label", "닫기");
+    close.textContent = "✕";
+
+    inner.appendChild(clone);
+    overlay.appendChild(inner);
+    overlay.appendChild(close);
+
+    const dismiss = () => {
+      overlay.remove();
+      document.removeEventListener("keydown", onKey);
+    };
+    const onKey = (e) => {
+      if (e.key === "Escape") dismiss();
+    };
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) dismiss();
+    });
+    close.addEventListener("click", dismiss);
+    document.addEventListener("keydown", onKey);
+
+    document.body.appendChild(overlay);
+  }
+</script><style>.mermaid-wrapper{position:relative}.mermaid-zoom-btn{position:absolute;top:.5em;right:.5em;background:rgba(0,0,0,.55);color:#fff;border:none;border-radius:4px;width:2em;height:2em;font-size:1.1em;line-height:1;cursor:pointer;opacity:0;transition:opacity .15s ease;z-index:2}.mermaid-wrapper:hover .mermaid-zoom-btn,.mermaid-wrapper:focus-within .mermaid-zoom-btn{opacity:1}.mermaid-zoom-overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:zoom-out;padding:2rem}.mermaid-zoom-inner{background:#fff;padding:1.5rem;border-radius:8px;max-width:95vw;max-height:90vh;overflow:auto;cursor:default;display:flex;align-items:center;justify-content:center}.mermaid-zoom-close{position:fixed;top:1rem;right:1rem;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:50%;width:2.5rem;height:2.5rem;font-size:1.2rem;cursor:pointer;line-height:1}html[data-theme=dark] .mermaid-zoom-inner{background:#1a1a1a}</style><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="복사";function s(){t.innerHTML="복사 완료!",setTimeout(()=>{t.innerHTML="복사"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
