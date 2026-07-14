@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Rate-Limiting on wid's blog</title><link>https://wid-blog.github.io/tags/rate-limiting/</link><description>Recent content in Rate-Limiting on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Fri, 14 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/rate-limiting/index.xml" rel="self" type="application/rss+xml"/><item><title>Rate Limiting</title><link>https://wid-blog.github.io/posts/tech/design-pattern/rate-limiting/</link><pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/design-pattern/rate-limiting/</guid><description>Rate Limit 알고리즘을 고르기 전에, 어느 계층에서 보호할지가 먼저 알고리즘의 선택지를 좌우한다. L4/L7/Application 계층과 Token/Leaky/Sliding/Fixed 알고리즘의 교차 관계를 정리한다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rate-Limiting on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/rate-limiting/</link>
+    <description>Recent content in Rate-Limiting on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Fri, 14 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/rate-limiting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rate Limiting</title>
+      <link>https://wid-blog.github.io/posts/tech/design-pattern/rate-limiting/</link>
+      <pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/design-pattern/rate-limiting/</guid>
+      <description>Rate Limit 알고리즘을 고르기 전에, 어느 계층에서 보호할지가 먼저 알고리즘의 선택지를 좌우한다. L4/L7/Application 계층과 Token/Leaky/Sliding/Fixed 알고리즘의 교차 관계를 정리한다.</description>
+    </item>
+  </channel>
+</rss>

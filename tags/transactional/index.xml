@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Transactional on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/transactional/</link>
+    <description>Recent content in Transactional on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sun, 05 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/transactional/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>@Transactional 은 프록시를 거쳐야 동작한다</title>
+      <link>https://wid-blog.github.io/posts/tech/language/spring-transactional-proxy/</link>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/language/spring-transactional-proxy/</guid>
+      <description>@Transactional 은 붙였다고 동작하지 않는다. Spring 은 bean 을 프록시로 감싸고 프록시를 거친 호출만 가로챈다. private 메소드와 self-invocation 에서 조용히 무시되는 이유, 그리고 @DataJpaTest 의 테스트 트랜잭션이 그 결함을 가리는 착시까지 정리한다.</description>
+    </item>
+  </channel>
+</rss>

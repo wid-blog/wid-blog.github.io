@@ -1,55 +1,1194 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>MLflow and the ML Lifecycle | wid's blog</title><meta name=keywords content="mlflow,mlops,ml-lifecycle,model-registry"><meta name=description content="Which slot of the ML lifecycle each MLflow component fills, and which pieces a lightweight team can pick."><meta name=author content><link rel=canonical href=https://wid-blog.github.io/en/posts/tech/ml/mlflow/><link crossorigin=anonymous href=/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as=style><link rel=icon href=https://wid-blog.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://wid-blog.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://wid-blog.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://wid-blog.github.io/apple-touch-icon.png><link rel=mask-icon href=https://wid-blog.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=ko href=https://wid-blog.github.io/posts/tech/ml/mlflow/><link rel=alternate hreflang=en href=https://wid-blog.github.io/en/posts/tech/ml/mlflow/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><style>:root{--main-width:min(1024px, 90vw)}.nav{display:flex;justify-content:space-between;align-items:center}.logo{display:flex;align-items:center;gap:.75rem}.header-right{display:flex;align-items:center;gap:.75rem}.header-right .lang-switch{display:flex;list-style:none;padding:0;margin:0;gap:.5rem}.header-right .lang-switch a{font-size:.875rem;color:var(--secondary)}.header-right .lang-switch a:hover{color:var(--primary)}.header-social{color:var(--secondary);display:flex;align-items:center}.header-social:hover{color:var(--primary)}.page-header h1{display:none}.post-entry,.first-entry{border:1px solid var(--border)!important;transition:border-color .15s}.post-entry:hover,.first-entry:hover{border-color:var(--primary)}.breadcrumbs{display:flex;align-items:center;gap:.5rem;font-size:.875rem}.breadcrumb-separator{color:var(--secondary);font-weight:400;user-select:none;font-size:1rem;line-height:1}.breadcrumb-current{font-weight:600;color:var(--primary)}.post-content h2{margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--border)}.post-content h3{margin-top:1.75rem}.layout-wrapper{display:flex;max-width:var(--main-width);margin:0 auto;padding:0 var(--gap)}.layout-wrapper .main{flex:1;min-width:0;margin:0;padding:0}.sidebar{position:sticky;top:var(--header-height,80px);align-self:flex-start;width:220px;flex-shrink:0;margin-right:2rem;padding-top:1rem;max-height:calc(100vh - var(--header-height,80px));overflow-y:auto}.sidebar-nav{font-size:.875rem;line-height:1.6}.sidebar-tree,.sidebar-children{list-style:none;padding:0;margin:0}.sidebar-children{padding-left:1rem;display:none}.sidebar-children.expanded{display:block}.sidebar-item-header{display:flex;align-items:center;gap:.25rem;padding:.2rem 0}.sidebar-toggle-btn{background:0 0;border:none;cursor:pointer;padding:2px;display:flex;align-items:center;color:var(--secondary);border-radius:4px;transition:background .15s}.sidebar-toggle-btn:hover{background:var(--code-bg)}.sidebar-chevron{transition:transform .2s ease}.sidebar-toggle-btn.open .sidebar-chevron{transform:rotate(90deg)}.sidebar-link{color:var(--secondary);text-decoration:none;transition:color .15s;display:flex;align-items:center;gap:.4rem}.sidebar-link:hover{color:var(--primary)}.sidebar-item.active>.sidebar-item-header .sidebar-link{color:var(--primary);font-weight:600}.sidebar-item.ancestor>.sidebar-item-header .sidebar-link{color:var(--primary)}.sidebar-count{display:inline-block;min-width:1.25rem;padding:.05rem .4rem;margin-left:.35rem;font-size:.7rem;font-weight:600;line-height:1.3;text-align:center;color:var(--primary);background:var(--code-bg);border-radius:.75rem}.sidebar-item.ancestor>.sidebar-item-header .sidebar-count,.sidebar-item.active>.sidebar-item-header .sidebar-count{color:var(--theme);background:var(--primary)}.sidebar-toggle{display:none;position:fixed;bottom:1.5rem;left:1.5rem;z-index:200;background:var(--theme);border:1px solid var(--border);border-radius:50%;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);color:var(--primary)}@media(max-width:768px){.layout-wrapper{display:block}.sidebar{position:fixed;top:0;left:0;width:260px;height:100vh;max-height:100vh;margin:0;padding:1rem;padding-top:calc(var(--header-height,80px) + 1rem);background:var(--theme);border-right:1px solid var(--border);z-index:100;transform:translateX(-100%);transition:transform .25s ease}.sidebar.open{transform:translateX(0)}.sidebar-toggle{display:flex}.sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:99;display:none}.sidebar-overlay.active{display:block}}.post-related{margin-top:40px}.post-related-title{font-size:1rem;font-weight:600;margin:0 0 14px;color:var(--primary)}.post-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.post-related-grid .post-related-entry{margin-bottom:0}.post-related-grid .post-related-entry .entry-header h2{font-size:18px;line-height:1.35}.post-related-grid .post-related-entry .entry-content{-webkit-line-clamp:3}@media(max-width:768px){.post-related-grid{grid-template-columns:1fr}}.post-header{padding-bottom:20px;margin-bottom:32px;border-bottom:1px solid var(--border)}.toc .toc-heading{margin-inline-start:10px;font-weight:500;user-select:none}.post-tags li{position:relative}.post-tags a{padding:0 14px 0 22px;border:none;border-radius:0 var(--radius)var(--radius)0;clip-path:polygon(10px 0,100% 0,100% 100%,10px 100%,0 50%)}.post-tags.entry-tags{position:relative;z-index:2;margin-top:14px;gap:8px}.post-tags.entry-tags a{font-size:12px;line-height:26px;padding:0 12px 0 20px}.post-tags li::before{content:"";position:absolute;left:8px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:var(--theme);z-index:1;pointer-events:none}.tag-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}.tag-chip{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .75rem;font-size:.8rem;line-height:1.4;color:var(--secondary);background:var(--code-bg);border:1px solid var(--border);border-radius:1rem;cursor:pointer;transition:all .15s;font-family:inherit}.tag-chip:hover{color:var(--primary);border-color:var(--primary)}.tag-chip.active{color:var(--theme);background:var(--primary);border-color:var(--primary)}.tag-chip-count{font-size:.7rem;opacity:.7}.tag-chip.active .tag-chip-count{opacity:.9}article.tag-hidden{display:none}</style><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".sidebar-toggle-btn").forEach(function(e){e.addEventListener("click",function(){var e,t=this.classList.toggle("open");this.setAttribute("aria-expanded",t),e=this.closest(".sidebar-item").querySelector(".sidebar-children"),e&&e.classList.toggle("expanded",t)})});var e,t,s,o,r,i=document.getElementById("sidebar-toggle"),n=document.getElementById("sidebar");if(i&&n){e=document.createElement("div"),e.className="sidebar-overlay",document.body.appendChild(e);function c(){n.classList.add("open"),e.classList.add("active")}function a(){n.classList.remove("open"),e.classList.remove("active")}i.addEventListener("click",function(){n.classList.contains("open")?a():c()}),e.addEventListener("click",a)}if(s=document.getElementById("tag-filter"),s){r=s.querySelectorAll(".tag-chip"),o=document.querySelectorAll("article[data-tags]"),t=new Set;function l(){if(t.size===0){o.forEach(function(e){e.classList.remove("tag-hidden")});return}o.forEach(function(e){var s=(e.getAttribute("data-tags")||"").split(","),n=!1;t.forEach(function(e){s.indexOf(e)!==-1&&(n=!0)}),e.classList.toggle("tag-hidden",!n)})}r.forEach(function(e){e.addEventListener("click",function(){var e=this.getAttribute("data-tag");t.has(e)?(t.delete(e),this.classList.remove("active")):(t.add(e),this.classList.add("active")),l()})})}})</script><meta property="og:url" content="https://wid-blog.github.io/en/posts/tech/ml/mlflow/"><meta property="og:site_name" content="wid's blog"><meta property="og:title" content="MLflow and the ML Lifecycle"><meta property="og:description" content="Which slot of the ML lifecycle each MLflow component fills, and which pieces a lightweight team can pick."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-02-20T00:00:00+00:00"><meta property="article:modified_time" content="2025-02-20T00:00:00+00:00"><meta property="article:tag" content="Mlflow"><meta property="article:tag" content="Mlops"><meta property="article:tag" content="Ml-Lifecycle"><meta property="article:tag" content="Model-Registry"><meta name=twitter:card content="summary"><meta name=twitter:title content="MLflow and the ML Lifecycle"><meta name=twitter:description content="Which slot of the ML lifecycle each MLflow component fills, and which pieces a lightweight team can pick."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://wid-blog.github.io/en/posts/"},{"@type":"ListItem","position":2,"name":"Tech","item":"https://wid-blog.github.io/en/posts/tech/"},{"@type":"ListItem","position":3,"name":"Machine Learning","item":"https://wid-blog.github.io/en/posts/tech/ml/"},{"@type":"ListItem","position":4,"name":"MLflow and the ML Lifecycle","item":"https://wid-blog.github.io/en/posts/tech/ml/mlflow/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"MLflow and the ML Lifecycle","name":"MLflow and the ML Lifecycle","description":"Which slot of the ML lifecycle each MLflow component fills, and which pieces a lightweight team can pick.","keywords":["mlflow","mlops","ml-lifecycle","model-registry"],"articleBody":"MLflow handles the boundary between experiment and model in the ML lifecycle. On the experiment side it records “what parameters trained what.” On the model side it records “which version is production right now.” That boundary is not the exclusive problem of large ML teams. It shows up just as clearly when you’re running a single Logistic Regression model.\nML Lifecycle ML projects roughly move through four stages.\nExperiment — you look at the data, try parameters, train models. You log metrics and go back to try again. Model — once you have something worth keeping, you declare “this is our model.” A version and a lineage attach to it. Deployment — you put that model into the serving environment. Rollout, rollback, traffic shifting all live here. Monitoring — you watch the live model for drift and degradation. Each stage has its own problem. Experiment struggles with remembering what was tried. Model struggles with agreeing on which one is real right now. Deployment struggles with swapping one thing for another. Monitoring struggles with deciding when to retrain.\nMLflow mostly fills the first two. It reaches into deployment and monitoring, but its center of gravity is in experiment and model.\nFile-name Versioning It starts simple. You upload model.pkl to S3 and the inference server reads it. Every time training finishes, you overwrite the file.\nThen you need to roll back. Yesterday’s version. But the file has already been overwritten. So you start splitting: model_v2.pkl, model_v3.pkl. Before long you get model_v3_final.pkl. Then model_v3_final_really.pkl.\nThese names don’t solve three things.\nLineage — there is no way to trace model_v3_final.pkl back to the code, the data, and the parameters that produced it. You cannot reproduce it even with the same code. Alias — “which model is production right now” gets managed with a filename convention outside the code. Does the inference server read latest.pkl? Does it take a version via env var? Every decision becomes ad hoc. Reproducibility — a few months later you want to repeat an experiment, but nothing remembers the parameters and the code from that run. To fix these you eventually need a metadata layer added to the “filename” layer. That is the gap MLflow fills.\nMLflow Components MLflow is four independent components in one package. You pick which ones you use.\nTracking It records a training session as a run. Parameters, metrics, and artifacts (model files, plots, logs) all attach to the run. Multiple runs group under an experiment.\nimport mlflow with mlflow.start_run(): mlflow.log_param(\"C\", 0.1) mlflow.log_metric(\"val_auc\", 0.782) mlflow.sklearn.log_model(model, \"model\") This chunk is the seed of lineage. Months later you can ask “val_auc was 0.78, what were the parameters?” and have an answer.\nModel Registry If Tracking records how it was trained, Registry records which result you want to declare yours. You promote one of the logged artifacts into a registered model and a version number attaches. v1, v2, v3 stack up automatically.\nTo those versions you can attach an alias. The champion alias is a mutable reference that points to a specific version. When a new version passes validation, you move the champion alias. No code changes, no filename rules, just one alias moving. The “model that production points at” is replaced.\nmlflow.register_model(\"runs://model\", name=\"ctr-model\") client.set_registered_model_alias(\"ctr-model\", \"champion\", version=7) Registry clears the entire model_v3_final.pkl problem. Lineage auto-links to runs, aliases replace filename rules, and reproduction is a matter of looking up a run id.\nOne important constraint: using Registry requires a database backend. File storage alone (./mlruns) does not expose the registry API. Even if you want to start light, you have to stand up at least SQLite, or PostgreSQL / MySQL for real use. Since MLflow 3.7.0 the default backend switched to SQLite, which lowers the first entry barrier a little.\nModels This piece standardizes what “a model file” means. Each framework (sklearn, pytorch, xgboost) gets a flavor, and the same model can be saved under multiple flavors. A saved model can be loaded without the original framework code.\nModels is the portability layer between experiment and deployment. Where Tracking and Registry deal with which model is it, Models deals with how is it serialized.\nProjects An MLproject file plus conda or docker config wraps everything so that “anyone running it gets the same environment.” mlflow run . sets up the environment and runs training.\nThis is the least used of the four. Teams with their own batch execution standard usually don’t add an MLproject layer; they keep their own standard.\nLifecycle Mapping flowchart LR E[Experiment] --\u003e|\"Tracking(run, param, metric)\"| M[Model] M --\u003e|\"Registry(version, alias)\"| D[Deployment] M -.-\u003e|\"Models(flavor)\"| D P[Projects] -.-\u003e|\"runtime env\"| E D --\u003e Mo[Monitoring] Tracking: inside the experiment stage Registry: in the model box between experiment and deployment Models: the portability axis from model into deployment Projects: an optional reproducibility layer on experiment Monitoring is not covered by MLflow directly. It’s another tool’s job. That diagram shows MLflow’s scope most concisely. Four pieces, each playing its own role, and your project picks which slots to fill.\nChoosing Tracking and Registry Picture a lightweight LR model running in production. The combination you most often see, out of the four pieces, is two: Tracking and Registry.\nWhy Tracking. The training batch re-runs LR every cycle, and each run has different parameters and validation metrics. You need to trace, later, which run produced which number. The records pile up faster than filenames can describe them. Tracking fills exactly that gap.\nWhy Registry. Only the models that pass the validation step should become “champion.” The inference server loads that champion. If you manage this with filename conventions, the server ends up polling latest.pkl and you get a race where an unvalidated model reaches production before validation finishes. Aliases remove that race. The actor pulling the deploy trigger and the object being deployed are cleanly separated.\nMoving the alias and swapping the inference server pods are two different events. Once the alias moves, a deployment tool (for example, Argo Rollouts) triggers the pod replacement. Rollouts starts new pods; each new pod, on boot, loads the model that champion currently points at and joins the service. MLflow says “which one is champion,” and the deployment tool handles “how to place it into service.”\nThis separation is the point. MLflow does not need to do everything. It just needs to fill its boundary.\nComponents Not Used Models format comes along for free when you log models through Tracking. You don’t pick it explicitly, but you get its benefits. Registry can return the model as runs://model because of this format.\nProjects is often skipped. If a team already has a stable batch execution standard, adding an MLproject layer is duplication. When a batch runs inside a single framework, the reproducibility win from Projects is small.\nServing is also optional. MLflow offers a serving endpoint (mlflow models serve), but handling lightweight-model inference directly in an existing server with sklearn is often lighter and easier to integrate with existing infrastructure. Delegating the serving layer to MLflow is rarely justified.\nUsing two pieces out of four is not “half using” MLflow. Filling only the boundary you need and leaving the rest to other tools is, if anything, closer to how this tool is meant to be used.\nClosing The word was “boundary.” That boundary is where meta-information (when, how, with what, which one is real right now) starts piling up faster than filenames can describe it. MLflow is the lightweight metadata layer at that point. How lightweight depends on you.\nIt isn’t a tool for large ML teams only. Even running a single LR, the same boundary shows up. When it does, you fill the slots you need.\n","wordCount":"1267","inLanguage":"en","datePublished":"2025-02-20T00:00:00Z","dateModified":"2025-02-20T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://wid-blog.github.io/en/posts/tech/ml/mlflow/"},"publisher":{"@type":"Organization","name":"wid's blog","logo":{"@type":"ImageObject","url":"https://wid-blog.github.io/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://wid-blog.github.io/en/ accesskey=h title="wid's blog (Alt + H)">wid's blog</a>
-<a href=https://github.com/byunghak target=_blank rel="noopener noreferrer" aria-label=GitHub class=header-social><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
-</a><a href=https://www.linkedin.com/in/byunhak082/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn class=header-social><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div><div class=header-right><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><ul class=lang-switch><li><a href=https://wid-blog.github.io/posts/tech/ml/mlflow/ title=한국어 aria-label=한국어>Ko</a></li></ul></div></nav></header><div class=layout-wrapper><aside class=sidebar id=sidebar><button class=sidebar-toggle id=sidebar-toggle aria-label="메뉴 열기/닫기">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><nav class=sidebar-nav id=sidebar-nav><ul class=sidebar-tree><li class="sidebar-item has-children ancestor"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/en/posts/tech/ class=sidebar-link>Tech
-<span class=sidebar-count>49</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/algorithm/ class=sidebar-link>Algorithm
-<span class=sidebar-count>2</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/network/ class=sidebar-link>Network
-<span class=sidebar-count>5</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/architecture/ class=sidebar-link>Architecture
-<span class=sidebar-count>8</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/devenv/ class=sidebar-link>Workflow
-<span class=sidebar-count>6</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/security/ class=sidebar-link>Security
-<span class=sidebar-count>3</span></a></div></li><li class="sidebar-item ancestor"><div class=sidebar-item-header><a href=/en/posts/tech/ml/ class=sidebar-link>Machine Learning
-<span class=sidebar-count>3</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/design-pattern/ class=sidebar-link>Design Pattern
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/infra/ class=sidebar-link>Infra
-<span class=sidebar-count>6</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/language/ class=sidebar-link>Language
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/database/ class=sidebar-link>Database
-<span class=sidebar-count>2</span></a></div></li></ul></li><li class="sidebar-item has-children"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/en/posts/career/ class=sidebar-link>Career
-<span class=sidebar-count>18</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/dable/ class=sidebar-link>Dable
-<span class=sidebar-count>10</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/personal/ class=sidebar-link>Personal Project
-<span class=sidebar-count>4</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/startup/ class=sidebar-link>Startup
-<span class=sidebar-count>2</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/hackathon/ class=sidebar-link>Hackathon
-<span class=sidebar-count>2</span></a></div></li></ul></li><li class="sidebar-item has-children"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/en/posts/daily/ class=sidebar-link>Daily
-<span class=sidebar-count>8</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/daily/investment/ class=sidebar-link>Investment
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/daily/notes/ class=sidebar-link>Notes
-<span class=sidebar-count>1</span></a></div></li></ul></li></ul></nav></aside><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://wid-blog.github.io/en/posts/tech/>Tech</a><span class=breadcrumb-separator aria-hidden=true>›</span><a href=https://wid-blog.github.io/en/posts/tech/ml/>Machine Learning</a><span class=breadcrumb-separator aria-hidden=true>›</span><span class=breadcrumb-current>MLflow and the ML Lifecycle</span></div><h1 class="post-title entry-hint-parent">MLflow and the ML Lifecycle</h1><div class=post-meta><span title='2025-02-20 00:00:00 +0000 UTC'>February 20, 2025</span>&nbsp;·&nbsp;<span>6 min read</span></div></header><div class=toc><div class=toc-heading>Table of Contents</div><div class=inner><ul><li><a href=#ml-lifecycle aria-label="ML Lifecycle">ML Lifecycle</a></li><li><a href=#file-name-versioning aria-label="File-name Versioning">File-name Versioning</a></li><li><a href=#mlflow-components aria-label="MLflow Components">MLflow Components</a><ul><li><a href=#tracking aria-label=Tracking>Tracking</a></li><li><a href=#model-registry aria-label="Model Registry">Model Registry</a></li><li><a href=#models aria-label=Models>Models</a></li><li><a href=#projects aria-label=Projects>Projects</a></li></ul></li><li><a href=#lifecycle-mapping aria-label="Lifecycle Mapping">Lifecycle Mapping</a></li><li><a href=#choosing-tracking-and-registry aria-label="Choosing Tracking and Registry">Choosing Tracking and Registry</a></li><li><a href=#components-not-used aria-label="Components Not Used">Components Not Used</a></li><li><a href=#closing aria-label=Closing>Closing</a></li></ul></div></div><div class=post-content><p>MLflow handles the boundary between <em>experiment</em> and <em>model</em> in the ML lifecycle. On the experiment side it records &ldquo;what parameters trained what.&rdquo; On the model side it records &ldquo;which version is production right now.&rdquo; That boundary is not the exclusive problem of large ML teams. It shows up just as clearly when you&rsquo;re running a single Logistic Regression model.</p><h2 id=ml-lifecycle>ML Lifecycle<a hidden class=anchor aria-hidden=true href=#ml-lifecycle>#</a></h2><p>ML projects roughly move through four stages.</p><ol><li><strong>Experiment</strong> — you look at the data, try parameters, train models. You log metrics and go back to try again.</li><li><strong>Model</strong> — once you have something worth keeping, you declare &ldquo;this is our model.&rdquo; A version and a lineage attach to it.</li><li><strong>Deployment</strong> — you put that model into the serving environment. Rollout, rollback, traffic shifting all live here.</li><li><strong>Monitoring</strong> — you watch the live model for drift and degradation.</li></ol><p>Each stage has its own problem. Experiment struggles with <em>remembering what was tried</em>. Model struggles with <em>agreeing on which one is real right now</em>. Deployment struggles with <em>swapping one thing for another</em>. Monitoring struggles with <em>deciding when to retrain</em>.</p><p>MLflow mostly fills the first two. It reaches into deployment and monitoring, but its center of gravity is in experiment and model.</p><h2 id=file-name-versioning>File-name Versioning<a hidden class=anchor aria-hidden=true href=#file-name-versioning>#</a></h2><p>It starts simple. You upload <code>model.pkl</code> to S3 and the inference server reads it. Every time training finishes, you overwrite the file.</p><p>Then you need to roll back. Yesterday&rsquo;s version. But the file has already been overwritten. So you start splitting: <code>model_v2.pkl</code>, <code>model_v3.pkl</code>. Before long you get <code>model_v3_final.pkl</code>. Then <code>model_v3_final_really.pkl</code>.</p><p>These names don&rsquo;t solve three things.</p><ul><li><strong>Lineage</strong> — there is no way to trace <code>model_v3_final.pkl</code> back to the code, the data, and the parameters that produced it. You cannot reproduce it even with the same code.</li><li><strong>Alias</strong> — &ldquo;which model is production right now&rdquo; gets managed with a filename convention outside the code. Does the inference server read <code>latest.pkl</code>? Does it take a version via env var? Every decision becomes ad hoc.</li><li><strong>Reproducibility</strong> — a few months later you want to repeat an experiment, but nothing remembers the parameters and the code from that run.</li></ul><p>To fix these you eventually need a metadata layer added to the &ldquo;filename&rdquo; layer. That is the gap MLflow fills.</p><h2 id=mlflow-components>MLflow Components<a hidden class=anchor aria-hidden=true href=#mlflow-components>#</a></h2><p>MLflow is four independent components in one package. You pick which ones you use.</p><h3 id=tracking>Tracking<a hidden class=anchor aria-hidden=true href=#tracking>#</a></h3><p>It records a training session as a <strong>run</strong>. Parameters, metrics, and artifacts (model files, plots, logs) all attach to the run. Multiple runs group under an <strong>experiment</strong>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> mlflow
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>with</span> mlflow<span style=color:#f92672>.</span>start_run():
-</span></span><span style=display:flex><span>    mlflow<span style=color:#f92672>.</span>log_param(<span style=color:#e6db74>&#34;C&#34;</span>, <span style=color:#ae81ff>0.1</span>)
-</span></span><span style=display:flex><span>    mlflow<span style=color:#f92672>.</span>log_metric(<span style=color:#e6db74>&#34;val_auc&#34;</span>, <span style=color:#ae81ff>0.782</span>)
-</span></span><span style=display:flex><span>    mlflow<span style=color:#f92672>.</span>sklearn<span style=color:#f92672>.</span>log_model(model, <span style=color:#e6db74>&#34;model&#34;</span>)
-</span></span></code></pre></div><p>This chunk is the seed of lineage. Months later you can ask &ldquo;val_auc was 0.78, what were the parameters?&rdquo; and have an answer.</p><h3 id=model-registry>Model Registry<a hidden class=anchor aria-hidden=true href=#model-registry>#</a></h3><p>If Tracking records <em>how it was trained</em>, Registry records <em>which result you want to declare yours</em>. You promote one of the logged artifacts into a <strong>registered model</strong> and a version number attaches. v1, v2, v3 stack up automatically.</p><p>To those versions you can attach an <strong>alias</strong>. The <code>champion</code> alias is a mutable reference that points to a specific version. When a new version passes validation, you move the <code>champion</code> alias. No code changes, no filename rules, just one alias moving. The &ldquo;model that production points at&rdquo; is replaced.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span>mlflow<span style=color:#f92672>.</span>register_model(<span style=color:#e6db74>&#34;runs:/&lt;run-id&gt;/model&#34;</span>, name<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;ctr-model&#34;</span>)
-</span></span><span style=display:flex><span>client<span style=color:#f92672>.</span>set_registered_model_alias(<span style=color:#e6db74>&#34;ctr-model&#34;</span>, <span style=color:#e6db74>&#34;champion&#34;</span>, version<span style=color:#f92672>=</span><span style=color:#ae81ff>7</span>)
-</span></span></code></pre></div><p>Registry clears the entire <code>model_v3_final.pkl</code> problem. Lineage auto-links to runs, aliases replace filename rules, and reproduction is a matter of looking up a run id.</p><p>One important constraint: <strong>using Registry requires a database backend</strong>. File storage alone (<code>./mlruns</code>) does not expose the registry API. Even if you want to start light, you have to stand up at least SQLite, or PostgreSQL / MySQL for real use. Since MLflow 3.7.0 the default backend switched to SQLite, which lowers the first entry barrier a little.</p><h3 id=models>Models<a hidden class=anchor aria-hidden=true href=#models>#</a></h3><p>This piece standardizes what &ldquo;a model file&rdquo; means. Each framework (sklearn, pytorch, xgboost) gets a <code>flavor</code>, and the same model can be saved under multiple flavors. A saved model can be loaded without the original framework code.</p><p>Models is the portability layer between experiment and deployment. Where Tracking and Registry deal with <em>which model is it</em>, Models deals with <em>how is it serialized</em>.</p><h3 id=projects>Projects<a hidden class=anchor aria-hidden=true href=#projects>#</a></h3><p>An <code>MLproject</code> file plus conda or docker config wraps everything so that &ldquo;anyone running it gets the same environment.&rdquo; <code>mlflow run .</code> sets up the environment and runs training.</p><p>This is the least used of the four. Teams with their own batch execution standard usually don&rsquo;t add an <code>MLproject</code> layer; they keep their own standard.</p><h2 id=lifecycle-mapping>Lifecycle Mapping<a hidden class=anchor aria-hidden=true href=#lifecycle-mapping>#</a></h2><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>flowchart LR
-    E[Experiment] -->|"Tracking<br>(run, param, metric)"| M[Model]
-    M -->|"Registry<br>(version, alias)"| D[Deployment]
-    M -.->|"Models<br>(flavor)"| D
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>MLflow and the ML Lifecycle | wid&#39;s blog</title>
+<meta name="keywords" content="mlflow, mlops, ml-lifecycle, model-registry">
+<meta name="description" content="Which slot of the ML lifecycle each MLflow component fills, and which pieces a lightweight team can pick.">
+<meta name="author" content="">
+<link rel="canonical" href="https://wid-blog.github.io/en/posts/tech/ml/mlflow/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://wid-blog.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://wid-blog.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://wid-blog.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://wid-blog.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://wid-blog.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ko" href="https://wid-blog.github.io/posts/tech/ml/mlflow/">
+<link rel="alternate" hreflang="en" href="https://wid-blog.github.io/en/posts/tech/ml/mlflow/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><style>
+  :root {
+    --main-width: min(1024px, 90vw);
+  }
+
+   
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .header-right .lang-switch {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+  }
+
+  .header-right .lang-switch a {
+    font-size: 0.875rem;
+    color: var(--secondary);
+  }
+
+  .header-right .lang-switch a:hover {
+    color: var(--primary);
+  }
+
+  .header-social {
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+  }
+
+  .header-social:hover {
+    color: var(--primary);
+  }
+
+   
+  .page-header h1 {
+    display: none;
+  }
+
+   
+  .post-entry,
+  .first-entry {
+    border: 1px solid var(--border) !important;
+    transition: border-color 0.15s;
+  }
+
+  .post-entry:hover,
+  .first-entry:hover {
+    border-color: var(--primary);
+  }
+
+   
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb-separator {
+    color: var(--secondary);
+    font-weight: 400;
+    user-select: none;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .breadcrumb-current {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+   
+  .post-content h2 {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .post-content h3 {
+    margin-top: 1.75rem;
+  }
+
+   
+  .layout-wrapper {
+    display: flex;
+    max-width: var(--main-width);
+    margin: 0 auto;
+    padding: 0 var(--gap);
+  }
+
+  .layout-wrapper .main {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+   
+  .sidebar {
+    position: sticky;
+    top: var(--header-height, 80px);
+    align-self: flex-start;
+    width: 220px;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    padding-top: 1rem;
+    max-height: calc(100vh - var(--header-height, 80px));
+    overflow-y: auto;
+  }
+
+  .sidebar-nav {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .sidebar-tree,
+  .sidebar-children {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-children {
+    padding-left: 1rem;
+    display: none;
+  }
+
+  .sidebar-children.expanded {
+    display: block;
+  }
+
+   
+  .sidebar-item-header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0;
+  }
+
+   
+  .sidebar-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    color: var(--secondary);
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+
+  .sidebar-toggle-btn:hover {
+    background: var(--code-bg);
+  }
+
+  .sidebar-chevron {
+    transition: transform 0.2s ease;
+  }
+
+  .sidebar-toggle-btn.open .sidebar-chevron {
+    transform: rotate(90deg);
+  }
+
+   
+  .sidebar-link {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .sidebar-link:hover {
+    color: var(--primary);
+  }
+
+  .sidebar-item.active > .sidebar-item-header .sidebar-link {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .sidebar-item.ancestor > .sidebar-item-header .sidebar-link {
+    color: var(--primary);
+  }
+
+   
+  .sidebar-count {
+    display: inline-block;
+    min-width: 1.25rem;
+    padding: 0.05rem 0.4rem;
+    margin-left: 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    color: var(--primary);
+    background: var(--code-bg);
+    border-radius: 0.75rem;
+  }
+
+  .sidebar-item.ancestor > .sidebar-item-header .sidebar-count,
+  .sidebar-item.active > .sidebar-item-header .sidebar-count {
+    color: var(--theme);
+    background: var(--primary);
+  }
+
+   
+  .sidebar-toggle {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 200;
+    background: var(--theme);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    color: var(--primary);
+  }
+
+   
+  @media (max-width: 768px) {
+    .layout-wrapper {
+      display: block;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      padding-top: calc(var(--header-height, 80px) + 1rem);
+      background: var(--theme);
+      border-right: 1px solid var(--border);
+      z-index: 100;
+      transform: translateX(-100%);
+      transition: transform 0.25s ease;
+    }
+
+    .sidebar.open {
+      transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+      display: flex;
+    }
+
+    .sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 99;
+      display: none;
+    }
+
+    .sidebar-overlay.active {
+      display: block;
+    }
+  }
+
+   
+  .post-related {
+    margin-top: 40px;
+  }
+
+  .post-related-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 14px;
+    color: var(--primary);
+  }
+
+  .post-related-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+   
+  .post-related-grid .post-related-entry {
+    margin-bottom: 0;
+  }
+
+  .post-related-grid .post-related-entry .entry-header h2 {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .post-related-grid .post-related-entry .entry-content {
+    -webkit-line-clamp: 3;
+  }
+
+  @media (max-width: 768px) {
+    .post-related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+   
+  .post-header {
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+   
+  .toc .toc-heading {
+    margin-inline-start: 10px;
+    font-weight: 500;
+    user-select: none;
+  }
+
+   
+  .post-tags li {
+    position: relative;
+  }
+
+  .post-tags a {
+    padding: 0 14px 0 22px;
+    border: none;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 50%);
+  }
+
+   
+  .post-tags.entry-tags {
+    position: relative;
+    z-index: 2;
+    margin-top: 14px;
+    gap: 8px;
+  }
+
+  .post-tags.entry-tags a {
+    font-size: 12px;
+    line-height: 26px;
+    padding: 0 12px 0 20px;
+  }
+
+  .post-tags li::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    margin-top: -2.5px;
+    border-radius: 50%;
+    background: var(--theme);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+   
+  .tag-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--secondary);
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+
+  .tag-chip:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .tag-chip.active {
+    color: var(--theme);
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .tag-chip-count {
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+
+  .tag-chip.active .tag-chip-count {
+    opacity: 0.9;
+  }
+
+   
+  article.tag-hidden {
+    display: none;
+  }
+</style><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    
+    document.querySelectorAll(".sidebar-toggle-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var isOpen = this.classList.toggle("open");
+        this.setAttribute("aria-expanded", isOpen);
+        var children =
+          this.closest(".sidebar-item").querySelector(".sidebar-children");
+        if (children) {
+          children.classList.toggle("expanded", isOpen);
+        }
+      });
+    });
+
+    
+    var toggle = document.getElementById("sidebar-toggle");
+    var sidebar = document.getElementById("sidebar");
+    if (toggle && sidebar) {
+      var overlay = document.createElement("div");
+      overlay.className = "sidebar-overlay";
+      document.body.appendChild(overlay);
+
+      function openSidebar() {
+        sidebar.classList.add("open");
+        overlay.classList.add("active");
+      }
+      function closeSidebar() {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("active");
+      }
+
+      toggle.addEventListener("click", function () {
+        if (sidebar.classList.contains("open")) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+      overlay.addEventListener("click", closeSidebar);
+    }
+
+    
+    var filterContainer = document.getElementById("tag-filter");
+    if (filterContainer) {
+      var chips = filterContainer.querySelectorAll(".tag-chip");
+      var articles = document.querySelectorAll("article[data-tags]");
+      var activeTags = new Set();
+
+      function applyFilter() {
+        if (activeTags.size === 0) {
+          articles.forEach(function (a) {
+            a.classList.remove("tag-hidden");
+          });
+          return;
+        }
+        articles.forEach(function (a) {
+          var tags = (a.getAttribute("data-tags") || "").split(",");
+          var match = false;
+          activeTags.forEach(function (t) {
+            if (tags.indexOf(t) !== -1) {
+              match = true;
+            }
+          });
+          a.classList.toggle("tag-hidden", !match);
+        });
+      }
+
+      chips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          var tag = this.getAttribute("data-tag");
+          if (activeTags.has(tag)) {
+            activeTags.delete(tag);
+            this.classList.remove("active");
+          } else {
+            activeTags.add(tag);
+            this.classList.add("active");
+          }
+          applyFilter();
+        });
+      });
+    }
+  });
+</script>
+<meta property="og:url" content="https://wid-blog.github.io/en/posts/tech/ml/mlflow/">
+  <meta property="og:site_name" content="wid&#39;s blog">
+  <meta property="og:title" content="MLflow and the ML Lifecycle">
+  <meta property="og:description" content="Which slot of the ML lifecycle each MLflow component fills, and which pieces a lightweight team can pick.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-20T00:00:00+00:00">
+    <meta property="article:tag" content="Mlflow">
+    <meta property="article:tag" content="Mlops">
+    <meta property="article:tag" content="Ml-Lifecycle">
+    <meta property="article:tag" content="Model-Registry">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MLflow and the ML Lifecycle">
+  <meta name="twitter:description" content="Which slot of the ML lifecycle each MLflow component fills, and which pieces a lightweight team can pick.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://wid-blog.github.io/en/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Tech",
+      "item": "https://wid-blog.github.io/en/posts/tech/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Machine Learning",
+      "item": "https://wid-blog.github.io/en/posts/tech/ml/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  4 ,
+      "name": "MLflow and the ML Lifecycle",
+      "item": "https://wid-blog.github.io/en/posts/tech/ml/mlflow/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "MLflow and the ML Lifecycle",
+  "name": "MLflow and the ML Lifecycle",
+  "description": "Which slot of the ML lifecycle each MLflow component fills, and which pieces a lightweight team can pick.",
+  "keywords": [
+    "mlflow", "mlops", "ml-lifecycle", "model-registry"
+  ],
+  "articleBody": "MLflow handles the boundary between experiment and model in the ML lifecycle. On the experiment side it records “what parameters trained what.” On the model side it records “which version is production right now.” That boundary is not the exclusive problem of large ML teams. It shows up just as clearly when you’re running a single Logistic Regression model.\nML Lifecycle ML projects roughly move through four stages.\nExperiment — you look at the data, try parameters, train models. You log metrics and go back to try again. Model — once you have something worth keeping, you declare “this is our model.” A version and a lineage attach to it. Deployment — you put that model into the serving environment. Rollout, rollback, traffic shifting all live here. Monitoring — you watch the live model for drift and degradation. Each stage has its own problem. Experiment struggles with remembering what was tried. Model struggles with agreeing on which one is real right now. Deployment struggles with swapping one thing for another. Monitoring struggles with deciding when to retrain.\nMLflow mostly fills the first two. It reaches into deployment and monitoring, but its center of gravity is in experiment and model.\nFile-name Versioning It starts simple. You upload model.pkl to S3 and the inference server reads it. Every time training finishes, you overwrite the file.\nThen you need to roll back. Yesterday’s version. But the file has already been overwritten. So you start splitting: model_v2.pkl, model_v3.pkl. Before long you get model_v3_final.pkl. Then model_v3_final_really.pkl.\nThese names don’t solve three things.\nLineage — there is no way to trace model_v3_final.pkl back to the code, the data, and the parameters that produced it. You cannot reproduce it even with the same code. Alias — “which model is production right now” gets managed with a filename convention outside the code. Does the inference server read latest.pkl? Does it take a version via env var? Every decision becomes ad hoc. Reproducibility — a few months later you want to repeat an experiment, but nothing remembers the parameters and the code from that run. To fix these you eventually need a metadata layer added to the “filename” layer. That is the gap MLflow fills.\nMLflow Components MLflow is four independent components in one package. You pick which ones you use.\nTracking It records a training session as a run. Parameters, metrics, and artifacts (model files, plots, logs) all attach to the run. Multiple runs group under an experiment.\nimport mlflow with mlflow.start_run(): mlflow.log_param(\"C\", 0.1) mlflow.log_metric(\"val_auc\", 0.782) mlflow.sklearn.log_model(model, \"model\") This chunk is the seed of lineage. Months later you can ask “val_auc was 0.78, what were the parameters?” and have an answer.\nModel Registry If Tracking records how it was trained, Registry records which result you want to declare yours. You promote one of the logged artifacts into a registered model and a version number attaches. v1, v2, v3 stack up automatically.\nTo those versions you can attach an alias. The champion alias is a mutable reference that points to a specific version. When a new version passes validation, you move the champion alias. No code changes, no filename rules, just one alias moving. The “model that production points at” is replaced.\nmlflow.register_model(\"runs://model\", name=\"ctr-model\") client.set_registered_model_alias(\"ctr-model\", \"champion\", version=7) Registry clears the entire model_v3_final.pkl problem. Lineage auto-links to runs, aliases replace filename rules, and reproduction is a matter of looking up a run id.\nOne important constraint: using Registry requires a database backend. File storage alone (./mlruns) does not expose the registry API. Even if you want to start light, you have to stand up at least SQLite, or PostgreSQL / MySQL for real use. Since MLflow 3.7.0 the default backend switched to SQLite, which lowers the first entry barrier a little.\nModels This piece standardizes what “a model file” means. Each framework (sklearn, pytorch, xgboost) gets a flavor, and the same model can be saved under multiple flavors. A saved model can be loaded without the original framework code.\nModels is the portability layer between experiment and deployment. Where Tracking and Registry deal with which model is it, Models deals with how is it serialized.\nProjects An MLproject file plus conda or docker config wraps everything so that “anyone running it gets the same environment.” mlflow run . sets up the environment and runs training.\nThis is the least used of the four. Teams with their own batch execution standard usually don’t add an MLproject layer; they keep their own standard.\nLifecycle Mapping flowchart LR E[Experiment] --\u003e|\"Tracking(run, param, metric)\"| M[Model] M --\u003e|\"Registry(version, alias)\"| D[Deployment] M -.-\u003e|\"Models(flavor)\"| D P[Projects] -.-\u003e|\"runtime env\"| E D --\u003e Mo[Monitoring] Tracking: inside the experiment stage Registry: in the model box between experiment and deployment Models: the portability axis from model into deployment Projects: an optional reproducibility layer on experiment Monitoring is not covered by MLflow directly. It’s another tool’s job. That diagram shows MLflow’s scope most concisely. Four pieces, each playing its own role, and your project picks which slots to fill.\nChoosing Tracking and Registry Picture a lightweight LR model running in production. The combination you most often see, out of the four pieces, is two: Tracking and Registry.\nWhy Tracking. The training batch re-runs LR every cycle, and each run has different parameters and validation metrics. You need to trace, later, which run produced which number. The records pile up faster than filenames can describe them. Tracking fills exactly that gap.\nWhy Registry. Only the models that pass the validation step should become “champion.” The inference server loads that champion. If you manage this with filename conventions, the server ends up polling latest.pkl and you get a race where an unvalidated model reaches production before validation finishes. Aliases remove that race. The actor pulling the deploy trigger and the object being deployed are cleanly separated.\nMoving the alias and swapping the inference server pods are two different events. Once the alias moves, a deployment tool (for example, Argo Rollouts) triggers the pod replacement. Rollouts starts new pods; each new pod, on boot, loads the model that champion currently points at and joins the service. MLflow says “which one is champion,” and the deployment tool handles “how to place it into service.”\nThis separation is the point. MLflow does not need to do everything. It just needs to fill its boundary.\nComponents Not Used Models format comes along for free when you log models through Tracking. You don’t pick it explicitly, but you get its benefits. Registry can return the model as runs://model because of this format.\nProjects is often skipped. If a team already has a stable batch execution standard, adding an MLproject layer is duplication. When a batch runs inside a single framework, the reproducibility win from Projects is small.\nServing is also optional. MLflow offers a serving endpoint (mlflow models serve), but handling lightweight-model inference directly in an existing server with sklearn is often lighter and easier to integrate with existing infrastructure. Delegating the serving layer to MLflow is rarely justified.\nUsing two pieces out of four is not “half using” MLflow. Filling only the boundary you need and leaving the rest to other tools is, if anything, closer to how this tool is meant to be used.\nClosing The word was “boundary.” That boundary is where meta-information (when, how, with what, which one is real right now) starts piling up faster than filenames can describe it. MLflow is the lightweight metadata layer at that point. How lightweight depends on you.\nIt isn’t a tool for large ML teams only. Even running a single LR, the same boundary shows up. When it does, you fill the slots you need.\n",
+  "wordCount" : "1267",
+  "inLanguage": "en",
+  "datePublished": "2025-02-20T00:00:00Z",
+  "dateModified": "2025-02-20T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wid-blog.github.io/en/posts/tech/ml/mlflow/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "wid's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wid-blog.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://wid-blog.github.io/en/" accesskey="h" title="wid&#39;s blog (Alt + H)">wid&#39;s blog</a>
+            <a href="https://github.com/byunghak" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="header-social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/byunhak082/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="header-social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+        </div>
+        <div class="header-right">
+            <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+                <ul class="lang-switch">
+                    <li>
+                        <a href="https://wid-blog.github.io/posts/tech/ml/mlflow/" title="한국어"
+                            aria-label="한국어">Ko</a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+</header>
+<div class="layout-wrapper">
+<aside class="sidebar" id="sidebar">
+  <button
+    class="sidebar-toggle"
+    id="sidebar-toggle"
+    aria-label="메뉴 열기/닫기"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+  <nav class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-tree">
+<li
+  class="sidebar-item has-children ancestor"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/en/posts/tech/" class="sidebar-link">
+      Tech
+      <span class="sidebar-count">52</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/language/" class="sidebar-link">
+      Language
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/algorithm/" class="sidebar-link">
+      Algorithm
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/network/" class="sidebar-link">
+      Network
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/architecture/" class="sidebar-link">
+      Architecture
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/devenv/" class="sidebar-link">
+      Workflow
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/security/" class="sidebar-link">
+      Security
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item ancestor"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/ml/" class="sidebar-link">
+      Machine Learning
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/design-pattern/" class="sidebar-link">
+      Design Pattern
+      <span class="sidebar-count">7</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/infra/" class="sidebar-link">
+      Infra
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/database/" class="sidebar-link">
+      Database
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+<li
+  class="sidebar-item has-children"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/en/posts/career/" class="sidebar-link">
+      Career
+      <span class="sidebar-count">18</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/dable/" class="sidebar-link">
+      Dable
+      <span class="sidebar-count">10</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/personal/" class="sidebar-link">
+      Personal Project
+      <span class="sidebar-count">4</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/startup/" class="sidebar-link">
+      Startup
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/hackathon/" class="sidebar-link">
+      Hackathon
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+<li
+  class="sidebar-item has-children"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/en/posts/daily/" class="sidebar-link">
+      Daily
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/daily/investment/" class="sidebar-link">
+      Investment
+      <span class="sidebar-count">7</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/daily/notes/" class="sidebar-link">
+      Notes
+      <span class="sidebar-count">1</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</aside>
+
+        <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://wid-blog.github.io/en/posts/tech/">Tech</a><span
+    class="breadcrumb-separator"
+    aria-hidden="true"
+    >›</span
+  ><a href="https://wid-blog.github.io/en/posts/tech/ml/">Machine Learning</a><span
+    class="breadcrumb-separator"
+    aria-hidden="true"
+    >›</span
+  ><span class="breadcrumb-current">MLflow and the ML Lifecycle</span></div>
+    <h1 class="post-title entry-hint-parent">
+      MLflow and the ML Lifecycle
+    </h1>
+    <div class="post-meta"><span title='2025-02-20 00:00:00 +0000 UTC'>February 20, 2025</span>&nbsp;·&nbsp;<span>6 min read</span>
+
+</div>
+  </header> <div class="toc">
+    <div class="toc-heading">Table of Contents</div>
+    <div class="inner"><ul>
+            <li>
+                <a href="#ml-lifecycle" aria-label="ML Lifecycle">ML Lifecycle</a></li>
+            <li>
+                <a href="#file-name-versioning" aria-label="File-name Versioning">File-name Versioning</a></li>
+            <li>
+                <a href="#mlflow-components" aria-label="MLflow Components">MLflow Components</a><ul>
+                    
+            <li>
+                <a href="#tracking" aria-label="Tracking">Tracking</a></li>
+            <li>
+                <a href="#model-registry" aria-label="Model Registry">Model Registry</a></li>
+            <li>
+                <a href="#models" aria-label="Models">Models</a></li>
+            <li>
+                <a href="#projects" aria-label="Projects">Projects</a></li></ul>
+            </li>
+            <li>
+                <a href="#lifecycle-mapping" aria-label="Lifecycle Mapping">Lifecycle Mapping</a></li>
+            <li>
+                <a href="#choosing-tracking-and-registry" aria-label="Choosing Tracking and Registry">Choosing Tracking and Registry</a></li>
+            <li>
+                <a href="#components-not-used" aria-label="Components Not Used">Components Not Used</a></li>
+            <li>
+                <a href="#closing" aria-label="Closing">Closing</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+  <div class="post-content"><p>MLflow handles the boundary between <em>experiment</em> and <em>model</em> in the ML lifecycle. On the experiment side it records &ldquo;what parameters trained what.&rdquo; On the model side it records &ldquo;which version is production right now.&rdquo; That boundary is not the exclusive problem of large ML teams. It shows up just as clearly when you&rsquo;re running a single Logistic Regression model.</p>
+<h2 id="ml-lifecycle">ML Lifecycle<a hidden class="anchor" aria-hidden="true" href="#ml-lifecycle">#</a></h2>
+<p>ML projects roughly move through four stages.</p>
+<ol>
+<li><strong>Experiment</strong> — you look at the data, try parameters, train models. You log metrics and go back to try again.</li>
+<li><strong>Model</strong> — once you have something worth keeping, you declare &ldquo;this is our model.&rdquo; A version and a lineage attach to it.</li>
+<li><strong>Deployment</strong> — you put that model into the serving environment. Rollout, rollback, traffic shifting all live here.</li>
+<li><strong>Monitoring</strong> — you watch the live model for drift and degradation.</li>
+</ol>
+<p>Each stage has its own problem. Experiment struggles with <em>remembering what was tried</em>. Model struggles with <em>agreeing on which one is real right now</em>. Deployment struggles with <em>swapping one thing for another</em>. Monitoring struggles with <em>deciding when to retrain</em>.</p>
+<p>MLflow mostly fills the first two. It reaches into deployment and monitoring, but its center of gravity is in experiment and model.</p>
+<h2 id="file-name-versioning">File-name Versioning<a hidden class="anchor" aria-hidden="true" href="#file-name-versioning">#</a></h2>
+<p>It starts simple. You upload <code>model.pkl</code> to S3 and the inference server reads it. Every time training finishes, you overwrite the file.</p>
+<p>Then you need to roll back. Yesterday&rsquo;s version. But the file has already been overwritten. So you start splitting: <code>model_v2.pkl</code>, <code>model_v3.pkl</code>. Before long you get <code>model_v3_final.pkl</code>. Then <code>model_v3_final_really.pkl</code>.</p>
+<p>These names don&rsquo;t solve three things.</p>
+<ul>
+<li><strong>Lineage</strong> — there is no way to trace <code>model_v3_final.pkl</code> back to the code, the data, and the parameters that produced it. You cannot reproduce it even with the same code.</li>
+<li><strong>Alias</strong> — &ldquo;which model is production right now&rdquo; gets managed with a filename convention outside the code. Does the inference server read <code>latest.pkl</code>? Does it take a version via env var? Every decision becomes ad hoc.</li>
+<li><strong>Reproducibility</strong> — a few months later you want to repeat an experiment, but nothing remembers the parameters and the code from that run.</li>
+</ul>
+<p>To fix these you eventually need a metadata layer added to the &ldquo;filename&rdquo; layer. That is the gap MLflow fills.</p>
+<h2 id="mlflow-components">MLflow Components<a hidden class="anchor" aria-hidden="true" href="#mlflow-components">#</a></h2>
+<p>MLflow is four independent components in one package. You pick which ones you use.</p>
+<h3 id="tracking">Tracking<a hidden class="anchor" aria-hidden="true" href="#tracking">#</a></h3>
+<p>It records a training session as a <strong>run</strong>. Parameters, metrics, and artifacts (model files, plots, logs) all attach to the run. Multiple runs group under an <strong>experiment</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> mlflow
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> mlflow<span style="color:#f92672">.</span>start_run():
+</span></span><span style="display:flex;"><span>    mlflow<span style="color:#f92672">.</span>log_param(<span style="color:#e6db74">&#34;C&#34;</span>, <span style="color:#ae81ff">0.1</span>)
+</span></span><span style="display:flex;"><span>    mlflow<span style="color:#f92672">.</span>log_metric(<span style="color:#e6db74">&#34;val_auc&#34;</span>, <span style="color:#ae81ff">0.782</span>)
+</span></span><span style="display:flex;"><span>    mlflow<span style="color:#f92672">.</span>sklearn<span style="color:#f92672">.</span>log_model(model, <span style="color:#e6db74">&#34;model&#34;</span>)
+</span></span></code></pre></div><p>This chunk is the seed of lineage. Months later you can ask &ldquo;val_auc was 0.78, what were the parameters?&rdquo; and have an answer.</p>
+<h3 id="model-registry">Model Registry<a hidden class="anchor" aria-hidden="true" href="#model-registry">#</a></h3>
+<p>If Tracking records <em>how it was trained</em>, Registry records <em>which result you want to declare yours</em>. You promote one of the logged artifacts into a <strong>registered model</strong> and a version number attaches. v1, v2, v3 stack up automatically.</p>
+<p>To those versions you can attach an <strong>alias</strong>. The <code>champion</code> alias is a mutable reference that points to a specific version. When a new version passes validation, you move the <code>champion</code> alias. No code changes, no filename rules, just one alias moving. The &ldquo;model that production points at&rdquo; is replaced.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>mlflow<span style="color:#f92672">.</span>register_model(<span style="color:#e6db74">&#34;runs:/&lt;run-id&gt;/model&#34;</span>, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ctr-model&#34;</span>)
+</span></span><span style="display:flex;"><span>client<span style="color:#f92672">.</span>set_registered_model_alias(<span style="color:#e6db74">&#34;ctr-model&#34;</span>, <span style="color:#e6db74">&#34;champion&#34;</span>, version<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)
+</span></span></code></pre></div><p>Registry clears the entire <code>model_v3_final.pkl</code> problem. Lineage auto-links to runs, aliases replace filename rules, and reproduction is a matter of looking up a run id.</p>
+<p>One important constraint: <strong>using Registry requires a database backend</strong>. File storage alone (<code>./mlruns</code>) does not expose the registry API. Even if you want to start light, you have to stand up at least SQLite, or PostgreSQL / MySQL for real use. Since MLflow 3.7.0 the default backend switched to SQLite, which lowers the first entry barrier a little.</p>
+<h3 id="models">Models<a hidden class="anchor" aria-hidden="true" href="#models">#</a></h3>
+<p>This piece standardizes what &ldquo;a model file&rdquo; means. Each framework (sklearn, pytorch, xgboost) gets a <code>flavor</code>, and the same model can be saved under multiple flavors. A saved model can be loaded without the original framework code.</p>
+<p>Models is the portability layer between experiment and deployment. Where Tracking and Registry deal with <em>which model is it</em>, Models deals with <em>how is it serialized</em>.</p>
+<h3 id="projects">Projects<a hidden class="anchor" aria-hidden="true" href="#projects">#</a></h3>
+<p>An <code>MLproject</code> file plus conda or docker config wraps everything so that &ldquo;anyone running it gets the same environment.&rdquo; <code>mlflow run .</code> sets up the environment and runs training.</p>
+<p>This is the least used of the four. Teams with their own batch execution standard usually don&rsquo;t add an <code>MLproject</code> layer; they keep their own standard.</p>
+<h2 id="lifecycle-mapping">Lifecycle Mapping<a hidden class="anchor" aria-hidden="true" href="#lifecycle-mapping">#</a></h2>
+<div
+  class="mermaid-wrapper"
+  style="overflow-x: auto; max-width: 100%; margin: 1em 0"
+>
+  <pre class="mermaid">flowchart LR
+    E[Experiment] -->|"Tracking<br/>(run, param, metric)"| M[Model]
+    M -->|"Registry<br/>(version, alias)"| D[Deployment]
+    M -.->|"Models<br/>(flavor)"| D
     P[Projects] -.->|"runtime env"| E
     D --> Mo[Monitoring]
-</pre></div><ul><li><strong>Tracking</strong>: inside the experiment stage</li><li><strong>Registry</strong>: in the model box between experiment and deployment</li><li><strong>Models</strong>: the portability axis from model into deployment</li><li><strong>Projects</strong>: an optional reproducibility layer on experiment</li><li>Monitoring is not covered by MLflow directly. It&rsquo;s another tool&rsquo;s job.</li></ul><p>That diagram shows MLflow&rsquo;s scope most concisely. Four pieces, each playing its own role, and your project picks which slots to fill.</p><h2 id=choosing-tracking-and-registry>Choosing Tracking and Registry<a hidden class=anchor aria-hidden=true href=#choosing-tracking-and-registry>#</a></h2><p>Picture a lightweight LR model running in production. The combination you most often see, out of the four pieces, is two: <strong>Tracking</strong> and <strong>Registry</strong>.</p><p><strong>Why Tracking</strong>. The training batch re-runs LR every cycle, and each run has different parameters and validation metrics. You need to trace, later, which run produced which number. The records pile up faster than filenames can describe them. Tracking fills exactly that gap.</p><p><strong>Why Registry</strong>. Only the models that pass the validation step should become &ldquo;champion.&rdquo; The inference server loads that champion. If you manage this with filename conventions, the server ends up polling <code>latest.pkl</code> and you get a race where an unvalidated model reaches production before validation finishes. Aliases remove that race. The actor pulling the deploy trigger and the object being deployed are cleanly separated.</p><p>Moving the alias and swapping the inference server pods are two different events. Once the alias moves, a deployment tool (for example, <strong>Argo Rollouts</strong>) triggers the pod replacement. Rollouts starts new pods; each new pod, on boot, loads the model that <code>champion</code> currently points at and joins the service. MLflow says &ldquo;which one is champion,&rdquo; and the deployment tool handles &ldquo;how to place it into service.&rdquo;</p><p>This separation is the point. MLflow does not need to do everything. It just needs to fill its boundary.</p><h2 id=components-not-used>Components Not Used<a hidden class=anchor aria-hidden=true href=#components-not-used>#</a></h2><p><strong>Models format</strong> comes along for free when you log models through Tracking. You don&rsquo;t pick it explicitly, but you get its benefits. Registry can return the model as <code>runs:/&lt;id>/model</code> because of this format.</p><p><strong>Projects</strong> is often skipped. If a team already has a stable batch execution standard, adding an <code>MLproject</code> layer is duplication. When a batch runs inside a single framework, the reproducibility win from Projects is small.</p><p><strong>Serving</strong> is also optional. MLflow offers a serving endpoint (<code>mlflow models serve</code>), but handling lightweight-model inference directly in an existing server with sklearn is often lighter and easier to integrate with existing infrastructure. Delegating the serving layer to MLflow is rarely justified.</p><p>Using two pieces out of four is not &ldquo;half using&rdquo; MLflow. Filling only the boundary you need and leaving the rest to other tools is, if anything, closer to how this tool is meant to be used.</p><h2 id=closing>Closing<a hidden class=anchor aria-hidden=true href=#closing>#</a></h2><p>The word was &ldquo;boundary.&rdquo; That boundary is where meta-information (<em>when, how, with what, which one is real right now</em>) starts piling up faster than filenames can describe it. MLflow is the lightweight metadata layer at that point. How lightweight depends on you.</p><p>It isn&rsquo;t a tool for large ML teams only. Even running a single LR, the same boundary shows up. When it does, you fill the slots you need.</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://wid-blog.github.io/en/tags/mlflow/>Mlflow</a></li><li><a href=https://wid-blog.github.io/en/tags/mlops/>Mlops</a></li><li><a href=https://wid-blog.github.io/en/tags/ml-lifecycle/>Ml-Lifecycle</a></li><li><a href=https://wid-blog.github.io/en/tags/model-registry/>Model-Registry</a></li></ul><section class=post-related><h3 class=post-related-title>Related posts</h3><div class=post-related-grid><article class="post-entry post-related-entry"><header class=entry-header><h2>Training Frameworks and Inference Formats: Where sklearn and ONNX Belong</h2></header><div class=entry-content><p>sklearn and ONNX aren’t competing at the same layer. Once you separate their roles, the real question becomes ‘do I need an ONNX layer at all?’</p></div><footer class=entry-footer><span title='2025-02-01 00:00:00 +0000 UTC'>February 1, 2025</span>&nbsp;·&nbsp;<span>6 min read</span></footer><a class=entry-link aria-label="post link to Training Frameworks and Inference Formats: Where sklearn and ONNX Belong" href=https://wid-blog.github.io/en/posts/tech/ml/model-training-frameworks/></a></article><article class="post-entry post-related-entry"><header class=entry-header><h2>Revisiting Logistic Regression</h2></header><div class=entry-content><p>The structure and characteristics of Logistic Regression, and why an old model still serves as the baseline in CTR prediction.</p></div><footer class=entry-footer><span title='2025-01-15 00:00:00 +0000 UTC'>January 15, 2025</span>&nbsp;·&nbsp;<span>9 min read</span></footer><a class=entry-link aria-label="post link to Revisiting Logistic Regression" href=https://wid-blog.github.io/en/posts/tech/ml/logistic-regression/></a></article></div></section></footer></article></main></div><footer class=footer><span>&copy; 2026 <a href=https://wid-blog.github.io/en/>wid's blog</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script type=module>
+</pre
+  >
+</div>
+<ul>
+<li><strong>Tracking</strong>: inside the experiment stage</li>
+<li><strong>Registry</strong>: in the model box between experiment and deployment</li>
+<li><strong>Models</strong>: the portability axis from model into deployment</li>
+<li><strong>Projects</strong>: an optional reproducibility layer on experiment</li>
+<li>Monitoring is not covered by MLflow directly. It&rsquo;s another tool&rsquo;s job.</li>
+</ul>
+<p>That diagram shows MLflow&rsquo;s scope most concisely. Four pieces, each playing its own role, and your project picks which slots to fill.</p>
+<h2 id="choosing-tracking-and-registry">Choosing Tracking and Registry<a hidden class="anchor" aria-hidden="true" href="#choosing-tracking-and-registry">#</a></h2>
+<p>Picture a lightweight LR model running in production. The combination you most often see, out of the four pieces, is two: <strong>Tracking</strong> and <strong>Registry</strong>.</p>
+<p><strong>Why Tracking</strong>. The training batch re-runs LR every cycle, and each run has different parameters and validation metrics. You need to trace, later, which run produced which number. The records pile up faster than filenames can describe them. Tracking fills exactly that gap.</p>
+<p><strong>Why Registry</strong>. Only the models that pass the validation step should become &ldquo;champion.&rdquo; The inference server loads that champion. If you manage this with filename conventions, the server ends up polling <code>latest.pkl</code> and you get a race where an unvalidated model reaches production before validation finishes. Aliases remove that race. The actor pulling the deploy trigger and the object being deployed are cleanly separated.</p>
+<p>Moving the alias and swapping the inference server pods are two different events. Once the alias moves, a deployment tool (for example, <strong>Argo Rollouts</strong>) triggers the pod replacement. Rollouts starts new pods; each new pod, on boot, loads the model that <code>champion</code> currently points at and joins the service. MLflow says &ldquo;which one is champion,&rdquo; and the deployment tool handles &ldquo;how to place it into service.&rdquo;</p>
+<p>This separation is the point. MLflow does not need to do everything. It just needs to fill its boundary.</p>
+<h2 id="components-not-used">Components Not Used<a hidden class="anchor" aria-hidden="true" href="#components-not-used">#</a></h2>
+<p><strong>Models format</strong> comes along for free when you log models through Tracking. You don&rsquo;t pick it explicitly, but you get its benefits. Registry can return the model as <code>runs:/&lt;id&gt;/model</code> because of this format.</p>
+<p><strong>Projects</strong> is often skipped. If a team already has a stable batch execution standard, adding an <code>MLproject</code> layer is duplication. When a batch runs inside a single framework, the reproducibility win from Projects is small.</p>
+<p><strong>Serving</strong> is also optional. MLflow offers a serving endpoint (<code>mlflow models serve</code>), but handling lightweight-model inference directly in an existing server with sklearn is often lighter and easier to integrate with existing infrastructure. Delegating the serving layer to MLflow is rarely justified.</p>
+<p>Using two pieces out of four is not &ldquo;half using&rdquo; MLflow. Filling only the boundary you need and leaving the rest to other tools is, if anything, closer to how this tool is meant to be used.</p>
+<h2 id="closing">Closing<a hidden class="anchor" aria-hidden="true" href="#closing">#</a></h2>
+<p>The word was &ldquo;boundary.&rdquo; That boundary is where meta-information (<em>when, how, with what, which one is real right now</em>) starts piling up faster than filenames can describe it. MLflow is the lightweight metadata layer at that point. How lightweight depends on you.</p>
+<p>It isn&rsquo;t a tool for large ML teams only. Even running a single LR, the same boundary shows up. When it does, you fill the slots you need.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://wid-blog.github.io/en/tags/mlflow/">Mlflow</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/mlops/">Mlops</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/ml-lifecycle/">Ml-Lifecycle</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/model-registry/">Model-Registry</a></li>
+    </ul>
+<section class="post-related">
+  <h3 class="post-related-title">Related posts</h3>
+  <div class="post-related-grid">
+    <article class="post-entry post-related-entry">
+      <header class="entry-header">
+        <h2>Training Frameworks and Inference Formats: Where sklearn and ONNX Belong</h2>
+      </header>
+      <div class="entry-content">
+        <p>
+          sklearn and ONNX aren’t competing at the same layer. Once you separate their roles, the real question becomes ‘do I need an ONNX layer at all?’
+        </p>
+      </div>
+      <footer class="entry-footer"><span title='2025-02-01 00:00:00 +0000 UTC'>February 1, 2025</span>&nbsp;·&nbsp;<span>6 min read</span></footer>
+      <a
+        class="entry-link"
+        aria-label="post link to Training Frameworks and Inference Formats: Where sklearn and ONNX Belong"
+        href="https://wid-blog.github.io/en/posts/tech/ml/model-training-frameworks/"
+      ></a>
+    </article>
+    <article class="post-entry post-related-entry">
+      <header class="entry-header">
+        <h2>Revisiting Logistic Regression</h2>
+      </header>
+      <div class="entry-content">
+        <p>
+          The structure and characteristics of Logistic Regression, and why an old model still serves as the baseline in CTR prediction.
+        </p>
+      </div>
+      <footer class="entry-footer"><span title='2025-01-15 00:00:00 +0000 UTC'>January 15, 2025</span>&nbsp;·&nbsp;<span>9 min read</span></footer>
+      <a
+        class="entry-link"
+        aria-label="post link to Revisiting Logistic Regression"
+        href="https://wid-blog.github.io/en/posts/tech/ml/logistic-regression/"
+      ></a>
+    </article>
+  </div>
+</section>
+
+  </footer>
+</article>
+        </main>
+    </div>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://wid-blog.github.io/en/">wid&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<script type="module">
   import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
   const isDark = document.documentElement.dataset.theme === "dark";
   mermaid.initialize({
@@ -117,4 +1256,182 @@
 
     document.body.appendChild(overlay);
   }
-</script><style>.mermaid-wrapper{position:relative}.mermaid-zoom-btn{position:absolute;top:.5em;right:.5em;background:rgba(0,0,0,.55);color:#fff;border:none;border-radius:4px;width:2em;height:2em;font-size:1.1em;line-height:1;cursor:pointer;opacity:0;transition:opacity .15s ease;z-index:2}.mermaid-wrapper:hover .mermaid-zoom-btn,.mermaid-wrapper:focus-within .mermaid-zoom-btn{opacity:1}.mermaid-zoom-overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:zoom-out;padding:2rem}.mermaid-zoom-inner{background:#fff;padding:1.5rem;border-radius:8px;max-width:95vw;max-height:90vh;overflow:auto;cursor:default;display:flex;align-items:center;justify-content:center}.mermaid-zoom-close{position:fixed;top:1rem;right:1rem;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:50%;width:2.5rem;height:2.5rem;font-size:1.2rem;cursor:pointer;line-height:1}html[data-theme=dark] .mermaid-zoom-inner{background:#1a1a1a}</style><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
+</script>
+<style>
+  .mermaid-wrapper {
+    position: relative;
+  }
+  .mermaid-zoom-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    width: 2em;
+    height: 2em;
+    font-size: 1.1em;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 2;
+  }
+  .mermaid-wrapper:hover .mermaid-zoom-btn,
+  .mermaid-wrapper:focus-within .mermaid-zoom-btn {
+    opacity: 1;
+  }
+  .mermaid-zoom-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+    padding: 2rem;
+  }
+  .mermaid-zoom-inner {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow: auto;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mermaid-zoom-close {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+  html[data-theme="dark"] .mermaid-zoom-inner {
+    background: #1a1a1a;
+  }
+</style>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

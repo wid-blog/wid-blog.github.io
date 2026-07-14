@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Container on wid's blog</title><link>https://wid-blog.github.io/en/tags/container/</link><description>Recent content in Container on wid's blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 10 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/en/tags/container/index.xml" rel="self" type="application/rss+xml"/><item><title>Kubernetes Fundamentals</title><link>https://wid-blog.github.io/en/posts/tech/infra/kubernetes-fundamentals/</link><pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/tech/infra/kubernetes-fundamentals/</guid><description>Container orchestration basics and what backend developers need to know: core objects, networking, scaling with HPA, and operational essentials.</description></item><item><title>Docker Container Fundamentals</title><link>https://wid-blog.github.io/en/posts/tech/infra/docker-container-fundamentals/</link><pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/tech/infra/docker-container-fundamentals/</guid><description>Covers container concepts, the differences from VMs, Docker&amp;rsquo;s architecture, and the basics of Dockerfile and Docker Compose.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Container on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/en/tags/container/</link>
+    <description>Recent content in Container on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 10 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/en/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Fundamentals</title>
+      <link>https://wid-blog.github.io/en/posts/tech/infra/kubernetes-fundamentals/</link>
+      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/tech/infra/kubernetes-fundamentals/</guid>
+      <description>Container orchestration basics and what backend developers need to know: core objects, networking, scaling with HPA, and operational essentials.</description>
+    </item>
+    <item>
+      <title>Docker Container Fundamentals</title>
+      <link>https://wid-blog.github.io/en/posts/tech/infra/docker-container-fundamentals/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/tech/infra/docker-container-fundamentals/</guid>
+      <description>Covers container concepts, the differences from VMs, Docker&amp;rsquo;s architecture, and the basics of Dockerfile and Docker Compose.</description>
+    </item>
+  </channel>
+</rss>

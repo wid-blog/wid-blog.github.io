@@ -1,1 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>아키텍처 on wid's blog</title><link>https://wid-blog.github.io/categories/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</link><description>Recent content in 아키텍처 on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Sat, 09 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/categories/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/index.xml" rel="self" type="application/rss+xml"/><item><title>Microservices Architecture</title><link>https://wid-blog.github.io/posts/tech/architecture/microservices-architecture/</link><pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/architecture/microservices-architecture/</guid><description>MSA 는 서비스를 어느 기준으로 가를 것인가의 결정이다. 도메인 경계, 데이터 소유권, 스케일 패턴, 장애 격리 — 어느 것을 우선하느냐가 경계를 만들고 통신과 데이터를 차례로 결정한다.</description></item><item><title>Event Sourcing and CQRS</title><link>https://wid-blog.github.io/posts/tech/architecture/event-sourcing-and-cqrs/</link><pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/architecture/event-sourcing-and-cqrs/</guid><description>ES 와 CQRS 는 시스템의 원본 데이터와 그 표현의 분리를 다룬다. 도입 비용이 시스템 전반에 분산되므로 채택 가치를 명시할 수 있을 때 채택할 만하다고 본다.</description></item><item><title>Distributed Transactions</title><link>https://wid-blog.github.io/posts/tech/architecture/distributed-transactions/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/architecture/distributed-transactions/</guid><description>분산 트랜잭션은 모놀리스의 단일 ACID 트랜잭션이 분산 환경에서 어떻게 분해되고, 그 조각을 어떻게 재조립하는가의 문제다. 2PC, Saga (Choreography vs Orchestration), Outbox 의 역할과 트레이드오프.</description></item><item><title>저지연 서비스의 SLA 설계와 운영</title><link>https://wid-blog.github.io/posts/tech/architecture/low-latency-sla/</link><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/architecture/low-latency-sla/</guid><description>SLA는 사후 모니터링으로 지켜지는 것이 아니라 설계로 만들어지고 운영으로 지켜진다. 저지연 서비스에서 SLI가 가용성이 아니라 p99 지연이 되는 순간, timeout budget·캐싱·degradation·격리·load shedding 이 SLA를 만들고, p99 SLO·Error Budget 소진율·headroom·배포 게이트·회고가 그것을 지킨다.</description></item><item><title>무중단 데이터 전환 패턴</title><link>https://wid-blog.github.io/posts/tech/architecture/zero-downtime-data-transition/</link><pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/architecture/zero-downtime-data-transition/</guid><description>이중 쓰기와 fallback 읽기를 조합하여 운영 중인 서비스의 데이터 형식을 무중단으로 전환하는 3단계 패턴을 정리한다.</description></item><item><title>Horizontal vs Vertical Slicing</title><link>https://wid-blog.github.io/posts/tech/architecture/horizontal-vertical-slicing/</link><pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/architecture/horizontal-vertical-slicing/</guid><description>코드를 기술 계층별로 나누는 수평 분할과, 기능/도메인별로 나누는 수직 분할의 차이를 정리한다. 각각의 장단점과 선택 기준.</description></item><item><title>Layered Architecture와 의존성 역전</title><link>https://wid-blog.github.io/posts/tech/architecture/layered-architecture/</link><pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/architecture/layered-architecture/</guid><description>레이어드 아키텍처는 기술적 책임 기준으로 코드를 수평 계층으로 나눈다. 4계층 구조의 각 역할, 의존성 방향 규칙, DIP로 계층 간 결합을 끊는 방법을 정리한다.</description></item><item><title>Go에서 Hexagonal Architecture 구현</title><link>https://wid-blog.github.io/posts/tech/architecture/go-hexagonal-architecture/</link><pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/architecture/go-hexagonal-architecture/</guid><description>Hexagonal Architecture의 핵심 개념과 Go에서의 관용적 구현. 암묵적 인터페이스와 패키지 구조를 활용한 의존성 방향 제어.</description></item><item><title>캐시 갱신 최적화 회고</title><link>https://wid-blog.github.io/posts/career/dable/ad-campaign-cache-optimization/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/dable/ad-campaign-cache-optimization/</guid><description>변경이 드문 캠페인 설정 데이터를 전량 갱신하던 캐시 구조를 개선하여 네트워크 비용을 줄이고 인스턴스를 스케일 다운한 과정을 기록한다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>아키텍처 on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/categories/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</link>
+    <description>Recent content in 아키텍처 on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 09 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/categories/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Microservices Architecture</title>
+      <link>https://wid-blog.github.io/posts/tech/architecture/microservices-architecture/</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/architecture/microservices-architecture/</guid>
+      <description>MSA 는 서비스를 어느 기준으로 가를 것인가의 결정이다. 도메인 경계, 데이터 소유권, 스케일 패턴, 장애 격리 — 어느 것을 우선하느냐가 경계를 만들고 통신과 데이터를 차례로 결정한다.</description>
+    </item>
+    <item>
+      <title>Event Sourcing and CQRS</title>
+      <link>https://wid-blog.github.io/posts/tech/architecture/event-sourcing-and-cqrs/</link>
+      <pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/architecture/event-sourcing-and-cqrs/</guid>
+      <description>ES 와 CQRS 는 시스템의 원본 데이터와 그 표현의 분리를 다룬다. 도입 비용이 시스템 전반에 분산되므로 채택 가치를 명시할 수 있을 때 채택할 만하다고 본다.</description>
+    </item>
+    <item>
+      <title>Distributed Transactions</title>
+      <link>https://wid-blog.github.io/posts/tech/architecture/distributed-transactions/</link>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/architecture/distributed-transactions/</guid>
+      <description>분산 트랜잭션은 모놀리스의 단일 ACID 트랜잭션이 분산 환경에서 어떻게 분해되고, 그 조각을 어떻게 재조립하는가의 문제다. 2PC, Saga (Choreography vs Orchestration), Outbox 의 역할과 트레이드오프.</description>
+    </item>
+    <item>
+      <title>저지연 서비스의 SLA 설계와 운영</title>
+      <link>https://wid-blog.github.io/posts/tech/architecture/low-latency-sla/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/architecture/low-latency-sla/</guid>
+      <description>SLA는 사후 모니터링으로 지켜지는 것이 아니라 설계로 만들어지고 운영으로 지켜진다. 저지연 서비스에서 SLI가 가용성이 아니라 p99 지연이 되는 순간, timeout budget·캐싱·degradation·격리·load shedding 이 SLA를 만들고, p99 SLO·Error Budget 소진율·headroom·배포 게이트·회고가 그것을 지킨다.</description>
+    </item>
+    <item>
+      <title>무중단 데이터 전환 패턴</title>
+      <link>https://wid-blog.github.io/posts/tech/architecture/zero-downtime-data-transition/</link>
+      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/architecture/zero-downtime-data-transition/</guid>
+      <description>이중 쓰기와 fallback 읽기를 조합하여 운영 중인 서비스의 데이터 형식을 무중단으로 전환하는 3단계 패턴을 정리한다.</description>
+    </item>
+    <item>
+      <title>Horizontal vs Vertical Slicing</title>
+      <link>https://wid-blog.github.io/posts/tech/architecture/horizontal-vertical-slicing/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/architecture/horizontal-vertical-slicing/</guid>
+      <description>코드를 기술 계층별로 나누는 수평 분할과, 기능/도메인별로 나누는 수직 분할의 차이를 정리한다. 각각의 장단점과 선택 기준.</description>
+    </item>
+    <item>
+      <title>Layered Architecture와 의존성 역전</title>
+      <link>https://wid-blog.github.io/posts/tech/architecture/layered-architecture/</link>
+      <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/architecture/layered-architecture/</guid>
+      <description>레이어드 아키텍처는 기술적 책임 기준으로 코드를 수평 계층으로 나눈다. 4계층 구조의 각 역할, 의존성 방향 규칙, DIP로 계층 간 결합을 끊는 방법을 정리한다.</description>
+    </item>
+    <item>
+      <title>Go에서 Hexagonal Architecture 구현</title>
+      <link>https://wid-blog.github.io/posts/tech/architecture/go-hexagonal-architecture/</link>
+      <pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/architecture/go-hexagonal-architecture/</guid>
+      <description>Hexagonal Architecture의 핵심 개념과 Go에서의 관용적 구현. 암묵적 인터페이스와 패키지 구조를 활용한 의존성 방향 제어.</description>
+    </item>
+    <item>
+      <title>캐시 갱신 최적화 회고</title>
+      <link>https://wid-blog.github.io/posts/career/dable/ad-campaign-cache-optimization/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/dable/ad-campaign-cache-optimization/</guid>
+      <description>변경이 드문 캠페인 설정 데이터를 전량 갱신하던 캐시 구조를 개선하여 네트워크 비용을 줄이고 인스턴스를 스케일 다운한 과정을 기록한다.</description>
+    </item>
+  </channel>
+</rss>

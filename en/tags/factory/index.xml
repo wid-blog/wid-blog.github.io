@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Factory on wid's blog</title><link>https://wid-blog.github.io/en/tags/factory/</link><description>Recent content in Factory on wid's blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 04 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/en/tags/factory/index.xml" rel="self" type="application/rss+xml"/><item><title>Factory</title><link>https://wid-blog.github.io/en/posts/tech/design-pattern/factory/</link><pubDate>Sun, 04 Feb 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/tech/design-pattern/factory/</guid><description>Factory&amp;rsquo;s shared intent is separating creation from use. The three variants — Factory Method, Abstract Factory, and Static Factory Method — split creation differently and suit different conditions. Static Factory Method is the variant most often encountered in practice, and DI containers absorb part of Factory&amp;rsquo;s explicit role.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Factory on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/en/tags/factory/</link>
+    <description>Recent content in Factory on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 04 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/en/tags/factory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Factory</title>
+      <link>https://wid-blog.github.io/en/posts/tech/design-pattern/factory/</link>
+      <pubDate>Sun, 04 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/tech/design-pattern/factory/</guid>
+      <description>Factory&amp;rsquo;s shared intent is separating creation from use. The three variants — Factory Method, Abstract Factory, and Static Factory Method — split creation differently and suit different conditions. Static Factory Method is the variant most often encountered in practice, and DI containers absorb part of Factory&amp;rsquo;s explicit role.</description>
+    </item>
+  </channel>
+</rss>

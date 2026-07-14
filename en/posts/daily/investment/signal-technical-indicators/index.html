@@ -1,48 +1,1343 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Technical Indicators and Trading Signals | wid's blog</title><meta name=keywords content="quant,technical-analysis,RSI,MACD,bollinger-bands,signal"><meta name=description content="Covers technical indicators (RSI, SMA Cross, MACD, Bollinger Bands) for reading price movements, composite signal design, and a comparison of three strategy types across different time horizons."><meta name=author content><link rel=canonical href=https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/><link crossorigin=anonymous href=/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as=style><link rel=icon href=https://wid-blog.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://wid-blog.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://wid-blog.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://wid-blog.github.io/apple-touch-icon.png><link rel=mask-icon href=https://wid-blog.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=ko href=https://wid-blog.github.io/posts/daily/investment/signal-technical-indicators/><link rel=alternate hreflang=en href=https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><style>:root{--main-width:min(1024px, 90vw)}.nav{display:flex;justify-content:space-between;align-items:center}.logo{display:flex;align-items:center;gap:.75rem}.header-right{display:flex;align-items:center;gap:.75rem}.header-right .lang-switch{display:flex;list-style:none;padding:0;margin:0;gap:.5rem}.header-right .lang-switch a{font-size:.875rem;color:var(--secondary)}.header-right .lang-switch a:hover{color:var(--primary)}.header-social{color:var(--secondary);display:flex;align-items:center}.header-social:hover{color:var(--primary)}.page-header h1{display:none}.post-entry,.first-entry{border:1px solid var(--border)!important;transition:border-color .15s}.post-entry:hover,.first-entry:hover{border-color:var(--primary)}.breadcrumbs{display:flex;align-items:center;gap:.5rem;font-size:.875rem}.breadcrumb-separator{color:var(--secondary);font-weight:400;user-select:none;font-size:1rem;line-height:1}.breadcrumb-current{font-weight:600;color:var(--primary)}.post-content h2{margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--border)}.post-content h3{margin-top:1.75rem}.layout-wrapper{display:flex;max-width:var(--main-width);margin:0 auto;padding:0 var(--gap)}.layout-wrapper .main{flex:1;min-width:0;margin:0;padding:0}.sidebar{position:sticky;top:var(--header-height,80px);align-self:flex-start;width:220px;flex-shrink:0;margin-right:2rem;padding-top:1rem;max-height:calc(100vh - var(--header-height,80px));overflow-y:auto}.sidebar-nav{font-size:.875rem;line-height:1.6}.sidebar-tree,.sidebar-children{list-style:none;padding:0;margin:0}.sidebar-children{padding-left:1rem;display:none}.sidebar-children.expanded{display:block}.sidebar-item-header{display:flex;align-items:center;gap:.25rem;padding:.2rem 0}.sidebar-toggle-btn{background:0 0;border:none;cursor:pointer;padding:2px;display:flex;align-items:center;color:var(--secondary);border-radius:4px;transition:background .15s}.sidebar-toggle-btn:hover{background:var(--code-bg)}.sidebar-chevron{transition:transform .2s ease}.sidebar-toggle-btn.open .sidebar-chevron{transform:rotate(90deg)}.sidebar-link{color:var(--secondary);text-decoration:none;transition:color .15s;display:flex;align-items:center;gap:.4rem}.sidebar-link:hover{color:var(--primary)}.sidebar-item.active>.sidebar-item-header .sidebar-link{color:var(--primary);font-weight:600}.sidebar-item.ancestor>.sidebar-item-header .sidebar-link{color:var(--primary)}.sidebar-count{display:inline-block;min-width:1.25rem;padding:.05rem .4rem;margin-left:.35rem;font-size:.7rem;font-weight:600;line-height:1.3;text-align:center;color:var(--primary);background:var(--code-bg);border-radius:.75rem}.sidebar-item.ancestor>.sidebar-item-header .sidebar-count,.sidebar-item.active>.sidebar-item-header .sidebar-count{color:var(--theme);background:var(--primary)}.sidebar-toggle{display:none;position:fixed;bottom:1.5rem;left:1.5rem;z-index:200;background:var(--theme);border:1px solid var(--border);border-radius:50%;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);color:var(--primary)}@media(max-width:768px){.layout-wrapper{display:block}.sidebar{position:fixed;top:0;left:0;width:260px;height:100vh;max-height:100vh;margin:0;padding:1rem;padding-top:calc(var(--header-height,80px) + 1rem);background:var(--theme);border-right:1px solid var(--border);z-index:100;transform:translateX(-100%);transition:transform .25s ease}.sidebar.open{transform:translateX(0)}.sidebar-toggle{display:flex}.sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:99;display:none}.sidebar-overlay.active{display:block}}.post-related{margin-top:40px}.post-related-title{font-size:1rem;font-weight:600;margin:0 0 14px;color:var(--primary)}.post-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.post-related-grid .post-related-entry{margin-bottom:0}.post-related-grid .post-related-entry .entry-header h2{font-size:18px;line-height:1.35}.post-related-grid .post-related-entry .entry-content{-webkit-line-clamp:3}@media(max-width:768px){.post-related-grid{grid-template-columns:1fr}}.post-header{padding-bottom:20px;margin-bottom:32px;border-bottom:1px solid var(--border)}.toc .toc-heading{margin-inline-start:10px;font-weight:500;user-select:none}.post-tags li{position:relative}.post-tags a{padding:0 14px 0 22px;border:none;border-radius:0 var(--radius)var(--radius)0;clip-path:polygon(10px 0,100% 0,100% 100%,10px 100%,0 50%)}.post-tags.entry-tags{position:relative;z-index:2;margin-top:14px;gap:8px}.post-tags.entry-tags a{font-size:12px;line-height:26px;padding:0 12px 0 20px}.post-tags li::before{content:"";position:absolute;left:8px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:var(--theme);z-index:1;pointer-events:none}.tag-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}.tag-chip{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .75rem;font-size:.8rem;line-height:1.4;color:var(--secondary);background:var(--code-bg);border:1px solid var(--border);border-radius:1rem;cursor:pointer;transition:all .15s;font-family:inherit}.tag-chip:hover{color:var(--primary);border-color:var(--primary)}.tag-chip.active{color:var(--theme);background:var(--primary);border-color:var(--primary)}.tag-chip-count{font-size:.7rem;opacity:.7}.tag-chip.active .tag-chip-count{opacity:.9}article.tag-hidden{display:none}</style><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".sidebar-toggle-btn").forEach(function(e){e.addEventListener("click",function(){var e,t=this.classList.toggle("open");this.setAttribute("aria-expanded",t),e=this.closest(".sidebar-item").querySelector(".sidebar-children"),e&&e.classList.toggle("expanded",t)})});var e,t,s,o,r,i=document.getElementById("sidebar-toggle"),n=document.getElementById("sidebar");if(i&&n){e=document.createElement("div"),e.className="sidebar-overlay",document.body.appendChild(e);function c(){n.classList.add("open"),e.classList.add("active")}function a(){n.classList.remove("open"),e.classList.remove("active")}i.addEventListener("click",function(){n.classList.contains("open")?a():c()}),e.addEventListener("click",a)}if(s=document.getElementById("tag-filter"),s){r=s.querySelectorAll(".tag-chip"),o=document.querySelectorAll("article[data-tags]"),t=new Set;function l(){if(t.size===0){o.forEach(function(e){e.classList.remove("tag-hidden")});return}o.forEach(function(e){var s=(e.getAttribute("data-tags")||"").split(","),n=!1;t.forEach(function(e){s.indexOf(e)!==-1&&(n=!0)}),e.classList.toggle("tag-hidden",!n)})}r.forEach(function(e){e.addEventListener("click",function(){var e=this.getAttribute("data-tag");t.has(e)?(t.delete(e),this.classList.remove("active")):(t.add(e),this.classList.add("active")),l()})})}})</script><meta property="og:url" content="https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/"><meta property="og:site_name" content="wid's blog"><meta property="og:title" content="Technical Indicators and Trading Signals"><meta property="og:description" content="Covers technical indicators (RSI, SMA Cross, MACD, Bollinger Bands) for reading price movements, composite signal design, and a comparison of three strategy types across different time horizons."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-09-01T00:00:00+00:00"><meta property="article:modified_time" content="2025-09-01T00:00:00+00:00"><meta property="article:tag" content="Quant"><meta property="article:tag" content="Technical-Analysis"><meta property="article:tag" content="RSI"><meta property="article:tag" content="MACD"><meta property="article:tag" content="Bollinger-Bands"><meta property="article:tag" content="Signal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Technical Indicators and Trading Signals"><meta name=twitter:description content="Covers technical indicators (RSI, SMA Cross, MACD, Bollinger Bands) for reading price movements, composite signal design, and a comparison of three strategy types across different time horizons."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://wid-blog.github.io/en/posts/"},{"@type":"ListItem","position":2,"name":"Daily","item":"https://wid-blog.github.io/en/posts/daily/"},{"@type":"ListItem","position":3,"name":"Investment","item":"https://wid-blog.github.io/en/posts/daily/investment/"},{"@type":"ListItem","position":4,"name":"Technical Indicators and Trading Signals","item":"https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Technical Indicators and Trading Signals","name":"Technical Indicators and Trading Signals","description":"Covers technical indicators (RSI, SMA Cross, MACD, Bollinger Bands) for reading price movements, composite signal design, and a comparison of three strategy types across different time horizons.","keywords":["quant","technical-analysis","RSI","MACD","bollinger-bands","signal"],"articleBody":"“Which stocks to buy” and “when to buy and sell” are different questions. The indicators covered in previous posts — PER, ROE, momentum, dividend yield — answer the first. They evaluate a company’s value and quality. Answering the second requires reading price movements directly. Technical indicators serve that purpose.\nTechnical Indicators RSI (Relative Strength Index) RS = Average Gain / Average Loss RSI = 100 - (100 / (1 + RS)) Compares the magnitude of price gains versus losses over a period (typically 14 days). Produces a value between 0 and 100.\nRSI \u003c 30 indicates an oversold condition. The decline has been large enough that a rebound is possible. Read as a buy signal. RSI \u003e 70 indicates an overbought condition. The rise has been large enough that a decline is possible. Read as a sell signal.\n30/70 are not absolute thresholds. In strong uptrends, RSI can stay above 70 and keep rising. Adjusting to 20/80 or combining with other indicators helps reduce false signals.\nSMA Cross (Moving Average Crossover) SMA(N) = Average of closing prices over the last N days The Simple Moving Average (SMA) is the arithmetic mean of closing prices over N days. Crossovers between short-term and long-term SMAs identify trend reversals.\nGolden cross. The short-term SMA crosses above the long-term SMA. Signals an uptrend. Buy signal. Death cross. The opposite. The short-term crosses below the long-term. Signals a downtrend. Sell signal.\nCommon period combinations are 5/20 (short-term), 20/60 (medium-term), and 50/200 (long-term). Shorter periods produce faster signals but also more false ones.\nMACD (Moving Average Convergence Divergence) MACD Line = 12-day EMA - 26-day EMA Signal Line = 9-day EMA of MACD Line Histogram = MACD Line - Signal Line Developed by Gerald Appel. Uses Exponential Moving Averages (EMA) to capture both trend direction and strength. EMA gives more weight to recent data than SMA.\nWhen the MACD Line crosses above the Signal Line, it is a buy signal. Crosses below, a sell signal. The histogram visualizes the gap between the two lines. A transition from positive to negative (or vice versa) also signals a trend change.\nSimilar principle to SMA Cross, but responds more quickly to price changes because of EMA.\nBollinger Bands Middle Band = 20-day SMA Upper Band = Middle Band + (2 × Standard Deviation) Lower Band = Middle Band - (2 × Standard Deviation) Developed by John Bollinger. Expresses price volatility as bands around a moving average. Since standard deviation is used, bands widen when volatility is high and narrow when low.\nPrice breaks below the lower band — oversold. Buy signal. Breaks above the upper band — overbought. Sell signal. About 95% of price action stays within the bands statistically.\nA narrowing band (squeeze) indicates low volatility. A significant price move may follow. Direction is unknown, so enter after confirming the breakout direction.\nComposite Signals Four indicators covered. They share a common limitation. Trading on any single indicator is vulnerable to false signals. RSI can drop below 30 and keep falling. A golden cross can quickly reverse into a death cross. Combining multiple indicators reduces these false signals.\nWeighted Combination Assign a weight to each indicator. When the sum of triggered weights meets a threshold relative to total weights, fire a composite signal.\nSignal condition: sum of triggered weights / total weights ≥ threshold (e.g., 0.5) Example: combining RSI (weight 0.3), SMA Cross (weight 0.3), and MACD (weight 0.4). If RSI and MACD both trigger buy signals, (0.3 + 0.4) / 1.0 = 0.7. Above the 0.5 threshold, so a composite buy signal fires.\nLower threshold means higher sensitivity. Higher threshold means more conservative. This tension is tuned against historical data.\nCooldown Prevents consecutive signals on the same ticker. Once a signal fires, signals for that ticker are ignored for a set period (e.g., 300 seconds).\nWithout cooldown, high-volatility periods generate repeated buy-sell signals. Unnecessary transaction costs accumulate.\nThree Strategy Types The technical indicators covered here belong to one of several strategy types in quantitative investing. The factor indicators from previous posts belong to another. Each type operates on a different time horizon.\nStrategy Type Decision Basis Time Horizon Stock Selection Signal (Technical) RSI, MACD, and other technical indicators Seconds/minutes (real-time) Fixed (user-specified) Factor (Screening) PER, ROE, and other factor scores Monthly/quarterly (rebalancing) Dynamic (rotated each rebalancing) Asset Allocation Drift from target weights When weight band is breached Fixed (asset class level) Signal strategies receive real-time price data and determine buy/sell decisions using technical indicators. RSI, SMA Cross, MACD, and Bollinger Bands covered in this post belong here. Operates on the shortest time horizon.\nFactor strategies score stocks using factors from previous posts (PER, ROE, momentum, etc.). Select the top N stocks at each rebalancing. Monthly or quarterly cycles.\nAsset Allocation strategies set target weights per holding. Rebalance when current weights drift outside a band. Holdings remain fixed unless the target weights change.\nThe three are not mutually exclusive. Select stocks via Factor, manage asset class weights via Asset Allocation, time entries and exits via Signal.\nTechnical indicators are tools for reading buy/sell signals from price movements. But knowing the tools and designing a strategy are different things. Choosing which indicators to combine and which strategy type to use — that is the design work.\nThis series started from stock data basics, progressed through company evaluation indicators, market trend indicators, portfolio construction, and price-based technical indicators. The next step is applying these to real data — building and validating strategies firsthand.\nReferences Investopedia — RSI Investopedia — Moving Average (SMA) Investopedia — MACD Investopedia — Bollinger Bands J. Welles Wilder Jr., New Concepts in Technical Trading Systems (1978) Gerald Appel, Technical Analysis: Power Tools for Active Investors (2005) John Bollinger, Bollinger on Bollinger Bands (2001) ","wordCount":"956","inLanguage":"en","datePublished":"2025-09-01T00:00:00Z","dateModified":"2025-09-01T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/"},"publisher":{"@type":"Organization","name":"wid's blog","logo":{"@type":"ImageObject","url":"https://wid-blog.github.io/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://wid-blog.github.io/en/ accesskey=h title="wid's blog (Alt + H)">wid's blog</a>
-<a href=https://github.com/byunghak target=_blank rel="noopener noreferrer" aria-label=GitHub class=header-social><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
-</a><a href=https://www.linkedin.com/in/byunhak082/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn class=header-social><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div><div class=header-right><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><ul class=lang-switch><li><a href=https://wid-blog.github.io/posts/daily/investment/signal-technical-indicators/ title=한국어 aria-label=한국어>Ko</a></li></ul></div></nav></header><div class=layout-wrapper><aside class=sidebar id=sidebar><button class=sidebar-toggle id=sidebar-toggle aria-label="메뉴 열기/닫기">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><nav class=sidebar-nav id=sidebar-nav><ul class=sidebar-tree><li class="sidebar-item has-children"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/en/posts/tech/ class=sidebar-link>Tech
-<span class=sidebar-count>49</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/algorithm/ class=sidebar-link>Algorithm
-<span class=sidebar-count>2</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/network/ class=sidebar-link>Network
-<span class=sidebar-count>5</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/architecture/ class=sidebar-link>Architecture
-<span class=sidebar-count>8</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/devenv/ class=sidebar-link>Workflow
-<span class=sidebar-count>6</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/security/ class=sidebar-link>Security
-<span class=sidebar-count>3</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/ml/ class=sidebar-link>Machine Learning
-<span class=sidebar-count>3</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/design-pattern/ class=sidebar-link>Design Pattern
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/infra/ class=sidebar-link>Infra
-<span class=sidebar-count>6</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/language/ class=sidebar-link>Language
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/database/ class=sidebar-link>Database
-<span class=sidebar-count>2</span></a></div></li></ul></li><li class="sidebar-item has-children"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/en/posts/career/ class=sidebar-link>Career
-<span class=sidebar-count>18</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/dable/ class=sidebar-link>Dable
-<span class=sidebar-count>10</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/personal/ class=sidebar-link>Personal Project
-<span class=sidebar-count>4</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/startup/ class=sidebar-link>Startup
-<span class=sidebar-count>2</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/hackathon/ class=sidebar-link>Hackathon
-<span class=sidebar-count>2</span></a></div></li></ul></li><li class="sidebar-item has-children ancestor"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/en/posts/daily/ class=sidebar-link>Daily
-<span class=sidebar-count>8</span></a></div><ul class="sidebar-children expanded"><li class="sidebar-item ancestor"><div class=sidebar-item-header><a href=/en/posts/daily/investment/ class=sidebar-link>Investment
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/daily/notes/ class=sidebar-link>Notes
-<span class=sidebar-count>1</span></a></div></li></ul></li></ul></nav></aside><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://wid-blog.github.io/en/posts/daily/>Daily</a><span class=breadcrumb-separator aria-hidden=true>›</span><a href=https://wid-blog.github.io/en/posts/daily/investment/>Investment</a><span class=breadcrumb-separator aria-hidden=true>›</span><span class=breadcrumb-current>Technical Indicators and Trading Signals</span></div><h1 class="post-title entry-hint-parent">Technical Indicators and Trading Signals</h1><div class=post-meta><span title='2025-09-01 00:00:00 +0000 UTC'>September 1, 2025</span>&nbsp;·&nbsp;<span>5 min read</span></div></header><div class=toc><div class=toc-heading>Table of Contents</div><div class=inner><ul><li><a href=#technical-indicators aria-label="Technical Indicators">Technical Indicators</a><ul><li><a href=#rsi-relative-strength-index aria-label="RSI (Relative Strength Index)">RSI (Relative Strength Index)</a></li><li><a href=#sma-cross-moving-average-crossover aria-label="SMA Cross (Moving Average Crossover)">SMA Cross (Moving Average Crossover)</a></li><li><a href=#macd-moving-average-convergence-divergence aria-label="MACD (Moving Average Convergence Divergence)">MACD (Moving Average Convergence Divergence)</a></li><li><a href=#bollinger-bands aria-label="Bollinger Bands">Bollinger Bands</a></li></ul></li><li><a href=#composite-signals aria-label="Composite Signals">Composite Signals</a><ul><li><a href=#weighted-combination aria-label="Weighted Combination">Weighted Combination</a></li><li><a href=#cooldown aria-label=Cooldown>Cooldown</a></li></ul></li><li><a href=#three-strategy-types aria-label="Three Strategy Types">Three Strategy Types</a></li><li><a href=#references aria-label=References>References</a></li></ul></div></div><div class=post-content><p>&ldquo;Which stocks to buy&rdquo; and &ldquo;when to buy and sell&rdquo; are different questions. The indicators covered in previous posts — PER, ROE, momentum, dividend yield — answer the first. They evaluate a company&rsquo;s value and quality. Answering the second requires reading price movements directly. Technical indicators serve that purpose.</p><h2 id=technical-indicators>Technical Indicators<a hidden class=anchor aria-hidden=true href=#technical-indicators>#</a></h2><h3 id=rsi-relative-strength-index>RSI (Relative Strength Index)<a hidden class=anchor aria-hidden=true href=#rsi-relative-strength-index>#</a></h3><pre tabindex=0><code>RS = Average Gain / Average Loss
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Technical Indicators and Trading Signals | wid&#39;s blog</title>
+<meta name="keywords" content="quant, technical-analysis, RSI, MACD, bollinger-bands, signal">
+<meta name="description" content="Covers technical indicators (RSI, SMA Cross, MACD, Bollinger Bands) for reading price movements, composite signal design, and a comparison of three strategy types across different time horizons.">
+<meta name="author" content="">
+<link rel="canonical" href="https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://wid-blog.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://wid-blog.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://wid-blog.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://wid-blog.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://wid-blog.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ko" href="https://wid-blog.github.io/posts/daily/investment/signal-technical-indicators/">
+<link rel="alternate" hreflang="en" href="https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><style>
+  :root {
+    --main-width: min(1024px, 90vw);
+  }
+
+   
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .header-right .lang-switch {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+  }
+
+  .header-right .lang-switch a {
+    font-size: 0.875rem;
+    color: var(--secondary);
+  }
+
+  .header-right .lang-switch a:hover {
+    color: var(--primary);
+  }
+
+  .header-social {
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+  }
+
+  .header-social:hover {
+    color: var(--primary);
+  }
+
+   
+  .page-header h1 {
+    display: none;
+  }
+
+   
+  .post-entry,
+  .first-entry {
+    border: 1px solid var(--border) !important;
+    transition: border-color 0.15s;
+  }
+
+  .post-entry:hover,
+  .first-entry:hover {
+    border-color: var(--primary);
+  }
+
+   
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb-separator {
+    color: var(--secondary);
+    font-weight: 400;
+    user-select: none;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .breadcrumb-current {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+   
+  .post-content h2 {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .post-content h3 {
+    margin-top: 1.75rem;
+  }
+
+   
+  .layout-wrapper {
+    display: flex;
+    max-width: var(--main-width);
+    margin: 0 auto;
+    padding: 0 var(--gap);
+  }
+
+  .layout-wrapper .main {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+   
+  .sidebar {
+    position: sticky;
+    top: var(--header-height, 80px);
+    align-self: flex-start;
+    width: 220px;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    padding-top: 1rem;
+    max-height: calc(100vh - var(--header-height, 80px));
+    overflow-y: auto;
+  }
+
+  .sidebar-nav {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .sidebar-tree,
+  .sidebar-children {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-children {
+    padding-left: 1rem;
+    display: none;
+  }
+
+  .sidebar-children.expanded {
+    display: block;
+  }
+
+   
+  .sidebar-item-header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0;
+  }
+
+   
+  .sidebar-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    color: var(--secondary);
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+
+  .sidebar-toggle-btn:hover {
+    background: var(--code-bg);
+  }
+
+  .sidebar-chevron {
+    transition: transform 0.2s ease;
+  }
+
+  .sidebar-toggle-btn.open .sidebar-chevron {
+    transform: rotate(90deg);
+  }
+
+   
+  .sidebar-link {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .sidebar-link:hover {
+    color: var(--primary);
+  }
+
+  .sidebar-item.active > .sidebar-item-header .sidebar-link {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .sidebar-item.ancestor > .sidebar-item-header .sidebar-link {
+    color: var(--primary);
+  }
+
+   
+  .sidebar-count {
+    display: inline-block;
+    min-width: 1.25rem;
+    padding: 0.05rem 0.4rem;
+    margin-left: 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    color: var(--primary);
+    background: var(--code-bg);
+    border-radius: 0.75rem;
+  }
+
+  .sidebar-item.ancestor > .sidebar-item-header .sidebar-count,
+  .sidebar-item.active > .sidebar-item-header .sidebar-count {
+    color: var(--theme);
+    background: var(--primary);
+  }
+
+   
+  .sidebar-toggle {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 200;
+    background: var(--theme);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    color: var(--primary);
+  }
+
+   
+  @media (max-width: 768px) {
+    .layout-wrapper {
+      display: block;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      padding-top: calc(var(--header-height, 80px) + 1rem);
+      background: var(--theme);
+      border-right: 1px solid var(--border);
+      z-index: 100;
+      transform: translateX(-100%);
+      transition: transform 0.25s ease;
+    }
+
+    .sidebar.open {
+      transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+      display: flex;
+    }
+
+    .sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 99;
+      display: none;
+    }
+
+    .sidebar-overlay.active {
+      display: block;
+    }
+  }
+
+   
+  .post-related {
+    margin-top: 40px;
+  }
+
+  .post-related-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 14px;
+    color: var(--primary);
+  }
+
+  .post-related-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+   
+  .post-related-grid .post-related-entry {
+    margin-bottom: 0;
+  }
+
+  .post-related-grid .post-related-entry .entry-header h2 {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .post-related-grid .post-related-entry .entry-content {
+    -webkit-line-clamp: 3;
+  }
+
+  @media (max-width: 768px) {
+    .post-related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+   
+  .post-header {
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+   
+  .toc .toc-heading {
+    margin-inline-start: 10px;
+    font-weight: 500;
+    user-select: none;
+  }
+
+   
+  .post-tags li {
+    position: relative;
+  }
+
+  .post-tags a {
+    padding: 0 14px 0 22px;
+    border: none;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 50%);
+  }
+
+   
+  .post-tags.entry-tags {
+    position: relative;
+    z-index: 2;
+    margin-top: 14px;
+    gap: 8px;
+  }
+
+  .post-tags.entry-tags a {
+    font-size: 12px;
+    line-height: 26px;
+    padding: 0 12px 0 20px;
+  }
+
+  .post-tags li::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    margin-top: -2.5px;
+    border-radius: 50%;
+    background: var(--theme);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+   
+  .tag-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--secondary);
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+
+  .tag-chip:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .tag-chip.active {
+    color: var(--theme);
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .tag-chip-count {
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+
+  .tag-chip.active .tag-chip-count {
+    opacity: 0.9;
+  }
+
+   
+  article.tag-hidden {
+    display: none;
+  }
+</style><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    
+    document.querySelectorAll(".sidebar-toggle-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var isOpen = this.classList.toggle("open");
+        this.setAttribute("aria-expanded", isOpen);
+        var children =
+          this.closest(".sidebar-item").querySelector(".sidebar-children");
+        if (children) {
+          children.classList.toggle("expanded", isOpen);
+        }
+      });
+    });
+
+    
+    var toggle = document.getElementById("sidebar-toggle");
+    var sidebar = document.getElementById("sidebar");
+    if (toggle && sidebar) {
+      var overlay = document.createElement("div");
+      overlay.className = "sidebar-overlay";
+      document.body.appendChild(overlay);
+
+      function openSidebar() {
+        sidebar.classList.add("open");
+        overlay.classList.add("active");
+      }
+      function closeSidebar() {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("active");
+      }
+
+      toggle.addEventListener("click", function () {
+        if (sidebar.classList.contains("open")) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+      overlay.addEventListener("click", closeSidebar);
+    }
+
+    
+    var filterContainer = document.getElementById("tag-filter");
+    if (filterContainer) {
+      var chips = filterContainer.querySelectorAll(".tag-chip");
+      var articles = document.querySelectorAll("article[data-tags]");
+      var activeTags = new Set();
+
+      function applyFilter() {
+        if (activeTags.size === 0) {
+          articles.forEach(function (a) {
+            a.classList.remove("tag-hidden");
+          });
+          return;
+        }
+        articles.forEach(function (a) {
+          var tags = (a.getAttribute("data-tags") || "").split(",");
+          var match = false;
+          activeTags.forEach(function (t) {
+            if (tags.indexOf(t) !== -1) {
+              match = true;
+            }
+          });
+          a.classList.toggle("tag-hidden", !match);
+        });
+      }
+
+      chips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          var tag = this.getAttribute("data-tag");
+          if (activeTags.has(tag)) {
+            activeTags.delete(tag);
+            this.classList.remove("active");
+          } else {
+            activeTags.add(tag);
+            this.classList.add("active");
+          }
+          applyFilter();
+        });
+      });
+    }
+  });
+</script>
+<meta property="og:url" content="https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/">
+  <meta property="og:site_name" content="wid&#39;s blog">
+  <meta property="og:title" content="Technical Indicators and Trading Signals">
+  <meta property="og:description" content="Covers technical indicators (RSI, SMA Cross, MACD, Bollinger Bands) for reading price movements, composite signal design, and a comparison of three strategy types across different time horizons.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-09-01T00:00:00+00:00">
+    <meta property="article:tag" content="Quant">
+    <meta property="article:tag" content="Technical-Analysis">
+    <meta property="article:tag" content="RSI">
+    <meta property="article:tag" content="MACD">
+    <meta property="article:tag" content="Bollinger-Bands">
+    <meta property="article:tag" content="Signal">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Technical Indicators and Trading Signals">
+  <meta name="twitter:description" content="Covers technical indicators (RSI, SMA Cross, MACD, Bollinger Bands) for reading price movements, composite signal design, and a comparison of three strategy types across different time horizons.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://wid-blog.github.io/en/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Daily",
+      "item": "https://wid-blog.github.io/en/posts/daily/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Investment",
+      "item": "https://wid-blog.github.io/en/posts/daily/investment/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  4 ,
+      "name": "Technical Indicators and Trading Signals",
+      "item": "https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Technical Indicators and Trading Signals",
+  "name": "Technical Indicators and Trading Signals",
+  "description": "Covers technical indicators (RSI, SMA Cross, MACD, Bollinger Bands) for reading price movements, composite signal design, and a comparison of three strategy types across different time horizons.",
+  "keywords": [
+    "quant", "technical-analysis", "RSI", "MACD", "bollinger-bands", "signal"
+  ],
+  "articleBody": "“Which stocks to buy” and “when to buy and sell” are different questions. The indicators covered in previous posts — PER, ROE, momentum, dividend yield — answer the first. They evaluate a company’s value and quality. Answering the second requires reading price movements directly. Technical indicators serve that purpose.\nTechnical Indicators RSI (Relative Strength Index) RS = Average Gain / Average Loss RSI = 100 - (100 / (1 + RS)) Compares the magnitude of price gains versus losses over a period (typically 14 days). Produces a value between 0 and 100.\nRSI \u003c 30 indicates an oversold condition. The decline has been large enough that a rebound is possible. Read as a buy signal. RSI \u003e 70 indicates an overbought condition. The rise has been large enough that a decline is possible. Read as a sell signal.\n30/70 are not absolute thresholds. In strong uptrends, RSI can stay above 70 and keep rising. Adjusting to 20/80 or combining with other indicators helps reduce false signals.\nSMA Cross (Moving Average Crossover) SMA(N) = Average of closing prices over the last N days The Simple Moving Average (SMA) is the arithmetic mean of closing prices over N days. Crossovers between short-term and long-term SMAs identify trend reversals.\nGolden cross. The short-term SMA crosses above the long-term SMA. Signals an uptrend. Buy signal. Death cross. The opposite. The short-term crosses below the long-term. Signals a downtrend. Sell signal.\nCommon period combinations are 5/20 (short-term), 20/60 (medium-term), and 50/200 (long-term). Shorter periods produce faster signals but also more false ones.\nMACD (Moving Average Convergence Divergence) MACD Line = 12-day EMA - 26-day EMA Signal Line = 9-day EMA of MACD Line Histogram = MACD Line - Signal Line Developed by Gerald Appel. Uses Exponential Moving Averages (EMA) to capture both trend direction and strength. EMA gives more weight to recent data than SMA.\nWhen the MACD Line crosses above the Signal Line, it is a buy signal. Crosses below, a sell signal. The histogram visualizes the gap between the two lines. A transition from positive to negative (or vice versa) also signals a trend change.\nSimilar principle to SMA Cross, but responds more quickly to price changes because of EMA.\nBollinger Bands Middle Band = 20-day SMA Upper Band = Middle Band + (2 × Standard Deviation) Lower Band = Middle Band - (2 × Standard Deviation) Developed by John Bollinger. Expresses price volatility as bands around a moving average. Since standard deviation is used, bands widen when volatility is high and narrow when low.\nPrice breaks below the lower band — oversold. Buy signal. Breaks above the upper band — overbought. Sell signal. About 95% of price action stays within the bands statistically.\nA narrowing band (squeeze) indicates low volatility. A significant price move may follow. Direction is unknown, so enter after confirming the breakout direction.\nComposite Signals Four indicators covered. They share a common limitation. Trading on any single indicator is vulnerable to false signals. RSI can drop below 30 and keep falling. A golden cross can quickly reverse into a death cross. Combining multiple indicators reduces these false signals.\nWeighted Combination Assign a weight to each indicator. When the sum of triggered weights meets a threshold relative to total weights, fire a composite signal.\nSignal condition: sum of triggered weights / total weights ≥ threshold (e.g., 0.5) Example: combining RSI (weight 0.3), SMA Cross (weight 0.3), and MACD (weight 0.4). If RSI and MACD both trigger buy signals, (0.3 + 0.4) / 1.0 = 0.7. Above the 0.5 threshold, so a composite buy signal fires.\nLower threshold means higher sensitivity. Higher threshold means more conservative. This tension is tuned against historical data.\nCooldown Prevents consecutive signals on the same ticker. Once a signal fires, signals for that ticker are ignored for a set period (e.g., 300 seconds).\nWithout cooldown, high-volatility periods generate repeated buy-sell signals. Unnecessary transaction costs accumulate.\nThree Strategy Types The technical indicators covered here belong to one of several strategy types in quantitative investing. The factor indicators from previous posts belong to another. Each type operates on a different time horizon.\nStrategy Type Decision Basis Time Horizon Stock Selection Signal (Technical) RSI, MACD, and other technical indicators Seconds/minutes (real-time) Fixed (user-specified) Factor (Screening) PER, ROE, and other factor scores Monthly/quarterly (rebalancing) Dynamic (rotated each rebalancing) Asset Allocation Drift from target weights When weight band is breached Fixed (asset class level) Signal strategies receive real-time price data and determine buy/sell decisions using technical indicators. RSI, SMA Cross, MACD, and Bollinger Bands covered in this post belong here. Operates on the shortest time horizon.\nFactor strategies score stocks using factors from previous posts (PER, ROE, momentum, etc.). Select the top N stocks at each rebalancing. Monthly or quarterly cycles.\nAsset Allocation strategies set target weights per holding. Rebalance when current weights drift outside a band. Holdings remain fixed unless the target weights change.\nThe three are not mutually exclusive. Select stocks via Factor, manage asset class weights via Asset Allocation, time entries and exits via Signal.\nTechnical indicators are tools for reading buy/sell signals from price movements. But knowing the tools and designing a strategy are different things. Choosing which indicators to combine and which strategy type to use — that is the design work.\nThis series started from stock data basics, progressed through company evaluation indicators, market trend indicators, portfolio construction, and price-based technical indicators. The next step is applying these to real data — building and validating strategies firsthand.\nReferences Investopedia — RSI Investopedia — Moving Average (SMA) Investopedia — MACD Investopedia — Bollinger Bands J. Welles Wilder Jr., New Concepts in Technical Trading Systems (1978) Gerald Appel, Technical Analysis: Power Tools for Active Investors (2005) John Bollinger, Bollinger on Bollinger Bands (2001) ",
+  "wordCount" : "956",
+  "inLanguage": "en",
+  "datePublished": "2025-09-01T00:00:00Z",
+  "dateModified": "2025-09-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "wid's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wid-blog.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://wid-blog.github.io/en/" accesskey="h" title="wid&#39;s blog (Alt + H)">wid&#39;s blog</a>
+            <a href="https://github.com/byunghak" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="header-social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/byunhak082/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="header-social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+        </div>
+        <div class="header-right">
+            <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+                <ul class="lang-switch">
+                    <li>
+                        <a href="https://wid-blog.github.io/posts/daily/investment/signal-technical-indicators/" title="한국어"
+                            aria-label="한국어">Ko</a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+</header>
+<div class="layout-wrapper">
+<aside class="sidebar" id="sidebar">
+  <button
+    class="sidebar-toggle"
+    id="sidebar-toggle"
+    aria-label="메뉴 열기/닫기"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+  <nav class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-tree">
+<li
+  class="sidebar-item has-children"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/en/posts/tech/" class="sidebar-link">
+      Tech
+      <span class="sidebar-count">52</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/language/" class="sidebar-link">
+      Language
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/algorithm/" class="sidebar-link">
+      Algorithm
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/network/" class="sidebar-link">
+      Network
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/architecture/" class="sidebar-link">
+      Architecture
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/devenv/" class="sidebar-link">
+      Workflow
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/security/" class="sidebar-link">
+      Security
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/ml/" class="sidebar-link">
+      Machine Learning
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/design-pattern/" class="sidebar-link">
+      Design Pattern
+      <span class="sidebar-count">7</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/infra/" class="sidebar-link">
+      Infra
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/database/" class="sidebar-link">
+      Database
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+<li
+  class="sidebar-item has-children"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/en/posts/career/" class="sidebar-link">
+      Career
+      <span class="sidebar-count">18</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/dable/" class="sidebar-link">
+      Dable
+      <span class="sidebar-count">10</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/personal/" class="sidebar-link">
+      Personal Project
+      <span class="sidebar-count">4</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/startup/" class="sidebar-link">
+      Startup
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/hackathon/" class="sidebar-link">
+      Hackathon
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+<li
+  class="sidebar-item has-children ancestor"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/en/posts/daily/" class="sidebar-link">
+      Daily
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item ancestor"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/daily/investment/" class="sidebar-link">
+      Investment
+      <span class="sidebar-count">7</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/daily/notes/" class="sidebar-link">
+      Notes
+      <span class="sidebar-count">1</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</aside>
+
+        <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://wid-blog.github.io/en/posts/daily/">Daily</a><span
+    class="breadcrumb-separator"
+    aria-hidden="true"
+    >›</span
+  ><a href="https://wid-blog.github.io/en/posts/daily/investment/">Investment</a><span
+    class="breadcrumb-separator"
+    aria-hidden="true"
+    >›</span
+  ><span class="breadcrumb-current">Technical Indicators and Trading Signals</span></div>
+    <h1 class="post-title entry-hint-parent">
+      Technical Indicators and Trading Signals
+    </h1>
+    <div class="post-meta"><span title='2025-09-01 00:00:00 +0000 UTC'>September 1, 2025</span>&nbsp;·&nbsp;<span>5 min read</span>
+
+</div>
+  </header> <div class="toc">
+    <div class="toc-heading">Table of Contents</div>
+    <div class="inner"><ul>
+            <li>
+                <a href="#technical-indicators" aria-label="Technical Indicators">Technical Indicators</a><ul>
+                    
+            <li>
+                <a href="#rsi-relative-strength-index" aria-label="RSI (Relative Strength Index)">RSI (Relative Strength Index)</a></li>
+            <li>
+                <a href="#sma-cross-moving-average-crossover" aria-label="SMA Cross (Moving Average Crossover)">SMA Cross (Moving Average Crossover)</a></li>
+            <li>
+                <a href="#macd-moving-average-convergence-divergence" aria-label="MACD (Moving Average Convergence Divergence)">MACD (Moving Average Convergence Divergence)</a></li>
+            <li>
+                <a href="#bollinger-bands" aria-label="Bollinger Bands">Bollinger Bands</a></li></ul>
+            </li>
+            <li>
+                <a href="#composite-signals" aria-label="Composite Signals">Composite Signals</a><ul>
+                    
+            <li>
+                <a href="#weighted-combination" aria-label="Weighted Combination">Weighted Combination</a></li>
+            <li>
+                <a href="#cooldown" aria-label="Cooldown">Cooldown</a></li></ul>
+            </li>
+            <li>
+                <a href="#three-strategy-types" aria-label="Three Strategy Types">Three Strategy Types</a></li>
+            <li>
+                <a href="#references" aria-label="References">References</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+  <div class="post-content"><p>&ldquo;Which stocks to buy&rdquo; and &ldquo;when to buy and sell&rdquo; are different questions. The indicators covered in previous posts — PER, ROE, momentum, dividend yield — answer the first. They evaluate a company&rsquo;s value and quality. Answering the second requires reading price movements directly. Technical indicators serve that purpose.</p>
+<h2 id="technical-indicators">Technical Indicators<a hidden class="anchor" aria-hidden="true" href="#technical-indicators">#</a></h2>
+<h3 id="rsi-relative-strength-index">RSI (Relative Strength Index)<a hidden class="anchor" aria-hidden="true" href="#rsi-relative-strength-index">#</a></h3>
+<pre tabindex="0"><code>RS = Average Gain / Average Loss
 RSI = 100 - (100 / (1 + RS))
-</code></pre><p>Compares the magnitude of price gains versus losses over a period (typically 14 days). Produces a value between 0 and 100.</p><p><strong>RSI &lt; 30</strong> indicates an oversold condition. The decline has been large enough that a rebound is possible. Read as a buy signal. <strong>RSI > 70</strong> indicates an overbought condition. The rise has been large enough that a decline is possible. Read as a sell signal.</p><p>30/70 are not absolute thresholds. In strong uptrends, RSI can stay above 70 and keep rising. Adjusting to 20/80 or combining with other indicators helps reduce false signals.</p><h3 id=sma-cross-moving-average-crossover>SMA Cross (Moving Average Crossover)<a hidden class=anchor aria-hidden=true href=#sma-cross-moving-average-crossover>#</a></h3><pre tabindex=0><code>SMA(N) = Average of closing prices over the last N days
-</code></pre><p>The Simple Moving Average (SMA) is the arithmetic mean of closing prices over N days. Crossovers between short-term and long-term SMAs identify trend reversals.</p><p><strong>Golden cross.</strong> The short-term SMA crosses above the long-term SMA. Signals an uptrend. Buy signal. <strong>Death cross.</strong> The opposite. The short-term crosses below the long-term. Signals a downtrend. Sell signal.</p><p>Common period combinations are 5/20 (short-term), 20/60 (medium-term), and 50/200 (long-term). Shorter periods produce faster signals but also more false ones.</p><h3 id=macd-moving-average-convergence-divergence>MACD (Moving Average Convergence Divergence)<a hidden class=anchor aria-hidden=true href=#macd-moving-average-convergence-divergence>#</a></h3><pre tabindex=0><code>MACD Line = 12-day EMA - 26-day EMA
+</code></pre><p>Compares the magnitude of price gains versus losses over a period (typically 14 days). Produces a value between 0 and 100.</p>
+<p><strong>RSI &lt; 30</strong> indicates an oversold condition. The decline has been large enough that a rebound is possible. Read as a buy signal. <strong>RSI &gt; 70</strong> indicates an overbought condition. The rise has been large enough that a decline is possible. Read as a sell signal.</p>
+<p>30/70 are not absolute thresholds. In strong uptrends, RSI can stay above 70 and keep rising. Adjusting to 20/80 or combining with other indicators helps reduce false signals.</p>
+<h3 id="sma-cross-moving-average-crossover">SMA Cross (Moving Average Crossover)<a hidden class="anchor" aria-hidden="true" href="#sma-cross-moving-average-crossover">#</a></h3>
+<pre tabindex="0"><code>SMA(N) = Average of closing prices over the last N days
+</code></pre><p>The Simple Moving Average (SMA) is the arithmetic mean of closing prices over N days. Crossovers between short-term and long-term SMAs identify trend reversals.</p>
+<p><strong>Golden cross.</strong> The short-term SMA crosses above the long-term SMA. Signals an uptrend. Buy signal. <strong>Death cross.</strong> The opposite. The short-term crosses below the long-term. Signals a downtrend. Sell signal.</p>
+<p>Common period combinations are 5/20 (short-term), 20/60 (medium-term), and 50/200 (long-term). Shorter periods produce faster signals but also more false ones.</p>
+<h3 id="macd-moving-average-convergence-divergence">MACD (Moving Average Convergence Divergence)<a hidden class="anchor" aria-hidden="true" href="#macd-moving-average-convergence-divergence">#</a></h3>
+<pre tabindex="0"><code>MACD Line = 12-day EMA - 26-day EMA
 Signal Line = 9-day EMA of MACD Line
 Histogram = MACD Line - Signal Line
-</code></pre><p>Developed by Gerald Appel. Uses Exponential Moving Averages (EMA) to capture both trend direction and strength. EMA gives more weight to recent data than SMA.</p><p>When the <strong>MACD Line crosses above the Signal Line</strong>, it is a buy signal. <strong>Crosses below</strong>, a sell signal. The histogram visualizes the gap between the two lines. A transition from positive to negative (or vice versa) also signals a trend change.</p><p>Similar principle to SMA Cross, but responds more quickly to price changes because of EMA.</p><h3 id=bollinger-bands>Bollinger Bands<a hidden class=anchor aria-hidden=true href=#bollinger-bands>#</a></h3><pre tabindex=0><code>Middle Band = 20-day SMA
+</code></pre><p>Developed by Gerald Appel. Uses Exponential Moving Averages (EMA) to capture both trend direction and strength. EMA gives more weight to recent data than SMA.</p>
+<p>When the <strong>MACD Line crosses above the Signal Line</strong>, it is a buy signal. <strong>Crosses below</strong>, a sell signal. The histogram visualizes the gap between the two lines. A transition from positive to negative (or vice versa) also signals a trend change.</p>
+<p>Similar principle to SMA Cross, but responds more quickly to price changes because of EMA.</p>
+<h3 id="bollinger-bands">Bollinger Bands<a hidden class="anchor" aria-hidden="true" href="#bollinger-bands">#</a></h3>
+<pre tabindex="0"><code>Middle Band = 20-day SMA
 Upper Band = Middle Band + (2 × Standard Deviation)
 Lower Band = Middle Band - (2 × Standard Deviation)
-</code></pre><p>Developed by John Bollinger. Expresses price volatility as bands around a moving average. Since standard deviation is used, bands widen when volatility is high and narrow when low.</p><p><strong>Price breaks below the lower band</strong> — oversold. Buy signal. <strong>Breaks above the upper band</strong> — overbought. Sell signal. About 95% of price action stays within the bands statistically.</p><p>A narrowing band (squeeze) indicates low volatility. A significant price move may follow. Direction is unknown, so enter after confirming the breakout direction.</p><h2 id=composite-signals>Composite Signals<a hidden class=anchor aria-hidden=true href=#composite-signals>#</a></h2><p>Four indicators covered. They share a common limitation. Trading on any single indicator is vulnerable to false signals. RSI can drop below 30 and keep falling. A golden cross can quickly reverse into a death cross. Combining multiple indicators reduces these false signals.</p><h3 id=weighted-combination>Weighted Combination<a hidden class=anchor aria-hidden=true href=#weighted-combination>#</a></h3><p>Assign a weight to each indicator. When the sum of triggered weights meets a threshold relative to total weights, fire a composite signal.</p><pre tabindex=0><code>Signal condition: sum of triggered weights / total weights ≥ threshold (e.g., 0.5)
-</code></pre><p>Example: combining RSI (weight 0.3), SMA Cross (weight 0.3), and MACD (weight 0.4). If RSI and MACD both trigger buy signals, (0.3 + 0.4) / 1.0 = 0.7. Above the 0.5 threshold, so a composite buy signal fires.</p><p>Lower threshold means higher sensitivity. Higher threshold means more conservative. This tension is tuned against historical data.</p><h3 id=cooldown>Cooldown<a hidden class=anchor aria-hidden=true href=#cooldown>#</a></h3><p>Prevents consecutive signals on the same ticker. Once a signal fires, signals for that ticker are ignored for a set period (e.g., 300 seconds).</p><p>Without cooldown, high-volatility periods generate repeated buy-sell signals. Unnecessary transaction costs accumulate.</p><h2 id=three-strategy-types>Three Strategy Types<a hidden class=anchor aria-hidden=true href=#three-strategy-types>#</a></h2><p>The technical indicators covered here belong to one of several strategy types in quantitative investing. The factor indicators from previous posts belong to another. Each type operates on a different time horizon.</p><table><thead><tr><th>Strategy Type</th><th>Decision Basis</th><th>Time Horizon</th><th>Stock Selection</th></tr></thead><tbody><tr><td>Signal (Technical)</td><td>RSI, MACD, and other technical indicators</td><td>Seconds/minutes (real-time)</td><td>Fixed (user-specified)</td></tr><tr><td>Factor (Screening)</td><td>PER, ROE, and other factor scores</td><td>Monthly/quarterly (rebalancing)</td><td>Dynamic (rotated each rebalancing)</td></tr><tr><td>Asset Allocation</td><td>Drift from target weights</td><td>When weight band is breached</td><td>Fixed (asset class level)</td></tr></tbody></table><p><strong>Signal strategies</strong> receive real-time price data and determine buy/sell decisions using technical indicators. RSI, SMA Cross, MACD, and Bollinger Bands covered in this post belong here. Operates on the shortest time horizon.</p><p><strong>Factor strategies</strong> score stocks using factors from previous posts (PER, ROE, momentum, etc.). Select the top N stocks at each rebalancing. Monthly or quarterly cycles.</p><p><strong>Asset Allocation strategies</strong> set target weights per holding. Rebalance when current weights drift outside a band. Holdings remain fixed unless the target weights change.</p><p>The three are not mutually exclusive. Select stocks via Factor, manage asset class weights via Asset Allocation, time entries and exits via Signal.</p><hr><p>Technical indicators are tools for reading buy/sell signals from price movements. But knowing the tools and designing a strategy are different things. Choosing which indicators to combine and which strategy type to use — that is the design work.</p><p>This series started from stock data basics, progressed through company evaluation indicators, market trend indicators, portfolio construction, and price-based technical indicators. The next step is applying these to real data — building and validating strategies firsthand.</p><h2 id=references>References<a hidden class=anchor aria-hidden=true href=#references>#</a></h2><ul><li><a href=https://www.investopedia.com/terms/r/rsi.asp>Investopedia — RSI</a></li><li><a href=https://www.investopedia.com/terms/s/sma.asp>Investopedia — Moving Average (SMA)</a></li><li><a href=https://www.investopedia.com/terms/m/macd.asp>Investopedia — MACD</a></li><li><a href=https://www.investopedia.com/terms/b/bollingerbands.asp>Investopedia — Bollinger Bands</a></li><li>J. Welles Wilder Jr., <em>New Concepts in Technical Trading Systems</em> (1978)</li><li>Gerald Appel, <em>Technical Analysis: Power Tools for Active Investors</em> (2005)</li><li>John Bollinger, <em>Bollinger on Bollinger Bands</em> (2001)</li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=https://wid-blog.github.io/en/tags/quant/>Quant</a></li><li><a href=https://wid-blog.github.io/en/tags/technical-analysis/>Technical-Analysis</a></li><li><a href=https://wid-blog.github.io/en/tags/rsi/>RSI</a></li><li><a href=https://wid-blog.github.io/en/tags/macd/>MACD</a></li><li><a href=https://wid-blog.github.io/en/tags/bollinger-bands/>Bollinger-Bands</a></li><li><a href=https://wid-blog.github.io/en/tags/signal/>Signal</a></li></ul><section class=post-related><h3 class=post-related-title>Related posts</h3><div class=post-related-grid><article class="post-entry post-related-entry"><header class=entry-header><h2>Portfolio Management and Factor Scoring</h2></header><div class=entry-content><p>Covers factor scoring methods (Z-Score, Rank) for combining indicators into a single score, plus the basics of rebalancing and asset allocation.</p></div><footer class=entry-footer><span title='2025-08-15 00:00:00 +0000 UTC'>August 15, 2025</span>&nbsp;·&nbsp;<span>4 min read</span></footer><a class=entry-link aria-label="post link to Portfolio Management and Factor Scoring" href=https://wid-blog.github.io/en/posts/daily/investment/portfolio-factor-scoring/></a></article><article class="post-entry post-related-entry"><header class=entry-header><h2>Momentum and Dividend</h2></header><div class=entry-content><p>Covers the role of price momentum and dividend yield as factors in quant investing.</p></div><footer class=entry-footer><span title='2025-07-15 00:00:00 +0000 UTC'>July 15, 2025</span>&nbsp;·&nbsp;<span>4 min read</span></footer><a class=entry-link aria-label="post link to Momentum and Dividend" href=https://wid-blog.github.io/en/posts/daily/investment/momentum-dividend/></a></article><article class="post-entry post-related-entry"><header class=entry-header><h2>Valuation and Quality Indicators</h2></header><div class=entry-content><p>Covers how to judge whether a company is cheap (valuation) and whether it earns well (quality) — formulas and interpretation of PER, PBR, PSR, ROE, ROA, and debt ratio.</p></div><footer class=entry-footer><span title='2025-07-01 00:00:00 +0000 UTC'>July 1, 2025</span>&nbsp;·&nbsp;<span>5 min read</span></footer><a class=entry-link aria-label="post link to Valuation and Quality Indicators" href=https://wid-blog.github.io/en/posts/daily/investment/valuation-quality-indicators/></a></article><article class="post-entry post-related-entry"><header class=entry-header><h2>Stock Data Basics</h2></header><div class=entry-content><p>Covers OHLCV data as the starting point of quant investing, the difference between simple and log returns, and the meaning of market capitalization.</p></div><footer class=entry-footer><span title='2025-06-15 00:00:00 +0000 UTC'>June 15, 2025</span>&nbsp;·&nbsp;<span>4 min read</span></footer><a class=entry-link aria-label="post link to Stock Data Basics" href=https://wid-blog.github.io/en/posts/daily/investment/stock-data-basics/></a></article></div></section></footer></article></main></div><footer class=footer><span>&copy; 2026 <a href=https://wid-blog.github.io/en/>wid's blog</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
+</code></pre><p>Developed by John Bollinger. Expresses price volatility as bands around a moving average. Since standard deviation is used, bands widen when volatility is high and narrow when low.</p>
+<p><strong>Price breaks below the lower band</strong> — oversold. Buy signal. <strong>Breaks above the upper band</strong> — overbought. Sell signal. About 95% of price action stays within the bands statistically.</p>
+<p>A narrowing band (squeeze) indicates low volatility. A significant price move may follow. Direction is unknown, so enter after confirming the breakout direction.</p>
+<h2 id="composite-signals">Composite Signals<a hidden class="anchor" aria-hidden="true" href="#composite-signals">#</a></h2>
+<p>Four indicators covered. They share a common limitation. Trading on any single indicator is vulnerable to false signals. RSI can drop below 30 and keep falling. A golden cross can quickly reverse into a death cross. Combining multiple indicators reduces these false signals.</p>
+<h3 id="weighted-combination">Weighted Combination<a hidden class="anchor" aria-hidden="true" href="#weighted-combination">#</a></h3>
+<p>Assign a weight to each indicator. When the sum of triggered weights meets a threshold relative to total weights, fire a composite signal.</p>
+<pre tabindex="0"><code>Signal condition: sum of triggered weights / total weights ≥ threshold (e.g., 0.5)
+</code></pre><p>Example: combining RSI (weight 0.3), SMA Cross (weight 0.3), and MACD (weight 0.4). If RSI and MACD both trigger buy signals, (0.3 + 0.4) / 1.0 = 0.7. Above the 0.5 threshold, so a composite buy signal fires.</p>
+<p>Lower threshold means higher sensitivity. Higher threshold means more conservative. This tension is tuned against historical data.</p>
+<h3 id="cooldown">Cooldown<a hidden class="anchor" aria-hidden="true" href="#cooldown">#</a></h3>
+<p>Prevents consecutive signals on the same ticker. Once a signal fires, signals for that ticker are ignored for a set period (e.g., 300 seconds).</p>
+<p>Without cooldown, high-volatility periods generate repeated buy-sell signals. Unnecessary transaction costs accumulate.</p>
+<h2 id="three-strategy-types">Three Strategy Types<a hidden class="anchor" aria-hidden="true" href="#three-strategy-types">#</a></h2>
+<p>The technical indicators covered here belong to one of several strategy types in quantitative investing. The factor indicators from previous posts belong to another. Each type operates on a different time horizon.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Strategy Type</th>
+					<th>Decision Basis</th>
+					<th>Time Horizon</th>
+					<th>Stock Selection</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Signal (Technical)</td>
+					<td>RSI, MACD, and other technical indicators</td>
+					<td>Seconds/minutes (real-time)</td>
+					<td>Fixed (user-specified)</td>
+			</tr>
+			<tr>
+					<td>Factor (Screening)</td>
+					<td>PER, ROE, and other factor scores</td>
+					<td>Monthly/quarterly (rebalancing)</td>
+					<td>Dynamic (rotated each rebalancing)</td>
+			</tr>
+			<tr>
+					<td>Asset Allocation</td>
+					<td>Drift from target weights</td>
+					<td>When weight band is breached</td>
+					<td>Fixed (asset class level)</td>
+			</tr>
+	</tbody>
+</table>
+<p><strong>Signal strategies</strong> receive real-time price data and determine buy/sell decisions using technical indicators. RSI, SMA Cross, MACD, and Bollinger Bands covered in this post belong here. Operates on the shortest time horizon.</p>
+<p><strong>Factor strategies</strong> score stocks using factors from previous posts (PER, ROE, momentum, etc.). Select the top N stocks at each rebalancing. Monthly or quarterly cycles.</p>
+<p><strong>Asset Allocation strategies</strong> set target weights per holding. Rebalance when current weights drift outside a band. Holdings remain fixed unless the target weights change.</p>
+<p>The three are not mutually exclusive. Select stocks via Factor, manage asset class weights via Asset Allocation, time entries and exits via Signal.</p>
+<hr>
+<p>Technical indicators are tools for reading buy/sell signals from price movements. But knowing the tools and designing a strategy are different things. Choosing which indicators to combine and which strategy type to use — that is the design work.</p>
+<p>This series started from stock data basics, progressed through company evaluation indicators, market trend indicators, portfolio construction, and price-based technical indicators. The next step is applying these to real data — building and validating strategies firsthand.</p>
+<h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h2>
+<ul>
+<li><a href="https://www.investopedia.com/terms/r/rsi.asp">Investopedia — RSI</a></li>
+<li><a href="https://www.investopedia.com/terms/s/sma.asp">Investopedia — Moving Average (SMA)</a></li>
+<li><a href="https://www.investopedia.com/terms/m/macd.asp">Investopedia — MACD</a></li>
+<li><a href="https://www.investopedia.com/terms/b/bollingerbands.asp">Investopedia — Bollinger Bands</a></li>
+<li>J. Welles Wilder Jr., <em>New Concepts in Technical Trading Systems</em> (1978)</li>
+<li>Gerald Appel, <em>Technical Analysis: Power Tools for Active Investors</em> (2005)</li>
+<li>John Bollinger, <em>Bollinger on Bollinger Bands</em> (2001)</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://wid-blog.github.io/en/tags/quant/">Quant</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/technical-analysis/">Technical-Analysis</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/rsi/">RSI</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/macd/">MACD</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/bollinger-bands/">Bollinger-Bands</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/signal/">Signal</a></li>
+    </ul>
+<section class="post-related">
+  <h3 class="post-related-title">Related posts</h3>
+  <div class="post-related-grid">
+    <article class="post-entry post-related-entry">
+      <header class="entry-header">
+        <h2>Portfolio Management and Factor Scoring</h2>
+      </header>
+      <div class="entry-content">
+        <p>
+          Covers factor scoring methods (Z-Score, Rank) for combining indicators into a single score, plus the basics of rebalancing and asset allocation.
+        </p>
+      </div>
+      <footer class="entry-footer"><span title='2025-08-15 00:00:00 +0000 UTC'>August 15, 2025</span>&nbsp;·&nbsp;<span>4 min read</span></footer>
+      <a
+        class="entry-link"
+        aria-label="post link to Portfolio Management and Factor Scoring"
+        href="https://wid-blog.github.io/en/posts/daily/investment/portfolio-factor-scoring/"
+      ></a>
+    </article>
+    <article class="post-entry post-related-entry">
+      <header class="entry-header">
+        <h2>Momentum and Dividend</h2>
+      </header>
+      <div class="entry-content">
+        <p>
+          Covers the role of price momentum and dividend yield as factors in quant investing.
+        </p>
+      </div>
+      <footer class="entry-footer"><span title='2025-07-15 00:00:00 +0000 UTC'>July 15, 2025</span>&nbsp;·&nbsp;<span>4 min read</span></footer>
+      <a
+        class="entry-link"
+        aria-label="post link to Momentum and Dividend"
+        href="https://wid-blog.github.io/en/posts/daily/investment/momentum-dividend/"
+      ></a>
+    </article>
+    <article class="post-entry post-related-entry">
+      <header class="entry-header">
+        <h2>Valuation and Quality Indicators</h2>
+      </header>
+      <div class="entry-content">
+        <p>
+          Covers how to judge whether a company is cheap (valuation) and whether it earns well (quality) — formulas and interpretation of PER, PBR, PSR, ROE, ROA, and debt ratio.
+        </p>
+      </div>
+      <footer class="entry-footer"><span title='2025-07-01 00:00:00 +0000 UTC'>July 1, 2025</span>&nbsp;·&nbsp;<span>5 min read</span></footer>
+      <a
+        class="entry-link"
+        aria-label="post link to Valuation and Quality Indicators"
+        href="https://wid-blog.github.io/en/posts/daily/investment/valuation-quality-indicators/"
+      ></a>
+    </article>
+    <article class="post-entry post-related-entry">
+      <header class="entry-header">
+        <h2>Stock Data Basics</h2>
+      </header>
+      <div class="entry-content">
+        <p>
+          Covers OHLCV data as the starting point of quant investing, the difference between simple and log returns, and the meaning of market capitalization.
+        </p>
+      </div>
+      <footer class="entry-footer"><span title='2025-06-15 00:00:00 +0000 UTC'>June 15, 2025</span>&nbsp;·&nbsp;<span>4 min read</span></footer>
+      <a
+        class="entry-link"
+        aria-label="post link to Stock Data Basics"
+        href="https://wid-blog.github.io/en/posts/daily/investment/stock-data-basics/"
+      ></a>
+    </article>
+  </div>
+</section>
+
+  </footer>
+</article>
+        </main>
+    </div>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://wid-blog.github.io/en/">wid&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

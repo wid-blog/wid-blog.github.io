@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Migration on wid's blog</title><link>https://wid-blog.github.io/en/tags/migration/</link><description>Recent content in Migration on wid's blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 15 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/en/tags/migration/index.xml" rel="self" type="application/rss+xml"/><item><title>Zero-Downtime Data Transition Pattern</title><link>https://wid-blog.github.io/en/posts/tech/architecture/zero-downtime-data-transition/</link><pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/tech/architecture/zero-downtime-data-transition/</guid><description>A three-step pattern combining dual write and fallback read to transition data formats in live services without downtime.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Migration on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/en/tags/migration/</link>
+    <description>Recent content in Migration on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 15 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/en/tags/migration/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zero-Downtime Data Transition Pattern</title>
+      <link>https://wid-blog.github.io/en/posts/tech/architecture/zero-downtime-data-transition/</link>
+      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/tech/architecture/zero-downtime-data-transition/</guid>
+      <description>A three-step pattern combining dual write and fallback read to transition data formats in live services without downtime.</description>
+    </item>
+  </channel>
+</rss>

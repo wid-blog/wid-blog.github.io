@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Container on wid's blog</title><link>https://wid-blog.github.io/tags/container/</link><description>Recent content in Container on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Wed, 10 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/container/index.xml" rel="self" type="application/rss+xml"/><item><title>Kubernetes 기초</title><link>https://wid-blog.github.io/posts/tech/infra/kubernetes-fundamentals/</link><pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/infra/kubernetes-fundamentals/</guid><description>Container 오케스트레이션의 기본 구조와 백엔드 개발자가 알아야 할 핵심 오브젝트, 네트워크, 스케일링, 운영 방법을 정리한다.</description></item><item><title>Docker Container 기초</title><link>https://wid-blog.github.io/posts/tech/infra/docker-container-fundamentals/</link><pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/infra/docker-container-fundamentals/</guid><description>Container의 개념과 VM과의 차이를 정리하고, Docker의 아키텍처, Dockerfile, Docker Compose의 기본 사용법을 설명한다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Container on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/container/</link>
+    <description>Recent content in Container on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Wed, 10 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes 기초</title>
+      <link>https://wid-blog.github.io/posts/tech/infra/kubernetes-fundamentals/</link>
+      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/infra/kubernetes-fundamentals/</guid>
+      <description>Container 오케스트레이션의 기본 구조와 백엔드 개발자가 알아야 할 핵심 오브젝트, 네트워크, 스케일링, 운영 방법을 정리한다.</description>
+    </item>
+    <item>
+      <title>Docker Container 기초</title>
+      <link>https://wid-blog.github.io/posts/tech/infra/docker-container-fundamentals/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/infra/docker-container-fundamentals/</guid>
+      <description>Container의 개념과 VM과의 차이를 정리하고, Docker의 아키텍처, Dockerfile, Docker Compose의 기본 사용법을 설명한다.</description>
+    </item>
+  </channel>
+</rss>

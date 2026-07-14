@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>예산-페이싱 on wid's blog</title><link>https://wid-blog.github.io/tags/%EC%98%88%EC%82%B0-%ED%8E%98%EC%9D%B4%EC%8B%B1/</link><description>Recent content in 예산-페이싱 on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Mon, 21 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/%EC%98%88%EC%82%B0-%ED%8E%98%EC%9D%B4%EC%8B%B1/index.xml" rel="self" type="application/rss+xml"/><item><title>광고 예산 페이싱의 2계층 제어 구조 회고</title><link>https://wid-blog.github.io/posts/career/dable/balanced-pacing-control/</link><pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/dable/balanced-pacing-control/</guid><description>고정 규칙으로 동작하던 광고 예산 페이싱을, 캠페인별 학습과 실시간 보정의 2계층 제어 구조로 옮긴 회고. 캠페인 특성의 다양성을 어떻게 자동 흡수하게 만들었는가.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>예산-페이싱 on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/%EC%98%88%EC%82%B0-%ED%8E%98%EC%9D%B4%EC%8B%B1/</link>
+    <description>Recent content in 예산-페이싱 on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Mon, 21 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/%EC%98%88%EC%82%B0-%ED%8E%98%EC%9D%B4%EC%8B%B1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>광고 예산 페이싱의 2계층 제어 구조 회고</title>
+      <link>https://wid-blog.github.io/posts/career/dable/balanced-pacing-control/</link>
+      <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/dable/balanced-pacing-control/</guid>
+      <description>고정 규칙으로 동작하던 광고 예산 페이싱을, 캠페인별 학습과 실시간 보정의 2계층 제어 구조로 옮긴 회고. 캠페인 특성의 다양성을 어떻게 자동 흡수하게 만들었는가.</description>
+    </item>
+  </channel>
+</rss>

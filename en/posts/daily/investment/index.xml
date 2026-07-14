@@ -1,1 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Investment on wid's blog</title><link>https://wid-blog.github.io/en/posts/daily/investment/</link><description>Recent content in Investment on wid's blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 13 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/en/posts/daily/investment/index.xml" rel="self" type="application/rss+xml"/><item><title>Korean Account Types and Investment Constraints</title><link>https://wid-blog.github.io/en/posts/daily/investment/korean-account-types/</link><pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/daily/investment/korean-account-types/</guid><description>The core constraints of the four Korean retail account types — general, ISA, pension savings, and IRP — covering tax-free thresholds, tax deductions, the 70% risk-asset cap, and access to direct foreign investment, plus a strategy-to-account mapping.</description></item><item><title>Efficient Frontier and Portfolio Optimization</title><link>https://wid-blog.github.io/en/posts/daily/investment/efficient-frontier-optimization/</link><pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/daily/investment/efficient-frontier-optimization/</guid><description>Covers Markowitz&amp;rsquo;s mean-variance model as the mathematical foundation for setting asset weights, the two optimal points on the efficient frontier (Min-Variance and Tangency), and the practical adjustments that compensate for the model&amp;rsquo;s weaknesses.</description></item><item><title>Technical Indicators and Trading Signals</title><link>https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/</link><pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/</guid><description>Covers technical indicators (RSI, SMA Cross, MACD, Bollinger Bands) for reading price movements, composite signal design, and a comparison of three strategy types across different time horizons.</description></item><item><title>Portfolio Management and Factor Scoring</title><link>https://wid-blog.github.io/en/posts/daily/investment/portfolio-factor-scoring/</link><pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/daily/investment/portfolio-factor-scoring/</guid><description>Covers factor scoring methods (Z-Score, Rank) for combining indicators into a single score, plus the basics of rebalancing and asset allocation.</description></item><item><title>Momentum and Dividend</title><link>https://wid-blog.github.io/en/posts/daily/investment/momentum-dividend/</link><pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/daily/investment/momentum-dividend/</guid><description>Covers the role of price momentum and dividend yield as factors in quant investing.</description></item><item><title>Valuation and Quality Indicators</title><link>https://wid-blog.github.io/en/posts/daily/investment/valuation-quality-indicators/</link><pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/daily/investment/valuation-quality-indicators/</guid><description>Covers how to judge whether a company is cheap (valuation) and whether it earns well (quality) — formulas and interpretation of PER, PBR, PSR, ROE, ROA, and debt ratio.</description></item><item><title>Stock Data Basics</title><link>https://wid-blog.github.io/en/posts/daily/investment/stock-data-basics/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/daily/investment/stock-data-basics/</guid><description>Covers OHLCV data as the starting point of quant investing, the difference between simple and log returns, and the meaning of market capitalization.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Investment on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/en/posts/daily/investment/</link>
+    <description>Recent content in Investment on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/en/posts/daily/investment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Korean Account Types and Investment Constraints</title>
+      <link>https://wid-blog.github.io/en/posts/daily/investment/korean-account-types/</link>
+      <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/daily/investment/korean-account-types/</guid>
+      <description>The core constraints of the four Korean retail account types — general, ISA, pension savings, and IRP — covering tax-free thresholds, tax deductions, the 70% risk-asset cap, and access to direct foreign investment, plus a strategy-to-account mapping.</description>
+    </item>
+    <item>
+      <title>Efficient Frontier and Portfolio Optimization</title>
+      <link>https://wid-blog.github.io/en/posts/daily/investment/efficient-frontier-optimization/</link>
+      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/daily/investment/efficient-frontier-optimization/</guid>
+      <description>Covers Markowitz&amp;rsquo;s mean-variance model as the mathematical foundation for setting asset weights, the two optimal points on the efficient frontier (Min-Variance and Tangency), and the practical adjustments that compensate for the model&amp;rsquo;s weaknesses.</description>
+    </item>
+    <item>
+      <title>Technical Indicators and Trading Signals</title>
+      <link>https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/daily/investment/signal-technical-indicators/</guid>
+      <description>Covers technical indicators (RSI, SMA Cross, MACD, Bollinger Bands) for reading price movements, composite signal design, and a comparison of three strategy types across different time horizons.</description>
+    </item>
+    <item>
+      <title>Portfolio Management and Factor Scoring</title>
+      <link>https://wid-blog.github.io/en/posts/daily/investment/portfolio-factor-scoring/</link>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/daily/investment/portfolio-factor-scoring/</guid>
+      <description>Covers factor scoring methods (Z-Score, Rank) for combining indicators into a single score, plus the basics of rebalancing and asset allocation.</description>
+    </item>
+    <item>
+      <title>Momentum and Dividend</title>
+      <link>https://wid-blog.github.io/en/posts/daily/investment/momentum-dividend/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/daily/investment/momentum-dividend/</guid>
+      <description>Covers the role of price momentum and dividend yield as factors in quant investing.</description>
+    </item>
+    <item>
+      <title>Valuation and Quality Indicators</title>
+      <link>https://wid-blog.github.io/en/posts/daily/investment/valuation-quality-indicators/</link>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/daily/investment/valuation-quality-indicators/</guid>
+      <description>Covers how to judge whether a company is cheap (valuation) and whether it earns well (quality) — formulas and interpretation of PER, PBR, PSR, ROE, ROA, and debt ratio.</description>
+    </item>
+    <item>
+      <title>Stock Data Basics</title>
+      <link>https://wid-blog.github.io/en/posts/daily/investment/stock-data-basics/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/daily/investment/stock-data-basics/</guid>
+      <description>Covers OHLCV data as the starting point of quant investing, the difference between simple and log returns, and the meaning of market capitalization.</description>
+    </item>
+  </channel>
+</rss>

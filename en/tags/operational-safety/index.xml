@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Operational Safety on wid's blog</title><link>https://wid-blog.github.io/en/tags/operational-safety/</link><description>Recent content in Operational Safety on wid's blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 31 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/en/tags/operational-safety/index.xml" rel="self" type="application/rss+xml"/><item><title>quant-investment-platform — mid-retrospective</title><link>https://wid-blog.github.io/en/posts/career/personal/quant-investment-platform-mid-retrospective/</link><pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/career/personal/quant-investment-platform-mid-retrospective/</guid><description>A mid-project retrospective on a personal automated trading platform built with Rust + Python + React. With ETF rebalancing and single-stock signal trading both in place, a record of how the safety layers — halt, block, detect, simulate — got built before going live.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Operational Safety on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/en/tags/operational-safety/</link>
+    <description>Recent content in Operational Safety on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 31 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/en/tags/operational-safety/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>quant-investment-platform — mid-retrospective</title>
+      <link>https://wid-blog.github.io/en/posts/career/personal/quant-investment-platform-mid-retrospective/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/career/personal/quant-investment-platform-mid-retrospective/</guid>
+      <description>A mid-project retrospective on a personal automated trading platform built with Rust + Python + React. With ETF rebalancing and single-stock signal trading both in place, a record of how the safety layers — halt, block, detect, simulate — got built before going live.</description>
+    </item>
+  </channel>
+</rss>

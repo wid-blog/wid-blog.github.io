@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>슬라이딩 윈도우 on wid's blog</title><link>https://wid-blog.github.io/tags/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%94%A9-%EC%9C%88%EB%8F%84%EC%9A%B0/</link><description>Recent content in 슬라이딩 윈도우 on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Sun, 14 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%94%A9-%EC%9C%88%EB%8F%84%EC%9A%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>슬라이딩 윈도우와 누적합 — 단조성이 도구를 가른다</title><link>https://wid-blog.github.io/posts/tech/algorithm/sliding-window-and-prefix-sum/</link><pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/algorithm/sliding-window-and-prefix-sum/</guid><description>부분 배열 합 문제는 슬라이딩 윈도우와 누적합 두 도구로 O(N) 환원된다. 입력에 음수가 섞이거나 합이 정확히 K 인 등식 조건이 붙으면 단조성이 깨지고, 도구는 누적합 + 해시 영역으로 넘어간다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>슬라이딩 윈도우 on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%94%A9-%EC%9C%88%EB%8F%84%EC%9A%B0/</link>
+    <description>Recent content in 슬라이딩 윈도우 on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sun, 14 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%94%A9-%EC%9C%88%EB%8F%84%EC%9A%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>슬라이딩 윈도우와 누적합 — 단조성이 도구를 가른다</title>
+      <link>https://wid-blog.github.io/posts/tech/algorithm/sliding-window-and-prefix-sum/</link>
+      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/algorithm/sliding-window-and-prefix-sum/</guid>
+      <description>부분 배열 합 문제는 슬라이딩 윈도우와 누적합 두 도구로 O(N) 환원된다. 입력에 음수가 섞이거나 합이 정확히 K 인 등식 조건이 붙으면 단조성이 깨지고, 도구는 누적합 + 해시 영역으로 넘어간다.</description>
+    </item>
+  </channel>
+</rss>

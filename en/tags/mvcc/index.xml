@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mvcc on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/en/tags/mvcc/</link>
+    <description>Recent content in Mvcc on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/en/tags/mvcc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Isolation Levels Actually Prevent</title>
+      <link>https://wid-blog.github.io/en/posts/tech/database/transaction-isolation-levels/</link>
+      <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/tech/database/transaction-isolation-levels/</guid>
+      <description>A transaction isolation level is a policy choice about which anomalies to allow. The anomalies each ANSI level prevents, and how InnoDB&amp;rsquo;s MVCC and Repeatable Read behave differently from the standard.</description>
+    </item>
+  </channel>
+</rss>

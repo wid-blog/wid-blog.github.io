@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sync on wid's blog</title><link>https://wid-blog.github.io/tags/sync/</link><description>Recent content in Sync on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Fri, 05 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/sync/index.xml" rel="self" type="application/rss+xml"/><item><title>Go Concurrency 모델</title><link>https://wid-blog.github.io/posts/tech/language/go-concurrency-model/</link><pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/language/go-concurrency-model/</guid><description>Go의 동시성 모델은 CSP를 기반으로 Goroutine과 Channel을 핵심 도구로 제공한다. 각 도구의 동작 원리와 선택 기준을 정리한다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sync on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/sync/</link>
+    <description>Recent content in Sync on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Fri, 05 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/sync/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Concurrency 모델</title>
+      <link>https://wid-blog.github.io/posts/tech/language/go-concurrency-model/</link>
+      <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/language/go-concurrency-model/</guid>
+      <description>Go의 동시성 모델은 CSP를 기반으로 Goroutine과 Channel을 핵심 도구로 제공한다. 각 도구의 동작 원리와 선택 기준을 정리한다.</description>
+    </item>
+  </channel>
+</rss>

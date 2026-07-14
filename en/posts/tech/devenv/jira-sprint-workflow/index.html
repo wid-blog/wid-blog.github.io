@@ -1,52 +1,1260 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>JIRA Sprint Workflows and Git/GitHub Integration | wid's blog</title><meta name=keywords content="jira,sprint,project-management,collaboration,workflow"><meta name=description content="Looking at JIRA&rsquo;s issues and workflows as a graph of work units — covering the Sprint lifecycle, issue hierarchy, Git/GitHub integration patterns, and automation flows."><meta name=author content><link rel=canonical href=https://wid-blog.github.io/en/posts/tech/devenv/jira-sprint-workflow/><link crossorigin=anonymous href=/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as=style><link rel=icon href=https://wid-blog.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://wid-blog.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://wid-blog.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://wid-blog.github.io/apple-touch-icon.png><link rel=mask-icon href=https://wid-blog.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=ko href=https://wid-blog.github.io/posts/tech/devenv/jira-sprint-workflow/><link rel=alternate hreflang=en href=https://wid-blog.github.io/en/posts/tech/devenv/jira-sprint-workflow/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><style>:root{--main-width:min(1024px, 90vw)}.nav{display:flex;justify-content:space-between;align-items:center}.logo{display:flex;align-items:center;gap:.75rem}.header-right{display:flex;align-items:center;gap:.75rem}.header-right .lang-switch{display:flex;list-style:none;padding:0;margin:0;gap:.5rem}.header-right .lang-switch a{font-size:.875rem;color:var(--secondary)}.header-right .lang-switch a:hover{color:var(--primary)}.header-social{color:var(--secondary);display:flex;align-items:center}.header-social:hover{color:var(--primary)}.page-header h1{display:none}.post-entry,.first-entry{border:1px solid var(--border)!important;transition:border-color .15s}.post-entry:hover,.first-entry:hover{border-color:var(--primary)}.breadcrumbs{display:flex;align-items:center;gap:.5rem;font-size:.875rem}.breadcrumb-separator{color:var(--secondary);font-weight:400;user-select:none;font-size:1rem;line-height:1}.breadcrumb-current{font-weight:600;color:var(--primary)}.post-content h2{margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--border)}.post-content h3{margin-top:1.75rem}.layout-wrapper{display:flex;max-width:var(--main-width);margin:0 auto;padding:0 var(--gap)}.layout-wrapper .main{flex:1;min-width:0;margin:0;padding:0}.sidebar{position:sticky;top:var(--header-height,80px);align-self:flex-start;width:220px;flex-shrink:0;margin-right:2rem;padding-top:1rem;max-height:calc(100vh - var(--header-height,80px));overflow-y:auto}.sidebar-nav{font-size:.875rem;line-height:1.6}.sidebar-tree,.sidebar-children{list-style:none;padding:0;margin:0}.sidebar-children{padding-left:1rem;display:none}.sidebar-children.expanded{display:block}.sidebar-item-header{display:flex;align-items:center;gap:.25rem;padding:.2rem 0}.sidebar-toggle-btn{background:0 0;border:none;cursor:pointer;padding:2px;display:flex;align-items:center;color:var(--secondary);border-radius:4px;transition:background .15s}.sidebar-toggle-btn:hover{background:var(--code-bg)}.sidebar-chevron{transition:transform .2s ease}.sidebar-toggle-btn.open .sidebar-chevron{transform:rotate(90deg)}.sidebar-link{color:var(--secondary);text-decoration:none;transition:color .15s;display:flex;align-items:center;gap:.4rem}.sidebar-link:hover{color:var(--primary)}.sidebar-item.active>.sidebar-item-header .sidebar-link{color:var(--primary);font-weight:600}.sidebar-item.ancestor>.sidebar-item-header .sidebar-link{color:var(--primary)}.sidebar-count{display:inline-block;min-width:1.25rem;padding:.05rem .4rem;margin-left:.35rem;font-size:.7rem;font-weight:600;line-height:1.3;text-align:center;color:var(--primary);background:var(--code-bg);border-radius:.75rem}.sidebar-item.ancestor>.sidebar-item-header .sidebar-count,.sidebar-item.active>.sidebar-item-header .sidebar-count{color:var(--theme);background:var(--primary)}.sidebar-toggle{display:none;position:fixed;bottom:1.5rem;left:1.5rem;z-index:200;background:var(--theme);border:1px solid var(--border);border-radius:50%;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);color:var(--primary)}@media(max-width:768px){.layout-wrapper{display:block}.sidebar{position:fixed;top:0;left:0;width:260px;height:100vh;max-height:100vh;margin:0;padding:1rem;padding-top:calc(var(--header-height,80px) + 1rem);background:var(--theme);border-right:1px solid var(--border);z-index:100;transform:translateX(-100%);transition:transform .25s ease}.sidebar.open{transform:translateX(0)}.sidebar-toggle{display:flex}.sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:99;display:none}.sidebar-overlay.active{display:block}}.post-related{margin-top:40px}.post-related-title{font-size:1rem;font-weight:600;margin:0 0 14px;color:var(--primary)}.post-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.post-related-grid .post-related-entry{margin-bottom:0}.post-related-grid .post-related-entry .entry-header h2{font-size:18px;line-height:1.35}.post-related-grid .post-related-entry .entry-content{-webkit-line-clamp:3}@media(max-width:768px){.post-related-grid{grid-template-columns:1fr}}.post-header{padding-bottom:20px;margin-bottom:32px;border-bottom:1px solid var(--border)}.toc .toc-heading{margin-inline-start:10px;font-weight:500;user-select:none}.post-tags li{position:relative}.post-tags a{padding:0 14px 0 22px;border:none;border-radius:0 var(--radius)var(--radius)0;clip-path:polygon(10px 0,100% 0,100% 100%,10px 100%,0 50%)}.post-tags.entry-tags{position:relative;z-index:2;margin-top:14px;gap:8px}.post-tags.entry-tags a{font-size:12px;line-height:26px;padding:0 12px 0 20px}.post-tags li::before{content:"";position:absolute;left:8px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:var(--theme);z-index:1;pointer-events:none}.tag-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}.tag-chip{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .75rem;font-size:.8rem;line-height:1.4;color:var(--secondary);background:var(--code-bg);border:1px solid var(--border);border-radius:1rem;cursor:pointer;transition:all .15s;font-family:inherit}.tag-chip:hover{color:var(--primary);border-color:var(--primary)}.tag-chip.active{color:var(--theme);background:var(--primary);border-color:var(--primary)}.tag-chip-count{font-size:.7rem;opacity:.7}.tag-chip.active .tag-chip-count{opacity:.9}article.tag-hidden{display:none}</style><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".sidebar-toggle-btn").forEach(function(e){e.addEventListener("click",function(){var e,t=this.classList.toggle("open");this.setAttribute("aria-expanded",t),e=this.closest(".sidebar-item").querySelector(".sidebar-children"),e&&e.classList.toggle("expanded",t)})});var e,t,s,o,r,i=document.getElementById("sidebar-toggle"),n=document.getElementById("sidebar");if(i&&n){e=document.createElement("div"),e.className="sidebar-overlay",document.body.appendChild(e);function c(){n.classList.add("open"),e.classList.add("active")}function a(){n.classList.remove("open"),e.classList.remove("active")}i.addEventListener("click",function(){n.classList.contains("open")?a():c()}),e.addEventListener("click",a)}if(s=document.getElementById("tag-filter"),s){r=s.querySelectorAll(".tag-chip"),o=document.querySelectorAll("article[data-tags]"),t=new Set;function l(){if(t.size===0){o.forEach(function(e){e.classList.remove("tag-hidden")});return}o.forEach(function(e){var s=(e.getAttribute("data-tags")||"").split(","),n=!1;t.forEach(function(e){s.indexOf(e)!==-1&&(n=!0)}),e.classList.toggle("tag-hidden",!n)})}r.forEach(function(e){e.addEventListener("click",function(){var e=this.getAttribute("data-tag");t.has(e)?(t.delete(e),this.classList.remove("active")):(t.add(e),this.classList.add("active")),l()})})}})</script><meta property="og:url" content="https://wid-blog.github.io/en/posts/tech/devenv/jira-sprint-workflow/"><meta property="og:site_name" content="wid's blog"><meta property="og:title" content="JIRA Sprint Workflows and Git/GitHub Integration"><meta property="og:description" content="Looking at JIRA’s issues and workflows as a graph of work units — covering the Sprint lifecycle, issue hierarchy, Git/GitHub integration patterns, and automation flows."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-12-30T00:00:00+00:00"><meta property="article:modified_time" content="2025-12-30T00:00:00+00:00"><meta property="article:tag" content="Jira"><meta property="article:tag" content="Sprint"><meta property="article:tag" content="Project-Management"><meta property="article:tag" content="Collaboration"><meta property="article:tag" content="Workflow"><meta name=twitter:card content="summary"><meta name=twitter:title content="JIRA Sprint Workflows and Git/GitHub Integration"><meta name=twitter:description content="Looking at JIRA’s issues and workflows as a graph of work units — covering the Sprint lifecycle, issue hierarchy, Git/GitHub integration patterns, and automation flows."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://wid-blog.github.io/en/posts/"},{"@type":"ListItem","position":2,"name":"Tech","item":"https://wid-blog.github.io/en/posts/tech/"},{"@type":"ListItem","position":3,"name":"Workflow","item":"https://wid-blog.github.io/en/posts/tech/devenv/"},{"@type":"ListItem","position":4,"name":"JIRA Sprint Workflows and Git/GitHub Integration","item":"https://wid-blog.github.io/en/posts/tech/devenv/jira-sprint-workflow/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"JIRA Sprint Workflows and Git/GitHub Integration","name":"JIRA Sprint Workflows and Git\/GitHub Integration","description":"Looking at JIRA\u0026rsquo;s issues and workflows as a graph of work units — covering the Sprint lifecycle, issue hierarchy, Git/GitHub integration patterns, and automation flows.","keywords":["jira","sprint","project-management","collaboration","workflow"],"articleBody":"JIRA covers the work unit that pairs with the flow of code — issues and tickets. When the Sprint, the ticket lifecycle, and Git/GitHub integration move together as a single bundle, the daily cost of context switching drops noticeably.\nIssue and Workflow The core of JIRA reduces to two pieces — issues and the workflow that runs on them.\nAn issue is a unit of work. Each issue carries a type (Story, Task, Bug, Epic, Subtask), a state, an assignee, and a set of free-form metadata (labels, priority, story points). Using JIRA ultimately means creating, grouping, and transitioning these issues.\nA workflow is the set of state-transition rules an issue passes through. The simplest version looks like this:\nflowchart LR Open[Open] --\u003e InProgress[In Progress] InProgress --\u003e InReview[In Review] InReview --\u003e Done[Done] InReview --\u003e InProgress Open --\u003e Closed[Closed] Each arrow corresponds to one transition. Teams customize states and transition rules to match their process — the simpler it is, the easier it is for people to follow; the more complex it is, the more it has to be handled exclusively through automation.\nThe key principle in workflow design is restraint on the number of states. As fine-grained states like “Pending Review”, “Ready for QA”, “QA in Progress”, and “Ready for Release” pile up, more time is spent moving issues around — and eventually people start ignoring states altogether.\nSprint A Sprint is a time-boxed bundle of issues. One- to two-week durations are typical, and the goal is to finish what’s bundled inside that window.\nA Sprint’s lifecycle has three stages.\nSprint Planning: pick issues from the backlog into the next Sprint. Compare team capacity against issue estimates and avoid overcommitting. Sprint execution: move issues through In Progress → In Review → Done. Daily standups surface progress and blockers. Sprint Review/Retro: at the end, check what got done, what carried over, and how to do the next Sprint better. Sprint scope creep — issues being added mid-Sprint — is the most common failure mode. Once the planned scope is no longer kept, the Sprint reduces to a time slice with no planning meaning behind it. When urgent issues must enter mid-Sprint, requiring an equivalent amount of work to be removed in trade is a useful safeguard.\nIssue Hierarchy Most teams use a hierarchy along these lines.\nLevel Meaning Example Epic Large bundle of work, usually spans multiple Sprints “Migrate payment system to v2” Story A unit of user value, fits inside one Sprint “User can save card information” Task A unit of technical work “Implement payment API endpoint” Bug A defect report “Error message missing on payment failure” Subtask A smaller piece inside a Story or Task “Write unit tests for payment API” The hierarchy is convention, not enforcement, so teams reshape it to match their flow. Teams that find Story and Task hard to distinguish often merge them; some teams replace Subtasks with simple checklists.\nThe essential split is Epic vs Story. Work that doesn’t fit in a Sprint should be grouped as an Epic and broken down into Stories — that’s what makes planning at the Sprint level possible.\nGit/GitHub Integration When JIRA pairs with Git/GitHub, issues and code changes get connected automatically. The conventions are simple.\nIssue key in the branch name\nfeature/PROJ-123-add-search JIRA recognizes PROJ-123 as the issue key.\nIssue key in the commit message\nPROJ-123: add search endpoint JIRA links this commit to issue PROJ-123 automatically.\nIssue key in the PR title or body\nPROJ-123: Add search endpoint closes PROJ-123 When the PR opens, JIRA surfaces a PR link on the issue’s page. PR state changes (open/merged) flow back as well.\nSmart commits are syntax that lets commit messages drive issue transitions directly. Writing PROJ-123 #close or PROJ-123 #time 2h will close the issue or log work time when the commit is merged.\nThe biggest payoff is preventing context loss. Being able to see commits and PRs from the issue page, and to jump back to the issue from the PR, dramatically lowers the cost of asking “why is this code the way it is?”.\nJIRA Automation JIRA includes a rules engine that triggers state transitions automatically.\nA few common patterns:\nPR open → In Review: when a PR linked to the issue opens, move the issue to In Review automatically PR merged → Done: when the PR merges into main, move the issue to Done Carry over at Sprint end: unfinished issues automatically move to the next Sprint SLA alerts by Bug priority(Service Level Agreement): a P1 bug that stays In Progress longer than 24 hours triggers a Slack alert Auto-assign by label: issues with a specific label get auto-assigned to the team’s on-call Automation should start small. Building a complex bundle of rules from day one makes debugging painful, and a misfiring rule can move issues around in unintended ways. Beginning with simple PR-state synchronization and expanding once trust has built up is the safer path.\nCommon Pitfalls Issues and commits drift apart Without enforcing the issue-key convention, commits don’t auto-link to issues. JIRA ends up used only as a PM tool while the code flow is tracked solely on GitHub — a clean split that costs context every time someone needs to connect them. Linting branch names or adding an issue-key field to the PR template are common safeguards.\nWorkflows that are too complex A workflow with five-plus states, multiple branches, and approval steps becomes too much for people to follow. The result is workarounds — people drag issues that “should be Done” straight to Done and skip the intermediate states. A simpler workflow backed by automation is almost always the better choice.\nSprint scope creep When new issues keep flowing in after planning, the Sprint loses its planning meaning and becomes just a time slice. Forcing an equivalent amount to be removed in trade when urgent issues come in is a structural safeguard. The PM or team lead owns that decision.\nIssues for the sake of issues When small tasks each get their own issue with full metadata, the issue system becomes a job. Teams need a shared agreement on what’s worth tracking — “work that requires synchronization with someone else” is usually a good cutoff.\nSeries Wrap-up This series treated developer collaboration tooling through four elements.\nGit (Article 1) — a graph of changes; commit / branch / merge·rebase GitHub PRs (Article 2) — a collaboration layer added to the graph; PR-level design + Code Review GitHub Actions (Article 3) — automated verification and deployment; workflow / job / step JIRA (Article 4) — the work units paired with the graph; issues + Sprint + Git/GitHub integration Each tool carries its own abstraction, but the four shine when they’re paired together. Issue keys flowing through branches, commits, and PRs; PRs gated by automatic verification; merges that auto-transition issue states. The automation built on those connections is what cuts the daily cost of context switching, and team velocity grows from there.\n","wordCount":"1158","inLanguage":"en","datePublished":"2025-12-30T00:00:00Z","dateModified":"2025-12-30T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://wid-blog.github.io/en/posts/tech/devenv/jira-sprint-workflow/"},"publisher":{"@type":"Organization","name":"wid's blog","logo":{"@type":"ImageObject","url":"https://wid-blog.github.io/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://wid-blog.github.io/en/ accesskey=h title="wid's blog (Alt + H)">wid's blog</a>
-<a href=https://github.com/byunghak target=_blank rel="noopener noreferrer" aria-label=GitHub class=header-social><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
-</a><a href=https://www.linkedin.com/in/byunhak082/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn class=header-social><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div><div class=header-right><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><ul class=lang-switch><li><a href=https://wid-blog.github.io/posts/tech/devenv/jira-sprint-workflow/ title=한국어 aria-label=한국어>Ko</a></li></ul></div></nav></header><div class=layout-wrapper><aside class=sidebar id=sidebar><button class=sidebar-toggle id=sidebar-toggle aria-label="메뉴 열기/닫기">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><nav class=sidebar-nav id=sidebar-nav><ul class=sidebar-tree><li class="sidebar-item has-children ancestor"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/en/posts/tech/ class=sidebar-link>Tech
-<span class=sidebar-count>49</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/algorithm/ class=sidebar-link>Algorithm
-<span class=sidebar-count>2</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/network/ class=sidebar-link>Network
-<span class=sidebar-count>5</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/architecture/ class=sidebar-link>Architecture
-<span class=sidebar-count>8</span></a></div></li><li class="sidebar-item ancestor"><div class=sidebar-item-header><a href=/en/posts/tech/devenv/ class=sidebar-link>Workflow
-<span class=sidebar-count>6</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/security/ class=sidebar-link>Security
-<span class=sidebar-count>3</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/ml/ class=sidebar-link>Machine Learning
-<span class=sidebar-count>3</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/design-pattern/ class=sidebar-link>Design Pattern
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/infra/ class=sidebar-link>Infra
-<span class=sidebar-count>6</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/language/ class=sidebar-link>Language
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/tech/database/ class=sidebar-link>Database
-<span class=sidebar-count>2</span></a></div></li></ul></li><li class="sidebar-item has-children"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/en/posts/career/ class=sidebar-link>Career
-<span class=sidebar-count>18</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/dable/ class=sidebar-link>Dable
-<span class=sidebar-count>10</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/personal/ class=sidebar-link>Personal Project
-<span class=sidebar-count>4</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/startup/ class=sidebar-link>Startup
-<span class=sidebar-count>2</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/career/hackathon/ class=sidebar-link>Hackathon
-<span class=sidebar-count>2</span></a></div></li></ul></li><li class="sidebar-item has-children"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/en/posts/daily/ class=sidebar-link>Daily
-<span class=sidebar-count>8</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/daily/investment/ class=sidebar-link>Investment
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/en/posts/daily/notes/ class=sidebar-link>Notes
-<span class=sidebar-count>1</span></a></div></li></ul></li></ul></nav></aside><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://wid-blog.github.io/en/posts/tech/>Tech</a><span class=breadcrumb-separator aria-hidden=true>›</span><a href=https://wid-blog.github.io/en/posts/tech/devenv/>Workflow</a><span class=breadcrumb-separator aria-hidden=true>›</span><span class=breadcrumb-current>JIRA Sprint Workflows and Git/GitHub Integration</span></div><h1 class="post-title entry-hint-parent">JIRA Sprint Workflows and Git/GitHub Integration</h1><div class=post-meta><span title='2025-12-30 00:00:00 +0000 UTC'>December 30, 2025</span>&nbsp;·&nbsp;<span>6 min read</span></div></header><div class=toc><div class=toc-heading>Table of Contents</div><div class=inner><ul><li><a href=#issue-and-workflow aria-label="Issue and Workflow">Issue and Workflow</a></li><li><a href=#sprint aria-label=Sprint>Sprint</a></li><li><a href=#issue-hierarchy aria-label="Issue Hierarchy">Issue Hierarchy</a></li><li><a href=#gitgithub-integration aria-label="Git/GitHub Integration">Git/GitHub Integration</a></li><li><a href=#jira-automation aria-label="JIRA Automation">JIRA Automation</a></li><li><a href=#common-pitfalls aria-label="Common Pitfalls">Common Pitfalls</a><ul><li><a href=#issues-and-commits-drift-apart aria-label="Issues and commits drift apart">Issues and commits drift apart</a></li><li><a href=#workflows-that-are-too-complex aria-label="Workflows that are too complex">Workflows that are too complex</a></li><li><a href=#sprint-scope-creep aria-label="Sprint scope creep">Sprint scope creep</a></li><li><a href=#issues-for-the-sake-of-issues aria-label="Issues for the sake of issues">Issues for the sake of issues</a></li></ul></li><li><a href=#series-wrap-up aria-label="Series Wrap-up">Series Wrap-up</a></li></ul></div></div><div class=post-content><p>JIRA covers the work unit that pairs with the flow of code — issues and tickets. When the Sprint, the ticket lifecycle, and Git/GitHub integration move together as a single bundle, the daily cost of context switching drops noticeably.</p><h2 id=issue-and-workflow>Issue and Workflow<a hidden class=anchor aria-hidden=true href=#issue-and-workflow>#</a></h2><p>The core of JIRA reduces to two pieces — issues and the workflow that runs on them.</p><p>An <strong>issue</strong> is a unit of work. Each issue carries a type (Story, Task, Bug, Epic, Subtask), a state, an assignee, and a set of free-form metadata (labels, priority, story points). Using JIRA ultimately means creating, grouping, and transitioning these issues.</p><p>A <strong>workflow</strong> is the set of state-transition rules an issue passes through. The simplest version looks like this:</p><div class=mermaid-wrapper style="overflow-x:auto;max-width:100%;margin:1em 0"><pre class=mermaid>flowchart LR
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>JIRA Sprint Workflows and Git/GitHub Integration | wid&#39;s blog</title>
+<meta name="keywords" content="jira, sprint, project-management, collaboration, workflow">
+<meta name="description" content="Looking at JIRA&rsquo;s issues and workflows as a graph of work units — covering the Sprint lifecycle, issue hierarchy, Git/GitHub integration patterns, and automation flows.">
+<meta name="author" content="">
+<link rel="canonical" href="https://wid-blog.github.io/en/posts/tech/devenv/jira-sprint-workflow/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://wid-blog.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://wid-blog.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://wid-blog.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://wid-blog.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://wid-blog.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ko" href="https://wid-blog.github.io/posts/tech/devenv/jira-sprint-workflow/">
+<link rel="alternate" hreflang="en" href="https://wid-blog.github.io/en/posts/tech/devenv/jira-sprint-workflow/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><style>
+  :root {
+    --main-width: min(1024px, 90vw);
+  }
+
+   
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .header-right .lang-switch {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+  }
+
+  .header-right .lang-switch a {
+    font-size: 0.875rem;
+    color: var(--secondary);
+  }
+
+  .header-right .lang-switch a:hover {
+    color: var(--primary);
+  }
+
+  .header-social {
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+  }
+
+  .header-social:hover {
+    color: var(--primary);
+  }
+
+   
+  .page-header h1 {
+    display: none;
+  }
+
+   
+  .post-entry,
+  .first-entry {
+    border: 1px solid var(--border) !important;
+    transition: border-color 0.15s;
+  }
+
+  .post-entry:hover,
+  .first-entry:hover {
+    border-color: var(--primary);
+  }
+
+   
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb-separator {
+    color: var(--secondary);
+    font-weight: 400;
+    user-select: none;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .breadcrumb-current {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+   
+  .post-content h2 {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .post-content h3 {
+    margin-top: 1.75rem;
+  }
+
+   
+  .layout-wrapper {
+    display: flex;
+    max-width: var(--main-width);
+    margin: 0 auto;
+    padding: 0 var(--gap);
+  }
+
+  .layout-wrapper .main {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+   
+  .sidebar {
+    position: sticky;
+    top: var(--header-height, 80px);
+    align-self: flex-start;
+    width: 220px;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    padding-top: 1rem;
+    max-height: calc(100vh - var(--header-height, 80px));
+    overflow-y: auto;
+  }
+
+  .sidebar-nav {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .sidebar-tree,
+  .sidebar-children {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-children {
+    padding-left: 1rem;
+    display: none;
+  }
+
+  .sidebar-children.expanded {
+    display: block;
+  }
+
+   
+  .sidebar-item-header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0;
+  }
+
+   
+  .sidebar-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    color: var(--secondary);
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+
+  .sidebar-toggle-btn:hover {
+    background: var(--code-bg);
+  }
+
+  .sidebar-chevron {
+    transition: transform 0.2s ease;
+  }
+
+  .sidebar-toggle-btn.open .sidebar-chevron {
+    transform: rotate(90deg);
+  }
+
+   
+  .sidebar-link {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .sidebar-link:hover {
+    color: var(--primary);
+  }
+
+  .sidebar-item.active > .sidebar-item-header .sidebar-link {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .sidebar-item.ancestor > .sidebar-item-header .sidebar-link {
+    color: var(--primary);
+  }
+
+   
+  .sidebar-count {
+    display: inline-block;
+    min-width: 1.25rem;
+    padding: 0.05rem 0.4rem;
+    margin-left: 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    color: var(--primary);
+    background: var(--code-bg);
+    border-radius: 0.75rem;
+  }
+
+  .sidebar-item.ancestor > .sidebar-item-header .sidebar-count,
+  .sidebar-item.active > .sidebar-item-header .sidebar-count {
+    color: var(--theme);
+    background: var(--primary);
+  }
+
+   
+  .sidebar-toggle {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 200;
+    background: var(--theme);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    color: var(--primary);
+  }
+
+   
+  @media (max-width: 768px) {
+    .layout-wrapper {
+      display: block;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      padding-top: calc(var(--header-height, 80px) + 1rem);
+      background: var(--theme);
+      border-right: 1px solid var(--border);
+      z-index: 100;
+      transform: translateX(-100%);
+      transition: transform 0.25s ease;
+    }
+
+    .sidebar.open {
+      transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+      display: flex;
+    }
+
+    .sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 99;
+      display: none;
+    }
+
+    .sidebar-overlay.active {
+      display: block;
+    }
+  }
+
+   
+  .post-related {
+    margin-top: 40px;
+  }
+
+  .post-related-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 14px;
+    color: var(--primary);
+  }
+
+  .post-related-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+   
+  .post-related-grid .post-related-entry {
+    margin-bottom: 0;
+  }
+
+  .post-related-grid .post-related-entry .entry-header h2 {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .post-related-grid .post-related-entry .entry-content {
+    -webkit-line-clamp: 3;
+  }
+
+  @media (max-width: 768px) {
+    .post-related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+   
+  .post-header {
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+   
+  .toc .toc-heading {
+    margin-inline-start: 10px;
+    font-weight: 500;
+    user-select: none;
+  }
+
+   
+  .post-tags li {
+    position: relative;
+  }
+
+  .post-tags a {
+    padding: 0 14px 0 22px;
+    border: none;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 50%);
+  }
+
+   
+  .post-tags.entry-tags {
+    position: relative;
+    z-index: 2;
+    margin-top: 14px;
+    gap: 8px;
+  }
+
+  .post-tags.entry-tags a {
+    font-size: 12px;
+    line-height: 26px;
+    padding: 0 12px 0 20px;
+  }
+
+  .post-tags li::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    margin-top: -2.5px;
+    border-radius: 50%;
+    background: var(--theme);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+   
+  .tag-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--secondary);
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+
+  .tag-chip:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .tag-chip.active {
+    color: var(--theme);
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .tag-chip-count {
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+
+  .tag-chip.active .tag-chip-count {
+    opacity: 0.9;
+  }
+
+   
+  article.tag-hidden {
+    display: none;
+  }
+</style><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    
+    document.querySelectorAll(".sidebar-toggle-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var isOpen = this.classList.toggle("open");
+        this.setAttribute("aria-expanded", isOpen);
+        var children =
+          this.closest(".sidebar-item").querySelector(".sidebar-children");
+        if (children) {
+          children.classList.toggle("expanded", isOpen);
+        }
+      });
+    });
+
+    
+    var toggle = document.getElementById("sidebar-toggle");
+    var sidebar = document.getElementById("sidebar");
+    if (toggle && sidebar) {
+      var overlay = document.createElement("div");
+      overlay.className = "sidebar-overlay";
+      document.body.appendChild(overlay);
+
+      function openSidebar() {
+        sidebar.classList.add("open");
+        overlay.classList.add("active");
+      }
+      function closeSidebar() {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("active");
+      }
+
+      toggle.addEventListener("click", function () {
+        if (sidebar.classList.contains("open")) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+      overlay.addEventListener("click", closeSidebar);
+    }
+
+    
+    var filterContainer = document.getElementById("tag-filter");
+    if (filterContainer) {
+      var chips = filterContainer.querySelectorAll(".tag-chip");
+      var articles = document.querySelectorAll("article[data-tags]");
+      var activeTags = new Set();
+
+      function applyFilter() {
+        if (activeTags.size === 0) {
+          articles.forEach(function (a) {
+            a.classList.remove("tag-hidden");
+          });
+          return;
+        }
+        articles.forEach(function (a) {
+          var tags = (a.getAttribute("data-tags") || "").split(",");
+          var match = false;
+          activeTags.forEach(function (t) {
+            if (tags.indexOf(t) !== -1) {
+              match = true;
+            }
+          });
+          a.classList.toggle("tag-hidden", !match);
+        });
+      }
+
+      chips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          var tag = this.getAttribute("data-tag");
+          if (activeTags.has(tag)) {
+            activeTags.delete(tag);
+            this.classList.remove("active");
+          } else {
+            activeTags.add(tag);
+            this.classList.add("active");
+          }
+          applyFilter();
+        });
+      });
+    }
+  });
+</script>
+<meta property="og:url" content="https://wid-blog.github.io/en/posts/tech/devenv/jira-sprint-workflow/">
+  <meta property="og:site_name" content="wid&#39;s blog">
+  <meta property="og:title" content="JIRA Sprint Workflows and Git/GitHub Integration">
+  <meta property="og:description" content="Looking at JIRA’s issues and workflows as a graph of work units — covering the Sprint lifecycle, issue hierarchy, Git/GitHub integration patterns, and automation flows.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-30T00:00:00+00:00">
+    <meta property="article:tag" content="Jira">
+    <meta property="article:tag" content="Sprint">
+    <meta property="article:tag" content="Project-Management">
+    <meta property="article:tag" content="Collaboration">
+    <meta property="article:tag" content="Workflow">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="JIRA Sprint Workflows and Git/GitHub Integration">
+  <meta name="twitter:description" content="Looking at JIRA’s issues and workflows as a graph of work units — covering the Sprint lifecycle, issue hierarchy, Git/GitHub integration patterns, and automation flows.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://wid-blog.github.io/en/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Tech",
+      "item": "https://wid-blog.github.io/en/posts/tech/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Workflow",
+      "item": "https://wid-blog.github.io/en/posts/tech/devenv/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  4 ,
+      "name": "JIRA Sprint Workflows and Git/GitHub Integration",
+      "item": "https://wid-blog.github.io/en/posts/tech/devenv/jira-sprint-workflow/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "JIRA Sprint Workflows and Git/GitHub Integration",
+  "name": "JIRA Sprint Workflows and Git\/GitHub Integration",
+  "description": "Looking at JIRA\u0026rsquo;s issues and workflows as a graph of work units — covering the Sprint lifecycle, issue hierarchy, Git/GitHub integration patterns, and automation flows.",
+  "keywords": [
+    "jira", "sprint", "project-management", "collaboration", "workflow"
+  ],
+  "articleBody": "JIRA covers the work unit that pairs with the flow of code — issues and tickets. When the Sprint, the ticket lifecycle, and Git/GitHub integration move together as a single bundle, the daily cost of context switching drops noticeably.\nIssue and Workflow The core of JIRA reduces to two pieces — issues and the workflow that runs on them.\nAn issue is a unit of work. Each issue carries a type (Story, Task, Bug, Epic, Subtask), a state, an assignee, and a set of free-form metadata (labels, priority, story points). Using JIRA ultimately means creating, grouping, and transitioning these issues.\nA workflow is the set of state-transition rules an issue passes through. The simplest version looks like this:\nflowchart LR Open[Open] --\u003e InProgress[In Progress] InProgress --\u003e InReview[In Review] InReview --\u003e Done[Done] InReview --\u003e InProgress Open --\u003e Closed[Closed] Each arrow corresponds to one transition. Teams customize states and transition rules to match their process — the simpler it is, the easier it is for people to follow; the more complex it is, the more it has to be handled exclusively through automation.\nThe key principle in workflow design is restraint on the number of states. As fine-grained states like “Pending Review”, “Ready for QA”, “QA in Progress”, and “Ready for Release” pile up, more time is spent moving issues around — and eventually people start ignoring states altogether.\nSprint A Sprint is a time-boxed bundle of issues. One- to two-week durations are typical, and the goal is to finish what’s bundled inside that window.\nA Sprint’s lifecycle has three stages.\nSprint Planning: pick issues from the backlog into the next Sprint. Compare team capacity against issue estimates and avoid overcommitting. Sprint execution: move issues through In Progress → In Review → Done. Daily standups surface progress and blockers. Sprint Review/Retro: at the end, check what got done, what carried over, and how to do the next Sprint better. Sprint scope creep — issues being added mid-Sprint — is the most common failure mode. Once the planned scope is no longer kept, the Sprint reduces to a time slice with no planning meaning behind it. When urgent issues must enter mid-Sprint, requiring an equivalent amount of work to be removed in trade is a useful safeguard.\nIssue Hierarchy Most teams use a hierarchy along these lines.\nLevel Meaning Example Epic Large bundle of work, usually spans multiple Sprints “Migrate payment system to v2” Story A unit of user value, fits inside one Sprint “User can save card information” Task A unit of technical work “Implement payment API endpoint” Bug A defect report “Error message missing on payment failure” Subtask A smaller piece inside a Story or Task “Write unit tests for payment API” The hierarchy is convention, not enforcement, so teams reshape it to match their flow. Teams that find Story and Task hard to distinguish often merge them; some teams replace Subtasks with simple checklists.\nThe essential split is Epic vs Story. Work that doesn’t fit in a Sprint should be grouped as an Epic and broken down into Stories — that’s what makes planning at the Sprint level possible.\nGit/GitHub Integration When JIRA pairs with Git/GitHub, issues and code changes get connected automatically. The conventions are simple.\nIssue key in the branch name\nfeature/PROJ-123-add-search JIRA recognizes PROJ-123 as the issue key.\nIssue key in the commit message\nPROJ-123: add search endpoint JIRA links this commit to issue PROJ-123 automatically.\nIssue key in the PR title or body\nPROJ-123: Add search endpoint closes PROJ-123 When the PR opens, JIRA surfaces a PR link on the issue’s page. PR state changes (open/merged) flow back as well.\nSmart commits are syntax that lets commit messages drive issue transitions directly. Writing PROJ-123 #close or PROJ-123 #time 2h will close the issue or log work time when the commit is merged.\nThe biggest payoff is preventing context loss. Being able to see commits and PRs from the issue page, and to jump back to the issue from the PR, dramatically lowers the cost of asking “why is this code the way it is?”.\nJIRA Automation JIRA includes a rules engine that triggers state transitions automatically.\nA few common patterns:\nPR open → In Review: when a PR linked to the issue opens, move the issue to In Review automatically PR merged → Done: when the PR merges into main, move the issue to Done Carry over at Sprint end: unfinished issues automatically move to the next Sprint SLA alerts by Bug priority(Service Level Agreement): a P1 bug that stays In Progress longer than 24 hours triggers a Slack alert Auto-assign by label: issues with a specific label get auto-assigned to the team’s on-call Automation should start small. Building a complex bundle of rules from day one makes debugging painful, and a misfiring rule can move issues around in unintended ways. Beginning with simple PR-state synchronization and expanding once trust has built up is the safer path.\nCommon Pitfalls Issues and commits drift apart Without enforcing the issue-key convention, commits don’t auto-link to issues. JIRA ends up used only as a PM tool while the code flow is tracked solely on GitHub — a clean split that costs context every time someone needs to connect them. Linting branch names or adding an issue-key field to the PR template are common safeguards.\nWorkflows that are too complex A workflow with five-plus states, multiple branches, and approval steps becomes too much for people to follow. The result is workarounds — people drag issues that “should be Done” straight to Done and skip the intermediate states. A simpler workflow backed by automation is almost always the better choice.\nSprint scope creep When new issues keep flowing in after planning, the Sprint loses its planning meaning and becomes just a time slice. Forcing an equivalent amount to be removed in trade when urgent issues come in is a structural safeguard. The PM or team lead owns that decision.\nIssues for the sake of issues When small tasks each get their own issue with full metadata, the issue system becomes a job. Teams need a shared agreement on what’s worth tracking — “work that requires synchronization with someone else” is usually a good cutoff.\nSeries Wrap-up This series treated developer collaboration tooling through four elements.\nGit (Article 1) — a graph of changes; commit / branch / merge·rebase GitHub PRs (Article 2) — a collaboration layer added to the graph; PR-level design + Code Review GitHub Actions (Article 3) — automated verification and deployment; workflow / job / step JIRA (Article 4) — the work units paired with the graph; issues + Sprint + Git/GitHub integration Each tool carries its own abstraction, but the four shine when they’re paired together. Issue keys flowing through branches, commits, and PRs; PRs gated by automatic verification; merges that auto-transition issue states. The automation built on those connections is what cuts the daily cost of context switching, and team velocity grows from there.\n",
+  "wordCount" : "1158",
+  "inLanguage": "en",
+  "datePublished": "2025-12-30T00:00:00Z",
+  "dateModified": "2025-12-30T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wid-blog.github.io/en/posts/tech/devenv/jira-sprint-workflow/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "wid's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wid-blog.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://wid-blog.github.io/en/" accesskey="h" title="wid&#39;s blog (Alt + H)">wid&#39;s blog</a>
+            <a href="https://github.com/byunghak" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="header-social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/byunhak082/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="header-social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+        </div>
+        <div class="header-right">
+            <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+                <ul class="lang-switch">
+                    <li>
+                        <a href="https://wid-blog.github.io/posts/tech/devenv/jira-sprint-workflow/" title="한국어"
+                            aria-label="한국어">Ko</a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+</header>
+<div class="layout-wrapper">
+<aside class="sidebar" id="sidebar">
+  <button
+    class="sidebar-toggle"
+    id="sidebar-toggle"
+    aria-label="메뉴 열기/닫기"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+  <nav class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-tree">
+<li
+  class="sidebar-item has-children ancestor"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/en/posts/tech/" class="sidebar-link">
+      Tech
+      <span class="sidebar-count">52</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/language/" class="sidebar-link">
+      Language
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/algorithm/" class="sidebar-link">
+      Algorithm
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/network/" class="sidebar-link">
+      Network
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/architecture/" class="sidebar-link">
+      Architecture
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item ancestor"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/devenv/" class="sidebar-link">
+      Workflow
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/security/" class="sidebar-link">
+      Security
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/ml/" class="sidebar-link">
+      Machine Learning
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/design-pattern/" class="sidebar-link">
+      Design Pattern
+      <span class="sidebar-count">7</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/infra/" class="sidebar-link">
+      Infra
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/tech/database/" class="sidebar-link">
+      Database
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+<li
+  class="sidebar-item has-children"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/en/posts/career/" class="sidebar-link">
+      Career
+      <span class="sidebar-count">18</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/dable/" class="sidebar-link">
+      Dable
+      <span class="sidebar-count">10</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/personal/" class="sidebar-link">
+      Personal Project
+      <span class="sidebar-count">4</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/startup/" class="sidebar-link">
+      Startup
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/career/hackathon/" class="sidebar-link">
+      Hackathon
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+<li
+  class="sidebar-item has-children"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/en/posts/daily/" class="sidebar-link">
+      Daily
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/daily/investment/" class="sidebar-link">
+      Investment
+      <span class="sidebar-count">7</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/en/posts/daily/notes/" class="sidebar-link">
+      Notes
+      <span class="sidebar-count">1</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</aside>
+
+        <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://wid-blog.github.io/en/posts/tech/">Tech</a><span
+    class="breadcrumb-separator"
+    aria-hidden="true"
+    >›</span
+  ><a href="https://wid-blog.github.io/en/posts/tech/devenv/">Workflow</a><span
+    class="breadcrumb-separator"
+    aria-hidden="true"
+    >›</span
+  ><span class="breadcrumb-current">JIRA Sprint Workflows and Git/GitHub Integration</span></div>
+    <h1 class="post-title entry-hint-parent">
+      JIRA Sprint Workflows and Git/GitHub Integration
+    </h1>
+    <div class="post-meta"><span title='2025-12-30 00:00:00 +0000 UTC'>December 30, 2025</span>&nbsp;·&nbsp;<span>6 min read</span>
+
+</div>
+  </header> <div class="toc">
+    <div class="toc-heading">Table of Contents</div>
+    <div class="inner"><ul>
+            <li>
+                <a href="#issue-and-workflow" aria-label="Issue and Workflow">Issue and Workflow</a></li>
+            <li>
+                <a href="#sprint" aria-label="Sprint">Sprint</a></li>
+            <li>
+                <a href="#issue-hierarchy" aria-label="Issue Hierarchy">Issue Hierarchy</a></li>
+            <li>
+                <a href="#gitgithub-integration" aria-label="Git/GitHub Integration">Git/GitHub Integration</a></li>
+            <li>
+                <a href="#jira-automation" aria-label="JIRA Automation">JIRA Automation</a></li>
+            <li>
+                <a href="#common-pitfalls" aria-label="Common Pitfalls">Common Pitfalls</a><ul>
+                    
+            <li>
+                <a href="#issues-and-commits-drift-apart" aria-label="Issues and commits drift apart">Issues and commits drift apart</a></li>
+            <li>
+                <a href="#workflows-that-are-too-complex" aria-label="Workflows that are too complex">Workflows that are too complex</a></li>
+            <li>
+                <a href="#sprint-scope-creep" aria-label="Sprint scope creep">Sprint scope creep</a></li>
+            <li>
+                <a href="#issues-for-the-sake-of-issues" aria-label="Issues for the sake of issues">Issues for the sake of issues</a></li></ul>
+            </li>
+            <li>
+                <a href="#series-wrap-up" aria-label="Series Wrap-up">Series Wrap-up</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+  <div class="post-content"><p>JIRA covers the work unit that pairs with the flow of code — issues and tickets. When the Sprint, the ticket lifecycle, and Git/GitHub integration move together as a single bundle, the daily cost of context switching drops noticeably.</p>
+<h2 id="issue-and-workflow">Issue and Workflow<a hidden class="anchor" aria-hidden="true" href="#issue-and-workflow">#</a></h2>
+<p>The core of JIRA reduces to two pieces — issues and the workflow that runs on them.</p>
+<p>An <strong>issue</strong> is a unit of work. Each issue carries a type (Story, Task, Bug, Epic, Subtask), a state, an assignee, and a set of free-form metadata (labels, priority, story points). Using JIRA ultimately means creating, grouping, and transitioning these issues.</p>
+<p>A <strong>workflow</strong> is the set of state-transition rules an issue passes through. The simplest version looks like this:</p>
+<div
+  class="mermaid-wrapper"
+  style="overflow-x: auto; max-width: 100%; margin: 1em 0"
+>
+  <pre class="mermaid">flowchart LR
     Open[Open] --> InProgress[In Progress]
     InProgress --> InReview[In Review]
     InReview --> Done[Done]
     InReview --> InProgress
     Open --> Closed[Closed]
-</pre></div><p>Each arrow corresponds to one transition. Teams customize states and transition rules to match their process — the simpler it is, the easier it is for people to follow; the more complex it is, the more it has to be handled exclusively through automation.</p><p>The key principle in workflow design is <strong>restraint on the number of states</strong>. As fine-grained states like &ldquo;Pending Review&rdquo;, &ldquo;Ready for QA&rdquo;, &ldquo;QA in Progress&rdquo;, and &ldquo;Ready for Release&rdquo; pile up, more time is spent moving issues around — and eventually people start ignoring states altogether.</p><h2 id=sprint>Sprint<a hidden class=anchor aria-hidden=true href=#sprint>#</a></h2><p>A Sprint is a time-boxed bundle of issues. One- to two-week durations are typical, and the goal is to finish what&rsquo;s bundled inside that window.</p><p>A Sprint&rsquo;s lifecycle has three stages.</p><ul><li><strong>Sprint Planning</strong>: pick issues from the backlog into the next Sprint. Compare team capacity against issue estimates and avoid overcommitting.</li><li><strong>Sprint execution</strong>: move issues through In Progress → In Review → Done. Daily standups surface progress and blockers.</li><li><strong>Sprint Review/Retro</strong>: at the end, check what got done, what carried over, and how to do the next Sprint better.</li></ul><p>Sprint scope creep — issues being added mid-Sprint — is the most common failure mode. Once the planned scope is no longer kept, the Sprint reduces to a time slice with no planning meaning behind it. When urgent issues must enter mid-Sprint, requiring an equivalent amount of work to be removed in trade is a useful safeguard.</p><h2 id=issue-hierarchy>Issue Hierarchy<a hidden class=anchor aria-hidden=true href=#issue-hierarchy>#</a></h2><p>Most teams use a hierarchy along these lines.</p><table><thead><tr><th>Level</th><th>Meaning</th><th>Example</th></tr></thead><tbody><tr><td><strong>Epic</strong></td><td>Large bundle of work, usually spans multiple Sprints</td><td>&ldquo;Migrate payment system to v2&rdquo;</td></tr><tr><td><strong>Story</strong></td><td>A unit of user value, fits inside one Sprint</td><td>&ldquo;User can save card information&rdquo;</td></tr><tr><td><strong>Task</strong></td><td>A unit of technical work</td><td>&ldquo;Implement payment API endpoint&rdquo;</td></tr><tr><td><strong>Bug</strong></td><td>A defect report</td><td>&ldquo;Error message missing on payment failure&rdquo;</td></tr><tr><td><strong>Subtask</strong></td><td>A smaller piece inside a Story or Task</td><td>&ldquo;Write unit tests for payment API&rdquo;</td></tr></tbody></table><p>The hierarchy is convention, not enforcement, so teams reshape it to match their flow. Teams that find Story and Task hard to distinguish often merge them; some teams replace Subtasks with simple checklists.</p><p>The essential split is <strong>Epic vs Story</strong>. Work that doesn&rsquo;t fit in a Sprint should be grouped as an Epic and broken down into Stories — that&rsquo;s what makes planning at the Sprint level possible.</p><h2 id=gitgithub-integration>Git/GitHub Integration<a hidden class=anchor aria-hidden=true href=#gitgithub-integration>#</a></h2><p>When JIRA pairs with Git/GitHub, issues and code changes get connected automatically. The conventions are simple.</p><p><strong>Issue key in the branch name</strong></p><pre tabindex=0><code>feature/PROJ-123-add-search
-</code></pre><p>JIRA recognizes <code>PROJ-123</code> as the issue key.</p><p><strong>Issue key in the commit message</strong></p><pre tabindex=0><code>PROJ-123: add search endpoint
-</code></pre><p>JIRA links this commit to issue PROJ-123 automatically.</p><p><strong>Issue key in the PR title or body</strong></p><pre tabindex=0><code>PROJ-123: Add search endpoint
+</pre
+  >
+</div>
+<p>Each arrow corresponds to one transition. Teams customize states and transition rules to match their process — the simpler it is, the easier it is for people to follow; the more complex it is, the more it has to be handled exclusively through automation.</p>
+<p>The key principle in workflow design is <strong>restraint on the number of states</strong>. As fine-grained states like &ldquo;Pending Review&rdquo;, &ldquo;Ready for QA&rdquo;, &ldquo;QA in Progress&rdquo;, and &ldquo;Ready for Release&rdquo; pile up, more time is spent moving issues around — and eventually people start ignoring states altogether.</p>
+<h2 id="sprint">Sprint<a hidden class="anchor" aria-hidden="true" href="#sprint">#</a></h2>
+<p>A Sprint is a time-boxed bundle of issues. One- to two-week durations are typical, and the goal is to finish what&rsquo;s bundled inside that window.</p>
+<p>A Sprint&rsquo;s lifecycle has three stages.</p>
+<ul>
+<li><strong>Sprint Planning</strong>: pick issues from the backlog into the next Sprint. Compare team capacity against issue estimates and avoid overcommitting.</li>
+<li><strong>Sprint execution</strong>: move issues through In Progress → In Review → Done. Daily standups surface progress and blockers.</li>
+<li><strong>Sprint Review/Retro</strong>: at the end, check what got done, what carried over, and how to do the next Sprint better.</li>
+</ul>
+<p>Sprint scope creep — issues being added mid-Sprint — is the most common failure mode. Once the planned scope is no longer kept, the Sprint reduces to a time slice with no planning meaning behind it. When urgent issues must enter mid-Sprint, requiring an equivalent amount of work to be removed in trade is a useful safeguard.</p>
+<h2 id="issue-hierarchy">Issue Hierarchy<a hidden class="anchor" aria-hidden="true" href="#issue-hierarchy">#</a></h2>
+<p>Most teams use a hierarchy along these lines.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Level</th>
+					<th>Meaning</th>
+					<th>Example</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Epic</strong></td>
+					<td>Large bundle of work, usually spans multiple Sprints</td>
+					<td>&ldquo;Migrate payment system to v2&rdquo;</td>
+			</tr>
+			<tr>
+					<td><strong>Story</strong></td>
+					<td>A unit of user value, fits inside one Sprint</td>
+					<td>&ldquo;User can save card information&rdquo;</td>
+			</tr>
+			<tr>
+					<td><strong>Task</strong></td>
+					<td>A unit of technical work</td>
+					<td>&ldquo;Implement payment API endpoint&rdquo;</td>
+			</tr>
+			<tr>
+					<td><strong>Bug</strong></td>
+					<td>A defect report</td>
+					<td>&ldquo;Error message missing on payment failure&rdquo;</td>
+			</tr>
+			<tr>
+					<td><strong>Subtask</strong></td>
+					<td>A smaller piece inside a Story or Task</td>
+					<td>&ldquo;Write unit tests for payment API&rdquo;</td>
+			</tr>
+	</tbody>
+</table>
+<p>The hierarchy is convention, not enforcement, so teams reshape it to match their flow. Teams that find Story and Task hard to distinguish often merge them; some teams replace Subtasks with simple checklists.</p>
+<p>The essential split is <strong>Epic vs Story</strong>. Work that doesn&rsquo;t fit in a Sprint should be grouped as an Epic and broken down into Stories — that&rsquo;s what makes planning at the Sprint level possible.</p>
+<h2 id="gitgithub-integration">Git/GitHub Integration<a hidden class="anchor" aria-hidden="true" href="#gitgithub-integration">#</a></h2>
+<p>When JIRA pairs with Git/GitHub, issues and code changes get connected automatically. The conventions are simple.</p>
+<p><strong>Issue key in the branch name</strong></p>
+<pre tabindex="0"><code>feature/PROJ-123-add-search
+</code></pre><p>JIRA recognizes <code>PROJ-123</code> as the issue key.</p>
+<p><strong>Issue key in the commit message</strong></p>
+<pre tabindex="0"><code>PROJ-123: add search endpoint
+</code></pre><p>JIRA links this commit to issue PROJ-123 automatically.</p>
+<p><strong>Issue key in the PR title or body</strong></p>
+<pre tabindex="0"><code>PROJ-123: Add search endpoint
 
 closes PROJ-123
-</code></pre><p>When the PR opens, JIRA surfaces a PR link on the issue&rsquo;s page. PR state changes (open/merged) flow back as well.</p><p><strong>Smart commits</strong> are syntax that lets commit messages drive issue transitions directly. Writing <code>PROJ-123 #close</code> or <code>PROJ-123 #time 2h</code> will close the issue or log work time when the commit is merged.</p><p>The biggest payoff is <strong>preventing context loss</strong>. Being able to see commits and PRs from the issue page, and to jump back to the issue from the PR, dramatically lowers the cost of asking &ldquo;why is this code the way it is?&rdquo;.</p><h2 id=jira-automation>JIRA Automation<a hidden class=anchor aria-hidden=true href=#jira-automation>#</a></h2><p>JIRA includes a rules engine that triggers state transitions automatically.</p><p>A few common patterns:</p><ul><li><strong>PR open → In Review</strong>: when a PR linked to the issue opens, move the issue to In Review automatically</li><li><strong>PR merged → Done</strong>: when the PR merges into main, move the issue to Done</li><li><strong>Carry over at Sprint end</strong>: unfinished issues automatically move to the next Sprint</li><li><strong>SLA alerts by Bug priority</strong>(Service Level Agreement): a P1 bug that stays In Progress longer than 24 hours triggers a Slack alert</li><li><strong>Auto-assign by label</strong>: issues with a specific label get auto-assigned to the team&rsquo;s on-call</li></ul><p>Automation should start small. Building a complex bundle of rules from day one makes debugging painful, and a misfiring rule can move issues around in unintended ways. Beginning with simple PR-state synchronization and expanding once trust has built up is the safer path.</p><h2 id=common-pitfalls>Common Pitfalls<a hidden class=anchor aria-hidden=true href=#common-pitfalls>#</a></h2><h3 id=issues-and-commits-drift-apart>Issues and commits drift apart<a hidden class=anchor aria-hidden=true href=#issues-and-commits-drift-apart>#</a></h3><p>Without enforcing the issue-key convention, commits don&rsquo;t auto-link to issues. JIRA ends up used only as a PM tool while the code flow is tracked solely on GitHub — a clean split that costs context every time someone needs to connect them. Linting branch names or adding an issue-key field to the PR template are common safeguards.</p><h3 id=workflows-that-are-too-complex>Workflows that are too complex<a hidden class=anchor aria-hidden=true href=#workflows-that-are-too-complex>#</a></h3><p>A workflow with five-plus states, multiple branches, and approval steps becomes too much for people to follow. The result is workarounds — people drag issues that &ldquo;should be Done&rdquo; straight to Done and skip the intermediate states. A simpler workflow backed by automation is almost always the better choice.</p><h3 id=sprint-scope-creep>Sprint scope creep<a hidden class=anchor aria-hidden=true href=#sprint-scope-creep>#</a></h3><p>When new issues keep flowing in after planning, the Sprint loses its planning meaning and becomes just a time slice. Forcing an equivalent amount to be removed in trade when urgent issues come in is a structural safeguard. The PM or team lead owns that decision.</p><h3 id=issues-for-the-sake-of-issues>Issues for the sake of issues<a hidden class=anchor aria-hidden=true href=#issues-for-the-sake-of-issues>#</a></h3><p>When small tasks each get their own issue with full metadata, the issue system becomes a job. Teams need a shared agreement on what&rsquo;s worth tracking — &ldquo;work that requires synchronization with someone else&rdquo; is usually a good cutoff.</p><h2 id=series-wrap-up>Series Wrap-up<a hidden class=anchor aria-hidden=true href=#series-wrap-up>#</a></h2><p>This series treated developer collaboration tooling through four elements.</p><ul><li><strong>Git</strong> (Article 1) — a graph of changes; commit / branch / merge·rebase</li><li><strong>GitHub PRs</strong> (Article 2) — a collaboration layer added to the graph; PR-level design + Code Review</li><li><strong>GitHub Actions</strong> (Article 3) — automated verification and deployment; workflow / job / step</li><li><strong>JIRA</strong> (Article 4) — the work units paired with the graph; issues + Sprint + Git/GitHub integration</li></ul><p>Each tool carries its own abstraction, but the four shine when they&rsquo;re paired together. Issue keys flowing through branches, commits, and PRs; PRs gated by automatic verification; merges that auto-transition issue states. The automation built on those connections is what cuts the daily cost of context switching, and team velocity grows from there.</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://wid-blog.github.io/en/tags/jira/>Jira</a></li><li><a href=https://wid-blog.github.io/en/tags/sprint/>Sprint</a></li><li><a href=https://wid-blog.github.io/en/tags/project-management/>Project-Management</a></li><li><a href=https://wid-blog.github.io/en/tags/collaboration/>Collaboration</a></li><li><a href=https://wid-blog.github.io/en/tags/workflow/>Workflow</a></li></ul><section class=post-related><h3 class=post-related-title>Related posts</h3><div class=post-related-grid><article class="post-entry post-related-entry"><header class=entry-header><h2>GitHub PRs and the Code Review Cycle</h2></header><div class=entry-content><p>Looking at GitHub PRs as a collaboration layer added to Git’s change graph, and walking through the Code Review cycle, PR-level design, and merge strategies.</p></div><footer class=entry-footer><span title='2025-11-30 00:00:00 +0000 UTC'>November 30, 2025</span>&nbsp;·&nbsp;<span>5 min read</span></footer><a class=entry-link aria-label="post link to GitHub PRs and the Code Review Cycle" href=https://wid-blog.github.io/en/posts/tech/devenv/github-pr-and-code-review/></a></article><article class="post-entry post-related-entry"><header class=entry-header><h2>GitHub Actions Fundamentals — Workflow, Job, Step</h2></header><div class=entry-content><p>GitHub Actions seen as an event-driven automation engine — the three-layer abstraction of workflow / job / step, plus the operational details of triggers, runners, and secrets.</p></div><footer class=entry-footer><span title='2025-12-15 00:00:00 +0000 UTC'>December 15, 2025</span>&nbsp;·&nbsp;<span>6 min read</span></footer><a class=entry-link aria-label="post link to GitHub Actions Fundamentals — Workflow, Job, Step" href=https://wid-blog.github.io/en/posts/tech/devenv/github-actions-fundamentals/></a></article><article class="post-entry post-related-entry"><header class=entry-header><h2>Git Workflow Basics — Commits, Branches, Merge vs Rebase</h2></header><div class=entry-content><p>Looking at Git as a graph of changes — and seeing how commit hygiene, branching strategy, and the merge-vs-rebase choice are all decisions about the shape of that graph.</p></div><footer class=entry-footer><span title='2025-11-15 00:00:00 +0000 UTC'>November 15, 2025</span>&nbsp;·&nbsp;<span>5 min read</span></footer><a class=entry-link aria-label="post link to Git Workflow Basics — Commits, Branches, Merge vs Rebase" href=https://wid-blog.github.io/en/posts/tech/devenv/git-workflow-basics/></a></article><article class="post-entry post-related-entry"><header class=entry-header><h2>Claude Code Config in Four Layers</h2></header><div class=entry-content><p>settings.json, CLAUDE.md, slash commands, subagents, hooks. Claude Code’s customization surface settles into four layers once you pick one criterion: when does each one step in?</p></div><footer class=entry-footer><span title='2026-05-01 00:00:00 +0000 UTC'>May 1, 2026</span>&nbsp;·&nbsp;<span>11 min read</span></footer><a class=entry-link aria-label="post link to Claude Code Config in Four Layers" href=https://wid-blog.github.io/en/posts/tech/devenv/claude-code-config-layers/></a></article></div></section></footer></article></main></div><footer class=footer><span>&copy; 2026 <a href=https://wid-blog.github.io/en/>wid's blog</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script type=module>
+</code></pre><p>When the PR opens, JIRA surfaces a PR link on the issue&rsquo;s page. PR state changes (open/merged) flow back as well.</p>
+<p><strong>Smart commits</strong> are syntax that lets commit messages drive issue transitions directly. Writing <code>PROJ-123 #close</code> or <code>PROJ-123 #time 2h</code> will close the issue or log work time when the commit is merged.</p>
+<p>The biggest payoff is <strong>preventing context loss</strong>. Being able to see commits and PRs from the issue page, and to jump back to the issue from the PR, dramatically lowers the cost of asking &ldquo;why is this code the way it is?&rdquo;.</p>
+<h2 id="jira-automation">JIRA Automation<a hidden class="anchor" aria-hidden="true" href="#jira-automation">#</a></h2>
+<p>JIRA includes a rules engine that triggers state transitions automatically.</p>
+<p>A few common patterns:</p>
+<ul>
+<li><strong>PR open → In Review</strong>: when a PR linked to the issue opens, move the issue to In Review automatically</li>
+<li><strong>PR merged → Done</strong>: when the PR merges into main, move the issue to Done</li>
+<li><strong>Carry over at Sprint end</strong>: unfinished issues automatically move to the next Sprint</li>
+<li><strong>SLA alerts by Bug priority</strong>(Service Level Agreement): a P1 bug that stays In Progress longer than 24 hours triggers a Slack alert</li>
+<li><strong>Auto-assign by label</strong>: issues with a specific label get auto-assigned to the team&rsquo;s on-call</li>
+</ul>
+<p>Automation should start small. Building a complex bundle of rules from day one makes debugging painful, and a misfiring rule can move issues around in unintended ways. Beginning with simple PR-state synchronization and expanding once trust has built up is the safer path.</p>
+<h2 id="common-pitfalls">Common Pitfalls<a hidden class="anchor" aria-hidden="true" href="#common-pitfalls">#</a></h2>
+<h3 id="issues-and-commits-drift-apart">Issues and commits drift apart<a hidden class="anchor" aria-hidden="true" href="#issues-and-commits-drift-apart">#</a></h3>
+<p>Without enforcing the issue-key convention, commits don&rsquo;t auto-link to issues. JIRA ends up used only as a PM tool while the code flow is tracked solely on GitHub — a clean split that costs context every time someone needs to connect them. Linting branch names or adding an issue-key field to the PR template are common safeguards.</p>
+<h3 id="workflows-that-are-too-complex">Workflows that are too complex<a hidden class="anchor" aria-hidden="true" href="#workflows-that-are-too-complex">#</a></h3>
+<p>A workflow with five-plus states, multiple branches, and approval steps becomes too much for people to follow. The result is workarounds — people drag issues that &ldquo;should be Done&rdquo; straight to Done and skip the intermediate states. A simpler workflow backed by automation is almost always the better choice.</p>
+<h3 id="sprint-scope-creep">Sprint scope creep<a hidden class="anchor" aria-hidden="true" href="#sprint-scope-creep">#</a></h3>
+<p>When new issues keep flowing in after planning, the Sprint loses its planning meaning and becomes just a time slice. Forcing an equivalent amount to be removed in trade when urgent issues come in is a structural safeguard. The PM or team lead owns that decision.</p>
+<h3 id="issues-for-the-sake-of-issues">Issues for the sake of issues<a hidden class="anchor" aria-hidden="true" href="#issues-for-the-sake-of-issues">#</a></h3>
+<p>When small tasks each get their own issue with full metadata, the issue system becomes a job. Teams need a shared agreement on what&rsquo;s worth tracking — &ldquo;work that requires synchronization with someone else&rdquo; is usually a good cutoff.</p>
+<h2 id="series-wrap-up">Series Wrap-up<a hidden class="anchor" aria-hidden="true" href="#series-wrap-up">#</a></h2>
+<p>This series treated developer collaboration tooling through four elements.</p>
+<ul>
+<li><strong>Git</strong> (Article 1) — a graph of changes; commit / branch / merge·rebase</li>
+<li><strong>GitHub PRs</strong> (Article 2) — a collaboration layer added to the graph; PR-level design + Code Review</li>
+<li><strong>GitHub Actions</strong> (Article 3) — automated verification and deployment; workflow / job / step</li>
+<li><strong>JIRA</strong> (Article 4) — the work units paired with the graph; issues + Sprint + Git/GitHub integration</li>
+</ul>
+<p>Each tool carries its own abstraction, but the four shine when they&rsquo;re paired together. Issue keys flowing through branches, commits, and PRs; PRs gated by automatic verification; merges that auto-transition issue states. The automation built on those connections is what cuts the daily cost of context switching, and team velocity grows from there.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://wid-blog.github.io/en/tags/jira/">Jira</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/sprint/">Sprint</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/project-management/">Project-Management</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/collaboration/">Collaboration</a></li>
+      <li><a href="https://wid-blog.github.io/en/tags/workflow/">Workflow</a></li>
+    </ul>
+<section class="post-related">
+  <h3 class="post-related-title">Related posts</h3>
+  <div class="post-related-grid">
+    <article class="post-entry post-related-entry">
+      <header class="entry-header">
+        <h2>GitHub PRs and the Code Review Cycle</h2>
+      </header>
+      <div class="entry-content">
+        <p>
+          Looking at GitHub PRs as a collaboration layer added to Git’s change graph, and walking through the Code Review cycle, PR-level design, and merge strategies.
+        </p>
+      </div>
+      <footer class="entry-footer"><span title='2025-11-30 00:00:00 +0000 UTC'>November 30, 2025</span>&nbsp;·&nbsp;<span>5 min read</span></footer>
+      <a
+        class="entry-link"
+        aria-label="post link to GitHub PRs and the Code Review Cycle"
+        href="https://wid-blog.github.io/en/posts/tech/devenv/github-pr-and-code-review/"
+      ></a>
+    </article>
+    <article class="post-entry post-related-entry">
+      <header class="entry-header">
+        <h2>GitHub Actions Fundamentals — Workflow, Job, Step</h2>
+      </header>
+      <div class="entry-content">
+        <p>
+          GitHub Actions seen as an event-driven automation engine — the three-layer abstraction of workflow / job / step, plus the operational details of triggers, runners, and secrets.
+        </p>
+      </div>
+      <footer class="entry-footer"><span title='2025-12-15 00:00:00 +0000 UTC'>December 15, 2025</span>&nbsp;·&nbsp;<span>6 min read</span></footer>
+      <a
+        class="entry-link"
+        aria-label="post link to GitHub Actions Fundamentals — Workflow, Job, Step"
+        href="https://wid-blog.github.io/en/posts/tech/devenv/github-actions-fundamentals/"
+      ></a>
+    </article>
+    <article class="post-entry post-related-entry">
+      <header class="entry-header">
+        <h2>Git Workflow Basics — Commits, Branches, Merge vs Rebase</h2>
+      </header>
+      <div class="entry-content">
+        <p>
+          Looking at Git as a graph of changes — and seeing how commit hygiene, branching strategy, and the merge-vs-rebase choice are all decisions about the shape of that graph.
+        </p>
+      </div>
+      <footer class="entry-footer"><span title='2025-11-15 00:00:00 +0000 UTC'>November 15, 2025</span>&nbsp;·&nbsp;<span>5 min read</span></footer>
+      <a
+        class="entry-link"
+        aria-label="post link to Git Workflow Basics — Commits, Branches, Merge vs Rebase"
+        href="https://wid-blog.github.io/en/posts/tech/devenv/git-workflow-basics/"
+      ></a>
+    </article>
+    <article class="post-entry post-related-entry">
+      <header class="entry-header">
+        <h2>Claude Code Config in Four Layers</h2>
+      </header>
+      <div class="entry-content">
+        <p>
+          settings.json, CLAUDE.md, slash commands, subagents, hooks. Claude Code’s customization surface settles into four layers once you pick one criterion: when does each one step in?
+        </p>
+      </div>
+      <footer class="entry-footer"><span title='2026-05-01 00:00:00 +0000 UTC'>May 1, 2026</span>&nbsp;·&nbsp;<span>11 min read</span></footer>
+      <a
+        class="entry-link"
+        aria-label="post link to Claude Code Config in Four Layers"
+        href="https://wid-blog.github.io/en/posts/tech/devenv/claude-code-config-layers/"
+      ></a>
+    </article>
+  </div>
+</section>
+
+  </footer>
+</article>
+        </main>
+    </div>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://wid-blog.github.io/en/">wid&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<script type="module">
   import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
   const isDark = document.documentElement.dataset.theme === "dark";
   mermaid.initialize({
@@ -114,4 +1322,182 @@ closes PROJ-123
 
     document.body.appendChild(overlay);
   }
-</script><style>.mermaid-wrapper{position:relative}.mermaid-zoom-btn{position:absolute;top:.5em;right:.5em;background:rgba(0,0,0,.55);color:#fff;border:none;border-radius:4px;width:2em;height:2em;font-size:1.1em;line-height:1;cursor:pointer;opacity:0;transition:opacity .15s ease;z-index:2}.mermaid-wrapper:hover .mermaid-zoom-btn,.mermaid-wrapper:focus-within .mermaid-zoom-btn{opacity:1}.mermaid-zoom-overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:zoom-out;padding:2rem}.mermaid-zoom-inner{background:#fff;padding:1.5rem;border-radius:8px;max-width:95vw;max-height:90vh;overflow:auto;cursor:default;display:flex;align-items:center;justify-content:center}.mermaid-zoom-close{position:fixed;top:1rem;right:1rem;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:50%;width:2.5rem;height:2.5rem;font-size:1.2rem;cursor:pointer;line-height:1}html[data-theme=dark] .mermaid-zoom-inner{background:#1a1a1a}</style><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
+</script>
+<style>
+  .mermaid-wrapper {
+    position: relative;
+  }
+  .mermaid-zoom-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    width: 2em;
+    height: 2em;
+    font-size: 1.1em;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 2;
+  }
+  .mermaid-wrapper:hover .mermaid-zoom-btn,
+  .mermaid-wrapper:focus-within .mermaid-zoom-btn {
+    opacity: 1;
+  }
+  .mermaid-zoom-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+    padding: 2rem;
+  }
+  .mermaid-zoom-inner {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow: auto;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mermaid-zoom-close {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+  html[data-theme="dark"] .mermaid-zoom-inner {
+    background: #1a1a1a;
+  }
+</style>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

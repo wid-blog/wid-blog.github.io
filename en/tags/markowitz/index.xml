@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Markowitz on wid's blog</title><link>https://wid-blog.github.io/en/tags/markowitz/</link><description>Recent content in Markowitz on wid's blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 11 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/en/tags/markowitz/index.xml" rel="self" type="application/rss+xml"/><item><title>Efficient Frontier and Portfolio Optimization</title><link>https://wid-blog.github.io/en/posts/daily/investment/efficient-frontier-optimization/</link><pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/daily/investment/efficient-frontier-optimization/</guid><description>Covers Markowitz&amp;rsquo;s mean-variance model as the mathematical foundation for setting asset weights, the two optimal points on the efficient frontier (Min-Variance and Tangency), and the practical adjustments that compensate for the model&amp;rsquo;s weaknesses.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Markowitz on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/en/tags/markowitz/</link>
+    <description>Recent content in Markowitz on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/en/tags/markowitz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Efficient Frontier and Portfolio Optimization</title>
+      <link>https://wid-blog.github.io/en/posts/daily/investment/efficient-frontier-optimization/</link>
+      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/daily/investment/efficient-frontier-optimization/</guid>
+      <description>Covers Markowitz&amp;rsquo;s mean-variance model as the mathematical foundation for setting asset weights, the two optimal points on the efficient frontier (Min-Variance and Tangency), and the practical adjustments that compensate for the model&amp;rsquo;s weaknesses.</description>
+    </item>
+  </channel>
+</rss>

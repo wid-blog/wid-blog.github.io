@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>공공데이터 on wid's blog</title><link>https://wid-blog.github.io/tags/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0/</link><description>Recent content in 공공데이터 on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>역 편의정보 공공데이터 활용 대회 — 숨겨진 휴식공간</title><link>https://wid-blog.github.io/posts/career/hackathon/kric-station-public-data-hackathon/</link><pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/hackathon/kric-station-public-data-hackathon/</guid><description>철도산업정보센터 주최 공공데이터 활용 대회. 지하철 역의 숨은 휴식 공간을 알려주는 Android 앱을 3주간 3명이 만든 기록.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>공공데이터 on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0/</link>
+    <description>Recent content in 공공데이터 on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>역 편의정보 공공데이터 활용 대회 — 숨겨진 휴식공간</title>
+      <link>https://wid-blog.github.io/posts/career/hackathon/kric-station-public-data-hackathon/</link>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/hackathon/kric-station-public-data-hackathon/</guid>
+      <description>철도산업정보센터 주최 공공데이터 활용 대회. 지하철 역의 숨은 휴식 공간을 알려주는 Android 앱을 3주간 3명이 만든 기록.</description>
+    </item>
+  </channel>
+</rss>

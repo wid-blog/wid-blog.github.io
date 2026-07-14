@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Ml-Lifecycle on wid's blog</title><link>https://wid-blog.github.io/tags/ml-lifecycle/</link><description>Recent content in Ml-Lifecycle on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/ml-lifecycle/index.xml" rel="self" type="application/rss+xml"/><item><title>MLflow 와 ML Lifecycle</title><link>https://wid-blog.github.io/posts/tech/ml/mlflow/</link><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/ml/mlflow/</guid><description>MLflow의 네 조각이 ML Lifecycle의 어느 칸을 메우는지, 그리고 경량 팀이 그 중 어떤 조각을 고를 수 있는지.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ml-Lifecycle on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/ml-lifecycle/</link>
+    <description>Recent content in Ml-Lifecycle on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/ml-lifecycle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MLflow 와 ML Lifecycle</title>
+      <link>https://wid-blog.github.io/posts/tech/ml/mlflow/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/ml/mlflow/</guid>
+      <description>MLflow의 네 조각이 ML Lifecycle의 어느 칸을 메우는지, 그리고 경량 팀이 그 중 어떤 조각을 고를 수 있는지.</description>
+    </item>
+  </channel>
+</rss>

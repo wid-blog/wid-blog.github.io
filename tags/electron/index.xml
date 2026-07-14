@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Electron on wid's blog</title><link>https://wid-blog.github.io/tags/electron/</link><description>Recent content in Electron on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/electron/index.xml" rel="self" type="application/rss+xml"/><item><title>55L(GGS) 창업기</title><link>https://wid-blog.github.io/posts/career/startup/55l-ggs-startup-retrospective/</link><pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/startup/55l-ggs-startup-retrospective/</guid><description>예전부터 가끔 하던 롤에서 시작된 창업. 아키텍처 설계부터 데스크톱 앱까지, 2명이 시작해 10,000 유저의 서비스를 만들어간 5개월의 기록.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Electron on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/electron/</link>
+    <description>Recent content in Electron on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/electron/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>55L(GGS) 창업기</title>
+      <link>https://wid-blog.github.io/posts/career/startup/55l-ggs-startup-retrospective/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/startup/55l-ggs-startup-retrospective/</guid>
+      <description>예전부터 가끔 하던 롤에서 시작된 창업. 아키텍처 설계부터 데스크톱 앱까지, 2명이 시작해 10,000 유저의 서비스를 만들어간 5개월의 기록.</description>
+    </item>
+  </channel>
+</rss>

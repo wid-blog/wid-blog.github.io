@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Ports-and-Adapters on wid's blog</title><link>https://wid-blog.github.io/tags/ports-and-adapters/</link><description>Recent content in Ports-and-Adapters on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Wed, 21 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/ports-and-adapters/index.xml" rel="self" type="application/rss+xml"/><item><title>Go에서 Hexagonal Architecture 구현</title><link>https://wid-blog.github.io/posts/tech/architecture/go-hexagonal-architecture/</link><pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/architecture/go-hexagonal-architecture/</guid><description>Hexagonal Architecture의 핵심 개념과 Go에서의 관용적 구현. 암묵적 인터페이스와 패키지 구조를 활용한 의존성 방향 제어.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ports-and-Adapters on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/ports-and-adapters/</link>
+    <description>Recent content in Ports-and-Adapters on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Wed, 21 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/ports-and-adapters/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go에서 Hexagonal Architecture 구현</title>
+      <link>https://wid-blog.github.io/posts/tech/architecture/go-hexagonal-architecture/</link>
+      <pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/architecture/go-hexagonal-architecture/</guid>
+      <description>Hexagonal Architecture의 핵심 개념과 Go에서의 관용적 구현. 암묵적 인터페이스와 패키지 구조를 활용한 의존성 방향 제어.</description>
+    </item>
+  </channel>
+</rss>

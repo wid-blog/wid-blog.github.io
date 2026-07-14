@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Pointer on wid's blog</title><link>https://wid-blog.github.io/tags/pointer/</link><description>Recent content in Pointer on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/pointer/index.xml" rel="self" type="application/rss+xml"/><item><title>모든 것은 값 복사다 — Go, Java, Python 의 메모리 전달</title><link>https://wid-blog.github.io/posts/tech/language/everything-is-pass-by-value/</link><pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/language/everything-is-pass-by-value/</guid><description>함수에 객체를 넘기는 동작을 &amp;lsquo;참조 전달&amp;rsquo; 이라 부르지만 메모리에서는 모두 값 복사다. Java reference value 복사, Python call by sharing, Go 구조체 헤더와 escape analysis. 무엇이 복사되느냐가 다를 뿐 메커니즘은 같다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pointer on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/pointer/</link>
+    <description>Recent content in Pointer on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/pointer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>모든 것은 값 복사다 — Go, Java, Python 의 메모리 전달</title>
+      <link>https://wid-blog.github.io/posts/tech/language/everything-is-pass-by-value/</link>
+      <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/language/everything-is-pass-by-value/</guid>
+      <description>함수에 객체를 넘기는 동작을 &amp;lsquo;참조 전달&amp;rsquo; 이라 부르지만 메모리에서는 모두 값 복사다. Java reference value 복사, Python call by sharing, Go 구조체 헤더와 escape analysis. 무엇이 복사되느냐가 다를 뿐 메커니즘은 같다.</description>
+    </item>
+  </channel>
+</rss>

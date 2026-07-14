@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Nosql on wid's blog</title><link>https://wid-blog.github.io/tags/nosql/</link><description>Recent content in Nosql on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Tue, 02 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/nosql/index.xml" rel="self" type="application/rss+xml"/><item><title>MongoDB와 Redis — 같은 NoSQL, 다른 역할</title><link>https://wid-blog.github.io/posts/tech/database/mongodb-vs-redis/</link><pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/database/mongodb-vs-redis/</guid><description>같은 NoSQL 우산 아래에서 MongoDB 와 Redis 가 서로 다른 역할로 자리잡은 이유. 데이터 모델·스토리지·스키마·확장·사용 사례를 기준으로 비교 정리.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nosql on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/nosql/</link>
+    <description>Recent content in Nosql on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Tue, 02 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/nosql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MongoDB와 Redis — 같은 NoSQL, 다른 역할</title>
+      <link>https://wid-blog.github.io/posts/tech/database/mongodb-vs-redis/</link>
+      <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/database/mongodb-vs-redis/</guid>
+      <description>같은 NoSQL 우산 아래에서 MongoDB 와 Redis 가 서로 다른 역할로 자리잡은 이유. 데이터 모델·스토리지·스키마·확장·사용 사례를 기준으로 비교 정리.</description>
+    </item>
+  </channel>
+</rss>

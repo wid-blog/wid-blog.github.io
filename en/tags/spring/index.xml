@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Spring on wid's blog</title><link>https://wid-blog.github.io/en/tags/spring/</link><description>Recent content in Spring on wid's blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 25 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/en/tags/spring/index.xml" rel="self" type="application/rss+xml"/><item><title>Spring WebFlux Fundamentals — Non-blocking I/O and the Reactive Stack</title><link>https://wid-blog.github.io/en/posts/tech/language/spring-webflux-reactive-stack/</link><pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/tech/language/spring-webflux-reactive-stack/</guid><description>Spring MVC assigns one thread per request. When I/O waits pile up, threads sit idle. WebFlux replaces this with an event loop-based non-blocking model. A summary of the structural differences from MVC, the Reactor pattern, and when to choose which.</description></item><item><title>GDG Korea Android 11 Hackathon — YouTube Together</title><link>https://wid-blog.github.io/en/posts/career/hackathon/gdg-korea-android-11-hackathon/</link><pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/career/hackathon/gdg-korea-android-11-hackathon/</guid><description>Entering the GDG Korea Android 11 Hackathon solo, building both server and app in three weeks.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Spring on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/en/tags/spring/</link>
+    <description>Recent content in Spring on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/en/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>@Transactional Only Works Through the Proxy</title>
+      <link>https://wid-blog.github.io/en/posts/tech/language/spring-transactional-proxy/</link>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/tech/language/spring-transactional-proxy/</guid>
+      <description>@Transactional doesn&amp;rsquo;t work just because it&amp;rsquo;s declared. Spring wraps the bean in a proxy and intercepts only the calls that go through it. Why the annotation is silently ignored on private methods and self-invocation, and how @DataJpaTest&amp;rsquo;s test transaction hides the defect.</description>
+    </item>
+    <item>
+      <title>Spring WebFlux Fundamentals — Non-blocking I/O and the Reactive Stack</title>
+      <link>https://wid-blog.github.io/en/posts/tech/language/spring-webflux-reactive-stack/</link>
+      <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/tech/language/spring-webflux-reactive-stack/</guid>
+      <description>Spring MVC assigns one thread per request. When I/O waits pile up, threads sit idle. WebFlux replaces this with an event loop-based non-blocking model. A summary of the structural differences from MVC, the Reactor pattern, and when to choose which.</description>
+    </item>
+    <item>
+      <title>GDG Korea Android 11 Hackathon — YouTube Together</title>
+      <link>https://wid-blog.github.io/en/posts/career/hackathon/gdg-korea-android-11-hackathon/</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/career/hackathon/gdg-korea-android-11-hackathon/</guid>
+      <description>Entering the GDG Korea Android 11 Hackathon solo, building both server and app in three weeks.</description>
+    </item>
+  </channel>
+</rss>

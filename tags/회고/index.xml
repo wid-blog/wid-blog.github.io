@@ -1,1 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>회고 on wid's blog</title><link>https://wid-blog.github.io/tags/%ED%9A%8C%EA%B3%A0/</link><description>Recent content in 회고 on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Fri, 10 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/%ED%9A%8C%EA%B3%A0/index.xml" rel="self" type="application/rss+xml"/><item><title>에어팟을 버렸다</title><link>https://wid-blog.github.io/posts/career/dable/starting-sabbatical/</link><pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/dable/starting-sabbatical/</guid><description>좋은 엔지니어는 기술을 잘 아는 사람이 아니라, 그 기술을 팀과 나눌 수 있는 사람이라는 것을 알게 되었다.</description></item><item><title>민감 정보 암호화 — 모듈 설계와 마이그레이션 회고</title><link>https://wid-blog.github.io/posts/career/dable/sensitive-data-encryption-retrospective/</link><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/dable/sensitive-data-encryption-retrospective/</guid><description>운영 중인 DB의 민감 정보를 컬럼 레벨로 암호화한 작업 회고. 봉투 암호화 도입, DEK 관리 단위 결정, WHERE 절 제약과 HMAC 우회, 마이그레이션 자동화 Skill까지.</description></item><item><title>사내 해커톤 1등 회고</title><link>https://wid-blog.github.io/posts/career/dable/worthy-hackathon-retrospective/</link><pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/dable/worthy-hackathon-retrospective/</guid><description>사내 해커톤 회고. 본인이 제안한 아이디어가 팀과 함께 발전해 1등 + 사내 런칭으로 이어진 과정과, AI 도구를 본격 활용하기 시작한 출발점이 된 경험.</description></item><item><title>배포 변경점 검증의 사각지대 — 캐시 캠페인 장애 회고</title><link>https://wid-blog.github.io/posts/career/dable/campaign-cache-miss-retrospective/</link><pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/dable/campaign-cache-miss-retrospective/</guid><description>배포는 이틀 전에 끝났지만 변경점은 적용되지 않은 채 잠재해 있었다. 캐시 갱신 배치를 끄는 순간 광고 서빙이 멈췄다. 배포 변경점 검증의 부재를 회고한다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>회고 on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/%ED%9A%8C%EA%B3%A0/</link>
+    <description>Recent content in 회고 on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Fri, 10 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/%ED%9A%8C%EA%B3%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>에어팟을 버렸다</title>
+      <link>https://wid-blog.github.io/posts/career/dable/starting-sabbatical/</link>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/dable/starting-sabbatical/</guid>
+      <description>좋은 엔지니어는 기술을 잘 아는 사람이 아니라, 그 기술을 팀과 나눌 수 있는 사람이라는 것을 알게 되었다.</description>
+    </item>
+    <item>
+      <title>민감 정보 암호화 — 모듈 설계와 마이그레이션 회고</title>
+      <link>https://wid-blog.github.io/posts/career/dable/sensitive-data-encryption-retrospective/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/dable/sensitive-data-encryption-retrospective/</guid>
+      <description>운영 중인 DB의 민감 정보를 컬럼 레벨로 암호화한 작업 회고. 봉투 암호화 도입, DEK 관리 단위 결정, WHERE 절 제약과 HMAC 우회, 마이그레이션 자동화 Skill까지.</description>
+    </item>
+    <item>
+      <title>사내 해커톤 1등 회고</title>
+      <link>https://wid-blog.github.io/posts/career/dable/worthy-hackathon-retrospective/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/dable/worthy-hackathon-retrospective/</guid>
+      <description>사내 해커톤 회고. 본인이 제안한 아이디어가 팀과 함께 발전해 1등 + 사내 런칭으로 이어진 과정과, AI 도구를 본격 활용하기 시작한 출발점이 된 경험.</description>
+    </item>
+    <item>
+      <title>배포 변경점 검증의 사각지대 — 캐시 캠페인 장애 회고</title>
+      <link>https://wid-blog.github.io/posts/career/dable/campaign-cache-miss-retrospective/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/dable/campaign-cache-miss-retrospective/</guid>
+      <description>배포는 이틀 전에 끝났지만 변경점은 적용되지 않은 채 잠재해 있었다. 캐시 갱신 배치를 끄는 순간 광고 서빙이 멈췄다. 배포 변경점 검증의 부재를 회고한다.</description>
+    </item>
+  </channel>
+</rss>

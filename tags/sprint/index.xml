@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sprint on wid's blog</title><link>https://wid-blog.github.io/tags/sprint/</link><description>Recent content in Sprint on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/sprint/index.xml" rel="self" type="application/rss+xml"/><item><title>JIRA Sprint 워크플로우와 Git/GitHub 연동</title><link>https://wid-blog.github.io/posts/tech/devenv/jira-sprint-workflow/</link><pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/devenv/jira-sprint-workflow/</guid><description>JIRA의 이슈와 워크플로우를 작업 단위의 그래프로 보고, Sprint 라이프사이클·이슈 계층·Git/GitHub 연동 패턴·자동화 흐름을 정리한다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sprint on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/sprint/</link>
+    <description>Recent content in Sprint on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/sprint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JIRA Sprint 워크플로우와 Git/GitHub 연동</title>
+      <link>https://wid-blog.github.io/posts/tech/devenv/jira-sprint-workflow/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/devenv/jira-sprint-workflow/</guid>
+      <description>JIRA의 이슈와 워크플로우를 작업 단위의 그래프로 보고, Sprint 라이프사이클·이슈 계층·Git/GitHub 연동 패턴·자동화 흐름을 정리한다.</description>
+    </item>
+  </channel>
+</rss>

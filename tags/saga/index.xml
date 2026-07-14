@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Saga on wid's blog</title><link>https://wid-blog.github.io/tags/saga/</link><description>Recent content in Saga on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/saga/index.xml" rel="self" type="application/rss+xml"/><item><title>Distributed Transactions</title><link>https://wid-blog.github.io/posts/tech/architecture/distributed-transactions/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/architecture/distributed-transactions/</guid><description>분산 트랜잭션은 모놀리스의 단일 ACID 트랜잭션이 분산 환경에서 어떻게 분해되고, 그 조각을 어떻게 재조립하는가의 문제다. 2PC, Saga (Choreography vs Orchestration), Outbox 의 역할과 트레이드오프.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Saga on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/saga/</link>
+    <description>Recent content in Saga on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/saga/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distributed Transactions</title>
+      <link>https://wid-blog.github.io/posts/tech/architecture/distributed-transactions/</link>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/architecture/distributed-transactions/</guid>
+      <description>분산 트랜잭션은 모놀리스의 단일 ACID 트랜잭션이 분산 환경에서 어떻게 분해되고, 그 조각을 어떻게 재조립하는가의 문제다. 2PC, Saga (Choreography vs Orchestration), Outbox 의 역할과 트레이드오프.</description>
+    </item>
+  </channel>
+</rss>

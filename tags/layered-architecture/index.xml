@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Layered-Architecture on wid's blog</title><link>https://wid-blog.github.io/tags/layered-architecture/</link><description>Recent content in Layered-Architecture on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/layered-architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>광고 fallback 서버 설계 회고</title><link>https://wid-blog.github.io/posts/career/dable/ad-fallback-server-retrospective/</link><pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/dable/ad-fallback-server-retrospective/</guid><description>레거시 광고 서버를 제거하면서 Nest.js 기반 fallback 서버를 새로 설계한 과정. 단일 API에 복잡한 비즈니스 로직이 집중된 구조에서 수평 계층 아키텍처를 선택한 배경과 결과.</description></item><item><title>Layered Architecture와 의존성 역전</title><link>https://wid-blog.github.io/posts/tech/architecture/layered-architecture/</link><pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/architecture/layered-architecture/</guid><description>레이어드 아키텍처는 기술적 책임 기준으로 코드를 수평 계층으로 나눈다. 4계층 구조의 각 역할, 의존성 방향 규칙, DIP로 계층 간 결합을 끊는 방법을 정리한다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Layered-Architecture on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/layered-architecture/</link>
+    <description>Recent content in Layered-Architecture on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/layered-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>광고 fallback 서버 설계 회고</title>
+      <link>https://wid-blog.github.io/posts/career/dable/ad-fallback-server-retrospective/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/dable/ad-fallback-server-retrospective/</guid>
+      <description>레거시 광고 서버를 제거하면서 Nest.js 기반 fallback 서버를 새로 설계한 과정. 단일 API에 복잡한 비즈니스 로직이 집중된 구조에서 수평 계층 아키텍처를 선택한 배경과 결과.</description>
+    </item>
+    <item>
+      <title>Layered Architecture와 의존성 역전</title>
+      <link>https://wid-blog.github.io/posts/tech/architecture/layered-architecture/</link>
+      <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/architecture/layered-architecture/</guid>
+      <description>레이어드 아키텍처는 기술적 책임 기준으로 코드를 수평 계층으로 나눈다. 4계층 구조의 각 역할, 의존성 방향 규칙, DIP로 계층 간 결합을 끊는 방법을 정리한다.</description>
+    </item>
+  </channel>
+</rss>

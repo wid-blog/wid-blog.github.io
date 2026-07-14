@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Web Server on wid's blog</title><link>https://wid-blog.github.io/tags/web-server/</link><description>Recent content in Web Server on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/web-server/index.xml" rel="self" type="application/rss+xml"/><item><title>Web Server, WAS, Reverse Proxy — 각자 다른 문제를 푼다</title><link>https://wid-blog.github.io/posts/tech/infra/web-server-was-reverse-proxy/</link><pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/infra/web-server-was-reverse-proxy/</guid><description>세 도구는 같은 자리에 보이지만 풀어내는 문제가 다르다. 정적 컨텐츠 전달, 동적 컨텐츠 생성, 트래픽 중개를 어떻게 나눠 갖는지 정리한다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web Server on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/web-server/</link>
+    <description>Recent content in Web Server on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/web-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web Server, WAS, Reverse Proxy — 각자 다른 문제를 푼다</title>
+      <link>https://wid-blog.github.io/posts/tech/infra/web-server-was-reverse-proxy/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/infra/web-server-was-reverse-proxy/</guid>
+      <description>세 도구는 같은 자리에 보이지만 풀어내는 문제가 다르다. 정적 컨텐츠 전달, 동적 컨텐츠 생성, 트래픽 중개를 어떻게 나눠 갖는지 정리한다.</description>
+    </item>
+  </channel>
+</rss>

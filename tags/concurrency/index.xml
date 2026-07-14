@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Concurrency on wid's blog</title><link>https://wid-blog.github.io/tags/concurrency/</link><description>Recent content in Concurrency on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/concurrency/index.xml" rel="self" type="application/rss+xml"/><item><title>세 가지 동시성 모델 — GIL, Virtual Thread, Goroutine</title><link>https://wid-blog.github.io/posts/tech/language/three-concurrency-models/</link><pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/language/three-concurrency-models/</guid><description>CPython 의 GIL 은 멀티스레드 CPU bound 를 차단하고 우회법을 강제한다. Java 는 OS 스레드 1:1 의 비용을 Java 21 virtual thread 로 우회해 thread-per-request 를 살렸다. Go 는 처음부터 M:N 스케줄러로 goroutine 을 경량화했다. 세 모델이 같은 백엔드 워크로드에서 다른 결정으로 이어진다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Concurrency on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/concurrency/</link>
+    <description>Recent content in Concurrency on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>세 가지 동시성 모델 — GIL, Virtual Thread, Goroutine</title>
+      <link>https://wid-blog.github.io/posts/tech/language/three-concurrency-models/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/language/three-concurrency-models/</guid>
+      <description>CPython 의 GIL 은 멀티스레드 CPU bound 를 차단하고 우회법을 강제한다. Java 는 OS 스레드 1:1 의 비용을 Java 21 virtual thread 로 우회해 thread-per-request 를 살렸다. Go 는 처음부터 M:N 스케줄러로 goroutine 을 경량화했다. 세 모델이 같은 백엔드 워크로드에서 다른 결정으로 이어진다.</description>
+    </item>
+  </channel>
+</rss>

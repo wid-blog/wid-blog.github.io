@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Envoy on wid's blog</title><link>https://wid-blog.github.io/en/tags/envoy/</link><description>Recent content in Envoy on wid's blog</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 13 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/en/tags/envoy/index.xml" rel="self" type="application/rss+xml"/><item><title>Load Balancing Algorithms — From Round Robin to LOR</title><link>https://wid-blog.github.io/en/posts/tech/network/load-balancing-rr-to-lor/</link><pubDate>Sat, 13 Jun 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/tech/network/load-balancing-rr-to-lor/</guid><description>Round Robin and Least Connection were the standard load balancer choices for years. Yet the core algorithm that modern LBs like Envoy and AWS ALB ship as their headline option is Least Outstanding Requests, and its practical implementation is Power of Two Choices. This post traces the evolution path along which the unit of routing decisions moved from connection to request.</description></item><item><title>Envoy — When Static Reverse Proxies Meet Cloud-Native</title><link>https://wid-blog.github.io/en/posts/tech/infra/envoy-and-l7-dynamic-proxy/</link><pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/en/posts/tech/infra/envoy-and-l7-dynamic-proxy/</guid><description>Manual reload, static upstreams, weak L7 observability — four limits a static reverse proxy hits in a cloud-native environment, and the four mechanisms Envoy uses to address them.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Envoy on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/en/tags/envoy/</link>
+    <description>Recent content in Envoy on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 13 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/en/tags/envoy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Load Balancing Algorithms — From Round Robin to LOR</title>
+      <link>https://wid-blog.github.io/en/posts/tech/network/load-balancing-rr-to-lor/</link>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/tech/network/load-balancing-rr-to-lor/</guid>
+      <description>Round Robin and Least Connection were the standard load balancer choices for years. Yet the core algorithm that modern LBs like Envoy and AWS ALB ship as their headline option is Least Outstanding Requests, and its practical implementation is Power of Two Choices. This post traces the evolution path along which the unit of routing decisions moved from connection to request.</description>
+    </item>
+    <item>
+      <title>Envoy — When Static Reverse Proxies Meet Cloud-Native</title>
+      <link>https://wid-blog.github.io/en/posts/tech/infra/envoy-and-l7-dynamic-proxy/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/en/posts/tech/infra/envoy-and-l7-dynamic-proxy/</guid>
+      <description>Manual reload, static upstreams, weak L7 observability — four limits a static reverse proxy hits in a cloud-native environment, and the four mechanisms Envoy uses to address them.</description>
+    </item>
+  </channel>
+</rss>

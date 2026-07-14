@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>해커톤 on wid's blog</title><link>https://wid-blog.github.io/tags/%ED%95%B4%EC%BB%A4%ED%86%A4/</link><description>Recent content in 해커톤 on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Mon, 05 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/%ED%95%B4%EC%BB%A4%ED%86%A4/index.xml" rel="self" type="application/rss+xml"/><item><title>사내 해커톤 1등 회고</title><link>https://wid-blog.github.io/posts/career/dable/worthy-hackathon-retrospective/</link><pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/dable/worthy-hackathon-retrospective/</guid><description>사내 해커톤 회고. 본인이 제안한 아이디어가 팀과 함께 발전해 1등 + 사내 런칭으로 이어진 과정과, AI 도구를 본격 활용하기 시작한 출발점이 된 경험.</description></item><item><title>GDG Korea Android 11 끝장개발대회 — YouTube Together</title><link>https://wid-blog.github.io/posts/career/hackathon/gdg-korea-android-11-hackathon/</link><pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/hackathon/gdg-korea-android-11-hackathon/</guid><description>GDG Korea Android 11 끝장개발대회에 단독으로 참가해 서버와 앱을 3주 만에 완성한 기록.</description></item><item><title>역 편의정보 공공데이터 활용 대회 — 숨겨진 휴식공간</title><link>https://wid-blog.github.io/posts/career/hackathon/kric-station-public-data-hackathon/</link><pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/career/hackathon/kric-station-public-data-hackathon/</guid><description>철도산업정보센터 주최 공공데이터 활용 대회. 지하철 역의 숨은 휴식 공간을 알려주는 Android 앱을 3주간 3명이 만든 기록.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>해커톤 on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/%ED%95%B4%EC%BB%A4%ED%86%A4/</link>
+    <description>Recent content in 해커톤 on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Mon, 05 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/%ED%95%B4%EC%BB%A4%ED%86%A4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>사내 해커톤 1등 회고</title>
+      <link>https://wid-blog.github.io/posts/career/dable/worthy-hackathon-retrospective/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/dable/worthy-hackathon-retrospective/</guid>
+      <description>사내 해커톤 회고. 본인이 제안한 아이디어가 팀과 함께 발전해 1등 + 사내 런칭으로 이어진 과정과, AI 도구를 본격 활용하기 시작한 출발점이 된 경험.</description>
+    </item>
+    <item>
+      <title>GDG Korea Android 11 끝장개발대회 — YouTube Together</title>
+      <link>https://wid-blog.github.io/posts/career/hackathon/gdg-korea-android-11-hackathon/</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/hackathon/gdg-korea-android-11-hackathon/</guid>
+      <description>GDG Korea Android 11 끝장개발대회에 단독으로 참가해 서버와 앱을 3주 만에 완성한 기록.</description>
+    </item>
+    <item>
+      <title>역 편의정보 공공데이터 활용 대회 — 숨겨진 휴식공간</title>
+      <link>https://wid-blog.github.io/posts/career/hackathon/kric-station-public-data-hackathon/</link>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/career/hackathon/kric-station-public-data-hackathon/</guid>
+      <description>철도산업정보센터 주최 공공데이터 활용 대회. 지하철 역의 숨은 휴식 공간을 알려주는 Android 앱을 3주간 3명이 만든 기록.</description>
+    </item>
+  </channel>
+</rss>

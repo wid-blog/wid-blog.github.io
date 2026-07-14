@@ -1,38 +1,1036 @@
-<!doctype html><html lang=ko dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Bulkhead | wid's blog</title><meta name=keywords content><meta name=description content><meta name=author content><link rel=canonical href=https://wid-blog.github.io/tags/bulkhead/><link crossorigin=anonymous href=/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as=style><link rel=icon href=https://wid-blog.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://wid-blog.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://wid-blog.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://wid-blog.github.io/apple-touch-icon.png><link rel=mask-icon href=https://wid-blog.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://wid-blog.github.io/tags/bulkhead/index.xml title=rss><link rel=alternate hreflang=ko href=https://wid-blog.github.io/tags/bulkhead/><link rel=alternate hreflang=en href=https://wid-blog.github.io/en/tags/bulkhead/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><style>:root{--main-width:min(1024px, 90vw)}.nav{display:flex;justify-content:space-between;align-items:center}.logo{display:flex;align-items:center;gap:.75rem}.header-right{display:flex;align-items:center;gap:.75rem}.header-right .lang-switch{display:flex;list-style:none;padding:0;margin:0;gap:.5rem}.header-right .lang-switch a{font-size:.875rem;color:var(--secondary)}.header-right .lang-switch a:hover{color:var(--primary)}.header-social{color:var(--secondary);display:flex;align-items:center}.header-social:hover{color:var(--primary)}.page-header h1{display:none}.post-entry,.first-entry{border:1px solid var(--border)!important;transition:border-color .15s}.post-entry:hover,.first-entry:hover{border-color:var(--primary)}.breadcrumbs{display:flex;align-items:center;gap:.5rem;font-size:.875rem}.breadcrumb-separator{color:var(--secondary);font-weight:400;user-select:none;font-size:1rem;line-height:1}.breadcrumb-current{font-weight:600;color:var(--primary)}.post-content h2{margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--border)}.post-content h3{margin-top:1.75rem}.layout-wrapper{display:flex;max-width:var(--main-width);margin:0 auto;padding:0 var(--gap)}.layout-wrapper .main{flex:1;min-width:0;margin:0;padding:0}.sidebar{position:sticky;top:var(--header-height,80px);align-self:flex-start;width:220px;flex-shrink:0;margin-right:2rem;padding-top:1rem;max-height:calc(100vh - var(--header-height,80px));overflow-y:auto}.sidebar-nav{font-size:.875rem;line-height:1.6}.sidebar-tree,.sidebar-children{list-style:none;padding:0;margin:0}.sidebar-children{padding-left:1rem;display:none}.sidebar-children.expanded{display:block}.sidebar-item-header{display:flex;align-items:center;gap:.25rem;padding:.2rem 0}.sidebar-toggle-btn{background:0 0;border:none;cursor:pointer;padding:2px;display:flex;align-items:center;color:var(--secondary);border-radius:4px;transition:background .15s}.sidebar-toggle-btn:hover{background:var(--code-bg)}.sidebar-chevron{transition:transform .2s ease}.sidebar-toggle-btn.open .sidebar-chevron{transform:rotate(90deg)}.sidebar-link{color:var(--secondary);text-decoration:none;transition:color .15s;display:flex;align-items:center;gap:.4rem}.sidebar-link:hover{color:var(--primary)}.sidebar-item.active>.sidebar-item-header .sidebar-link{color:var(--primary);font-weight:600}.sidebar-item.ancestor>.sidebar-item-header .sidebar-link{color:var(--primary)}.sidebar-count{display:inline-block;min-width:1.25rem;padding:.05rem .4rem;margin-left:.35rem;font-size:.7rem;font-weight:600;line-height:1.3;text-align:center;color:var(--primary);background:var(--code-bg);border-radius:.75rem}.sidebar-item.ancestor>.sidebar-item-header .sidebar-count,.sidebar-item.active>.sidebar-item-header .sidebar-count{color:var(--theme);background:var(--primary)}.sidebar-toggle{display:none;position:fixed;bottom:1.5rem;left:1.5rem;z-index:200;background:var(--theme);border:1px solid var(--border);border-radius:50%;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);color:var(--primary)}@media(max-width:768px){.layout-wrapper{display:block}.sidebar{position:fixed;top:0;left:0;width:260px;height:100vh;max-height:100vh;margin:0;padding:1rem;padding-top:calc(var(--header-height,80px) + 1rem);background:var(--theme);border-right:1px solid var(--border);z-index:100;transform:translateX(-100%);transition:transform .25s ease}.sidebar.open{transform:translateX(0)}.sidebar-toggle{display:flex}.sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:99;display:none}.sidebar-overlay.active{display:block}}.post-related{margin-top:40px}.post-related-title{font-size:1rem;font-weight:600;margin:0 0 14px;color:var(--primary)}.post-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.post-related-grid .post-related-entry{margin-bottom:0}.post-related-grid .post-related-entry .entry-header h2{font-size:18px;line-height:1.35}.post-related-grid .post-related-entry .entry-content{-webkit-line-clamp:3}@media(max-width:768px){.post-related-grid{grid-template-columns:1fr}}.post-header{padding-bottom:20px;margin-bottom:32px;border-bottom:1px solid var(--border)}.toc .toc-heading{margin-inline-start:10px;font-weight:500;user-select:none}.post-tags li{position:relative}.post-tags a{padding:0 14px 0 22px;border:none;border-radius:0 var(--radius)var(--radius)0;clip-path:polygon(10px 0,100% 0,100% 100%,10px 100%,0 50%)}.post-tags.entry-tags{position:relative;z-index:2;margin-top:14px;gap:8px}.post-tags.entry-tags a{font-size:12px;line-height:26px;padding:0 12px 0 20px}.post-tags li::before{content:"";position:absolute;left:8px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:var(--theme);z-index:1;pointer-events:none}.tag-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}.tag-chip{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .75rem;font-size:.8rem;line-height:1.4;color:var(--secondary);background:var(--code-bg);border:1px solid var(--border);border-radius:1rem;cursor:pointer;transition:all .15s;font-family:inherit}.tag-chip:hover{color:var(--primary);border-color:var(--primary)}.tag-chip.active{color:var(--theme);background:var(--primary);border-color:var(--primary)}.tag-chip-count{font-size:.7rem;opacity:.7}.tag-chip.active .tag-chip-count{opacity:.9}article.tag-hidden{display:none}</style><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".sidebar-toggle-btn").forEach(function(e){e.addEventListener("click",function(){var e,t=this.classList.toggle("open");this.setAttribute("aria-expanded",t),e=this.closest(".sidebar-item").querySelector(".sidebar-children"),e&&e.classList.toggle("expanded",t)})});var e,t,s,o,r,i=document.getElementById("sidebar-toggle"),n=document.getElementById("sidebar");if(i&&n){e=document.createElement("div"),e.className="sidebar-overlay",document.body.appendChild(e);function c(){n.classList.add("open"),e.classList.add("active")}function a(){n.classList.remove("open"),e.classList.remove("active")}i.addEventListener("click",function(){n.classList.contains("open")?a():c()}),e.addEventListener("click",a)}if(s=document.getElementById("tag-filter"),s){r=s.querySelectorAll(".tag-chip"),o=document.querySelectorAll("article[data-tags]"),t=new Set;function l(){if(t.size===0){o.forEach(function(e){e.classList.remove("tag-hidden")});return}o.forEach(function(e){var s=(e.getAttribute("data-tags")||"").split(","),n=!1;t.forEach(function(e){s.indexOf(e)!==-1&&(n=!0)}),e.classList.toggle("tag-hidden",!n)})}r.forEach(function(e){e.addEventListener("click",function(){var e=this.getAttribute("data-tag");t.has(e)?(t.delete(e),this.classList.remove("active")):(t.add(e),this.classList.add("active")),l()})})}})</script><meta property="og:url" content="https://wid-blog.github.io/tags/bulkhead/"><meta property="og:site_name" content="wid's blog"><meta property="og:title" content="Bulkhead"><meta property="og:locale" content="ko"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="Bulkhead"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://wid-blog.github.io/ accesskey=h title="wid's blog (Alt + H)">wid's blog</a>
-<a href=https://github.com/byunghak target=_blank rel="noopener noreferrer" aria-label=GitHub class=header-social><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
-</a><a href=https://www.linkedin.com/in/byunhak082/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn class=header-social><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div><div class=header-right><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><ul class=lang-switch><li><a href=https://wid-blog.github.io/en/tags/bulkhead/ title=English aria-label=English>En</a></li></ul></div></nav></header><div class=layout-wrapper><aside class=sidebar id=sidebar><button class=sidebar-toggle id=sidebar-toggle aria-label="메뉴 열기/닫기">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><nav class=sidebar-nav id=sidebar-nav><ul class=sidebar-tree><li class="sidebar-item has-children"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/posts/tech/ class=sidebar-link>기술
-<span class=sidebar-count>49</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/algorithm/ class=sidebar-link>알고리즘
-<span class=sidebar-count>2</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/network/ class=sidebar-link>네트워크
-<span class=sidebar-count>5</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/architecture/ class=sidebar-link>아키텍처
-<span class=sidebar-count>8</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/devenv/ class=sidebar-link>워크플로우
-<span class=sidebar-count>6</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/security/ class=sidebar-link>보안
-<span class=sidebar-count>3</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/ml/ class=sidebar-link>머신러닝
-<span class=sidebar-count>3</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/design-pattern/ class=sidebar-link>디자인 패턴
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/infra/ class=sidebar-link>인프라
-<span class=sidebar-count>6</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/language/ class=sidebar-link>언어
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/tech/database/ class=sidebar-link>데이터베이스
-<span class=sidebar-count>2</span></a></div></li></ul></li><li class="sidebar-item has-children"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/posts/career/ class=sidebar-link>커리어
-<span class=sidebar-count>18</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/career/dable/ class=sidebar-link>데이블
-<span class=sidebar-count>10</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/career/personal/ class=sidebar-link>개인 프로젝트
-<span class=sidebar-count>4</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/career/startup/ class=sidebar-link>창업
-<span class=sidebar-count>2</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/career/hackathon/ class=sidebar-link>해커톤
-<span class=sidebar-count>2</span></a></div></li></ul></li><li class="sidebar-item has-children"><div class=sidebar-item-header><button class="sidebar-toggle-btn open" aria-expanded=true>
-<svg class="sidebar-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-</button>
-<a href=/posts/daily/ class=sidebar-link>일상
-<span class=sidebar-count>8</span></a></div><ul class="sidebar-children expanded"><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/daily/investment/ class=sidebar-link>투자
-<span class=sidebar-count>7</span></a></div></li><li class=sidebar-item><div class=sidebar-item-header><a href=/posts/daily/notes/ class=sidebar-link>단상
-<span class=sidebar-count>1</span></a></div></li></ul></li></ul></nav></aside><main class=main><header class=page-header><div class=breadcrumbs><a href=https://wid-blog.github.io/tags/>Tags</a><span class=breadcrumb-separator aria-hidden=true>›</span><span class=breadcrumb-current>Bulkhead</span></div><h1>Bulkhead</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Circuit Breaker</h2></header><div class=entry-content><p>Circuit Breaker 의 차단 트리거와 회복 전략은 함께 설계되어야 한다. 회복 없는 차단은 의존성을 영구히 끊고, 차단 기준 없는 회복은 무의미한 반복 전이다.</p></div><footer class=entry-footer><span title='2025-02-15 00:00:00 +0000 UTC'>2025년 2월 15일</span>&nbsp;·&nbsp;<span>약 5분 읽기</span></footer><ul class="post-tags entry-tags"><li><a href=https://wid-blog.github.io/tags/circuit-breaker/>Circuit-Breaker</a></li><li><a href=https://wid-blog.github.io/tags/resilience/>Resilience</a></li><li><a href=https://wid-blog.github.io/tags/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4/>디자인 패턴</a></li><li><a href=https://wid-blog.github.io/tags/fail-fast/>Fail-Fast</a></li><li><a href=https://wid-blog.github.io/tags/bulkhead/>Bulkhead</a></li></ul><a class=entry-link aria-label="post link to Circuit Breaker" href=https://wid-blog.github.io/posts/tech/design-pattern/circuit-breaker/></a></article></main></div><footer class=footer><span>&copy; 2026 <a href=https://wid-blog.github.io/>wid's blog</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+<!DOCTYPE html>
+<html lang="ko" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Bulkhead | wid&#39;s blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://wid-blog.github.io/tags/bulkhead/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://wid-blog.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://wid-blog.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://wid-blog.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://wid-blog.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://wid-blog.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://wid-blog.github.io/tags/bulkhead/index.xml" title="rss">
+<link rel="alternate" hreflang="ko" href="https://wid-blog.github.io/tags/bulkhead/">
+<link rel="alternate" hreflang="en" href="https://wid-blog.github.io/en/tags/bulkhead/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><style>
+  :root {
+    --main-width: min(1024px, 90vw);
+  }
+
+   
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .header-right .lang-switch {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+  }
+
+  .header-right .lang-switch a {
+    font-size: 0.875rem;
+    color: var(--secondary);
+  }
+
+  .header-right .lang-switch a:hover {
+    color: var(--primary);
+  }
+
+  .header-social {
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+  }
+
+  .header-social:hover {
+    color: var(--primary);
+  }
+
+   
+  .page-header h1 {
+    display: none;
+  }
+
+   
+  .post-entry,
+  .first-entry {
+    border: 1px solid var(--border) !important;
+    transition: border-color 0.15s;
+  }
+
+  .post-entry:hover,
+  .first-entry:hover {
+    border-color: var(--primary);
+  }
+
+   
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb-separator {
+    color: var(--secondary);
+    font-weight: 400;
+    user-select: none;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .breadcrumb-current {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+   
+  .post-content h2 {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .post-content h3 {
+    margin-top: 1.75rem;
+  }
+
+   
+  .layout-wrapper {
+    display: flex;
+    max-width: var(--main-width);
+    margin: 0 auto;
+    padding: 0 var(--gap);
+  }
+
+  .layout-wrapper .main {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+   
+  .sidebar {
+    position: sticky;
+    top: var(--header-height, 80px);
+    align-self: flex-start;
+    width: 220px;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    padding-top: 1rem;
+    max-height: calc(100vh - var(--header-height, 80px));
+    overflow-y: auto;
+  }
+
+  .sidebar-nav {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .sidebar-tree,
+  .sidebar-children {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-children {
+    padding-left: 1rem;
+    display: none;
+  }
+
+  .sidebar-children.expanded {
+    display: block;
+  }
+
+   
+  .sidebar-item-header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0;
+  }
+
+   
+  .sidebar-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    color: var(--secondary);
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+
+  .sidebar-toggle-btn:hover {
+    background: var(--code-bg);
+  }
+
+  .sidebar-chevron {
+    transition: transform 0.2s ease;
+  }
+
+  .sidebar-toggle-btn.open .sidebar-chevron {
+    transform: rotate(90deg);
+  }
+
+   
+  .sidebar-link {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .sidebar-link:hover {
+    color: var(--primary);
+  }
+
+  .sidebar-item.active > .sidebar-item-header .sidebar-link {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .sidebar-item.ancestor > .sidebar-item-header .sidebar-link {
+    color: var(--primary);
+  }
+
+   
+  .sidebar-count {
+    display: inline-block;
+    min-width: 1.25rem;
+    padding: 0.05rem 0.4rem;
+    margin-left: 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    color: var(--primary);
+    background: var(--code-bg);
+    border-radius: 0.75rem;
+  }
+
+  .sidebar-item.ancestor > .sidebar-item-header .sidebar-count,
+  .sidebar-item.active > .sidebar-item-header .sidebar-count {
+    color: var(--theme);
+    background: var(--primary);
+  }
+
+   
+  .sidebar-toggle {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 200;
+    background: var(--theme);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    color: var(--primary);
+  }
+
+   
+  @media (max-width: 768px) {
+    .layout-wrapper {
+      display: block;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      padding-top: calc(var(--header-height, 80px) + 1rem);
+      background: var(--theme);
+      border-right: 1px solid var(--border);
+      z-index: 100;
+      transform: translateX(-100%);
+      transition: transform 0.25s ease;
+    }
+
+    .sidebar.open {
+      transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+      display: flex;
+    }
+
+    .sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 99;
+      display: none;
+    }
+
+    .sidebar-overlay.active {
+      display: block;
+    }
+  }
+
+   
+  .post-related {
+    margin-top: 40px;
+  }
+
+  .post-related-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 14px;
+    color: var(--primary);
+  }
+
+  .post-related-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+   
+  .post-related-grid .post-related-entry {
+    margin-bottom: 0;
+  }
+
+  .post-related-grid .post-related-entry .entry-header h2 {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .post-related-grid .post-related-entry .entry-content {
+    -webkit-line-clamp: 3;
+  }
+
+  @media (max-width: 768px) {
+    .post-related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+   
+  .post-header {
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+   
+  .toc .toc-heading {
+    margin-inline-start: 10px;
+    font-weight: 500;
+    user-select: none;
+  }
+
+   
+  .post-tags li {
+    position: relative;
+  }
+
+  .post-tags a {
+    padding: 0 14px 0 22px;
+    border: none;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 50%);
+  }
+
+   
+  .post-tags.entry-tags {
+    position: relative;
+    z-index: 2;
+    margin-top: 14px;
+    gap: 8px;
+  }
+
+  .post-tags.entry-tags a {
+    font-size: 12px;
+    line-height: 26px;
+    padding: 0 12px 0 20px;
+  }
+
+  .post-tags li::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    margin-top: -2.5px;
+    border-radius: 50%;
+    background: var(--theme);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+   
+  .tag-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--secondary);
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+
+  .tag-chip:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .tag-chip.active {
+    color: var(--theme);
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .tag-chip-count {
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+
+  .tag-chip.active .tag-chip-count {
+    opacity: 0.9;
+  }
+
+   
+  article.tag-hidden {
+    display: none;
+  }
+</style><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    
+    document.querySelectorAll(".sidebar-toggle-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var isOpen = this.classList.toggle("open");
+        this.setAttribute("aria-expanded", isOpen);
+        var children =
+          this.closest(".sidebar-item").querySelector(".sidebar-children");
+        if (children) {
+          children.classList.toggle("expanded", isOpen);
+        }
+      });
+    });
+
+    
+    var toggle = document.getElementById("sidebar-toggle");
+    var sidebar = document.getElementById("sidebar");
+    if (toggle && sidebar) {
+      var overlay = document.createElement("div");
+      overlay.className = "sidebar-overlay";
+      document.body.appendChild(overlay);
+
+      function openSidebar() {
+        sidebar.classList.add("open");
+        overlay.classList.add("active");
+      }
+      function closeSidebar() {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("active");
+      }
+
+      toggle.addEventListener("click", function () {
+        if (sidebar.classList.contains("open")) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+      overlay.addEventListener("click", closeSidebar);
+    }
+
+    
+    var filterContainer = document.getElementById("tag-filter");
+    if (filterContainer) {
+      var chips = filterContainer.querySelectorAll(".tag-chip");
+      var articles = document.querySelectorAll("article[data-tags]");
+      var activeTags = new Set();
+
+      function applyFilter() {
+        if (activeTags.size === 0) {
+          articles.forEach(function (a) {
+            a.classList.remove("tag-hidden");
+          });
+          return;
+        }
+        articles.forEach(function (a) {
+          var tags = (a.getAttribute("data-tags") || "").split(",");
+          var match = false;
+          activeTags.forEach(function (t) {
+            if (tags.indexOf(t) !== -1) {
+              match = true;
+            }
+          });
+          a.classList.toggle("tag-hidden", !match);
+        });
+      }
+
+      chips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          var tag = this.getAttribute("data-tag");
+          if (activeTags.has(tag)) {
+            activeTags.delete(tag);
+            this.classList.remove("active");
+          } else {
+            activeTags.add(tag);
+            this.classList.add("active");
+          }
+          applyFilter();
+        });
+      });
+    }
+  });
+</script>
+<meta property="og:url" content="https://wid-blog.github.io/tags/bulkhead/">
+  <meta property="og:site_name" content="wid&#39;s blog">
+  <meta property="og:title" content="Bulkhead">
+  <meta property="og:locale" content="ko">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bulkhead">
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://wid-blog.github.io/" accesskey="h" title="wid&#39;s blog (Alt + H)">wid&#39;s blog</a>
+            <a href="https://github.com/byunghak" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="header-social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/byunhak082/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="header-social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+        </div>
+        <div class="header-right">
+            <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+                <ul class="lang-switch">
+                    <li>
+                        <a href="https://wid-blog.github.io/en/tags/bulkhead/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+</header>
+<div class="layout-wrapper">
+<aside class="sidebar" id="sidebar">
+  <button
+    class="sidebar-toggle"
+    id="sidebar-toggle"
+    aria-label="메뉴 열기/닫기"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+  <nav class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-tree">
+<li
+  class="sidebar-item has-children"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/posts/tech/" class="sidebar-link">
+      기술
+      <span class="sidebar-count">52</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/tech/language/" class="sidebar-link">
+      언어
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/tech/algorithm/" class="sidebar-link">
+      알고리즘
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/tech/network/" class="sidebar-link">
+      네트워크
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/tech/architecture/" class="sidebar-link">
+      아키텍처
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/tech/devenv/" class="sidebar-link">
+      워크플로우
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/tech/security/" class="sidebar-link">
+      보안
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/tech/ml/" class="sidebar-link">
+      머신러닝
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/tech/design-pattern/" class="sidebar-link">
+      디자인 패턴
+      <span class="sidebar-count">7</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/tech/infra/" class="sidebar-link">
+      인프라
+      <span class="sidebar-count">6</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/tech/database/" class="sidebar-link">
+      데이터베이스
+      <span class="sidebar-count">3</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+<li
+  class="sidebar-item has-children"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/posts/career/" class="sidebar-link">
+      커리어
+      <span class="sidebar-count">18</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/career/dable/" class="sidebar-link">
+      데이블
+      <span class="sidebar-count">10</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/career/personal/" class="sidebar-link">
+      개인 프로젝트
+      <span class="sidebar-count">4</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/career/startup/" class="sidebar-link">
+      창업
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/career/hackathon/" class="sidebar-link">
+      해커톤
+      <span class="sidebar-count">2</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+<li
+  class="sidebar-item has-children"
+>
+  <div class="sidebar-item-header">
+    <button class="sidebar-toggle-btn open" aria-expanded="true">
+      <svg
+        class="sidebar-chevron"
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    <a href="/posts/daily/" class="sidebar-link">
+      일상
+      <span class="sidebar-count">8</span>
+    </a>
+  </div>
+  <ul class="sidebar-children expanded">
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/daily/investment/" class="sidebar-link">
+      투자
+      <span class="sidebar-count">7</span>
+    </a>
+  </div>
+</li>
+<li
+  class="sidebar-item"
+>
+  <div class="sidebar-item-header">
+    <a href="/posts/daily/notes/" class="sidebar-link">
+      단상
+      <span class="sidebar-count">1</span>
+    </a>
+  </div>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</aside>
+
+        <main class="main">
+<header class="page-header"><div class="breadcrumbs"><a href="https://wid-blog.github.io/tags/">Tags</a><span
+    class="breadcrumb-separator"
+    aria-hidden="true"
+    >›</span
+  ><span class="breadcrumb-current">Bulkhead</span></div>
+  <h1>
+    Bulkhead
+  </h1>
+</header>     
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Circuit Breaker
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+      Circuit Breaker 의 차단 트리거와 회복 전략은 함께 설계되어야 한다. 회복 없는 차단은 의존성을 영구히 끊고, 차단 기준 없는 회복은 무의미한 반복 전이다.
+    </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-15 00:00:00 +0000 UTC'>2025년 2월 15일</span>&nbsp;·&nbsp;<span>약 5분 읽기</span></footer>
+  <ul class="post-tags entry-tags">
+    <li><a href="https://wid-blog.github.io/tags/circuit-breaker/">Circuit-Breaker</a></li>
+    <li><a href="https://wid-blog.github.io/tags/resilience/">Resilience</a></li>
+    <li><a href="https://wid-blog.github.io/tags/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4/">디자인 패턴</a></li>
+    <li><a href="https://wid-blog.github.io/tags/fail-fast/">Fail-Fast</a></li>
+    <li><a href="https://wid-blog.github.io/tags/bulkhead/">Bulkhead</a></li>
+  </ul>
+  <a
+    class="entry-link"
+    aria-label="post link to Circuit Breaker"
+    href="https://wid-blog.github.io/posts/tech/design-pattern/circuit-breaker/"
+  ></a>
+</article>
+        </main>
+    </div>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://wid-blog.github.io/">wid&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

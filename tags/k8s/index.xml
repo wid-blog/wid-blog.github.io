@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>K8s on wid's blog</title><link>https://wid-blog.github.io/tags/k8s/</link><description>Recent content in K8s on wid's blog</description><generator>Hugo</generator><language>ko</language><lastBuildDate>Wed, 10 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wid-blog.github.io/tags/k8s/index.xml" rel="self" type="application/rss+xml"/><item><title>Kubernetes 기초</title><link>https://wid-blog.github.io/posts/tech/infra/kubernetes-fundamentals/</link><pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate><guid>https://wid-blog.github.io/posts/tech/infra/kubernetes-fundamentals/</guid><description>Container 오케스트레이션의 기본 구조와 백엔드 개발자가 알아야 할 핵심 오브젝트, 네트워크, 스케일링, 운영 방법을 정리한다.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>K8s on wid&#39;s blog</title>
+    <link>https://wid-blog.github.io/tags/k8s/</link>
+    <description>Recent content in K8s on wid&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Wed, 10 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wid-blog.github.io/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes 기초</title>
+      <link>https://wid-blog.github.io/posts/tech/infra/kubernetes-fundamentals/</link>
+      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wid-blog.github.io/posts/tech/infra/kubernetes-fundamentals/</guid>
+      <description>Container 오케스트레이션의 기본 구조와 백엔드 개발자가 알아야 할 핵심 오브젝트, 네트워크, 스케일링, 운영 방법을 정리한다.</description>
+    </item>
+  </channel>
+</rss>
