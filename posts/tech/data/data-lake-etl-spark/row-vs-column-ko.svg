@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-labelledby="rvc-title">
+  <title id="rvc-title">행 저장과 열 저장의 디스크 배치 비교</title>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; }
+    .d-small { fill: var(--secondary); font: 12px sans-serif; }
+    .d-head { fill: var(--primary); font: bold 15px sans-serif; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-accent { fill: rgba(70, 130, 220, 0.18); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-warm { fill: rgba(230, 140, 50, 0.18); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+  </style>
+
+  <text class="d-head" x="20" y="28">행 저장 (OLTP)</text>
+  <text class="d-small" x="20" y="48">한 행의 컬럼이 붙어 있다. 주문 한 건을 통째로 읽고 쓰기에 유리</text>
+  <rect class="d-accent" x="20" y="62" width="220" height="34" rx="4"/>
+  <text class="d-text" x="32" y="84">1 | kim | 서울 | 12,000</text>
+  <rect class="d-accent" x="250" y="62" width="220" height="34" rx="4"/>
+  <text class="d-text" x="262" y="84">2 | lee | 부산 | 8,500</text>
+  <rect class="d-accent" x="480" y="62" width="220" height="34" rx="4"/>
+  <text class="d-text" x="492" y="84">3 | park | 서울 | 31,000</text>
+
+  <text class="d-head" x="20" y="148">열 저장 (OLAP)</text>
+  <text class="d-small" x="20" y="168">같은 컬럼의 값이 붙어 있다. "금액 합계"는 금액 열만 읽는다</text>
+  <rect class="d-box" x="20" y="182" width="160" height="34" rx="4"/>
+  <text class="d-text" x="32" y="204">id: 1, 2, 3</text>
+  <rect class="d-box" x="190" y="182" width="160" height="34" rx="4"/>
+  <text class="d-text" x="202" y="204">name: kim, lee, park</text>
+  <rect class="d-box" x="360" y="182" width="160" height="34" rx="4"/>
+  <text class="d-text" x="372" y="204">city: 서울, 부산, 서울</text>
+  <rect class="d-warm" x="530" y="182" width="170" height="34" rx="4"/>
+  <text class="d-text" x="542" y="204">amount: 12,000 …</text>
+  <text class="d-small" x="530" y="240">SUM(amount) 가 읽는 범위</text>
+  <text class="d-small" x="20" y="272">같은 타입 값이 모여 있어 압축이 잘 되고, 열마다 최솟값·최댓값을 두면 읽지 않아도 되는 구간을 건너뛸 수 있다</text>
+</svg>

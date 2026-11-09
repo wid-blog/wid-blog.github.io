@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-labelledby="rvc-title-en">
+  <title id="rvc-title-en">On-disk layout of row storage versus column storage</title>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; }
+    .d-small { fill: var(--secondary); font: 12px sans-serif; }
+    .d-head { fill: var(--primary); font: bold 15px sans-serif; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-accent { fill: rgba(70, 130, 220, 0.18); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-warm { fill: rgba(230, 140, 50, 0.18); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+  </style>
+
+  <text class="d-head" x="20" y="28">Row storage (OLTP)</text>
+  <text class="d-small" x="20" y="48">A row's columns sit together, so reading or writing one whole order is cheap</text>
+  <rect class="d-accent" x="20" y="62" width="220" height="34" rx="4"/>
+  <text class="d-text" x="32" y="84">1 | kim | Seoul | 12.00</text>
+  <rect class="d-accent" x="250" y="62" width="220" height="34" rx="4"/>
+  <text class="d-text" x="262" y="84">2 | lee | Busan | 8.50</text>
+  <rect class="d-accent" x="480" y="62" width="220" height="34" rx="4"/>
+  <text class="d-text" x="492" y="84">3 | park | Seoul | 31.00</text>
+
+  <text class="d-head" x="20" y="148">Column storage (OLAP)</text>
+  <text class="d-small" x="20" y="168">Values of one column sit together, so summing amount reads only the amount column</text>
+  <rect class="d-box" x="20" y="182" width="160" height="34" rx="4"/>
+  <text class="d-text" x="32" y="204">id: 1, 2, 3</text>
+  <rect class="d-box" x="190" y="182" width="160" height="34" rx="4"/>
+  <text class="d-text" x="202" y="204">name: kim, lee, park</text>
+  <rect class="d-box" x="360" y="182" width="160" height="34" rx="4"/>
+  <text class="d-text" x="372" y="204">city: Seoul, Busan, …</text>
+  <rect class="d-warm" x="530" y="182" width="170" height="34" rx="4"/>
+  <text class="d-text" x="542" y="204">amount: 12.00 …</text>
+  <text class="d-small" x="530" y="240">What SUM(amount) reads</text>
+  <text class="d-small" x="20" y="272">Same-typed values compress well, and per-column min/max stats let a reader skip ranges it does not need</text>
+</svg>

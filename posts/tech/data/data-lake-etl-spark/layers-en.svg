@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" width="100%" role="img" aria-labelledby="layers-title-en">
+  <title id="layers-title-en">Data flowing from sources through raw, staging, and mart to consumers</title>
+  <defs>
+    <marker id="layers-arrow-en" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; }
+    .d-small { fill: var(--secondary); font: 12px sans-serif; }
+    .d-head { fill: var(--primary); font: bold 15px sans-serif; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-accent { fill: rgba(70, 130, 220, 0.18); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+  </style>
+
+  <rect class="d-box" x="10" y="40" width="120" height="120" rx="6"/>
+  <text class="d-head" x="22" y="66">Sources</text>
+  <text class="d-small" x="22" y="92">Service DBs</text>
+  <text class="d-small" x="22" y="112">Event logs</text>
+  <text class="d-small" x="22" y="132">Vendor exports</text>
+
+  <rect class="d-accent" x="170" y="40" width="160" height="120" rx="6"/>
+  <text class="d-head" x="182" y="66">raw</text>
+  <text class="d-small" x="182" y="92">Kept as received</text>
+  <text class="d-small" x="182" y="112">Append-only</text>
+  <text class="d-small" x="182" y="132">Where reprocessing starts</text>
+
+  <rect class="d-accent" x="370" y="40" width="160" height="120" rx="6"/>
+  <text class="d-head" x="382" y="66">staging</text>
+  <text class="d-small" x="382" y="92">Types and names fixed</text>
+  <text class="d-small" x="382" y="112">Duplicates, bad rows out</text>
+  <text class="d-small" x="382" y="132">Cleaned per source</text>
+
+  <rect class="d-accent" x="570" y="40" width="170" height="120" rx="6"/>
+  <text class="d-head" x="582" y="66">mart</text>
+  <text class="d-small" x="582" y="92">Aggregated per question</text>
+  <text class="d-small" x="582" y="112">Joins across sources</text>
+  <text class="d-small" x="582" y="132">Stable names and definitions</text>
+
+  <line class="d-line" x1="130" y1="100" x2="166" y2="100" marker-end="url(#layers-arrow-en)"/>
+  <line class="d-line" x1="330" y1="100" x2="366" y2="100" marker-end="url(#layers-arrow-en)"/>
+  <line class="d-line" x1="530" y1="100" x2="566" y2="100" marker-end="url(#layers-arrow-en)"/>
+
+  <text class="d-small" x="182" y="190">Read by: the pipeline</text>
+  <text class="d-small" x="382" y="190">Read by: data engineers</text>
+  <text class="d-small" x="582" y="190">Read by: dashboards, models</text>
+  <text class="d-text" x="190" y="236">Any layer can be rebuilt as long as the one before it survives</text>
+</svg>
