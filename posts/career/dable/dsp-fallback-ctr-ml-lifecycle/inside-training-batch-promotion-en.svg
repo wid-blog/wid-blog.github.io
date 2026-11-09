@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 994.9 172.1" width="100%" style="display: block; max-width: 994.9px; margin: 0 auto" role="img" aria-labelledby="inside-training-batch-promotion-title">
+  <title id="inside-training-batch-promotion-title">Inside the Training Batch: The Promotion Gate</title>
+  <defs>
+    <marker id="inside-training-batch-promotion-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="inside-training-batch-promotion-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M99.234,76.031L103.401,76.031C107.568,76.031,115.901,76.031,123.351,76.031C130.801,76.031,137.368,76.031,140.651,76.031L143.934,76.031" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M260.125,76.031L264.292,76.031C268.458,76.031,276.792,76.031,284.242,76.031C291.692,76.031,298.258,76.031,301.542,76.031L304.825,76.031" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M378.781,76.031L382.948,76.031C387.115,76.031,395.448,76.031,402.898,76.031C410.348,76.031,416.915,76.031,420.198,76.031L423.481,76.031" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M513.844,76.031L518.01,76.031C522.177,76.031,530.51,76.031,538.044,76.097C545.577,76.163,552.311,76.295,555.678,76.361L559.045,76.427" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M695.779,55.904L706.543,51.781C717.308,47.659,738.838,39.414,756.338,35.292C773.838,31.17,787.308,31.17,794.043,31.17L800.778,31.17" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M695.779,97.159L706.543,101.115C717.308,105.07,738.838,112.981,756.129,116.937C773.421,120.893,786.474,120.893,793.001,120.893L799.528,120.893" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <rect class="d-label-bg" x="738.9" y="21.7" width="42.9" height="19" rx="3"/>
+  <text class="d-text" x="760.4" y="32.2">PASS</text>
+  <rect class="d-label-bg" x="742.9" y="111.4" width="34.9" height="19" rx="3"/>
+  <text class="d-text" x="760.4" y="121.9">FAIL</text>
+  <rect class="d-box" transform="translate(49.6,76)" x="-49.6171875" y="-16.158935546875" width="99.234375" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="49.6" y="77">Data loading</text>
+  <rect class="d-box" transform="translate(204.7,76)" x="-55.4453125" y="-16.158935546875" width="110.890625" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="204.7" y="77">Preprocessing</text>
+  <rect class="d-box" transform="translate(344.5,76)" x="-34.328125" y="-16.158935546875" width="68.65625" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="344.5" y="77">Training</text>
+  <rect class="d-box" transform="translate(471.3,76)" x="-42.53125" y="-16" width="85.0625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="471.3" y="77">Evaluation</text>
+  <polygon class="d-box" transform="translate(563.8,152.1)" points="76.03125,0 152.0625,-76.03125 76.03125,-152.0625 0,-76.03125"/>
+  <text class="d-text" x="639.9" y="77">Promotion Gate</text>
+  <rect class="d-box" transform="translate(889.9,31.2)" x="-83.796875" y="-23.658935546875" width="167.59375" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="889.9" y="24.6">Update champion alias</text>
+  <text class="d-text" x="889.9" y="39.7">+ trigger rollout</text>
+  <rect class="d-box" transform="translate(889.9,120.9)" x="-85.046875" y="-16.063720703125" width="170.09375" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="889.9" y="121.9">Keep current champion</text>
+</svg>

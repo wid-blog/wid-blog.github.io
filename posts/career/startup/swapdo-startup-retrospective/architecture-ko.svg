@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 900 197.4" width="100%" style="display: block; max-width: 900px; margin: 0 auto" role="img" aria-labelledby="architecture-title">
+  <title id="architecture-title">아키텍처</title>
+  <defs>
+    <marker id="architecture-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="architecture-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0.5" y="51.3" width="226.7" height="82" rx="6"/>
+  <text class="d-group-text" x="113.9" y="60.8">Client</text>
+  <path class="d-line" transform="translate(0,0)" d="M436.969,102.895L450.608,90.724C464.248,78.553,491.526,54.211,520.114,42.04C548.702,29.869,578.599,29.869,593.548,29.869L608.497,29.869" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M444.219,129.752L456.65,128.518C469.081,127.283,493.943,124.814,517.93,125.203C541.917,125.592,565.03,128.84,576.586,130.463L588.142,132.087" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M593.391,148.866L580.96,150.612C568.529,152.359,543.667,155.852,519.668,155.077C495.669,154.302,472.533,149.258,460.965,146.737L449.397,144.215" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M707.563,140.845L716.402,140.845C725.242,140.845,742.922,140.845,759.718,140.845C776.515,140.845,792.428,140.845,800.384,140.845L808.341,140.845" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M226.719,57.353L237.84,53.926C248.961,50.498,271.203,43.643,294.703,40.215C318.202,36.788,342.959,36.788,355.337,36.788L367.716,36.788" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M226.719,99.581L237.84,100.296C248.961,101.011,271.203,102.442,292.594,105.995C313.985,109.548,334.524,115.225,344.794,118.063L355.063,120.901" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M360.172,141.087L349.051,142.982C337.93,144.877,315.688,148.667,294.283,147.126C272.879,145.586,252.312,138.714,242.029,135.279L231.746,131.843" marker-end="url(#architecture-arrow)"/>
+  <rect class="d-label-bg" x="467.2" y="20.4" width="103.1" height="19" rx="3"/>
+  <text class="d-text" x="518.8" y="30.9">데이터 저장/조회</text>
+  <rect class="d-label-bg" x="488.8" y="112.8" width="60" height="19" rx="3"/>
+  <text class="d-text" x="518.8" y="123.3">합성 요청</text>
+  <rect class="d-label-bg" x="473.7" y="149.8" width="90.1" height="19" rx="3"/>
+  <text class="d-text" x="518.8" y="160.3">합성 결과 위치</text>
+  <rect class="d-label-bg" x="730.6" y="131.3" width="60" height="19" rx="3"/>
+  <text class="d-text" x="760.6" y="141.8">합성 결과</text>
+  <rect class="d-label-bg" x="263.4" y="27.3" width="60" height="19" rx="3"/>
+  <text class="d-text" x="293.4" y="37.8">에러 로그</text>
+  <rect class="d-label-bg" x="249.7" y="94.3" width="87.4" height="19.1" rx="3"/>
+  <text class="d-text" x="293.4" y="104.9">요청 (CRUD)</text>
+  <rect class="d-label-bg" x="251.4" y="142.9" width="84.1" height="19.1" rx="3"/>
+  <text class="d-text" x="293.4" y="153.5">응답 (JSON)</text>
+  <rect class="d-box" transform="translate(68.9,92.3)" x="-33.3515625" y="-16" width="66.703125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="68.9" y="93.3">Android</text>
+  <rect class="d-box" transform="translate(172.2,92.3)" x="-20.0078125" y="-16" width="40.015625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="172.2" y="93.3">iOS</text>
+  <rect class="d-box" transform="translate(402.2,36.8)" x="-29.1796875" y="-16.107666015625" width="58.359375" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="402.2" y="37.8">Sentry</text>
+  <rect class="d-box" transform="translate(402.2,133.9)" x="-42.0234375" y="-31.03076171875" width="84.046875" height="62.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="402.2" y="120">Apache</text>
+  <text class="d-text" x="402.2" y="134.9">백엔드 서버</text>
+  <text class="d-text" x="402.2" y="149.9">(PHP)</text>
+  <path class="d-box" transform="translate(613.8,0)" d="M 0,9.245766049625837 a 36.6796875,9.245766049625837 0,0,0 73.359375 0 a 36.6796875,9.245766049625837 0,0,0 -73.359375 0 l 0,41.245766049625836 a 36.6796875,9.245766049625837 0,0,0 73.359375 0 l 0,-41.245766049625836"/>
+  <text class="d-text" x="650.5" y="30.9">MariaDB</text>
+  <rect class="d-box" transform="translate(650.5,140.8)" x="-57.0859375" y="-31.107666015625" width="114.171875" height="62.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="650.5" y="126.7">Anaconda</text>
+  <text class="d-text" x="650.5" y="141.7">합성용 가상 환경</text>
+  <text class="d-text" x="650.5" y="156.8">(Python)</text>
+  <path class="d-box" transform="translate(813.6,104.3)" d="M 0,8.716007164956848 a 33.453125,8.716007164956848 0,0,0 66.90625 0 a 33.453125,8.716007164956848 0,0,0 -66.90625 0 l 0,55.71600716495685 a 33.453125,8.716007164956848 0,0,0 66.90625 0 l 0,-55.71600716495685"/>
+  <text class="d-text" x="847.1" y="134.3">파일</text>
+  <text class="d-text" x="847.1" y="149.3">스토리지</text>
+</svg>

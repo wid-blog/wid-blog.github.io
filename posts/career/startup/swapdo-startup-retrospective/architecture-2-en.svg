@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 1067 82" width="100%" style="display: block; max-width: 1067px; margin: 0 auto" role="img" aria-labelledby="architecture-2-title">
+  <title id="architecture-2-title">Architecture</title>
+  <defs>
+    <marker id="architecture-2-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="architecture-2-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M88.391,31L92.557,31C96.724,31,105.057,31,112.507,31C119.957,31,126.524,31,129.807,31L133.091,31" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M220.094,31L224.26,31C228.427,31,236.76,31,244.21,31C251.66,31,258.227,31,261.51,31L264.794,31" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M352.609,31L356.776,31C360.943,31,369.276,31,376.726,31C384.176,31,390.743,31,394.026,31L397.309,31" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M516,31L520.167,31C524.333,31,532.667,31,540.117,31C547.567,31,554.133,31,557.417,31L560.7,31" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M659.391,31L663.557,31C667.724,31,676.057,31,683.507,31C690.957,31,697.524,31,700.807,31L704.091,31" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M804.438,31L808.604,31C812.771,31,821.104,31,828.554,31C836.004,31,842.571,31,845.854,31L849.138,31" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M930.328,31L934.495,31C938.661,31,946.995,31,954.445,31C961.895,31,968.461,31,971.745,31L975.028,31" marker-end="url(#architecture-2-arrow)"/>
+  <rect class="d-box" transform="translate(44.2,31)" x="-44.1953125" y="-23.658935546875" width="88.390625" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="44.2" y="24.3">Face</text>
+  <text class="d-text" x="44.2" y="39.5">recognition</text>
+  <rect class="d-box" transform="translate(179.2,31)" x="-40.8515625" y="-23.5" width="81.703125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="179.2" y="24.5">Landmark</text>
+  <text class="d-text" x="179.2" y="39.5">extraction</text>
+  <rect class="d-box" transform="translate(311.4,31)" x="-41.2578125" y="-23.5" width="82.515625" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="311.4" y="24.5">GIF frame</text>
+  <text class="d-text" x="311.4" y="39.5">extraction</text>
+  <rect class="d-box" transform="translate(459.3,31)" x="-56.6953125" y="-23.607666015625" width="113.390625" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="459.3" y="24.6">3D modeling &amp;</text>
+  <text class="d-text" x="459.3" y="39.5">face synthesis</text>
+  <rect class="d-box" transform="translate(612.7,31)" x="-46.6953125" y="-31" width="93.390625" height="62" rx="4" ry="4"/>
+  <text class="d-text" x="612.7" y="17.1">Boundary &amp;</text>
+  <text class="d-text" x="612.7" y="32">skin tone</text>
+  <text class="d-text" x="612.7" y="47">refinement</text>
+  <rect class="d-box" transform="translate(756.9,31)" x="-47.5234375" y="-23.658935546875" width="95.046875" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="756.9" y="24.3">Per-frame</text>
+  <text class="d-text" x="756.9" y="39.5">compositing</text>
+  <rect class="d-box" transform="translate(892.4,31)" x="-37.9453125" y="-23.658935546875" width="75.890625" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="892.4" y="24.3">GIF</text>
+  <text class="d-text" x="892.4" y="39.5">encoding</text>
+  <rect class="d-box" transform="translate(1013.7,31)" x="-33.34375" y="-23.607666015625" width="66.6875" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="1013.7" y="24.4">Result</text>
+  <text class="d-text" x="1013.7" y="39.5">delivery</text>
+</svg>

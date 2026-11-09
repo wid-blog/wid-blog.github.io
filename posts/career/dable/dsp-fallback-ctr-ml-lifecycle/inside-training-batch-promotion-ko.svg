@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 826.1 172.1" width="100%" style="display: block; max-width: 826.1px; margin: 0 auto" role="img" aria-labelledby="inside-training-batch-promotion-title">
+  <title id="inside-training-batch-promotion-title">학습 배치 내부와 Promotion Gate</title>
+  <defs>
+    <marker id="inside-training-batch-promotion-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="inside-training-batch-promotion-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M84.047,76.031L88.214,76.031C92.38,76.031,100.714,76.031,108.164,76.031C115.614,76.031,122.18,76.031,125.464,76.031L128.747,76.031" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M187.984,76.031L192.151,76.031C196.318,76.031,204.651,76.031,212.101,76.031C219.551,76.031,226.118,76.031,229.401,76.031L232.684,76.031" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M278.938,76.031L283.104,76.031C287.271,76.031,295.604,76.031,303.054,76.031C310.504,76.031,317.071,76.031,320.354,76.031L323.638,76.031" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M369.891,76.031L374.057,76.031C378.224,76.031,386.557,76.031,394.091,76.097C401.624,76.163,408.358,76.295,411.725,76.361L415.092,76.427" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M551.852,55.93L562.612,51.817C573.373,47.703,594.893,39.476,612.181,35.363C629.468,31.249,642.521,31.249,649.048,31.249L655.575,31.249" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M551.852,97.132L562.612,101.079C573.373,105.026,594.893,112.92,612.589,116.866C630.285,120.813,644.157,120.813,651.092,120.813L658.028,120.813" marker-end="url(#inside-training-batch-promotion-arrow)"/>
+  <rect class="d-label-bg" x="595" y="21.7" width="42.9" height="19" rx="3"/>
+  <text class="d-text" x="616.4" y="32.2">PASS</text>
+  <rect class="d-label-bg" x="599" y="111.3" width="34.9" height="19" rx="3"/>
+  <text class="d-text" x="616.4" y="121.8">FAIL</text>
+  <rect class="d-box" transform="translate(42,76)" x="-42.0234375" y="-16" width="84.046875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="42" y="77">데이터 로딩</text>
+  <rect class="d-box" transform="translate(161,76)" x="-26.96875" y="-16" width="53.9375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="161" y="77">전처리</text>
+  <rect class="d-box" transform="translate(258.5,76)" x="-20.4765625" y="-16" width="40.953125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="258.5" y="77">학습</text>
+  <rect class="d-box" transform="translate(349.4,76)" x="-20.4765625" y="-16" width="40.953125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="349.4" y="77">평가</text>
+  <polygon class="d-box" transform="translate(419.9,152.1)" points="76.03125,0 152.0625,-76.03125 76.03125,-152.0625 0,-76.03125"/>
+  <text class="d-text" x="495.9" y="77">Promotion Gate</text>
+  <rect class="d-box" transform="translate(733.5,31.2)" x="-72.59375" y="-23.5" width="145.1875" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="733.5" y="24.8">champion alias 교체</text>
+  <text class="d-text" x="733.5" y="39.7">+ Rollout 트리거</text>
+  <rect class="d-box" transform="translate(733.5,120.8)" x="-70.140625" y="-16.063720703125" width="140.28125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="733.5" y="121.8">기존 champion 유지</text>
+</svg>

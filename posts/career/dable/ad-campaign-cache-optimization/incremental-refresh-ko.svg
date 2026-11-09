@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 368.1 869.5" width="100%" style="display: block; max-width: 368.1px; margin: 0 auto" role="img" aria-labelledby="incremental-refresh-title">
+  <title id="incremental-refresh-title">변경분 갱신</title>
+  <defs>
+    <marker id="incremental-refresh-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="incremental-refresh-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0.5" y="0" width="348.1" height="370.4" rx="6"/>
+  <text class="d-group-text" x="174.5" y="9.5">읽기 경로</text>
+  <rect class="d-group" x="18.1" y="420.4" width="312.9" height="429.1" rx="6"/>
+  <text class="d-group-text" x="174.5" y="429.9">쓰기 경로</text>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M179.906,65L179.906,69.167C179.906,73.333,179.906,81.667,179.972,89.2C180.038,96.734,180.17,103.467,180.236,106.834L180.302,110.201" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M150.448,224.932L142.391,235.425C134.334,245.918,118.22,266.904,110.163,282.098C102.105,297.291,102.105,306.691,102.105,311.391L102.105,316.091" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M210.365,224.932L218.255,235.425C226.145,245.918,241.926,266.904,249.817,282.098C257.707,297.291,257.707,306.691,257.707,311.391L257.707,316.091" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(10.1,412.4)" d="M176.91,65L176.91,69.167C176.91,73.333,176.91,81.667,176.91,89.117C176.91,96.567,176.91,103.133,176.91,106.417L176.91,109.7" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(10.1,412.4)" d="M176.91,147L176.91,151.167C176.91,155.333,176.91,163.667,176.976,171.2C177.042,178.734,177.174,185.467,177.24,188.834L177.306,192.201" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(10.1,412.4)" d="M154.413,275.44L146.447,284.773C138.481,294.106,122.549,312.772,114.583,326.805C106.617,340.838,106.617,350.238,106.617,354.938L106.617,359.638" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(10.1,412.4)" d="M200.407,275.44L208.207,284.773C216.006,294.106,231.605,312.772,239.404,328.065C247.203,343.359,247.203,355.28,247.203,361.241L247.203,367.201" marker-end="url(#incremental-refresh-arrow)"/>
+  <rect class="d-label-bg" x="79.6" y="270.4" width="29.9" height="19" rx="3"/>
+  <text class="d-text" x="94.6" y="280.9">있다</text>
+  <rect class="d-label-bg" x="235.2" y="270.4" width="29.9" height="19" rx="3"/>
+  <text class="d-text" x="250.2" y="280.9">없다</text>
+  <rect class="d-label-bg" x="95.2" y="734.3" width="42.9" height="19" rx="3"/>
+  <text class="d-text" x="116.7" y="744.8">변경됨</text>
+  <rect class="d-label-bg" x="242.3" y="734.3" width="29.9" height="19" rx="3"/>
+  <text class="d-text" x="257.3" y="744.8">동일</text>
+  <polygon class="d-box" transform="translate(102.7,246.4)" points="69.6953125,0 139.390625,-69.6953125 69.6953125,-139.390625 0,-69.6953125"/>
+  <text class="d-text" x="172.4" y="170.2">마지막 갱신</text>
+  <text class="d-text" x="172.4" y="185.2">이후 변경분?</text>
+  <rect class="d-box" transform="translate(172.4,41)" x="-26.96875" y="-16" width="53.9375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="172.4" y="42">서비스</text>
+  <rect class="d-box" transform="translate(94.6,329.4)" x="-48.515625" y="-16" width="97.03125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="94.6" y="330.4">변경분만 조회</text>
+  <rect class="d-box" transform="translate(250.2,329.4)" x="-57.0859375" y="-16" width="114.171875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="250.2" y="330.4">로컬 데이터 유지</text>
+  <rect class="d-box" transform="translate(187,543.4)" x="-20.4765625" y="-16" width="40.953125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="187" y="544.4">배치</text>
+  <rect class="d-box" transform="translate(187,461.4)" x="-17.921875" y="-16" width="35.84375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="187" y="462.4">DB</text>
+  <polygon class="d-box" transform="translate(136.5,710.3)" points="50.46875,0 100.9375,-50.46875 50.46875,-100.9375 0,-50.46875"/>
+  <text class="d-text" x="187" y="653.4">캐시와</text>
+  <text class="d-text" x="187" y="668.4">비교</text>
+  <rect class="d-box" transform="translate(116.7,800.9)" x="-63.6171875" y="-23.563720703125" width="127.234375" height="47.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="116.7" y="794.3">캐시 갱신</text>
+  <text class="d-text" x="116.7" y="809.4">+ timestamp 기록</text>
+  <rect class="d-box" transform="translate(257.3,800.9)" x="-26.96875" y="-16" width="53.9375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="257.3" y="801.9">건너뜀</text>
+</svg>

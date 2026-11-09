@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 867.1 119.4" width="100%" style="display: block; max-width: 867.1px; margin: 0 auto" role="img" aria-labelledby="ml-lifecycle-architecture-title">
+  <title id="ml-lifecycle-architecture-title">ML Lifecycle Architecture</title>
+  <defs>
+    <marker id="ml-lifecycle-architecture-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="ml-lifecycle-architecture-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M109.516,53.839L126.853,57.508C144.19,61.176,178.865,68.512,216.657,72.18C254.449,75.849,295.36,75.849,315.815,75.849L336.27,75.849" marker-end="url(#ml-lifecycle-architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M109.516,30.668L126.853,27C144.19,23.332,178.865,15.995,225.322,12.327C271.779,8.659,330.018,8.659,392.986,8.659C455.953,8.659,523.648,8.659,578.691,12.328C633.733,15.996,676.123,23.334,697.317,27.002L718.512,30.671" marker-end="url(#ml-lifecycle-architecture-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M434.945,75.849L461.012,75.849C487.078,75.849,539.211,75.849,586.472,72.18C633.733,68.511,676.123,61.174,697.317,57.505L718.512,53.837" marker-end="url(#ml-lifecycle-architecture-arrow)"/>
+  <rect class="d-label-bg" x="132.5" y="58.8" width="162" height="34.1" rx="3"/>
+  <text class="d-text" x="181.8" y="69.3">① push model</text>
+  <text class="d-text" x="213.5" y="84.3">② move champion alias</text>
+  <rect class="d-label-bg" x="315.6" y="-1" width="145.3" height="19.3" rx="3"/>
+  <text class="d-text" x="388.2" y="9.7">③ trigger deployment</text>
+  <rect class="d-label-bg" x="482" y="66.3" width="218.6" height="19.1" rx="3"/>
+  <text class="d-text" x="591.3" y="76.8">④ load champion on pod startup</text>
+  <rect class="d-box" transform="translate(54.8,42.3)" x="-54.7578125" y="-16.158935546875" width="109.515625" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="54.8" y="43.3">Training batch</text>
+  <rect class="d-box" transform="translate(388.3,75.8)" x="-46.6875" y="-23.53076171875" width="93.375" height="47.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="388.3" y="69.3">Model store</text>
+  <text class="d-text" x="388.3" y="84.3">(MLflow)</text>
+  <rect class="d-box" transform="translate(785.4,42.3)" x="-61.6953125" y="-16" width="123.390625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="785.4" y="43.3">Inference server</text>
+</svg>

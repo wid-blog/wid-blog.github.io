@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 381.1 507.9" width="100%" style="display: block; max-width: 381.1px; margin: 0 auto" role="img" aria-labelledby="architecture-title">
+  <title id="architecture-title">아키텍처</title>
+  <defs>
+    <marker id="architecture-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="architecture-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0" y="0" width="286.1" height="293.5" rx="6"/>
+  <text class="d-group-text" x="143" y="9.6">Application</text>
+  <path class="d-line" transform="translate(0,0)" d="M88.781,72.318L88.781,77.901C88.781,83.485,88.781,94.651,94.175,105.218C99.568,115.786,110.355,125.753,115.748,130.737L121.141,135.721" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M150.465,186.318L150.465,190.485C150.465,194.651,150.465,202.985,150.465,210.435C150.465,217.885,150.465,224.451,150.465,227.735L150.465,231.018" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M116.737,268.533L108.013,272.7C99.289,276.867,81.84,285.2,73.115,293.533C64.391,301.867,64.391,310.2,64.391,317.65C64.391,325.1,64.391,331.667,64.391,334.95L64.391,338.233" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M184.192,268.533L192.917,272.7C201.641,276.867,219.09,285.2,227.815,293.533C236.539,301.867,236.539,310.2,236.539,318.905C236.539,327.61,236.539,336.687,236.539,341.226L236.539,345.764" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M216.727,383.064L210.013,388.486C203.3,393.908,189.873,404.751,183.159,413.478C176.445,422.204,176.445,428.814,176.445,432.118L176.445,435.423" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M256.351,383.064L263.065,388.486C269.778,393.908,283.206,404.751,289.919,413.456C296.633,422.161,296.633,428.728,296.633,432.011L296.633,435.295" marker-end="url(#architecture-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M321.066,58.045L290.014,85.856" marker-end="url(#architecture-arrow)"/>
+  <rect class="d-label-bg" x="267" y="64.2" width="73" height="19" rx="3"/>
+  <text class="d-text" x="303.5" y="74.7">의존성 주입</text>
+  <rect class="d-box" transform="translate(150.5,162.8)" x="-44.0546875" y="-23.5" width="88.109375" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="150.5" y="156.3">ViewModel</text>
+  <text class="d-text" x="150.5" y="171.3">+ LiveData</text>
+  <rect class="d-box" transform="translate(88.8,48.7)" x="-53.78125" y="-23.658935546875" width="107.5625" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="88.8" y="42.2">Single Activity</text>
+  <text class="d-text" x="88.8" y="57.2">+ Fragment</text>
+  <rect class="d-box" transform="translate(150.5,252.4)" x="-43.3515625" y="-16.107666015625" width="86.703125" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="150.5" y="253.4">Repository</text>
+  <rect class="d-box" transform="translate(341.1,48.7)" x="-20" y="-23.53076171875" width="40" height="47.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="341.1" y="42.1">Hilt</text>
+  <text class="d-text" x="341.1" y="57.2">(DI)</text>
+  <rect class="d-box" transform="translate(64.4,367.1)" x="-47.9453125" y="-23.53076171875" width="95.890625" height="47.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="64.4" y="360.5">Local Model</text>
+  <text class="d-text" x="64.4" y="375.6">(SQLite)</text>
+  <rect class="d-box" transform="translate(236.5,367.1)" x="-74.203125" y="-16" width="148.40625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="236.5" y="368.1">Remote Data Model</text>
+  <rect class="d-box" transform="translate(176.4,464.3)" x="-35.5390625" y="-23.53076171875" width="71.078125" height="47.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="176.4" y="457.7">소켓 서버</text>
+  <text class="d-text" x="176.4" y="472.8">(Java)</text>
+  <rect class="d-box" transform="translate(296.6,464.3)" x="-34.6484375" y="-23.658935546875" width="69.296875" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="296.6" y="457.6">API 서버</text>
+  <text class="d-text" x="296.6" y="472.8">(Spring)</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 418.2 923.9" width="100%" style="display: block; max-width: 418.2px; margin: 0 auto" role="img" aria-labelledby="incremental-refresh-title">
+  <title id="incremental-refresh-title">Incremental Refresh</title>
+  <defs>
+    <marker id="incremental-refresh-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="incremental-refresh-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0.5" y="0" width="398.2" height="392.6" rx="6"/>
+  <text class="d-group-text" x="199.6" y="9.5">Read Path</text>
+  <rect class="d-group" x="34.5" y="442.6" width="330.2" height="461.3" rx="6"/>
+  <text class="d-group-text" x="199.6" y="452.1">Write Path</text>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M210.453,65L210.453,69.167C210.453,73.333,210.453,81.667,210.519,89.2C210.585,96.734,210.717,103.467,210.783,106.834L210.849,110.201" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M175.215,240.996L165.942,252.452C156.669,263.909,138.124,286.822,128.851,302.978C119.578,319.134,119.578,328.534,119.578,333.234L119.578,337.934" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M246.691,240.996L255.798,252.452C264.904,263.909,283.116,286.822,292.222,302.994C301.328,319.166,301.328,328.598,301.328,333.314L301.328,338.03" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(26.5,434.6)" d="M186.895,65L186.895,69.167C186.895,73.333,186.895,81.667,186.895,89.117C186.895,96.567,186.895,103.133,186.895,106.417L186.895,109.7" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(26.5,434.6)" d="M186.895,147L186.895,151.167C186.895,155.333,186.895,163.667,186.961,171.2C187.027,178.734,187.159,185.467,187.225,188.834L187.291,192.201" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(26.5,434.6)" d="M159.6,302.58L152.15,312.739C144.699,322.898,129.799,343.216,122.349,358.102C114.898,372.987,114.898,382.44,114.898,387.166L114.898,391.893" marker-end="url(#incremental-refresh-arrow)"/>
+  <path class="d-line" transform="translate(26.5,434.6)" d="M215.189,302.58L222.473,312.739C229.756,322.898,244.323,343.216,251.607,359.352C258.891,375.487,258.891,387.44,258.891,393.416L258.891,399.393" marker-end="url(#incremental-refresh-arrow)"/>
+  <rect class="d-label-bg" x="97.8" y="292.2" width="28.5" height="19" rx="3"/>
+  <text class="d-text" x="112.1" y="302.7">Yes</text>
+  <rect class="d-label-bg" x="282.2" y="292.2" width="23.2" height="19" rx="3"/>
+  <text class="d-text" x="293.8" y="302.7">No</text>
+  <rect class="d-label-bg" x="109" y="788.4" width="64.9" height="19.3" rx="3"/>
+  <text class="d-text" x="141.4" y="799.1">Changed</text>
+  <rect class="d-label-bg" x="263.8" y="788.6" width="43.2" height="19" rx="3"/>
+  <text class="d-text" x="285.4" y="799.1">Same</text>
+  <polygon class="d-box" transform="translate(122.3,268.2)" points="80.6171875,0 161.234375,-80.6171875 80.6171875,-161.234375 0,-80.6171875"/>
+  <text class="d-text" x="203" y="181.3">Changes since</text>
+  <text class="d-text" x="203" y="196.1">last refresh?</text>
+  <rect class="d-box" transform="translate(203,41)" x="-32.515625" y="-16" width="65.03125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="203" y="42">Service</text>
+  <rect class="d-box" transform="translate(112.1,351.4)" x="-72.5390625" y="-16.158935546875" width="145.078125" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="112.1" y="352.4">Fetch changes only</text>
+  <rect class="d-box" transform="translate(293.8,351.4)" x="-59.2109375" y="-16.063720703125" width="118.421875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="293.8" y="352.4">Keep local data</text>
+  <rect class="d-box" transform="translate(213.4,565.6)" x="-26.6796875" y="-16" width="53.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="213.4" y="566.6">Batch</text>
+  <rect class="d-box" transform="translate(213.4,483.6)" x="-17.921875" y="-16" width="35.84375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="213.4" y="484.6">DB</text>
+  <polygon class="d-box" transform="translate(147,764.4)" points="66.4375,0 132.875,-66.4375 66.4375,-132.875 0,-66.4375"/>
+  <text class="d-text" x="213.4" y="691.6">Compare</text>
+  <text class="d-text" x="213.4" y="706.5">with cache</text>
+  <rect class="d-box" transform="translate(141.4,855.3)" x="-71.8984375" y="-23.563720703125" width="143.796875" height="47.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="141.4" y="848.8">Update cache</text>
+  <text class="d-text" x="141.4" y="863.8">+ record timestamp</text>
+  <rect class="d-box" transform="translate(285.4,855.3)" x="-22.09375" y="-16.063720703125" width="44.1875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="285.4" y="856.3">Skip</text>
+</svg>

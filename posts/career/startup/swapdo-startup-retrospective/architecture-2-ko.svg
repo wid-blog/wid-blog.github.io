@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 1094 67" width="100%" style="display: block; max-width: 1094px; margin: 0 auto" role="img" aria-labelledby="architecture-2-title">
+  <title id="architecture-2-title">아키텍처</title>
+  <defs>
+    <marker id="architecture-2-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="architecture-2-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M114.172,23.5L118.339,23.5C122.505,23.5,130.839,23.5,138.289,23.5C145.739,23.5,152.305,23.5,155.589,23.5L158.872,23.5" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M261.203,23.5L265.37,23.5C269.536,23.5,277.87,23.5,285.32,23.5C292.77,23.5,299.336,23.5,302.62,23.5L305.903,23.5" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M394.297,23.5L398.464,23.5C402.63,23.5,410.964,23.5,418.414,23.5C425.864,23.5,432.43,23.5,435.714,23.5L438.997,23.5" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M538.719,23.5L542.885,23.5C547.052,23.5,555.385,23.5,562.835,23.5C570.285,23.5,576.852,23.5,580.135,23.5L583.419,23.5" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M672.766,23.5L676.932,23.5C681.099,23.5,689.432,23.5,696.882,23.5C704.332,23.5,710.899,23.5,714.182,23.5L717.466,23.5" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M819.797,23.5L823.964,23.5C828.13,23.5,836.464,23.5,843.914,23.5C851.364,23.5,857.93,23.5,861.214,23.5L864.497,23.5" marker-end="url(#architecture-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M952.891,23.5L957.057,23.5C961.224,23.5,969.557,23.5,977.007,23.5C984.457,23.5,991.024,23.5,994.307,23.5L997.591,23.5" marker-end="url(#architecture-2-arrow)"/>
+  <rect class="d-box" transform="translate(57.1,23.5)" x="-57.0859375" y="-16" width="114.171875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="57.1" y="24.5">사용자 얼굴 인식</text>
+  <rect class="d-box" transform="translate(212.7,23.5)" x="-48.515625" y="-23.5" width="97.03125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="212.7" y="17">얼굴 랜드마크</text>
+  <text class="d-text" x="212.7" y="32">추출</text>
+  <rect class="d-box" transform="translate(352.8,23.5)" x="-41.546875" y="-23.5" width="83.09375" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="352.8" y="17">GIF 프레임</text>
+  <text class="d-text" x="352.8" y="32">정보 추출</text>
+  <rect class="d-box" transform="translate(491.5,23.5)" x="-47.2109375" y="-23.5" width="94.421875" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="491.5" y="17">3D 모델링 및</text>
+  <text class="d-text" x="491.5" y="32">얼굴 합성</text>
+  <rect class="d-box" transform="translate(630.7,23.5)" x="-42.0234375" y="-23.5" width="84.046875" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="630.7" y="17">경계선 및</text>
+  <text class="d-text" x="630.7" y="32">피부색 보정</text>
+  <rect class="d-box" transform="translate(771.3,23.5)" x="-48.515625" y="-16" width="97.03125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="771.3" y="24.5">프레임별 합성</text>
+  <rect class="d-box" transform="translate(911.3,23.5)" x="-41.546875" y="-16" width="83.09375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="911.3" y="24.5">GIF 인코딩</text>
+  <rect class="d-box" transform="translate(1038.4,23.5)" x="-35.5390625" y="-23.5" width="71.078125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="1038.4" y="17">합성 결과</text>
+  <text class="d-text" x="1038.4" y="32">전달</text>
+</svg>
