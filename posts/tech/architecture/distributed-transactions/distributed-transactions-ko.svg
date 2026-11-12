@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 998.4 142.6" width="100%" style="display: block; max-width: 998.4px; margin: 0 auto" role="img" aria-labelledby="distributed-transactions-title">
+  <title id="distributed-transactions-title">Distributed Transactions</title>
+  <defs>
+    <marker id="distributed-transactions-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="distributed-transactions-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M153.094,58.023L157.26,58.023C161.427,58.023,169.76,58.023,177.21,58.023C184.66,58.023,191.227,58.023,194.51,58.023L197.794,58.023" marker-end="url(#distributed-transactions-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M330.234,58.023L334.401,58.023C338.568,58.023,346.901,58.023,354.435,58.089C361.968,58.155,368.702,58.288,372.069,58.354L375.435,58.42" marker-end="url(#distributed-transactions-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M483.887,45.629L500.244,40.848C516.602,36.067,549.316,26.506,583.159,21.725C617.002,16.944,651.972,16.944,669.457,16.944L686.942,16.944" marker-end="url(#distributed-transactions-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M483.887,71.418L500.244,76.032C516.602,80.646,549.316,89.875,579.082,94.489C608.848,99.103,635.665,99.103,649.073,99.103L662.481,99.103" marker-end="url(#distributed-transactions-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M760.891,99.103L765.057,99.103C769.224,99.103,777.557,99.103,785.007,99.103C792.457,99.103,799.024,99.103,802.307,99.103L805.591,99.103" marker-end="url(#distributed-transactions-arrow)"/>
+  <rect class="d-label-bg" x="552" y="7.4" width="60" height="19" rx="3"/>
+  <text class="d-text" x="582" y="17.9">동기 합의</text>
+  <rect class="d-label-bg" x="519.3" y="89.6" width="125.4" height="19" rx="3"/>
+  <text class="d-text" x="582" y="100.1">로컬 commit + 보상</text>
+  <rect class="d-box" transform="translate(76.5,58)" x="-76.546875" y="-23.5" width="153.09375" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="76.5" y="51.5">모놀리스 단일 트랜잭션</text>
+  <text class="d-text" x="76.5" y="66.5">ACID</text>
+  <rect class="d-box" transform="translate(266.7,58)" x="-63.5703125" y="-16" width="127.140625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="266.7" y="59">서비스 경계로 분해</text>
+  <polygon class="d-box" transform="translate(380.2,116)" points="58.0234375,0 116.046875,-58.0234375 58.0234375,-116.046875 0,-58.0234375"/>
+  <text class="d-text" x="438.3" y="59">재조립 전략</text>
+  <rect class="d-box" transform="translate(714.3,16.9)" x="-22.09375" y="-16" width="44.1875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="714.3" y="17.9">2PC</text>
+  <rect class="d-box" transform="translate(714.3,99.1)" x="-46.5546875" y="-16.158935546875" width="93.109375" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="714.3" y="100.1">Saga / TCC</text>
+  <rect class="d-box" transform="translate(894.6,99.1)" x="-83.734375" y="-23.5" width="167.46875" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="894.6" y="92.6">Outbox</text>
+  <text class="d-text" x="894.6" y="107.6">DB ↔ 이벤트 발행 일관성</text>
+</svg>

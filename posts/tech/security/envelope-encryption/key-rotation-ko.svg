@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 622.2 280" width="100%" style="display: block; max-width: 622.2px; margin: 0 auto" role="img" aria-labelledby="key-rotation-title">
+  <title id="key-rotation-title">키 회전</title>
+  <defs>
+    <marker id="key-rotation-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="key-rotation-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="143.3" y="0" width="458.9" height="138" rx="6"/>
+  <text class="d-group-text" x="372.8" y="9.5">키 회전 후</text>
+  <rect class="d-group" x="0" y="158" width="295.3" height="102" rx="6"/>
+  <text class="d-group-text" x="147.6" y="167.5">키 회전 전</text>
+  <path class="d-line" transform="translate(0,0)" d="M93.344,209.031L97.51,209.031C101.677,209.031,110.01,209.031,118.344,209.031C126.677,209.031,135.01,209.031,142.46,209.031C149.91,209.031,156.477,209.031,159.76,209.031L163.044,209.031" marker-end="url(#key-rotation-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M253.477,54.765L260.441,54.765C267.406,54.765,281.336,54.765,303.302,54.765C325.268,54.765,355.271,54.765,384.397,56.569C413.524,58.373,441.774,61.98,455.899,63.783L470.024,65.587" marker-end="url(#key-rotation-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M270.266,209.031L274.432,209.031C278.599,209.031,286.932,209.031,306.1,189.32C325.268,169.609,355.271,130.187,384.397,108.673C413.524,87.158,441.774,83.551,455.899,81.747L470.024,79.944" marker-end="url(#key-rotation-arrow)"/>
+  <rect class="d-label-bg" x="318.3" y="73.8" width="133.9" height="34" rx="3"/>
+  <text class="d-text" x="385.2" y="84.3">DEK 재암호화만 수행</text>
+  <text class="d-text" x="367.7" y="99.3">데이터는 그대로</text>
+  <rect class="d-box" transform="translate(526.2,72.8)" x="-50.9609375" y="-23.53076171875" width="101.921875" height="47.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="526.2" y="66.2">암호화된 DEK</text>
+  <text class="d-text" x="526.2" y="81.3">(재암호화)</text>
+  <rect class="d-box" transform="translate(219.3,54.8)" x="-34.171875" y="-16" width="68.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="219.3" y="55.8">CMK v2</text>
+  <rect class="d-box" transform="translate(219.3,209)" x="-50.9609375" y="-16" width="101.921875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="219.3" y="210">암호화된 DEK</text>
+  <rect class="d-box" transform="translate(59.2,209)" x="-34.171875" y="-16" width="68.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="59.2" y="210">CMK v1</text>
+</svg>

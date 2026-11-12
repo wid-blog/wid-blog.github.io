@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 729.7 97.2" width="100%" style="display: block; max-width: 729.7px; margin: 0 auto" role="img" aria-labelledby="three-step-process-title">
+  <title id="three-step-process-title">3단계 프로세스</title>
+  <defs>
+    <marker id="three-step-process-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="three-step-process-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M148.55,38.608L157.39,38.608C166.23,38.608,183.909,38.608,200.706,38.608C217.502,38.608,233.415,38.608,241.372,38.608L249.328,38.608" marker-end="url(#three-step-process-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M455.081,38.608L463.921,38.608C472.761,38.608,490.441,38.608,507.237,38.608C524.033,38.608,539.946,38.608,547.903,38.608L555.859,38.608" marker-end="url(#three-step-process-arrow)"/>
+  <rect class="d-label-bg" x="171.6" y="29.1" width="60" height="19" rx="3"/>
+  <text class="d-text" x="201.6" y="39.6">배포 완료</text>
+  <rect class="d-label-bg" x="478.1" y="29.1" width="60" height="19" rx="3"/>
+  <text class="d-text" x="508.1" y="39.6">검증 완료</text>
+  <rect class="d-box" transform="translate(74.3,38.6)" x="-74.27503967285156" y="-38.5" width="148.55007934570312" height="77" rx="4" ry="4"/>
+  <text class="d-text" x="74.3" y="17.2">&lt;b&gt;Step 1: 준비&lt;/b&gt;</text>
+  <text class="d-text" x="74.3" y="32.1">새 형식 추가</text>
+  <text class="d-text" x="74.3" y="47.1">이중 쓰기 시작</text>
+  <text class="d-text" x="74.3" y="62.1">fallback 읽기 적용</text>
+  <rect class="d-box" transform="translate(354.9,38.6)" x="-100.2265625" y="-38.607666015625" width="200.453125" height="77.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="354.9" y="17.1">&lt;b&gt;Step 2: 마이그레이션&lt;/b&gt;</text>
+  <text class="d-text" x="354.9" y="32">기존 데이터를</text>
+  <text class="d-text" x="354.9" y="47">새 형식으로 변환</text>
+  <text class="d-text" x="354.9" y="62.1">dry-run → 실행</text>
+  <rect class="d-box" transform="translate(635.4,38.6)" x="-74.27503967285156" y="-31" width="148.55007934570312" height="62" rx="4" ry="4"/>
+  <text class="d-text" x="635.4" y="24.7">&lt;b&gt;Step 3: 정리&lt;/b&gt;</text>
+  <text class="d-text" x="635.4" y="39.6">fallback 제거</text>
+  <text class="d-text" x="635.4" y="54.6">기존 형식 삭제</text>
+</svg>

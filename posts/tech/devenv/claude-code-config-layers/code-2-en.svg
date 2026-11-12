@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 347.2 1099.9" width="100%" style="display: block; max-width: 347.2px; margin: 0 auto" role="img" aria-labelledby="code-2-title">
+  <title id="code-2-title">/code</title>
+  <defs>
+    <marker id="code-2-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="code-2-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M231.18,92.745L231.18,96.912C231.18,101.079,231.18,109.412,231.18,116.862C231.18,124.312,231.18,130.879,231.18,134.162L231.18,137.445" marker-end="url(#code-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M231.18,190.063L231.18,194.23C231.18,198.397,231.18,206.73,231.18,214.18C231.18,221.63,231.18,228.197,231.18,231.48L231.18,234.763" marker-end="url(#code-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M171.344,297.919L160.339,302.83C149.333,307.74,127.323,317.561,116.318,325.754C105.313,333.948,105.313,340.514,105.313,343.798L105.313,347.081" marker-end="url(#code-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M105.313,414.699L105.313,418.866C105.313,423.032,105.313,431.366,105.313,438.816C105.313,446.266,105.313,452.832,105.313,456.116L105.313,459.399" marker-end="url(#code-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M61.137,557.017L55.776,562.618C50.415,568.219,39.694,579.422,35.637,589.788C31.579,600.155,34.186,609.685,35.489,614.45L36.793,619.215" marker-end="url(#code-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M74.806,624.327L79.89,618.71C84.975,613.093,95.144,601.859,100.228,591.524C105.313,581.189,105.313,571.753,105.313,567.035L105.313,562.317" marker-end="url(#code-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M162.072,557.017L168.96,562.618C175.848,568.219,189.623,579.422,196.511,589.741C203.398,600.06,203.398,609.496,203.398,614.214L203.398,618.932" marker-end="url(#code-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M203.398,686.55L203.398,690.717C203.398,694.883,203.398,703.217,203.398,710.667C203.398,718.117,203.398,724.683,203.398,727.967L203.398,731.25" marker-end="url(#code-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M203.398,783.765L203.398,787.932C203.398,792.099,203.398,800.432,207.027,812.041C210.655,823.651,217.911,838.536,221.539,845.979L225.167,853.422" marker-end="url(#code-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M275.331,858.186L279.179,849.949C283.028,841.712,290.725,825.239,294.573,808.901C298.422,792.563,298.422,776.36,298.422,760.158C298.422,743.955,298.422,727.753,298.422,710.291C298.422,692.83,298.422,674.111,298.422,653.956C298.422,633.802,298.422,612.213,298.422,588.124C298.422,564.036,298.422,537.447,298.422,512.292C298.422,487.138,298.422,463.419,298.422,442.199C298.422,420.979,298.422,402.26,298.422,383.54C298.422,364.82,298.422,346.101,294.111,333.14C289.8,320.18,281.178,312.979,276.867,309.379L272.556,305.778" marker-end="url(#code-2-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M251.41,981.312L251.327,986.812C251.243,992.312,251.077,1003.312,250.993,1013.512C250.91,1023.712,250.91,1033.112,250.91,1037.812L250.91,1042.512" marker-end="url(#code-2-arrow)"/>
+  <rect class="d-label-bg" x="11.5" y="581.1" width="34.8" height="19" rx="3"/>
+  <text class="d-text" x="29" y="591.6">FAIL</text>
+  <rect class="d-label-bg" x="181.9" y="581.1" width="42.9" height="19" rx="3"/>
+  <text class="d-text" x="203.4" y="591.6">PASS</text>
+  <rect class="d-label-bg" x="284.8" y="581" width="27.3" height="19.2" rx="3"/>
+  <text class="d-text" x="298.4" y="591.6">yes</text>
+  <rect class="d-label-bg" x="240.6" y="1004.8" width="20.7" height="19" rx="3"/>
+  <text class="d-text" x="250.9" y="1015.3">no</text>
+  <path class="d-box" transform="translate(135.1,0)" d="M 0,15.145962924185502 a 96.064453125,15.145962924185502 0,0,0 192.12890625 0 a 96.064453125,15.145962924185502 0,0,0 -192.12890625 0 l 0,62.463834017935504 a 96.064453125,15.145962924185502 0,0,0 192.12890625 0 l 0,-62.463834017935504"/>
+  <text class="d-text" x="231.2" y="39.8">/code input</text>
+  <text class="d-text" x="231.4" y="54.9">.claude/plans/&lt;topic&gt;/</text>
+  <rect class="d-box" transform="translate(231.2,166.4)" x="-82.3359375" y="-23.658935546875" width="164.671875" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="231.2" y="159.9">Load _dag.yaml</text>
+  <text class="d-text" x="231.2" y="174.9">topo-sort + status gate</text>
+  <rect class="d-box" transform="translate(231.2,271.2)" x="-59.8359375" y="-31.158935546875" width="119.671875" height="62.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="231.2" y="257.2">Stage Pre</text>
+  <text class="d-text" x="231.2" y="272.2">architect agent</text>
+  <text class="d-text" x="231.2" y="287.2">+ planner agent</text>
+  <rect class="d-box" transform="translate(105.3,383.5)" x="-50.0234375" y="-31.158935546875" width="100.046875" height="62.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="105.3" y="369.5">Stage Impl</text>
+  <text class="d-text" x="105.3" y="384.4">parallel build</text>
+  <text class="d-text" x="105.3" y="399.5">(agent team)</text>
+  <rect class="d-box" transform="translate(105.3,510.9)" x="-75.453125" y="-46.158935546875" width="150.90625" height="92.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="105.3" y="481.9">Stage Post (parallel)</text>
+  <text class="d-text" x="105.3" y="496.7">code-reviewer</text>
+  <text class="d-text" x="105.3" y="511.8">security-reviewer</text>
+  <text class="d-text" x="105.3" y="526.7">database-reviewer</text>
+  <text class="d-text" x="105.3" y="541.9">verify-agent</text>
+  <rect class="d-box" transform="translate(46.7,655.4)" x="-46.6875" y="-31.063720703125" width="93.375" height="62.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="46.7" y="641.5">Stage Fix</text>
+  <text class="d-text" x="46.7" y="656.5">verify-agent</text>
+  <text class="d-text" x="46.7" y="671.4">auto-repair</text>
+  <rect class="d-box" transform="translate(203.4,655.4)" x="-60.0234375" y="-31.158935546875" width="120.046875" height="62.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="203.4" y="641.4">Stage Clean</text>
+  <text class="d-text" x="203.4" y="656.2">refactor-cleaner</text>
+  <text class="d-text" x="203.4" y="671.4">agent</text>
+  <rect class="d-box" transform="translate(203.4,760.2)" x="-54.6171875" y="-23.607666015625" width="109.234375" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="203.4" y="753.5">status</text>
+  <text class="d-text" x="203.4" y="768.7">ready → done</text>
+  <polygon class="d-box" transform="translate(177.4,980.8)" points="73.5234375,0 147.046875,-73.5234375 73.5234375,-147.046875 0,-73.5234375"/>
+  <text class="d-text" x="250.9" y="908.3">Next sub-task?</text>
+  <rect class="d-box" transform="translate(250.9,1063.9)" x="-45.4375" y="-16.063720703125" width="90.875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="250.9" y="1064.9">Final report</text>
+</svg>

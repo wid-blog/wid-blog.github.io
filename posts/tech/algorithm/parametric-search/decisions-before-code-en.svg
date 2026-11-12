@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 343.2 643.6" width="100%" style="display: block; max-width: 343.2px; margin: 0 auto" role="img" aria-labelledby="decisions-before-code-title">
+  <title id="decisions-before-code-title">Decisions Before the Code</title>
+  <defs>
+    <marker id="decisions-before-code-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="decisions-before-code-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M168.535,32.215L168.535,36.382C168.535,40.549,168.535,48.882,168.601,56.416C168.667,63.949,168.799,70.683,168.865,74.05L168.931,77.416" marker-end="url(#decisions-before-code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M132.11,226.514L123.916,238.168C115.722,249.823,99.333,273.131,91.139,289.491C82.945,305.85,82.945,315.261,82.945,319.967L82.945,324.672" marker-end="url(#decisions-before-code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M205.96,226.514L213.988,238.168C222.015,249.823,238.07,273.131,246.098,289.485C254.125,305.839,254.125,315.239,254.125,319.939L254.125,324.639" marker-end="url(#decisions-before-code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M82.945,362.034L82.945,366.206C82.945,370.378,82.945,378.723,82.945,386.178C82.945,393.634,82.945,400.2,82.945,403.484L82.945,406.767" marker-end="url(#decisions-before-code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M82.945,444.282L82.945,448.449C82.945,452.616,82.945,460.949,82.945,468.399C82.945,475.849,82.945,482.416,82.945,485.699L82.945,488.982" marker-end="url(#decisions-before-code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M82.945,541.344L82.945,545.51C82.945,549.677,82.945,558.01,82.945,565.46C82.945,572.91,82.945,579.477,82.945,582.76L82.945,586.044" marker-end="url(#decisions-before-code-arrow)"/>
+  <rect class="d-label-bg" x="68.7" y="286.9" width="28.5" height="19" rx="3"/>
+  <text class="d-text" x="82.9" y="297.4">Yes</text>
+  <rect class="d-label-bg" x="242.5" y="286.9" width="23.2" height="19" rx="3"/>
+  <text class="d-text" x="254.1" y="297.4">No</text>
+  <rect class="d-box" transform="translate(168.5,16.1)" x="-86.2890625" y="-16.107666015625" width="172.578125" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="168.5" y="17.1">Answer not in any array</text>
+  <polygon class="d-box" transform="translate(78.2,262.9)" points="90.362060546875,0 180.72412109375,-90.362060546875 90.362060546875,-180.72412109375 0,-90.362060546875"/>
+  <text class="d-text" x="168.5" y="166">Does the problem</text>
+  <text class="d-text" x="168.5" y="181.1">get easier with x?</text>
+  <rect class="d-box" transform="translate(82.9,346)" x="-52.1015625" y="-16.03076171875" width="104.203125" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="82.9" y="347">Define can(x)</text>
+  <rect class="d-box" transform="translate(254.1,346)" x="-69.078125" y="-16.063720703125" width="138.15625" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="254.1" y="347">Different approach</text>
+  <rect class="d-box" transform="translate(82.9,428.2)" x="-59.1953125" y="-16.107666015625" width="118.390625" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="82.9" y="429.2">Justify lo and hi</text>
+  <rect class="d-box" transform="translate(82.9,517.8)" x="-82.9453125" y="-23.53076171875" width="165.890625" height="47.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="82.9" y="511.3">Shrink direction</text>
+  <text class="d-text" x="82.9" y="526.3">(find_min vs find_max)</text>
+  <rect class="d-box" transform="translate(82.9,607.5)" x="-53.359375" y="-16.107666015625" width="106.71875" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="82.9" y="608.5">Binary search</text>
+</svg>

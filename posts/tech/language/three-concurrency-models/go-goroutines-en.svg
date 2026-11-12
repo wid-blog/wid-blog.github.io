@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 360.1 331.3" width="100%" style="display: block; max-width: 360.1px; margin: 0 auto" role="img" aria-labelledby="go-goroutines-title">
+  <title id="go-goroutines-title">Go Goroutines</title>
+  <defs>
+    <marker id="go-goroutines-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="go-goroutines-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0" y="229.3" width="340.1" height="82.1" rx="6"/>
+  <text class="d-group-text" x="170" y="238.8">OS</text>
+  <rect class="d-group" x="3.5" y="0" width="333" height="179.3" rx="6"/>
+  <text class="d-group-text" x="170" y="9.5">Go Runtime</text>
+  <path class="d-line" transform="translate(0,0)" d="M90.016,154.255L90.016,158.422C90.016,162.588,90.016,170.922,90.016,179.255C90.016,187.588,90.016,195.922,90.016,204.255C90.016,212.588,90.016,220.922,90.016,228.372C90.016,235.822,90.016,242.388,90.016,245.672L90.016,248.955" marker-end="url(#go-goroutines-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M250.047,154.255L250.047,158.422C250.047,162.588,250.047,170.922,250.047,179.255C250.047,187.588,250.047,195.922,250.047,204.255C250.047,212.588,250.047,220.922,250.047,228.372C250.047,235.822,250.047,242.388,250.047,245.672L250.047,248.955" marker-end="url(#go-goroutines-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M138.73,57.127L130.611,61.294C122.492,65.461,106.254,73.794,98.135,81.244C90.016,88.694,90.016,95.261,90.016,98.544L90.016,101.827" marker-end="url(#go-goroutines-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M201.333,57.127L209.452,61.294C217.571,65.461,233.809,73.794,241.928,81.244C250.047,88.694,250.047,95.261,250.047,98.544L250.047,101.827" marker-end="url(#go-goroutines-arrow)"/>
+  <rect class="d-box" transform="translate(90,270.3)" x="-55.015625" y="-16.03076171875" width="110.03125" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="90" y="271.3">M (OS thread)</text>
+  <rect class="d-box" transform="translate(250,270.3)" x="-55.015625" y="-16.03076171875" width="110.03125" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="250" y="271.3">M (OS thread)</text>
+  <rect class="d-box" transform="translate(90,130.7)" x="-50.859375" y="-23.563720703125" width="101.71875" height="47.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="90" y="124.1">P</text>
+  <text class="d-text" x="90" y="139.2">(local queue)</text>
+  <rect class="d-box" transform="translate(250,130.7)" x="-50.859375" y="-23.563720703125" width="101.71875" height="47.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="250" y="124.1">P</text>
+  <text class="d-text" x="250" y="139.2">(local queue)</text>
+  <rect class="d-box" transform="translate(170,41.1)" x="-52.125" y="-16.063720703125" width="104.25" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="170" y="42.1">Global queue</text>
+</svg>

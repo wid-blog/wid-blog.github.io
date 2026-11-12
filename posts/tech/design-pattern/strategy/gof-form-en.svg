@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 382.6 216" width="100%" style="display: block; max-width: 382.6px; margin: 0 auto" role="img" aria-labelledby="gof-form-title">
+  <title id="gof-form-title">The GoF Form</title>
+  <defs>
+    <marker id="gof-form-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="gof-form-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M66.703,98L70.87,98C75.036,98,83.37,98,90.82,98C98.27,98,104.836,98,108.12,98L111.403,98" marker-end="url(#gof-form-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M164.05,81.841L172.138,70.868C180.226,59.894,196.402,37.947,209.441,26.974C222.481,16,232.383,16,237.335,16L242.286,16" marker-end="url(#gof-form-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M187.578,98L191.745,98C195.911,98,204.245,98,211.695,98C219.145,98,225.711,98,228.995,98L232.278,98" marker-end="url(#gof-form-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M164.05,114.159L172.138,125.132C180.226,136.106,196.402,158.053,210.483,169.026C224.564,180,236.55,180,242.543,180L248.536,180" marker-end="url(#gof-form-arrow)"/>
+  <rect class="d-box" transform="translate(33.4,98)" x="-33.3515625" y="-16" width="66.703125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="33.4" y="99">Context</text>
+  <rect class="d-box" transform="translate(152.1,98)" x="-35.4375" y="-16.158935546875" width="70.875" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="152.1" y="99">Strategy</text>
+  <rect class="d-box" transform="translate(300.1,16)" x="-52.5234375" y="-16" width="105.046875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="300.1" y="17">RateDiscount</text>
+  <rect class="d-box" transform="translate(300.1,98)" x="-62.53125" y="-16" width="125.0625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="300.1" y="99">AmountDiscount</text>
+  <rect class="d-box" transform="translate(300.1,180)" x="-46.2734375" y="-16" width="92.546875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="300.1" y="181">NoDiscount</text>
+</svg>

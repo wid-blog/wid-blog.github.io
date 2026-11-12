@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 1699.7 209.3" width="100%" style="display: block; max-width: 1699.7px; margin: 0 auto" role="img" aria-labelledby="cluster-architecture-title">
+  <title id="cluster-architecture-title">클러스터 아키텍처</title>
+  <defs>
+    <marker id="cluster-architecture-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="cluster-architecture-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="459.3" y="107" width="554.3" height="82.3" rx="6"/>
+  <text class="d-group-text" x="736.5" y="116.7">Worker Node</text>
+  <rect class="d-group" x="1033.7" y="107" width="646" height="82.3" rx="6"/>
+  <text class="d-group-text" x="1356.7" y="116.7">Worker Node</text>
+  <rect class="d-group" x="0" y="0" width="439.3" height="189.3" rx="6"/>
+  <text class="d-group-text" x="219.7" y="9.7">Control Plane</text>
+  <path class="d-line" transform="translate(0,0)" d="M288.844,52.01L268.975,57.008C249.107,62.007,209.37,72.003,189.501,81.168C169.633,90.333,169.633,98.667,169.633,106.143C169.633,113.62,169.633,120.239,169.633,123.549L169.633,126.859" marker-end="url(#cluster-architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M332.609,57L332.609,61.167C332.609,65.333,332.609,73.667,332.609,82C332.609,90.333,332.609,98.667,332.609,106.117C332.609,113.567,332.609,120.133,332.609,123.417L332.609,126.7" marker-end="url(#cluster-architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M288.844,47.503L250.15,53.253C211.456,59.002,134.068,70.501,95.374,80.417C56.68,90.333,56.68,98.667,56.68,106.143C56.68,113.62,56.68,120.239,56.68,123.549L56.68,126.859" marker-end="url(#cluster-architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M357.332,57L363.77,61.167C370.208,65.333,383.085,73.667,389.523,82C395.961,90.333,395.961,98.667,507.195,109.333C618.429,119.999,840.897,132.999,952.131,139.498L1063.365,145.998" marker-end="url(#cluster-architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M349.527,57L353.933,61.167C358.338,65.333,367.15,73.667,371.555,82C375.961,90.333,375.961,98.667,394.834,108.011C413.708,117.355,451.455,127.71,470.328,132.887L489.201,138.064" marker-end="url(#cluster-architecture-arrow)"/>
+  <rect class="d-box" transform="translate(526,148.2)" x="-31.6875" y="-16" width="63.375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="526" y="149.4">kubelet</text>
+  <rect class="d-box" transform="translate(652.3,148.2)" x="-44.6015625" y="-16.107666015625" width="89.203125" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="652.3" y="149.3">kube-proxy</text>
+  <rect class="d-box" transform="translate(816.9,148.2)" x="-70.03125" y="-16" width="140.0625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="816.9" y="149.4">Container Runtime</text>
+  <rect class="d-box" transform="translate(957.8,148.2)" x="-20.8515625" y="-16" width="41.703125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="957.8" y="149.4">Pod</text>
+  <rect class="d-box" transform="translate(1100.3,148.2)" x="-31.6875" y="-16" width="63.375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="1100.3" y="149.4">kubelet</text>
+  <rect class="d-box" transform="translate(1226.6,148.2)" x="-44.6015625" y="-16.107666015625" width="89.203125" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="1226.6" y="149.3">kube-proxy</text>
+  <rect class="d-box" transform="translate(1391.3,148.2)" x="-70.03125" y="-16" width="140.0625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="1391.3" y="149.4">Container Runtime</text>
+  <rect class="d-box" transform="translate(1532.1,148.2)" x="-20.8515625" y="-16" width="41.703125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="1532.1" y="149.4">Pod</text>
+  <rect class="d-box" transform="translate(1623.9,148.2)" x="-20.8515625" y="-16" width="41.703125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="1623.9" y="149.4">Pod</text>
+  <rect class="d-box" transform="translate(332.6,41)" x="-43.765625" y="-16" width="87.53125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="332.6" y="42.2">API Server</text>
+  <rect class="d-box" transform="translate(56.7,148.2)" x="-21.6796875" y="-16" width="43.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="56.7" y="149.4">etcd</text>
+  <rect class="d-box" transform="translate(169.6,148.2)" x="-41.2734375" y="-16" width="82.546875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="169.6" y="149.4">Scheduler</text>
+  <rect class="d-box" transform="translate(332.6,148.2)" x="-71.703125" y="-16.158935546875" width="143.40625" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="332.6" y="149.2">Controller Manager</text>
+</svg>

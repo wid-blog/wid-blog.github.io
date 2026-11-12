@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30.4 -10 344.7 427" width="100%" style="display: block; max-width: 344.7px; margin: 0 auto" role="img" aria-labelledby="multiple-consumer-groups-title">
+  <title id="multiple-consumer-groups-title">Multiple Consumer Groups</title>
+  <defs>
+    <marker id="multiple-consumer-groups-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="multiple-consumer-groups-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="133.4" y="0" width="156.7" height="194" rx="6"/>
+  <text class="d-group-text" x="211.7" y="9.6">Group B (Analytics)</text>
+  <rect class="d-group" x="119.2" y="214" width="185.1" height="188.5" rx="6"/>
+  <text class="d-group-text" x="211.7" y="223.7">Group A (Order Processing)</text>
+  <rect class="d-group" x="-20.4" y="0" width="124.2" height="407" rx="6"/>
+  <text class="d-group-text" x="41.7" y="9.6">Topic (3 Partitions)</text>
+  <path class="d-line" transform="translate(0,0)" d="M44.878,67L51.292,99.083C57.705,131.167,70.532,195.333,81.113,227.417C91.693,259.5,100.026,259.5,108.359,259.5C116.693,259.5,125.026,259.5,132.552,259.929C140.078,260.357,146.797,261.215,150.157,261.644L153.516,262.072" marker-end="url(#multiple-consumer-groups-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M44.732,149L51.17,182.75C57.608,216.5,70.483,284,81.088,317.75C91.693,351.5,100.026,351.5,108.359,351.5C116.693,351.5,125.026,351.5,132.545,351.5C140.064,351.5,146.769,351.5,150.121,351.5L153.473,351.5" marker-end="url(#multiple-consumer-groups-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M50.397,240L55.891,250.083C61.384,260.167,72.372,280.333,82.032,290.417C91.693,300.5,100.026,300.5,108.359,300.5C116.693,300.5,125.026,300.5,134.691,298.325C144.355,296.15,155.351,291.8,160.849,289.625L166.347,287.45" marker-end="url(#multiple-consumer-groups-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M58.359,48.799L62.526,48.249C66.693,47.699,75.026,46.6,83.359,46.05C91.693,45.5,100.026,45.5,108.359,45.5C116.693,45.5,125.026,45.5,135.562,48.385C146.098,51.271,158.836,57.042,165.205,59.927L171.574,62.813" marker-end="url(#multiple-consumer-groups-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M58.359,122.795L62.526,120.246C66.693,117.697,75.026,112.598,83.359,110.049C91.693,107.5,100.026,107.5,108.359,107.5C116.693,107.5,125.026,107.5,133.531,106.033C142.035,104.566,150.711,101.632,155.049,100.165L159.387,98.698" marker-end="url(#multiple-consumer-groups-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M51.861,208L57.111,199.75C62.36,191.5,72.86,175,82.276,166.75C91.693,158.5,100.026,158.5,108.359,158.5C116.693,158.5,125.026,158.5,138.928,148.871C152.831,139.242,172.302,119.985,182.037,110.356L191.773,100.727" marker-end="url(#multiple-consumer-groups-arrow)"/>
+  <rect class="d-box" transform="translate(211.7,81)" x="-53.359375" y="-16" width="106.71875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="211.7" y="82">Consumer B1</text>
+  <rect class="d-box" transform="translate(211.7,269.5)" x="-52.9453125" y="-16" width="105.890625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="211.7" y="270.5">Consumer A1</text>
+  <rect class="d-box" transform="translate(211.7,351.5)" x="-52.9453125" y="-16" width="105.890625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="211.7" y="352.5">Consumer A2</text>
+  <rect class="d-box" transform="translate(41.7,51)" x="-16.6796875" y="-16" width="33.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="41.7" y="52">P0</text>
+  <rect class="d-box" transform="translate(41.7,133)" x="-16.6796875" y="-16" width="33.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="41.7" y="134">P1</text>
+  <rect class="d-box" transform="translate(41.7,224)" x="-16.6796875" y="-16" width="33.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="41.7" y="225">P2</text>
+</svg>

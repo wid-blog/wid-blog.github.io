@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 802.8 67.2" width="100%" style="display: block; max-width: 802.8px; margin: 0 auto" role="img" aria-labelledby="cmk-dek-two-tier-title">
+  <title id="cmk-dek-two-tier-title">CMK/DEK Two-Tier Structure</title>
+  <defs>
+    <marker id="cmk-dek-two-tier-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="cmk-dek-two-tier-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M100.859,23.608L118.086,23.608C135.313,23.608,169.766,23.608,203.335,23.608C236.905,23.608,269.592,23.608,285.935,23.608L302.278,23.608" marker-end="url(#cmk-dek-two-tier-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M469.313,23.608L486.401,23.608C503.49,23.608,537.667,23.608,570.96,23.608C604.254,23.608,636.665,23.608,652.87,23.608L669.075,23.608" marker-end="url(#cmk-dek-two-tier-arrow)"/>
+  <rect class="d-label-bg" x="123.9" y="14" width="160.6" height="19.2" rx="3"/>
+  <text class="d-text" x="204.2" y="24.6">Encrypts/Decrypts DEK</text>
+  <rect class="d-label-bg" x="492.3" y="14" width="159" height="19.2" rx="3"/>
+  <text class="d-text" x="571.8" y="24.6">Encrypts/Decrypts data</text>
+  <rect class="d-box" transform="translate(50.4,23.6)" x="-50.4296875" y="-23.607666015625" width="100.859375" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="50.4" y="17">CMK</text>
+  <text class="d-text" x="50.4" y="32.1">(Master Key)</text>
+  <rect class="d-box" transform="translate(388.4,23.6)" x="-80.8671875" y="-23.607666015625" width="161.734375" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="388.4" y="17">DEK</text>
+  <text class="d-text" x="388.4" y="32.1">(Data Encryption Key)</text>
+  <rect class="d-box" transform="translate(728.6,23.6)" x="-54.1953125" y="-16" width="108.390625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="728.6" y="24.6">Plaintext Data</text>
+</svg>

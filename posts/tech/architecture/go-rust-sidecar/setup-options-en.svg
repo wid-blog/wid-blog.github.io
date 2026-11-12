@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 570.2 234.3" width="100%" style="display: block; max-width: 570.2px; margin: 0 auto" role="img" aria-labelledby="setup-options-title">
+  <title id="setup-options-title">Setup Options</title>
+  <defs>
+    <marker id="setup-options-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="setup-options-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="142.5" y="0" width="407.7" height="214.3" rx="6"/>
+  <text class="d-group-text" x="346.4" y="9.5">Pod</text>
+  <path class="d-line" transform="translate(0,0)" d="M53.359,107.111L60.79,107.111C68.221,107.111,83.083,107.111,97.945,107.111C112.807,107.111,127.669,107.111,138.384,107.111C149.098,107.111,155.665,107.111,158.948,107.111L162.231,107.111" marker-end="url(#setup-options-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M302.173,83.452L312.25,79.307C322.326,75.161,342.48,66.87,358.479,62.725C374.478,58.579,386.323,58.579,392.246,58.579L398.169,58.579" marker-end="url(#setup-options-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M302.173,130.77L312.25,134.916C322.326,139.061,342.48,147.352,360.006,151.498C377.533,155.643,392.433,155.643,399.883,155.643L407.333,155.643" marker-end="url(#setup-options-arrow)"/>
+  <rect class="d-label-bg" x="76.4" y="97.6" width="43.1" height="19" rx="3"/>
+  <text class="d-text" x="97.9" y="108.1">HTTP</text>
+  <rect class="d-label-bg" x="344.8" y="49.1" width="35.7" height="19" rx="3"/>
+  <text class="d-text" x="362.6" y="59.6">UDS</text>
+  <rect class="d-label-bg" x="344.8" y="146.1" width="35.7" height="19" rx="3"/>
+  <text class="d-text" x="362.6" y="156.6">UDS</text>
+  <rect class="d-box" transform="translate(244.7,107.1)" x="-77.1328125" y="-23.658935546875" width="154.265625" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="244.7" y="100.5">Go service</text>
+  <text class="d-text" x="244.7" y="115.6">request handling, I/O</text>
+  <rect class="d-box" transform="translate(464.3,58.6)" x="-60.8671875" y="-23.5" width="121.734375" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="464.3" y="52.1">Rust sidecar</text>
+  <text class="d-text" x="464.3" y="67.1">model inference</text>
+  <rect class="d-box" transform="translate(464.3,155.6)" x="-51.703125" y="-23.563720703125" width="103.40625" height="47.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="464.3" y="149.1">Rust sidecar</text>
+  <text class="d-text" x="464.3" y="164.1">lookup tables</text>
+  <rect class="d-box" transform="translate(26.7,107.1)" x="-26.6796875" y="-16" width="53.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="26.7" y="108.1">Client</text>
+</svg>

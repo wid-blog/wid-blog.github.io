@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 406.4 883.4" width="100%" style="display: block; max-width: 406.4px; margin: 0 auto" role="img" aria-labelledby="choosing-between-them-title">
+  <title id="choosing-between-them-title">Choosing Between Them</title>
+  <defs>
+    <marker id="choosing-between-them-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="choosing-between-them-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M155.16,32.215L155.16,36.382C155.16,40.549,155.16,48.882,155.226,56.416C155.292,63.949,155.424,70.683,155.49,74.05L155.556,77.416" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M118.403,199.51L107.271,211.22C96.14,222.929,73.876,246.348,62.745,275.566C51.613,304.783,51.613,339.798,51.613,374.813C51.613,409.828,51.613,444.843,53.162,467.12C54.71,489.397,57.807,498.937,59.355,503.706L60.904,508.476" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M184.597,207.831L190.776,218.153C196.954,228.476,209.311,249.122,215.56,264.228C221.809,279.334,221.949,288.901,222.02,293.685L222.09,298.468" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M189.67,414.36L180.432,425.276C171.194,436.193,152.718,458.025,136.675,474.023C120.631,490.021,107.021,500.183,100.215,505.265L93.41,510.346" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M234.049,434.977L235.472,442.457C236.895,449.937,239.74,464.898,241.163,477.078C242.586,489.258,242.586,498.658,242.586,503.358L242.586,508.058" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M242.586,545.676L242.586,549.842C242.586,554.009,242.586,562.342,242.652,569.876C242.718,577.409,242.85,584.143,242.916,587.51L242.982,590.877" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M208.412,730.221L200.399,741.5C192.387,752.779,176.361,775.337,168.349,791.316C160.336,807.295,160.336,816.695,160.336,821.395L160.336,826.095" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M277.76,730.221L285.606,741.5C293.452,752.779,309.144,775.337,316.99,791.316C324.836,807.295,324.836,816.695,324.836,821.395L324.836,826.095" marker-end="url(#choosing-between-them-arrow)"/>
+  <rect class="d-label-bg" x="37.4" y="365.3" width="28.5" height="19" rx="3"/>
+  <text class="d-text" x="51.6" y="375.8">Yes</text>
+  <rect class="d-label-bg" x="210.1" y="260.3" width="23.2" height="19" rx="3"/>
+  <text class="d-text" x="221.7" y="270.8">No</text>
+  <rect class="d-label-bg" x="120" y="470.4" width="28.5" height="19" rx="3"/>
+  <text class="d-text" x="134.2" y="480.9">Yes</text>
+  <rect class="d-label-bg" x="231" y="470.4" width="23.2" height="19" rx="3"/>
+  <text class="d-text" x="242.6" y="480.9">No</text>
+  <rect class="d-label-bg" x="146.1" y="788.4" width="28.5" height="19" rx="3"/>
+  <text class="d-text" x="160.3" y="798.9">Yes</text>
+  <rect class="d-label-bg" x="313.2" y="788.4" width="23.2" height="19" rx="3"/>
+  <text class="d-text" x="324.8" y="798.9">No</text>
+  <rect class="d-box" transform="translate(155.2,16.1)" x="-83.3671875" y="-16.107666015625" width="166.734375" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="155.2" y="17.1">Subarray sum problem</text>
+  <polygon class="d-box" transform="translate(78.1,236.3)" points="77.026123046875,0 154.05224609375,-77.026123046875 77.026123046875,-154.05224609375 0,-77.026123046875"/>
+  <text class="d-text" x="155.2" y="160.2">Negative values</text>
+  <rect class="d-box" transform="translate(67.7,529.5)" x="-67.734375" y="-16" width="135.46875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="67.7" y="530.5">Prefix sum + hash</text>
+  <polygon class="d-box" transform="translate(150.1,446.4)" points="71.545166015625,0 143.09033203125,-71.545166015625 71.545166015625,-143.09033203125 0,-71.545166015625"/>
+  <text class="d-text" x="221.7" y="375.8">Sum exactly K</text>
+  <rect class="d-box" transform="translate(242.6,529.5)" x="-57.1171875" y="-16.158935546875" width="114.234375" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="242.6" y="530.5">Sliding window</text>
+  <polygon class="d-box" transform="translate(158.2,764.4)" points="84.359375,0 168.71875,-84.359375 84.359375,-168.71875 0,-84.359375"/>
+  <text class="d-text" x="242.6" y="681">Fixed window size</text>
+  <rect class="d-box" transform="translate(160.3,847.4)" x="-52.9375" y="-16" width="105.875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="160.3" y="848.4">Fixed window</text>
+  <rect class="d-box" transform="translate(324.8,847.4)" x="-61.5625" y="-16" width="123.125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="324.8" y="848.4">Variable window</text>
+</svg>

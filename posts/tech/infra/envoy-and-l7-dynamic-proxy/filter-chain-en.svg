@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 1215.7 52.3" width="100%" style="display: block; max-width: 1215.7px; margin: 0 auto" role="img" aria-labelledby="filter-chain-title">
+  <title id="filter-chain-title">Filter Chain</title>
+  <defs>
+    <marker id="filter-chain-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="filter-chain-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M152.594,16.159L156.76,16.159C160.927,16.159,169.26,16.159,176.71,16.159C184.16,16.159,190.727,16.159,194.01,16.159L197.294,16.159" marker-end="url(#filter-chain-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M270.969,16.159L275.135,16.159C279.302,16.159,287.635,16.159,295.085,16.159C302.535,16.159,309.102,16.159,312.385,16.159L315.669,16.159" marker-end="url(#filter-chain-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M471.844,16.159L476.01,16.159C480.177,16.159,488.51,16.159,495.96,16.159C503.41,16.159,509.977,16.159,513.26,16.159L516.544,16.159" marker-end="url(#filter-chain-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M719.172,16.159L723.339,16.159C727.505,16.159,735.839,16.159,743.289,16.159C750.739,16.159,757.305,16.159,760.589,16.159L763.872,16.159" marker-end="url(#filter-chain-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M903.938,16.159L908.104,16.159C912.271,16.159,920.604,16.159,928.054,16.159C935.504,16.159,942.071,16.159,945.354,16.159L948.638,16.159" marker-end="url(#filter-chain-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M1013.969,16.159L1018.135,16.159C1022.302,16.159,1030.635,16.159,1038.085,16.159C1045.535,16.159,1052.102,16.159,1055.385,16.159L1058.669,16.159" marker-end="url(#filter-chain-arrow)"/>
+  <rect class="d-box" transform="translate(76.3,16.2)" x="-76.296875" y="-16.158935546875" width="152.59375" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="76.3" y="17.2">Incoming connection</text>
+  <rect class="d-box" transform="translate(236.8,16.2)" x="-34.1875" y="-16" width="68.375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="236.8" y="17.2">Listener</text>
+  <rect class="d-box" transform="translate(396.4,16.2)" x="-75.4375" y="-16" width="150.875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="396.4" y="17.2">Network Filter Chain</text>
+  <rect class="d-box" transform="translate(620.5,16.2)" x="-98.6640625" y="-16.158935546875" width="197.328125" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="620.5" y="17.2">HTTP Connection Manager</text>
+  <rect class="d-box" transform="translate(836.6,16.2)" x="-67.3828125" y="-16" width="134.765625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="836.6" y="17.2">HTTP Filter Chain</text>
+  <rect class="d-box" transform="translate(984,16.2)" x="-30.015625" y="-16" width="60.03125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="984" y="17.2">Router</text>
+  <rect class="d-box" transform="translate(1129.8,16.2)" x="-65.8515625" y="-16.063720703125" width="131.703125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="1129.8" y="17.2">Upstream Cluster</text>
+</svg>

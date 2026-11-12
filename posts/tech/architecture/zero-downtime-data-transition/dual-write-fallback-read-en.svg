@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 611.4 339.7" width="100%" style="display: block; max-width: 611.4px; margin: 0 auto" role="img" aria-labelledby="dual-write-fallback-read-title">
+  <title id="dual-write-fallback-read-title">Dual Write + Fallback Read</title>
+  <defs>
+    <marker id="dual-write-fallback-read-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="dual-write-fallback-read-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M139.57,26.659L127.772,31.715C115.974,36.772,92.378,46.886,80.579,64.117C68.781,81.348,68.781,105.696,68.781,117.87L68.781,130.044" marker-end="url(#dual-write-fallback-read-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M189.305,26.659L201.103,31.715C212.901,36.772,236.497,46.886,248.296,64.117C260.094,81.348,260.094,105.696,260.094,117.87L260.094,130.044" marker-end="url(#dual-write-fallback-read-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M451.969,32L451.969,36.167C451.969,40.333,451.969,48.667,452.035,56.2C452.101,63.734,452.233,70.467,452.299,73.834L452.365,77.201" marker-end="url(#dual-write-fallback-read-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M421.468,190.187L412.694,200.854C403.919,211.521,386.37,232.854,377.595,248.221C368.82,263.588,368.82,272.988,368.82,277.688L368.82,282.388" marker-end="url(#dual-write-fallback-read-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M483.469,190.187L492.077,200.854C500.685,211.521,517.901,232.854,526.509,248.221C535.117,263.588,535.117,272.988,535.117,277.688L535.117,282.388" marker-end="url(#dual-write-fallback-read-arrow)"/>
+  <rect class="d-label-bg" x="354.6" y="244.7" width="28.5" height="19" rx="3"/>
+  <text class="d-text" x="368.8" y="255.2">Yes</text>
+  <rect class="d-label-bg" x="523.5" y="244.7" width="23.2" height="19" rx="3"/>
+  <text class="d-text" x="535.1" y="255.2">No</text>
+  <rect class="d-box" transform="translate(164.4,16)" x="-24.8671875" y="-16" width="49.734375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="164.4" y="17">Write</text>
+  <rect class="d-box" transform="translate(68.8,151.3)" x="-68.78125" y="-16" width="137.5625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="68.8" y="152.3">Store in old format</text>
+  <rect class="d-box" transform="translate(260.1,151.3)" x="-72.53125" y="-16" width="145.0625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="260.1" y="152.3">Store in new format</text>
+  <rect class="d-box" transform="translate(452,16)" x="-25.4296875" y="-16" width="50.859375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="452" y="17">Read</text>
+  <polygon class="d-box" transform="translate(382.6,220.7)" points="69.34375,0 138.6875,-69.34375 69.34375,-138.6875 0,-69.34375"/>
+  <text class="d-text" x="452" y="144.8">New format</text>
+  <text class="d-text" x="452" y="159.8">has value?</text>
+  <rect class="d-box" transform="translate(368.8,303.7)" x="-60.0234375" y="-16" width="120.046875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="368.8" y="304.7">Use new format</text>
+  <rect class="d-box" transform="translate(535.1,303.7)" x="-56.2734375" y="-16" width="112.546875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="535.1" y="304.7">Use old format</text>
+</svg>

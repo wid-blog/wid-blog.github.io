@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 637.7 403.1" width="100%" style="display: block; max-width: 637.7px; margin: 0 auto" role="img" aria-labelledby="gmp-scheduler-title">
+  <title id="gmp-scheduler-title">GMP 스케줄러</title>
+  <defs>
+    <marker id="gmp-scheduler-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="gmp-scheduler-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="39.2" y="301" width="578.5" height="82.1" rx="6"/>
+  <text class="d-group-text" x="328.4" y="310.5">OS</text>
+  <rect class="d-group" x="0" y="0" width="477.9" height="251" rx="6"/>
+  <text class="d-group-text" x="239" y="9.5">Go Runtime</text>
+  <rect class="d-group" x="35.5" y="124" width="193.1" height="102" rx="6"/>
+  <text class="d-group-text" x="132.1" y="133.5">P (Processor)</text>
+  <rect class="d-group" x="278.6" y="124" width="164.8" height="102" rx="6"/>
+  <text class="d-group-text" x="361" y="133.5">P (Processor)</text>
+  <path class="d-line" transform="translate(0,0)" d="M131.57,226L131.57,230.167C131.57,234.333,131.57,242.667,131.57,251C131.57,259.333,131.57,267.667,131.57,276C131.57,284.333,131.57,292.667,131.57,300.117C131.57,307.567,131.57,314.133,131.57,317.417L131.57,320.7" marker-end="url(#gmp-scheduler-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M360.539,226L360.539,230.167C360.539,234.333,360.539,242.667,360.539,251C360.539,259.333,360.539,267.667,360.539,276C360.539,284.333,360.539,292.667,360.539,300.117C360.539,307.567,360.539,314.133,360.539,317.417L360.539,320.7" marker-end="url(#gmp-scheduler-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M131.57,57L131.57,62.583C131.57,68.167,131.57,79.333,131.57,89.617C131.57,99.9,131.57,109.3,131.57,114L131.57,118.7" marker-end="url(#gmp-scheduler-arrow)"/>
+  <rect class="d-label-bg" x="51.4" y="81" width="160.3" height="19" rx="3"/>
+  <text class="d-text" x="131.5" y="91.5">P의 로컬 큐가 비면 가져감</text>
+  <rect class="d-box" transform="translate(131.6,342)" x="-57.3828125" y="-16.03076171875" width="114.765625" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="131.6" y="343">M (OS Thread)</text>
+  <rect class="d-box" transform="translate(360.5,342)" x="-57.3828125" y="-16.03076171875" width="114.765625" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="360.5" y="343">M (OS Thread)</text>
+  <rect class="d-box" transform="translate(525.3,342)" x="-57.3828125" y="-16.03076171875" width="114.765625" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="525.3" y="343">M (OS Thread)</text>
+  <rect class="d-box" transform="translate(132.1,175)" x="-71.5703125" y="-16" width="143.140625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="132.1" y="176">로컬 큐: G1, G2, G3</text>
+  <rect class="d-box" transform="translate(361,175)" x="-57.3984375" y="-16" width="114.796875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="361" y="176">로컬 큐: G4, G5</text>
+  <rect class="d-box" transform="translate(131.6,41)" x="-70.1328125" y="-16" width="140.265625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="131.6" y="42">글로벌 큐: G6, G7...</text>
+</svg>

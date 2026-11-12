@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 782.8 149.4" width="100%" style="display: block; max-width: 782.8px; margin: 0 auto" role="img" aria-labelledby="microservices-architecture-title">
+  <title id="microservices-architecture-title">Microservices Architecture</title>
+  <defs>
+    <marker id="microservices-architecture-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="microservices-architecture-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M219.266,68.465L223.432,68.465C227.599,68.465,235.932,68.465,243.382,68.465C250.832,68.465,257.399,68.465,260.682,68.465L263.966,68.465" marker-end="url(#microservices-architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M368.898,52.358L378.694,47.566C388.489,42.774,408.081,33.191,422.272,28.399C436.463,23.608,445.253,23.608,449.648,23.608L454.044,23.608" marker-end="url(#microservices-architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M368.898,84.573L378.694,89.365C388.489,94.156,408.081,103.74,421.16,108.531C434.239,113.323,440.805,113.323,444.089,113.323L447.372,113.323" marker-end="url(#microservices-architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M578.563,23.608L583.841,23.608C589.12,23.608,599.677,23.608,613.665,28.008C627.654,32.409,645.073,41.21,653.783,45.611L662.492,50.011" marker-end="url(#microservices-architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M585.234,113.323L589.401,113.323C593.568,113.323,601.901,113.323,614.777,108.922C627.654,104.522,645.073,95.72,653.783,91.32L662.492,86.919" marker-end="url(#microservices-architecture-arrow)"/>
+  <rect class="d-box" transform="translate(109.6,68.5)" x="-109.6328125" y="-23.5" width="219.265625" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="109.6" y="62">Decomposition Criteria</text>
+  <text class="d-text" x="109.6" y="77">Domain · Data · Scale · Failure</text>
+  <rect class="d-box" transform="translate(336,68.5)" x="-66.703125" y="-16.107666015625" width="133.40625" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="336" y="69.5">Service Boundary</text>
+  <rect class="d-box" transform="translate(519,23.6)" x="-59.609375" y="-23.607666015625" width="119.21875" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="519" y="17">Communication</text>
+  <text class="d-text" x="519" y="32.1">Sync / Async</text>
+  <rect class="d-box" transform="translate(519,113.3)" x="-66.28125" y="-16.107666015625" width="132.5625" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="519" y="114.3">Data Consistency</text>
+  <rect class="d-box" transform="translate(699,68.5)" x="-63.78125" y="-16.063720703125" width="127.5625" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="699" y="69.5">Operational Cost</text>
+</svg>

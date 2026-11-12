@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 1160.9 216.3" width="100%" style="display: block; max-width: 1160.9px; margin: 0 auto" role="img" aria-labelledby="merge-vs-rebase-title">
+  <title id="merge-vs-rebase-title">Merge vs Rebase</title>
+  <defs>
+    <marker id="merge-vs-rebase-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="merge-vs-rebase-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0.5" y="45.2" width="418.3" height="105.8" rx="6"/>
+  <text class="d-group-text" x="209.6" y="54.7">After rebase</text>
+  <rect class="d-group" x="468.8" y="0" width="365.1" height="196.3" rx="6"/>
+  <text class="d-group-text" x="651.3" y="9.7">After merge</text>
+  <rect class="d-group" x="883.8" y="5.4" width="257.5" height="185.4" rx="6"/>
+  <text class="d-group-text" x="1012.6" y="15.1">Diverged</text>
+  <path class="d-line" transform="translate(-7.5,37.2)" d="M68.844,60.922L73.01,60.922C77.177,60.922,85.51,60.922,92.96,60.922C100.41,60.922,106.977,60.922,110.26,60.922L113.544,60.922" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,37.2)" d="M154.688,60.922L158.854,60.922C163.021,60.922,171.354,60.922,178.804,60.922C186.254,60.922,192.821,60.922,196.104,60.922L199.388,60.922" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,37.2)" d="M240.531,60.922L244.698,60.922C248.865,60.922,257.198,60.922,264.648,60.922C272.098,60.922,278.665,60.922,281.948,60.922L285.231,60.922" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,37.2)" d="M320.906,60.922L325.073,60.922C329.24,60.922,337.573,60.922,345.023,60.922C352.473,60.922,359.04,60.922,362.323,60.922L365.606,60.922" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(460.8,-8)" d="M63.906,94.83L68.895,90.082C73.885,85.334,83.864,75.839,92.137,71.091C100.41,66.344,106.977,66.344,110.26,66.344L113.544,66.344" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(460.8,-8)" d="M154.688,66.344L158.854,66.344C163.021,66.344,171.354,66.344,178.804,66.344C186.254,66.344,192.821,66.344,196.104,66.344L199.388,66.344" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(460.8,-8)" d="M240.531,66.344L244.698,66.344C248.865,66.344,257.198,66.344,265.804,69.716C274.411,73.089,283.29,79.833,287.73,83.206L292.17,86.578" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(460.8,-8)" d="M63.906,119.537L68.895,124.285C73.885,129.033,83.864,138.528,92.831,143.276C101.798,148.023,109.753,148.023,113.73,148.023L117.708,148.023" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(460.8,-8)" d="M150.523,148.023L155.384,148.023C160.245,148.023,169.966,148.023,178.804,148.023C187.642,148.023,195.597,148.023,199.574,148.023L203.552,148.023" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(460.8,-8)" d="M236.367,148.023L241.228,148.023C246.089,148.023,255.81,148.023,265.11,144.651C274.411,141.279,283.29,134.534,287.73,131.161L292.17,127.789" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(875.8,-2.6)" d="M63.906,89.408L68.895,84.66C73.885,79.913,83.864,70.417,92.137,65.67C100.41,60.922,106.977,60.922,110.26,60.922L113.544,60.922" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(875.8,-2.6)" d="M154.688,60.922L158.854,60.922C163.021,60.922,171.354,60.922,178.804,60.922C186.254,60.922,192.821,60.922,196.104,60.922L199.388,60.922" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(875.8,-2.6)" d="M63.906,114.116L68.895,118.863C73.885,123.611,83.864,133.106,92.831,137.854C101.798,142.602,109.753,142.602,113.73,142.602L117.708,142.602" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <path class="d-line" transform="translate(875.8,-2.6)" d="M150.523,142.602L155.384,142.602C160.245,142.602,169.966,142.602,178.804,142.602C187.642,142.602,195.597,142.602,199.574,142.602L203.552,142.602" marker-end="url(#merge-vs-rebase-arrow)"/>
+  <circle class="d-box" transform="translate(378.6,98.1)" width="30.375" height="32" rx="0" ry="0" r="15.1875"/>
+  <text class="d-text" x="378.6" y="99.1">f2'</text>
+  <circle class="d-box" transform="translate(43.4,98.1)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="43.4" y="99.1">m1</text>
+  <circle class="d-box" transform="translate(129.3,98.1)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="129.3" y="99.1">m2</text>
+  <circle class="d-box" transform="translate(215.1,98.1)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="215.1" y="99.1">m3</text>
+  <circle class="d-box" transform="translate(298.2,98.1)" width="30.375" height="32" rx="0" ry="0" r="15.1875"/>
+  <text class="d-text" x="298.2" y="99.1">f1'</text>
+  <circle class="d-box" transform="translate(780.1,99.2)" width="57.53125" height="32.31787109375" rx="0" ry="0" r="28.765625"/>
+  <text class="d-text" x="780.1" y="100.2">merge</text>
+  <circle class="d-box" transform="translate(511.7,99.2)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="511.7" y="100.2">m1</text>
+  <circle class="d-box" transform="translate(597.5,58.3)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="597.5" y="59.3">m2</text>
+  <circle class="d-box" transform="translate(683.4,58.3)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="683.4" y="59.3">m3</text>
+  <circle class="d-box" transform="translate(597.5,140)" width="27.515625" height="32" rx="0" ry="0" r="13.7578125"/>
+  <text class="d-text" x="597.5" y="141">f1</text>
+  <circle class="d-box" transform="translate(683.4,140)" width="27.515625" height="32" rx="0" ry="0" r="13.7578125"/>
+  <text class="d-text" x="683.4" y="141">f2</text>
+  <circle class="d-box" transform="translate(1098.5,58.3)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="1098.5" y="59.3">m3</text>
+  <circle class="d-box" transform="translate(926.8,99.2)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="926.8" y="100.2">m1</text>
+  <circle class="d-box" transform="translate(1012.6,58.3)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="1012.6" y="59.3">m2</text>
+  <circle class="d-box" transform="translate(1012.6,140)" width="27.515625" height="32" rx="0" ry="0" r="13.7578125"/>
+  <text class="d-text" x="1012.6" y="141">f1</text>
+  <circle class="d-box" transform="translate(1098.5,140)" width="27.515625" height="32" rx="0" ry="0" r="13.7578125"/>
+  <text class="d-text" x="1098.5" y="141">f2</text>
+</svg>

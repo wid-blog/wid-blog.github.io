@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 1602.3 471.9" width="100%" style="display: block; max-width: 1602.3px; margin: 0 auto" role="img" aria-labelledby="osi-model-tcp-ip-title">
+  <title id="osi-model-tcp-ip-title">OSI 모델과 TCP/IP 모델</title>
+  <defs>
+    <marker id="osi-model-tcp-ip-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="osi-model-tcp-ip-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="803.5" y="0" width="778.8" height="122.1" rx="6"/>
+  <text class="d-group-text" x="1192.9" y="10">TCP/IP 4계층</text>
+  <rect class="d-group" x="0" y="142.1" width="1424.7" height="309.8" rx="6"/>
+  <text class="d-group-text" x="712.3" y="152.1">OSI 7계층</text>
+  <path class="d-line" transform="translate(0,0)" d="M162.422,269.244L168.576,270.819C174.729,272.394,187.037,275.545,197.357,277.12C207.677,278.696,216.01,278.696,220.177,278.696L224.344,278.696"/>
+  <path class="d-line" transform="translate(0,0)" d="M370.466,294.726L376.977,296.307C383.488,297.888,396.509,301.049,407.187,302.63C417.865,304.211,426.198,304.211,430.365,304.211L434.531,304.211"/>
+  <path class="d-line" transform="translate(0,0)" d="M563.859,318.646L568.026,319.577C572.193,320.507,580.526,322.367,588.859,323.297C597.193,324.227,605.526,324.227,609.693,324.227L613.859,324.227"/>
+  <path class="d-line" transform="translate(0,0)" d="M743.35,340.291L749.203,341.866C755.056,343.442,766.763,346.592,776.782,348.168C786.802,349.743,795.135,349.743,803.469,349.743C811.802,349.743,820.135,349.743,824.302,349.743L828.469,349.743"/>
+  <path class="d-line" transform="translate(0,0)" d="M971.945,365.774L978.355,367.354C984.765,368.935,997.586,372.097,1008.163,373.677C1018.74,375.258,1027.073,375.258,1031.24,375.258L1035.406,375.258"/>
+  <path class="d-line" transform="translate(0,0)" d="M1199.52,391.289L1206.738,392.876C1213.956,394.463,1228.392,397.638,1239.777,399.225C1251.161,400.812,1259.495,400.812,1263.661,400.812L1267.828,400.812"/>
+  <path class="d-line" transform="translate(0,0)" d="M971.188,51.064L977.724,51.064C984.26,51.064,997.333,51.064,1013.342,51.064C1029.352,51.064,1048.297,51.064,1057.77,51.064L1067.242,51.064"/>
+  <path class="d-line" transform="translate(0,0)" d="M1185.992,51.064L1195.465,51.064C1204.938,51.064,1223.883,51.064,1238.595,51.064C1253.307,51.064,1263.786,51.064,1269.026,51.064L1274.266,51.064"/>
+  <path class="d-line" transform="translate(0,0)" d="M1393.219,51.064L1398.458,51.064C1403.698,51.064,1414.177,51.064,1423.583,51.064C1432.99,51.064,1441.323,51.064,1449.656,52.32C1457.99,53.577,1466.323,56.09,1470.49,57.347L1474.656,58.604"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M119.422,237.116L132.742,226.282C146.062,215.448,172.703,193.779,203.539,182.945C234.375,172.111,269.406,172.111,304.438,172.111C339.469,172.111,374.5,172.111,406.96,172.111C439.419,172.111,469.307,172.111,499.195,172.111C529.083,172.111,558.971,172.111,589.716,172.111C620.461,172.111,652.063,172.111,683.664,172.111C715.266,172.111,746.867,172.111,766.835,172.111C786.802,172.111,795.135,172.111,813.684,155.285C832.233,138.459,860.998,104.808,875.381,87.982L889.763,71.156" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M328.143,262.665L341.708,253.492C355.272,244.319,382.402,225.972,410.911,216.799C439.419,207.626,469.307,207.626,499.195,207.626C529.083,207.626,558.971,207.626,589.716,207.626C620.461,207.626,652.063,207.626,683.664,207.626C715.266,207.626,746.867,207.626,766.835,207.626C786.802,207.626,795.135,207.626,814.29,184.947C833.446,162.267,863.422,116.908,878.411,94.229L893.399,71.549" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M522.732,288.18L533.753,280.674C544.775,273.167,566.817,258.155,593.639,250.648C620.461,243.142,652.063,243.142,683.664,243.142C715.266,243.142,746.867,243.142,766.835,243.142C786.802,243.142,795.135,243.142,814.686,214.584C834.236,186.026,865.003,128.91,880.387,100.352L895.771,71.794" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M717.095,308.164L727.324,303.249C737.553,298.334,758.011,288.504,772.406,283.589C786.802,278.674,795.135,278.674,816.547,278.674C837.958,278.674,872.448,278.674,906.938,278.674C941.427,278.674,975.917,278.674,1010.761,244.203C1045.606,209.732,1080.806,140.79,1098.406,106.319L1116.005,71.848" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M953.59,333.712L963.06,330.458C972.529,327.204,991.468,320.697,1020.305,317.443C1049.143,314.189,1087.88,314.189,1126.617,314.189C1165.354,314.189,1204.091,314.189,1237.4,273.841C1270.71,233.494,1298.591,152.799,1312.532,112.451L1326.472,72.104" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M1199.52,359.227L1206.738,357.64C1213.956,356.053,1228.392,352.879,1250.762,351.292C1273.133,349.704,1303.438,349.704,1333.742,349.704C1364.047,349.704,1394.352,349.704,1413.671,303.264C1432.99,256.824,1441.323,163.944,1448.773,117.504C1456.223,71.064,1462.79,71.064,1466.073,71.064L1469.356,71.064" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M1399.656,400.812L1403.823,400.812C1407.99,400.812,1416.323,400.812,1424.656,349.187C1432.99,297.563,1441.323,194.313,1448.811,141.687C1456.298,89.061,1462.94,87.057,1466.261,86.056L1469.582,85.054" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <rect class="d-box" transform="translate(906.9,51.1)" x="-64.25" y="-16.063720703125" width="128.5" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="906.9" y="52.5">응용 (Application)</text>
+  <rect class="d-ok" transform="translate(1126.6,51.1)" x="-59.375" y="-16.063720703125" width="118.75" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="1126.6" y="52.5">전송 (Transport)</text>
+  <rect class="d-warm" transform="translate(1333.7,51.1)" x="-59.4765625" y="-16.03076171875" width="118.953125" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="1333.7" y="52.5">인터넷 (Internet)</text>
+  <rect class="d-box" transform="translate(1516,71.1)" x="-41.3125" y="-16.03076171875" width="82.625" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="1516" y="72.5">링크 (Link)</text>
+  <rect class="d-box" transform="translate(99.7,253.2)" x="-74.671875" y="-16.063720703125" width="149.34375" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="99.7" y="254.6">L7 응용 (Application)</text>
+  <rect class="d-box" transform="translate(304.4,278.7)" x="-80.09375" y="-16.03076171875" width="160.1875" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="304.4" y="280.2">L6 표현 (Presentation)</text>
+  <rect class="d-box" transform="translate(499.2,304.2)" x="-64.6640625" y="-16.03076171875" width="129.328125" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="499.2" y="305.7">L5 세션 (Session)</text>
+  <rect class="d-ok" transform="translate(683.7,324.2)" x="-69.8046875" y="-16.063720703125" width="139.609375" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="683.7" y="325.7">L4 전송 (Transport)</text>
+  <rect class="d-warm" transform="translate(906.9,349.7)" x="-78.46875" y="-16.03076171875" width="156.9375" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="906.9" y="351.2">L3 네트워크 (Network)</text>
+  <rect class="d-box" transform="translate(1126.6,375.3)" x="-91.2109375" y="-16.03076171875" width="182.421875" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="1126.6" y="376.7">L2 데이터 링크 (Data Link)</text>
+  <rect class="d-box" transform="translate(1333.7,400.8)" x="-65.9140625" y="-16.107666015625" width="131.828125" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="1333.7" y="402.2">L1 물리 (Physical)</text>
+</svg>

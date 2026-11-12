@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 476.8 895.9" width="100%" style="display: block; max-width: 476.8px; margin: 0 auto" role="img" aria-labelledby="code-title">
+  <title id="code-title">/code</title>
+  <defs>
+    <marker id="code-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="code-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M123.953,47.318L123.953,51.485C123.953,55.651,123.953,63.985,123.953,71.435C123.953,78.885,123.953,85.451,123.953,88.735L123.953,92.018" marker-end="url(#code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M123.953,144.636L123.953,148.802C123.953,152.969,123.953,161.302,123.953,168.752C123.953,176.202,123.953,182.769,123.953,186.052L123.953,189.336" marker-end="url(#code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M123.953,241.636L123.953,245.802C123.953,249.969,123.953,258.302,123.953,265.752C123.953,273.202,123.953,279.769,123.953,283.052L123.953,286.336" marker-end="url(#code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M123.953,323.636L123.953,327.802C123.953,331.969,123.953,340.302,123.953,347.752C123.953,355.202,123.953,361.769,123.953,365.052L123.953,368.336" marker-end="url(#code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M167.383,420.636L177.701,426.219C188.019,431.802,208.656,442.969,218.975,453.252C229.293,463.536,229.293,472.936,229.293,477.636L229.293,482.336" marker-end="url(#code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M106.686,420.636L102.583,426.219C98.481,431.802,90.275,442.969,86.173,458.052C82.07,473.136,82.07,492.136,82.07,511.136C82.07,530.136,82.07,549.136,82.07,566.912C82.07,584.689,82.07,601.242,82.07,617.795C82.07,634.348,82.07,650.901,89.556,664.281C97.043,677.661,112.015,687.868,119.501,692.972L126.987,698.076" marker-end="url(#code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M229.293,534.636L229.293,540.219C229.293,545.802,229.293,556.969,229.293,567.252C229.293,577.536,229.293,586.936,229.293,591.636L229.293,596.336" marker-end="url(#code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M200.306,701.061L208.522,695.46C216.738,689.859,233.17,678.656,239.437,668.289C245.704,657.922,241.806,648.391,239.857,643.625L237.908,638.859" marker-end="url(#code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M208.644,633.954L201.509,639.537C194.375,645.12,180.105,656.287,172.971,666.588C165.836,676.89,165.836,686.325,165.836,691.043L165.836,695.761" marker-end="url(#code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M272.049,633.954L286.822,639.537C301.595,645.12,331.141,656.287,345.914,666.57C360.688,676.854,360.688,686.254,360.688,690.954L360.688,695.654" marker-end="url(#code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M360.688,748.169L360.688,752.336C360.688,756.502,360.688,764.836,360.688,772.286C360.688,779.736,360.688,786.302,360.688,789.586L360.688,792.869" marker-end="url(#code-arrow)"/>
+  <rect class="d-label-bg" x="199.8" y="444.6" width="59" height="19" rx="3"/>
+  <text class="d-text" x="229.3" y="455.1">SINGLE</text>
+  <rect class="d-label-bg" x="59.2" y="558.6" width="45.7" height="19" rx="3"/>
+  <text class="d-text" x="82.1" y="569.1">SPLIT</text>
+  <rect class="d-label-bg" x="100.1" y="658" width="131.5" height="19" rx="3"/>
+  <text class="d-text" x="165.8" y="668.5">NEEDS REVISION</text>
+  <rect class="d-label-bg" x="317" y="658" width="87.3" height="19" rx="3"/>
+  <text class="d-text" x="360.7" y="668.5">APPROVED</text>
+  <rect class="d-box" transform="translate(124,23.7)" x="-79.1953125" y="-23.658935546875" width="158.390625" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="124" y="17">아이디어 입력</text>
+  <text class="d-text" x="124" y="32.2">/code (Brainstorming)</text>
+  <rect class="d-box" transform="translate(124,121)" x="-123.953125" y="-23.658935546875" width="247.90625" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="124" y="114.3">컨텍스트 수집</text>
+  <text class="d-text" x="124" y="129.5">프로젝트 타입 · CLAUDE.md · git log</text>
+  <rect class="d-box" transform="translate(124,218.1)" x="-78.3671875" y="-23.5" width="156.734375" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="124" y="211.6">요구사항 탐색</text>
+  <text class="d-text" x="124" y="226.6">AskUserQuestion 1:1</text>
+  <rect class="d-box" transform="translate(124,307.6)" x="-82.9609375" y="-16" width="165.921875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="124" y="308.6">접근법 2-3개 제시 + 추천</text>
+  <rect class="d-box" transform="translate(124,397.1)" x="-57.953125" y="-23.5" width="115.90625" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="124" y="390.8">pm-code-agent</text>
+  <text class="d-text" x="124" y="405.6">분리 판단</text>
+  <rect class="d-box" transform="translate(229.3,511.1)" x="-91.9140625" y="-23.5" width="183.828125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="229.3" y="504.8">DESIGN.md + _dag.yaml</text>
+  <text class="d-text" x="229.3" y="519.6">01-main.md</text>
+  <rect class="d-box" transform="translate(165.8,724.6)" x="-91.9140625" y="-23.5" width="183.828125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="165.8" y="718.2">DESIGN.md + _dag.yaml</text>
+  <text class="d-text" x="165.8" y="733.1">NN-task.md × N</text>
+  <rect class="d-box" transform="translate(229.3,617.8)" x="-71.7578125" y="-16.158935546875" width="143.515625" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="229.3" y="618.8">architect agent 리뷰</text>
+  <rect class="d-box" transform="translate(360.7,724.6)" x="-52.9375" y="-23.607666015625" width="105.875" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="360.7" y="718">status</text>
+  <text class="d-text" x="360.7" y="733.1">draft → ready</text>
+  <path class="d-box" transform="translate(264.6,798.2)" d="M 0,15.145962924185502 a 96.064453125,15.145962924185502 0,0,0 192.12890625 0 a 96.064453125,15.145962924185502 0,0,0 -192.12890625 0 l 0,47.463834017935504 a 96.064453125,15.145962924185502 0,0,0 192.12890625 0 l 0,-47.463834017935504"/>
+  <text class="d-text" x="360.9" y="838">.claude/plans/&lt;topic&gt;/</text>
+</svg>

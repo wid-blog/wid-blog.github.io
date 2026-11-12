@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 1114.1 234.6" width="100%" style="display: block; max-width: 1114.1px; margin: 0 auto" role="img" aria-labelledby="designing-operating-slas-low-title">
+  <title id="designing-operating-slas-low-title">Designing and Operating SLAs for Low-Latency Services</title>
+  <defs>
+    <marker id="designing-operating-slas-low-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="designing-operating-slas-low-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0.5" y="132.3" width="944.5" height="82.3" rx="6"/>
+  <text class="d-group-text" x="472.8" y="141.9">Held by operation</text>
+  <rect class="d-group" x="26.2" y="0" width="893.2" height="82.3" rx="6"/>
+  <text class="d-group-text" x="472.8" y="9.7">Built by design</text>
+  <path class="d-line" transform="translate(0,0)" d="M918.867,41.159L927.314,41.159C935.76,41.159,952.654,41.159,966.747,46.138C980.84,51.117,992.133,61.075,997.78,66.054L1003.427,71.033" marker-end="url(#designing-operating-slas-low-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M944.547,173.477L948.714,173.477C952.88,173.477,961.214,173.477,971.027,168.498C980.84,163.519,992.133,153.561,997.78,148.582L1003.427,143.603" marker-end="url(#designing-operating-slas-low-arrow)"/>
+  <rect class="d-box" transform="translate(72.6,173.5)" x="-37.109375" y="-16.063720703125" width="74.21875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="72.6" y="174.5">p99 SLO</text>
+  <rect class="d-box" transform="translate(241,173.5)" x="-81.296875" y="-16.158935546875" width="162.59375" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="241" y="174.5">Error budget burn rate</text>
+  <rect class="d-box" transform="translate(444.9,173.5)" x="-72.5390625" y="-16.107666015625" width="145.078125" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="444.9" y="174.5">Capacity headroom</text>
+  <rect class="d-box" transform="translate(640.8,173.5)" x="-73.375" y="-16.158935546875" width="146.75" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="640.8" y="174.5">Deploy latency gate</text>
+  <rect class="d-box" transform="translate(837.1,173.5)" x="-72.953125" y="-16.158935546875" width="145.90625" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="837.1" y="174.5">Error budget review</text>
+  <rect class="d-box" transform="translate(120.5,41.2)" x="-59.34375" y="-16.158935546875" width="118.6875" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="120.5" y="42.2">Timeout budget</text>
+  <rect class="d-box" transform="translate(294.1,41.2)" x="-64.203125" y="-16.158935546875" width="128.40625" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="294.1" y="42.2">Hot-path caching</text>
+  <rect class="d-box" transform="translate(485.8,41.2)" x="-77.546875" y="-16.158935546875" width="155.09375" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="485.8" y="42.2">Graceful degradation</text>
+  <rect class="d-box" transform="translate(667.1,41.2)" x="-53.78125" y="-16" width="107.5625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="667.1" y="42.2">Fault isolation</text>
+  <rect class="d-box" transform="translate(827.6,41.2)" x="-56.71875" y="-16.158935546875" width="113.4375" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="827.6" y="42.2">Load shedding</text>
+  <path class="d-box" transform="translate(994.5,74.5)" d="M 0,11.114968064426547 a 50.03125,11.114968064426547 0,0,0 100.0625 0 a 50.03125,11.114968064426547 0,0,0 -100.0625 0 l 0,43.33030009567655 a 50.03125,11.114968064426547 0,0,0 100.0625 0 l 0,-43.33030009567655"/>
+  <text class="d-text" x="1044.6" y="108.3">Latency SLA</text>
+</svg>

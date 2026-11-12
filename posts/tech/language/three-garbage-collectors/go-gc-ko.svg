@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 668 149" width="100%" style="display: block; max-width: 668px; margin: 0 auto" role="img" aria-labelledby="go-gc-title">
+  <title id="go-gc-title">Go GC</title>
+  <defs>
+    <marker id="go-gc-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="go-gc-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-text-inverse { fill: #fff; }
+    .d-mute-dark { fill: rgb(66, 66, 66); stroke: rgb(30, 30, 30); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M105.359,51.114L119.508,46.512C133.656,41.909,161.953,32.705,189.367,28.102C216.78,23.5,243.31,23.5,256.576,23.5L269.841,23.5" marker-end="url(#go-gc-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M414.781,23.5L426.13,23.5C437.479,23.5,460.177,23.5,481.992,23.5C503.806,23.5,524.738,23.5,535.203,23.5L545.669,23.5" marker-end="url(#go-gc-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M105.359,85.386L119.508,89.988C133.656,94.591,161.953,103.795,195.08,108.398C228.207,113,266.165,113,285.143,113L304.122,113" marker-end="url(#go-gc-arrow)"/>
+  <rect class="d-label-bg" x="145.2" y="14" width="90.1" height="19" rx="3"/>
+  <text class="d-text" x="190.3" y="24.5">root 에서 도달</text>
+  <rect class="d-label-bg" x="437.8" y="14" width="90.2" height="19" rx="3"/>
+  <text class="d-text" x="482.9" y="24.5">자식 모두 탐색</text>
+  <rect class="d-label-bg" x="128.4" y="103.4" width="123.8" height="19.2" rx="3"/>
+  <text class="d-text" x="190.3" y="114">cycle 끝까지 White</text>
+  <rect class="d-mute" transform="translate(52.7,68.3)" x="-52.6796875" y="-23.5" width="105.359375" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="52.7" y="61.8">White</text>
+  <text class="d-text" x="52.7" y="76.8">아직 안 본 객체</text>
+  <rect class="d-mute-strong" transform="translate(345,23.5)" x="-69.8203125" y="-23.5" width="139.640625" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="345" y="17.1">Gray</text>
+  <text class="d-text" x="345" y="32">본 객체 / 자식 미탐색</text>
+  <rect class="d-mute-dark" transform="translate(599.5,23.5)" x="-48.515625" y="-23.5" width="97.03125" height="47" rx="4" ry="4"/>
+  <text class="d-text d-text-inverse" x="599.5" y="17">Black</text>
+  <text class="d-text d-text-inverse" x="599.5" y="32">완전히 탐색됨</text>
+  <rect class="d-bad-strong" transform="translate(345,113)" x="-35.5390625" y="-16" width="71.078125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="345" y="114">회수 대상</text>
+</svg>

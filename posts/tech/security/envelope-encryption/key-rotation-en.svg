@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 677.7 280.6" width="100%" style="display: block; max-width: 677.7px; margin: 0 auto" role="img" aria-labelledby="key-rotation-title">
+  <title id="key-rotation-title">Key Rotation</title>
+  <defs>
+    <marker id="key-rotation-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="key-rotation-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="143.3" y="0" width="514.3" height="138.3" rx="6"/>
+  <text class="d-group-text" x="400.5" y="9.5">After Rotation</text>
+  <rect class="d-group" x="0" y="158.3" width="310.9" height="102.2" rx="6"/>
+  <text class="d-group-text" x="155.4" y="167.8">Before Rotation</text>
+  <path class="d-line" transform="translate(0,0)" d="M93.344,209.454L97.51,209.454C101.677,209.454,110.01,209.454,118.344,209.454C126.677,209.454,135.01,209.454,142.46,209.454C149.91,209.454,156.477,209.454,159.76,209.454L163.044,209.454" marker-end="url(#key-rotation-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M261.289,54.804L269.556,54.804C277.823,54.804,294.357,54.804,319.643,54.804C344.93,54.804,378.969,54.804,412.13,56.618C445.291,58.432,477.575,62.059,493.716,63.873L509.858,65.687" marker-end="url(#key-rotation-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M285.891,209.454L290.057,209.454C294.224,209.454,302.557,209.454,323.743,189.705C344.93,169.957,378.969,130.46,412.13,108.897C445.291,87.335,477.575,83.707,493.716,81.893L509.858,80.08" marker-end="url(#key-rotation-arrow)"/>
+  <rect class="d-label-bg" x="333.9" y="73.8" width="158.1" height="34.3" rx="3"/>
+  <text class="d-text" x="413" y="84.4">Only DEK re-encrypted</text>
+  <text class="d-text" x="390.9" y="99.5">Data unchanged</text>
+  <rect class="d-box" transform="translate(573.9,72.9)" x="-58.7734375" y="-23.607666015625" width="117.546875" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="573.9" y="66.4">Encrypted DEK</text>
+  <text class="d-text" x="573.9" y="81.4">(re-encrypted)</text>
+  <rect class="d-box" transform="translate(227.1,54.8)" x="-34.171875" y="-16" width="68.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="227.1" y="55.8">CMK v2</text>
+  <rect class="d-box" transform="translate(227.1,209.5)" x="-58.7734375" y="-16.107666015625" width="117.546875" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="227.1" y="210.5">Encrypted DEK</text>
+  <rect class="d-box" transform="translate(59.2,209.5)" x="-34.171875" y="-16" width="68.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="59.2" y="210.5">CMK v1</text>
+</svg>

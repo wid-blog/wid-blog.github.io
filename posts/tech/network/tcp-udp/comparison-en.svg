@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 1112.8 234.6" width="100%" style="display: block; max-width: 1112.8px; margin: 0 auto" role="img" aria-labelledby="comparison-title">
+  <title id="comparison-title">Comparison</title>
+  <defs>
+    <marker id="comparison-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="comparison-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="79.1" y="0" width="807" height="82.3" rx="6"/>
+  <text class="d-group-text" x="482.6" y="9.5">UDP</text>
+  <rect class="d-group" x="0.5" y="132.3" width="964.1" height="82.3" rx="6"/>
+  <text class="d-group-text" x="482.6" y="141.8">TCP</text>
+  <path class="d-line" transform="translate(0,0)" d="M964.125,173.477L968.292,173.477C972.458,173.477,980.792,173.477,989.125,173.477C997.458,173.477,1005.792,173.477,1009.958,173.477L1014.125,173.477"/>
+  <path class="d-line" transform="translate(0,0)" d="M885.539,41.159L902.803,41.159C920.068,41.159,954.596,41.159,977.763,41.159C1000.93,41.159,1012.734,41.159,1018.637,41.159L1024.539,41.159"/>
+  <rect class="d-box" transform="translate(172.9,41.2)" x="-58.78125" y="-16" width="117.5625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="172.9" y="42.2">Connectionless</text>
+  <rect class="d-box" transform="translate(328.3,41.2)" x="-46.6953125" y="-16.158935546875" width="93.390625" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="328.3" y="42.2">No ordering</text>
+  <rect class="d-box" transform="translate(493,41.2)" x="-67.9375" y="-16" width="135.875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="493" y="42.2">No retransmission</text>
+  <rect class="d-box" transform="translate(652.6,41.2)" x="-41.6875" y="-16" width="83.375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="652.6" y="42.2">No control</text>
+  <rect class="d-box" transform="translate(797.7,41.2)" x="-53.375" y="-16.107666015625" width="106.75" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="797.7" y="42.2">8 byte header</text>
+  <rect class="d-box" transform="translate(110.5,173.5)" x="-75.046875" y="-16" width="150.09375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="110.5" y="174.5">Connection-oriented</text>
+  <rect class="d-box" transform="translate(298.5,173.5)" x="-62.9453125" y="-16.107666015625" width="125.890625" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="298.5" y="174.5">Ordered delivery</text>
+  <rect class="d-box" transform="translate(470.7,173.5)" x="-59.1875" y="-16" width="118.375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="470.7" y="174.5">Retransmission</text>
+  <rect class="d-box" transform="translate(667.8,173.5)" x="-87.9609375" y="-16.158935546875" width="175.921875" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="667.8" y="174.5">Flow/Congestion control</text>
+  <rect class="d-box" transform="translate(867.7,173.5)" x="-61.921875" y="-16.107666015625" width="123.84375" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="867.7" y="174.5">20+ byte header</text>
+  <rect class="d-box" transform="translate(1053.7,173.5)" x="-39.6015625" y="-16.107666015625" width="79.203125" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="1053.7" y="174.5">Reliability</text>
+  <rect class="d-box" transform="translate(1053.7,41.2)" x="-29.1875" y="-16.063720703125" width="58.375" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="1053.7" y="42.2">Speed</text>
+</svg>

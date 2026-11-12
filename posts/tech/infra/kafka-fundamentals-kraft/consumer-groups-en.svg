@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30.4 -10 320.5 286" width="100%" style="display: block; max-width: 320.5px; margin: 0 auto" role="img" aria-labelledby="consumer-groups-title">
+  <title id="consumer-groups-title">Consumer Groups</title>
+  <defs>
+    <marker id="consumer-groups-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="consumer-groups-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="133.4" y="0" width="146.7" height="266" rx="6"/>
+  <text class="d-group-text" x="206.7" y="9.6">Consumer Group A</text>
+  <rect class="d-group" x="-20.4" y="0" width="124.2" height="266" rx="6"/>
+  <text class="d-group-text" x="41.7" y="9.6">Topic (3 Partitions)</text>
+  <path class="d-line" transform="translate(0,0)" d="M58.359,51L62.526,51C66.693,51,75.026,51,83.359,51C91.693,51,100.026,51,108.359,51C116.693,51,125.026,51,132.476,51C139.926,51,146.493,51,149.776,51L153.059,51" marker-end="url(#consumer-groups-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M58.359,133L62.526,133C66.693,133,75.026,133,83.359,133C91.693,133,100.026,133,108.359,133C116.693,133,125.026,133,132.476,133C139.926,133,146.493,133,149.776,133L153.059,133" marker-end="url(#consumer-groups-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M58.359,215L62.526,215C66.693,215,75.026,215,83.359,215C91.693,215,100.026,215,108.359,215C116.693,215,125.026,215,132.476,215C139.926,215,146.493,215,149.776,215L153.059,215" marker-end="url(#consumer-groups-arrow)"/>
+  <rect class="d-box" transform="translate(206.7,51)" x="-48.3515625" y="-16" width="96.703125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="206.7" y="52">Consumer 1</text>
+  <rect class="d-box" transform="translate(206.7,133)" x="-48.3515625" y="-16" width="96.703125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="206.7" y="134">Consumer 2</text>
+  <rect class="d-box" transform="translate(206.7,215)" x="-48.3515625" y="-16" width="96.703125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="206.7" y="216">Consumer 3</text>
+  <rect class="d-box" transform="translate(41.7,51)" x="-16.6796875" y="-16" width="33.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="41.7" y="52">P0</text>
+  <rect class="d-box" transform="translate(41.7,133)" x="-16.6796875" y="-16" width="33.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="41.7" y="134">P1</text>
+  <rect class="d-box" transform="translate(41.7,215)" x="-16.6796875" y="-16" width="33.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="41.7" y="216">P2</text>
+</svg>

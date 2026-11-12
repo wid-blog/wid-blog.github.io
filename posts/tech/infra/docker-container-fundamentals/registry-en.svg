@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 680.3 134.3" width="100%" style="display: block; max-width: 680.3px; margin: 0 auto" role="img" aria-labelledby="registry-title">
+  <title id="registry-title">Registry</title>
+  <defs>
+    <marker id="registry-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="registry-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M81.688,57.079L92.595,57.079C103.503,57.079,125.318,57.079,146.249,57.079C167.181,57.079,187.23,57.079,197.254,57.079L207.278,57.079" marker-end="url(#registry-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M269.281,44.717L280.258,39.931C291.234,35.145,313.188,25.572,334.257,20.786C355.327,16,375.514,16,385.607,16L395.7,16" marker-end="url(#registry-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M269.281,69.442L280.258,74.228C291.234,79.014,313.188,88.587,335.093,93.373C356.999,98.159,378.857,98.159,389.786,98.159L400.716,98.159" marker-end="url(#registry-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M476.031,98.159L487.079,98.159C498.128,98.159,520.224,98.159,540.601,98.159C560.978,98.159,579.636,98.159,588.965,98.159L598.294,98.159" marker-end="url(#registry-arrow)"/>
+  <rect class="d-label-bg" x="104.7" y="47.6" width="84.8" height="19" rx="3"/>
+  <text class="d-text" x="147.1" y="58.1">docker build</text>
+  <rect class="d-label-bg" x="297.7" y="6.5" width="74.8" height="19" rx="3"/>
+  <text class="d-text" x="335.1" y="17">docker run</text>
+  <rect class="d-label-bg" x="292.3" y="88.6" width="85.7" height="19.1" rx="3"/>
+  <text class="d-text" x="335.1" y="99.2">docker push</text>
+  <rect class="d-label-bg" x="504" y="88.6" width="76.5" height="19.1" rx="3"/>
+  <text class="d-text" x="542.3" y="99.2">docker pull</text>
+  <rect class="d-box" transform="translate(40.8,57.1)" x="-40.84375" y="-16" width="81.6875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="40.8" y="58.1">Dockerfile</text>
+  <rect class="d-box" transform="translate(240.9,57.1)" x="-28.3515625" y="-16.158935546875" width="56.703125" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="240.9" y="58.1">Image</text>
+  <rect class="d-box" transform="translate(441,16)" x="-40.0234375" y="-16" width="80.046875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="441" y="17">Container</text>
+  <rect class="d-box" transform="translate(441,98.2)" x="-35.0078125" y="-16.158935546875" width="70.015625" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="441" y="99.2">Registry</text>
+  <rect class="d-box" transform="translate(631.9,98.2)" x="-28.3515625" y="-16.158935546875" width="56.703125" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="631.9" y="99.2">Image</text>
+</svg>

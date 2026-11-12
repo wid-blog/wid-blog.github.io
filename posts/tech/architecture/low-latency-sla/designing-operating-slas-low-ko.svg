@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 1019.8 234.6" width="100%" style="display: block; max-width: 1019.8px; margin: 0 auto" role="img" aria-labelledby="designing-operating-slas-low-title">
+  <title id="designing-operating-slas-low-title">저지연 서비스의 SLA 설계와 운영</title>
+  <defs>
+    <marker id="designing-operating-slas-low-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="designing-operating-slas-low-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0.5" y="132.3" width="876.8" height="82.3" rx="6"/>
+  <text class="d-group-text" x="438.9" y="141.8">운영으로 지키기</text>
+  <rect class="d-group" x="32.7" y="0" width="812.3" height="82.3" rx="6"/>
+  <text class="d-group-text" x="438.9" y="9.5">설계로 만들기</text>
+  <path class="d-line" transform="translate(0,0)" d="M844.563,41.159L854.099,41.159C863.635,41.159,882.708,41.159,897.284,46.559C911.86,51.959,921.94,62.759,926.979,68.159L932.019,73.56" marker-end="url(#designing-operating-slas-low-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M876.781,173.477L880.948,173.477C885.115,173.477,893.448,173.477,902.654,168.077C911.86,162.677,921.94,151.876,926.979,146.476L932.019,141.076" marker-end="url(#designing-operating-slas-low-arrow)"/>
+  <rect class="d-box" transform="translate(72.6,173.5)" x="-37.109375" y="-16.063720703125" width="74.21875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="72.6" y="174.5">p99 SLO</text>
+  <rect class="d-box" transform="translate(231.3,173.5)" x="-71.5703125" y="-16.158935546875" width="143.140625" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="231.3" y="174.5">Error Budget 소진율</text>
+  <rect class="d-box" transform="translate(425.4,173.5)" x="-72.5390625" y="-16.107666015625" width="145.078125" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="425.4" y="174.5">Capacity headroom</text>
+  <rect class="d-box" transform="translate(605,173.5)" x="-57.0859375" y="-16" width="114.171875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="605" y="174.5">배포 지연 게이트</text>
+  <rect class="d-box" transform="translate(777.2,173.5)" x="-65.0859375" y="-16.158935546875" width="130.171875" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="777.2" y="174.5">Error Budget 회고</text>
+  <rect class="d-box" transform="translate(127.1,41.2)" x="-59.34375" y="-16.158935546875" width="118.6875" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="127.1" y="42.2">Timeout budget</text>
+  <rect class="d-box" transform="translate(278.4,41.2)" x="-42.0234375" y="-16" width="84.046875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="278.4" y="42.2">핫패스 캐싱</text>
+  <rect class="d-box" transform="translate(448,41.2)" x="-77.546875" y="-16.158935546875" width="155.09375" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="448" y="42.2">Graceful degradation</text>
+  <rect class="d-box" transform="translate(611.1,41.2)" x="-35.5390625" y="-16" width="71.078125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="611.1" y="42.2">장애 격리</text>
+  <rect class="d-box" transform="translate(753.3,41.2)" x="-56.71875" y="-16.158935546875" width="113.4375" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="753.3" y="42.2">Load shedding</text>
+  <path class="d-box" transform="translate(926.8,77.4)" d="M 0,9.255687632842635 a 36.7421875,9.255687632842635 0,0,0 73.484375 0 a 36.7421875,9.255687632842635 0,0,0 -73.484375 0 l 0,41.25568763284264 a 36.7421875,9.255687632842635 0,0,0 73.484375 0 l 0,-41.25568763284264"/>
+  <text class="d-text" x="963.5" y="108.3">지연 SLA</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 499.4 393.1" width="100%" style="display: block; max-width: 499.4px; margin: 0 auto" role="img" aria-labelledby="workflow-job-step-title">
+  <title id="workflow-job-step-title">Workflow / Job / Step</title>
+  <defs>
+    <marker id="workflow-job-step-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="workflow-job-step-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M292.625,96.51L292.625,100.677C292.625,104.844,292.625,113.177,292.625,120.627C292.625,128.077,292.625,134.644,292.625,137.927L292.625,141.21" marker-end="url(#workflow-job-step-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M215.407,193.828L201.808,197.995C188.209,202.162,161.011,210.495,147.412,217.945C133.813,225.395,133.813,231.962,133.813,235.245L133.813,238.528" marker-end="url(#workflow-job-step-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M344.104,193.828L353.17,197.995C362.236,202.162,380.368,210.495,389.434,217.945C398.5,225.395,398.5,231.962,398.5,235.245L398.5,238.528" marker-end="url(#workflow-job-step-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M82.441,290.956L73.357,295.122C64.273,299.289,46.105,307.622,37.021,315.072C27.938,322.522,27.938,329.089,27.938,332.372L27.938,335.656" marker-end="url(#workflow-job-step-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M133.813,290.956L133.813,295.122C133.813,299.289,133.813,307.622,133.813,315.072C133.813,322.522,133.813,329.089,133.813,332.372L133.813,335.656" marker-end="url(#workflow-job-step-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M185.184,290.956L194.268,295.122C203.352,299.289,221.52,307.622,230.604,315.072C239.688,322.522,239.688,329.089,239.688,332.372L239.688,335.656" marker-end="url(#workflow-job-step-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M372.814,290.956L368.272,295.122C363.73,299.289,354.646,307.622,350.104,315.072C345.563,322.522,345.563,329.089,345.563,332.372L345.563,335.656" marker-end="url(#workflow-job-step-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M424.186,290.956L428.728,295.122C433.27,299.289,442.354,307.622,446.896,315.072C451.438,322.522,451.438,329.089,451.438,332.372L451.438,335.656" marker-end="url(#workflow-job-step-arrow)"/>
+  <path class="d-box" transform="translate(172.1,0)" d="M 0,16.46101955426522 a 120.484375,16.46101955426522 0,0,0 240.96875 0 a 120.484375,16.46101955426522 0,0,0 -240.96875 0 l 0,63.58846096051522 a 120.484375,16.46101955426522 0,0,0 240.96875 0 l 0,-63.58846096051522"/>
+  <text class="d-text" x="292.6" y="41.8">Repository event</text>
+  <text class="d-text" x="292.6" y="56.8">(push / pull_request / schedule ...)</text>
+  <rect class="d-box" transform="translate(292.6,170.2)" x="-88.7734375" y="-23.658935546875" width="177.546875" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="292.6" y="163.5">workflow</text>
+  <text class="d-text" x="292.6" y="178.7">(.github/workflows/*.yml)</text>
+  <rect class="d-box" transform="translate(133.8,267.4)" x="-65.453125" y="-23.563720703125" width="130.90625" height="47.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="133.7" y="260.9">job A</text>
+  <text class="d-text" x="133.8" y="275.9">(separate runner)</text>
+  <rect class="d-box" transform="translate(398.5,267.4)" x="-65.453125" y="-23.563720703125" width="130.90625" height="47.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="398.4" y="260.9">job B</text>
+  <text class="d-text" x="398.5" y="275.9">(separate runner)</text>
+  <rect class="d-box" transform="translate(27.9,357)" x="-27.9375" y="-16.063720703125" width="55.875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="27.9" y="358">step 1</text>
+  <rect class="d-box" transform="translate(133.8,357)" x="-27.9375" y="-16.063720703125" width="55.875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="133.8" y="358">step 2</text>
+  <rect class="d-box" transform="translate(239.7,357)" x="-27.9375" y="-16.063720703125" width="55.875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="239.7" y="358">step 3</text>
+  <rect class="d-box" transform="translate(345.6,357)" x="-27.9375" y="-16.063720703125" width="55.875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="345.6" y="358">step 1</text>
+  <rect class="d-box" transform="translate(451.4,357)" x="-27.9375" y="-16.063720703125" width="55.875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="451.4" y="358">step 2</text>
+</svg>

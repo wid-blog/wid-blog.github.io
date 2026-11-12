@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 633.6 321.6" width="100%" style="display: block; max-width: 633.6px; margin: 0 auto" role="img" aria-labelledby="quick-select-title">
+  <title id="quick-select-title">Quick Select</title>
+  <defs>
+    <marker id="quick-select-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="quick-select-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M297.742,28.283L269.865,33.091C241.987,37.898,186.232,47.513,158.42,55.687C130.609,63.861,130.741,70.595,130.807,73.962L130.873,77.328" marker-end="url(#quick-select-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M105.323,176.854L97.843,186.656C90.364,196.458,75.405,216.063,67.925,230.607C60.445,245.151,60.445,254.636,60.445,259.379L60.445,264.121" marker-end="url(#quick-select-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M156.717,176.768L164.084,186.584C171.452,196.401,186.187,216.034,200.766,230.95C215.345,245.866,229.767,256.066,236.979,261.166L244.19,266.266" marker-end="url(#quick-select-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M176.292,157.192L216.993,170.271C257.695,183.35,339.097,209.509,389.962,227.795C440.826,246.081,461.152,256.495,471.315,261.702L481.478,266.909" marker-end="url(#quick-select-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M302.906,269.326L313.855,263.716C324.805,258.106,346.703,246.886,357.652,225.677C368.602,204.467,368.602,173.267,368.602,143.511C368.602,113.754,368.602,85.441,368.602,68.001C368.602,50.561,368.602,43.994,368.602,40.711L368.602,37.427" marker-end="url(#quick-select-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M526.151,269.326L529.073,263.716C531.995,258.106,537.839,246.886,540.762,225.677C543.684,204.467,543.684,173.267,543.684,143.511C543.684,113.754,543.684,85.441,526.778,67.319C509.873,49.198,476.062,41.268,459.157,37.303L442.252,33.338" marker-end="url(#quick-select-arrow)"/>
+  <rect class="d-label-bg" x="46.8" y="226.1" width="27.3" height="19.2" rx="3"/>
+  <text class="d-text" x="60.4" y="236.7">yes</text>
+  <rect class="d-label-bg" x="160.6" y="226" width="80.7" height="19.3" rx="3"/>
+  <text class="d-text" x="200.9" y="236.7">p &lt; target</text>
+  <rect class="d-label-bg" x="386.6" y="226" width="67.8" height="19.3" rx="3"/>
+  <text class="d-text" x="420.5" y="236.7">p &gt; target</text>
+  <rect class="d-box" transform="translate(368.6,16.1)" x="-70.859375" y="-16.063720703125" width="141.71875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="368.6" y="17.1">partition(lo, hi) → p</text>
+  <polygon class="d-box" transform="translate(70.5,202)" points="59.940185546875,0 119.88037109375,-59.940185546875 59.940185546875,-119.88037109375 0,-59.940185546875"/>
+  <text class="d-text" x="130.5" y="143.1">p == target</text>
+  <rect class="d-box" transform="translate(60.4,285.5)" x="-60.4453125" y="-16.063720703125" width="120.890625" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="60.4" y="286.5">answer nums[p]</text>
+  <rect class="d-box" transform="translate(271.4,285.5)" x="-100.4765625" y="-16.158935546875" width="200.953125" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="271.4" y="286.5">partition the right range only</text>
+  <rect class="d-box" transform="translate(517.7,285.5)" x="-95.890625" y="-16.158935546875" width="191.78125" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="517.7" y="286.5">partition the left range only</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 692.4 174.5" width="100%" style="display: block; max-width: 692.4px; margin: 0 auto" role="img" aria-labelledby="nginx-tomcat-practice-title">
+  <title id="nginx-tomcat-practice-title">nginx + Tomcat in Practice</title>
+  <defs>
+    <marker id="nginx-tomcat-practice-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="nginx-tomcat-practice-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M53.359,74.818L57.526,74.818C61.693,74.818,70.026,74.818,77.476,74.818C84.926,74.818,91.493,74.818,94.776,74.818L98.059,74.818" marker-end="url(#nginx-tomcat-practice-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M299.497,51.21L315.995,46.905C332.493,42.6,365.488,33.989,396.873,29.684C428.257,25.379,458.029,25.379,472.915,25.379L487.802,25.379" marker-end="url(#nginx-tomcat-practice-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M299.497,98.425L315.995,102.731C332.493,107.036,365.488,115.646,395.067,119.952C424.645,124.257,450.805,124.257,463.885,124.257L476.966,124.257" marker-end="url(#nginx-tomcat-practice-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M545.625,124.257L549.792,124.257C553.958,124.257,562.292,124.257,569.742,124.257C577.192,124.257,583.758,124.257,587.042,124.257L590.325,124.257" marker-end="url(#nginx-tomcat-practice-arrow)"/>
+  <rect class="d-label-bg" x="363.6" y="15.9" width="69.8" height="19" rx="3"/>
+  <text class="d-text" x="398.5" y="26.4">static files</text>
+  <rect class="d-label-bg" x="337.7" y="114.6" width="121.5" height="19.2" rx="3"/>
+  <text class="d-text" x="398.4" y="125.3">dynamic requests</text>
+  <rect class="d-box" transform="translate(26.7,74.8)" x="-26.6796875" y="-16" width="53.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="26.7" y="75.8">Client</text>
+  <rect class="d-box" transform="translate(209,74.8)" x="-105.671875" y="-23.607666015625" width="211.34375" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="209" y="68.4">nginx</text>
+  <text class="d-text" x="209" y="83.3">reverse proxy + static content</text>
+  <path class="d-box" transform="translate(493.1,0)" d="M 0,6.252343457067866 a 20.84375,6.252343457067866 0,0,0 41.6875 0 a 20.84375,6.252343457067866 0,0,0 -41.6875 0 l 0,38.252343457067866 a 20.84375,6.252343457067866 0,0,0 41.6875 0 l 0,-38.252343457067866"/>
+  <text class="d-text" x="513.9" y="26.4">disk</text>
+  <rect class="d-box" transform="translate(513.9,124.3)" x="-31.6796875" y="-23.5" width="63.359375" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="513.9" y="117.8">Tomcat</text>
+  <text class="d-text" x="513.9" y="132.8">WAS</text>
+  <path class="d-box" transform="translate(595.6,94)" d="M 0,9.509333126791107 a 38.3671875,9.509333126791107 0,0,0 76.734375 0 a 38.3671875,9.509333126791107 0,0,0 -76.734375 0 l 0,41.509333126791105 a 38.3671875,9.509333126791107 0,0,0 76.734375 0 l 0,-41.509333126791105"/>
+  <text class="d-text" x="634" y="125.3">database</text>
+</svg>

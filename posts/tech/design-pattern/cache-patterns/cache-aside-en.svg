@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 244.3 195.7" width="100%" style="display: block; max-width: 244.3px; margin: 0 auto" role="img" aria-labelledby="cache-aside-title">
+  <title id="cache-aside-title">Cache-aside</title>
+  <defs>
+    <marker id="cache-aside-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="cache-aside-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M41.553,56.881L51.931,48.828C62.309,40.776,83.065,24.67,102.977,20.494C122.89,16.319,141.959,24.073,151.493,27.951L161.028,31.828" marker-end="url(#cache-aside-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M165.938,57.537L155.585,61.74C145.232,65.943,124.526,74.349,104.698,77.432C84.869,80.514,65.918,78.273,56.442,77.153L46.966,76.033" marker-end="url(#cache-aside-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M41.703,84.709L52.056,90.55C62.409,96.391,83.115,108.073,103.255,116.946C123.396,125.818,142.971,131.881,152.759,134.913L162.547,137.945" marker-end="url(#cache-aside-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M167.609,150.661L156.978,151.676C146.346,152.692,125.083,154.724,103.896,145.076C82.708,135.428,61.595,114.102,51.039,103.439L40.483,92.775" marker-end="url(#cache-aside-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M41.703,66.096L52.056,62.695C62.409,59.294,83.115,52.493,102.937,49.092C122.759,45.691,141.698,45.691,151.168,45.691L160.638,45.691" marker-end="url(#cache-aside-arrow)"/>
+  <rect class="d-label-bg" x="71.4" y="-1" width="64.8" height="19.1" rx="3"/>
+  <text class="d-text" x="103.8" y="9.6">1. lookup</text>
+  <rect class="d-label-bg" x="78.1" y="73.3" width="51.5" height="19" rx="3"/>
+  <text class="d-text" x="103.8" y="83.8">2. miss</text>
+  <rect class="d-label-bg" x="77.2" y="110.3" width="53.2" height="19" rx="3"/>
+  <text class="d-text" x="103.8" y="120.8">3. fetch</text>
+  <rect class="d-label-bg" x="78.9" y="147.3" width="49.8" height="19" rx="3"/>
+  <text class="d-text" x="103.8" y="157.8">4. data</text>
+  <rect class="d-label-bg" x="64.7" y="36.1" width="78.2" height="19.1" rx="3"/>
+  <text class="d-text" x="103.8" y="46.7">5. populate</text>
+  <rect class="d-box" transform="translate(20.9,72.9)" x="-20.8515625" y="-16.063720703125" width="41.703125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="20.9" y="73.9">App</text>
+  <rect class="d-box" transform="translate(195.1,45.7)" x="-29.1796875" y="-16" width="58.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="195.1" y="46.7">Cache</text>
+  <path class="d-box" transform="translate(167.6,120.4)" d="M 0,7.640395798975783 a 27.5078125,7.640395798975783 0,0,0 55.015625 0 a 27.5078125,7.640395798975783 0,0,0 -55.015625 0 l 0,39.95826689272578 a 27.5078125,7.640395798975783 0,0,0 55.015625 0 l 0,-39.95826689272578"/>
+  <text class="d-text" x="195.1" y="149">Origin</text>
+</svg>

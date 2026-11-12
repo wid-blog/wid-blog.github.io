@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 270" width="100%" role="img" aria-labelledby="maint-title">
+  <title id="maint-title">작은 파일 합치기, snapshot 만료, 고아 파일 삭제의 정리 대상</title>
+  <defs>
+    <marker id="maint-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; }
+    .d-small { fill: var(--secondary); font: 12px sans-serif; }
+    .d-head { fill: var(--primary); font: bold 15px sans-serif; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-accent { fill: rgba(70, 130, 220, 0.18); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-warm { fill: rgba(230, 140, 50, 0.18); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dash { stroke: var(--secondary); stroke-width: 1.5; stroke-dasharray: 6 4; fill: none; }
+    .d-warm-dash { fill: rgba(230, 140, 50, 0.10); stroke: rgb(220, 130, 40); stroke-width: 1.5; stroke-dasharray: 5 3; }
+    .d-accent-dash { fill: rgba(70, 130, 220, 0.10); stroke: rgb(70, 130, 220); stroke-width: 1.5; stroke-dasharray: 5 3; }
+  </style>
+  <text class="d-head" x="10" y="26">작은 파일 합치기</text>
+  <rect class="d-warm" x="10" y="50" width="30" height="30" rx="3"/>
+  <rect class="d-warm" x="48" y="50" width="30" height="30" rx="3"/>
+  <rect class="d-warm" x="86" y="50" width="30" height="30" rx="3"/>
+  <rect class="d-warm" x="10" y="88" width="30" height="30" rx="3"/>
+  <rect class="d-warm" x="48" y="88" width="30" height="30" rx="3"/>
+  <rect class="d-warm" x="86" y="88" width="30" height="30" rx="3"/>
+  <line class="d-line" x1="128" y1="87" x2="160" y2="87" marker-end="url(#maint-arrow)"/>
+  <rect class="d-accent" x="165" y="55" width="60" height="64" rx="4"/>
+  <text class="d-small" x="10" y="150">작은 파일을 큰 파일로 다시 쓴다</text>
+  <text class="d-small" x="10" y="168">합치기도 커밋 한 번</text>
+  <text class="d-head" x="265" y="26">snapshot 만료</text>
+  <rect class="d-warm" x="265" y="60" width="46" height="46" rx="4"/>
+  <text class="d-text" x="277" y="89">S1</text>
+  <line class="d-line" x1="311" y1="83" x2="321" y2="83" marker-end="url(#maint-arrow)"/>
+  <rect class="d-warm" x="323" y="60" width="46" height="46" rx="4"/>
+  <text class="d-text" x="335" y="89">S2</text>
+  <line class="d-line" x1="369" y1="83" x2="379" y2="83" marker-end="url(#maint-arrow)"/>
+  <rect class="d-accent" x="381" y="60" width="46" height="46" rx="4"/>
+  <text class="d-text" x="393" y="89">S3</text>
+  <line class="d-line" x1="427" y1="83" x2="437" y2="83" marker-end="url(#maint-arrow)"/>
+  <rect class="d-accent" x="439" y="60" width="46" height="46" rx="4"/>
+  <text class="d-text" x="451" y="89">S4</text>
+  <text class="d-small" x="265" y="132">오래된 것</text>
+  <text class="d-small" x="381" y="132">남길 것</text>
+  <text class="d-small" x="265" y="150">만료된 snapshot 만 가리키던</text>
+  <text class="d-small" x="265" y="168">data file 도 함께 지운다</text>
+  <text class="d-head" x="530" y="26">고아 파일 삭제</text>
+  <rect class="d-box" x="530" y="50" width="50" height="36" rx="4"/>
+  <rect class="d-box" x="590" y="50" width="50" height="36" rx="4"/>
+  <rect class="d-warm-dash" x="650" y="50" width="50" height="36" rx="4"/>
+  <rect class="d-accent-dash" x="710" y="50" width="40" height="36" rx="4"/>
+  <text class="d-small" x="560" y="104">참조됨</text>
+  <text class="d-small" x="658" y="104">고아</text>
+  <text class="d-small" x="710" y="104">커밋 전</text>
+  <text class="d-small" x="530" y="132">어느 metadata 도 가리키지</text>
+  <text class="d-small" x="530" y="150">않는 파일을 지운다. 커밋 전 파일은</text>
+  <text class="d-small" x="530" y="168">여유 기간 안이면 남긴다</text>
+  <rect class="d-warm" x="10" y="196" width="16" height="16" rx="3"/>
+  <text class="d-small" x="34" y="209">정리 대상</text>
+  <rect class="d-accent" x="120" y="196" width="16" height="16" rx="3"/>
+  <text class="d-small" x="144" y="209">남는 것</text>
+  <text class="d-text" x="10" y="250">커밋은 파일을 고치지 않고 새로 쓰기 때문에, 남는 파일과 snapshot 을 따로 정리해야 한다</text>
+</svg>

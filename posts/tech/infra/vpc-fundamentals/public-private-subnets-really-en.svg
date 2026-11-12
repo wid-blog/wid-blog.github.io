@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 604.8 274" width="100%" style="display: block; max-width: 604.8px; margin: 0 auto" role="img" aria-labelledby="public-private-subnets-really-title">
+  <title id="public-private-subnets-really-title">What Public and Private Subnets Really Are</title>
+  <defs>
+    <marker id="public-private-subnets-really-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="public-private-subnets-really-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0" y="137" width="288.1" height="117" rx="6"/>
+  <text class="d-group-text" x="144.1" y="146.5">Private Subnet</text>
+  <rect class="d-group" x="112.5" y="0" width="377.3" height="117" rx="6"/>
+  <text class="d-group-text" x="301.2" y="9.5">Public Subnet</text>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M255.742,58.5L261.139,58.5C266.536,58.5,277.331,58.5,286.895,58.5C296.458,58.5,304.792,58.5,312.242,58.5C319.692,58.5,326.258,58.5,329.542,58.5L332.825,58.5" marker-end="url(#public-private-subnets-really-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M62.5,195.5L66.667,195.5C70.833,195.5,79.167,195.5,87.5,195.5C95.833,195.5,104.167,195.5,111.617,195.5C119.067,195.5,125.633,195.5,128.917,195.5L132.2,195.5" marker-end="url(#public-private-subnets-really-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M464.844,58.5L469.01,58.5C473.177,58.5,481.51,58.5,489.844,58.5C498.177,58.5,506.51,58.5,516.241,66.524C525.972,74.548,537.1,90.596,542.665,98.621L548.229,106.645" marker-end="url(#public-private-subnets-really-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M263.125,195.5L267.292,195.5C271.458,195.5,279.792,195.5,288.125,195.5C296.458,195.5,304.792,195.5,313.885,195.5C322.978,195.5,332.831,195.5,337.758,195.5L342.684,195.5" marker-end="url(#public-private-subnets-really-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M454.984,195.5L460.794,195.5C466.604,195.5,478.224,195.5,488.201,195.5C498.177,195.5,506.51,195.5,516.241,187.476C525.972,179.452,537.1,163.404,542.665,155.379L548.229,147.355" marker-end="url(#public-private-subnets-really-arrow)"/>
+  <rect class="d-box" transform="translate(200.3,195.5)" x="-62.8125" y="-23.5" width="125.625" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="200.3" y="189">Route Table</text>
+  <text class="d-text" x="200.3" y="204">0.0.0.0/0 → NAT</text>
+  <rect class="d-box" transform="translate(43.8,195.5)" x="-18.75" y="-16" width="37.5" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="43.8" y="196.5">VM</text>
+  <rect class="d-box" transform="translate(401.5,58.5)" x="-63.359375" y="-23.5" width="126.71875" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="401.5" y="52">Route Table</text>
+  <text class="d-text" x="401.5" y="67">0.0.0.0/0 → IGW</text>
+  <rect class="d-box" transform="translate(200.3,58.5)" x="-55.4296875" y="-16.03076171875" width="110.859375" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="200.3" y="59.5">VM (Public IP)</text>
+  <rect class="d-box" transform="translate(562.3,127)" x="-22.5" y="-16" width="45" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="562.3" y="128">IGW</text>
+  <rect class="d-box" transform="translate(401.5,195.5)" x="-53.5" y="-16.107666015625" width="107" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="401.5" y="196.5">NAT Gateway</text>
+</svg>

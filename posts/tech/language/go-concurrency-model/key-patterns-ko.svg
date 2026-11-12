@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 416.8 398" width="100%" style="display: block; max-width: 416.8px; margin: 0 auto" role="img" aria-labelledby="key-patterns-title">
+  <title id="key-patterns-title">주요 패턴</title>
+  <defs>
+    <marker id="key-patterns-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="key-patterns-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="33.7" y="0" width="330.4" height="164" rx="6"/>
+  <text class="d-group-text" x="198.9" y="9.5">Fan-In</text>
+  <rect class="d-group" x="0.5" y="214" width="396.8" height="164" rx="6"/>
+  <text class="d-group-text" x="198.9" y="223.5">Fan-Out</text>
+  <path class="d-line" transform="translate(25.7,-8)" d="M69.734,65L69.734,69.167C69.734,73.333,69.734,81.667,82.745,90.989C95.756,100.311,121.778,110.622,134.788,115.778L147.799,120.934" marker-end="url(#key-patterns-arrow)"/>
+  <path class="d-line" transform="translate(25.7,-8)" d="M173.203,65L173.203,69.167C173.203,73.333,173.203,81.667,173.203,89.117C173.203,96.567,173.203,103.133,173.203,106.417L173.203,109.7" marker-end="url(#key-patterns-arrow)"/>
+  <path class="d-line" transform="translate(25.7,-8)" d="M276.672,65L276.672,69.167C276.672,73.333,276.672,81.667,263.661,90.989C250.65,100.311,224.629,110.622,211.618,115.778L198.607,120.934" marker-end="url(#key-patterns-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,206)" d="M185.914,55.685L168.395,61.404C150.875,67.123,115.836,78.562,98.316,87.564C80.797,96.567,80.797,103.133,80.797,106.417L80.797,109.7" marker-end="url(#key-patterns-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,206)" d="M206.391,65L206.391,69.167C206.391,73.333,206.391,81.667,206.391,89.117C206.391,96.567,206.391,103.133,206.391,106.417L206.391,109.7" marker-end="url(#key-patterns-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,206)" d="M226.867,55.685L244.387,61.404C261.906,67.123,296.945,78.562,314.465,87.564C331.984,96.567,331.984,103.133,331.984,106.417L331.984,109.7" marker-end="url(#key-patterns-arrow)"/>
+  <rect class="d-box" transform="translate(198.9,123)" x="-20.4765625" y="-16" width="40.953125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="198.9" y="124">출력</text>
+  <rect class="d-box" transform="translate(95.4,41)" x="-26.734375" y="-16" width="53.46875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="95.4" y="42">결과 1</text>
+  <rect class="d-box" transform="translate(198.9,41)" x="-26.734375" y="-16" width="53.46875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="198.9" y="42">결과 2</text>
+  <rect class="d-box" transform="translate(302.4,41)" x="-26.734375" y="-16" width="53.46875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="302.4" y="42">결과 3</text>
+  <rect class="d-box" transform="translate(73.3,337)" x="-37.796875" y="-16" width="75.59375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="73.3" y="338">Worker 1</text>
+  <rect class="d-box" transform="translate(198.9,255)" x="-20.4765625" y="-16" width="40.953125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="198.9" y="256">입력</text>
+  <rect class="d-box" transform="translate(198.9,337)" x="-37.796875" y="-16" width="75.59375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="198.9" y="338">Worker 2</text>
+  <rect class="d-box" transform="translate(324.5,337)" x="-37.796875" y="-16" width="75.59375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="324.5" y="338">Worker 3</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 353.5 306.6" width="100%" style="display: block; max-width: 353.5px; margin: 0 auto" role="img" aria-labelledby="segmentation-title">
+  <title id="segmentation-title">Segmentation</title>
+  <defs>
+    <marker id="segmentation-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="segmentation-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M100.078,143.323L104.245,143.323C108.411,143.323,116.745,143.323,124.195,143.323C131.645,143.323,138.211,143.323,141.495,143.323L144.778,143.323" marker-end="url(#segmentation-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M179.351,127.323L186.139,111.287C192.927,95.251,206.502,63.179,216.574,47.144C226.645,31.108,233.211,31.108,236.495,31.108L239.778,31.108" marker-end="url(#segmentation-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M195.078,143.323L199.245,143.323C203.411,143.323,211.745,143.323,219.195,143.323C226.645,143.323,233.211,143.323,236.495,143.323L239.778,143.323" marker-end="url(#segmentation-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M179.351,159.323L186.139,175.359C192.927,191.395,206.502,223.467,216.644,239.502C226.785,255.538,233.493,255.538,236.846,255.538L240.2,255.538" marker-end="url(#segmentation-arrow)"/>
+  <rect class="d-box" transform="translate(50,143.3)" x="-50.0390625" y="-23.607666015625" width="100.078125" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="50" y="136.8">Application</text>
+  <text class="d-text" x="50" y="151.8">4KB payload</text>
+  <rect class="d-box" transform="translate(172.6,143.3)" x="-22.5" y="-16" width="45" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="172.6" y="144.3">TCP</text>
+  <rect class="d-box" transform="translate(289.3,31.1)" x="-44.1953125" y="-31.107666015625" width="88.390625" height="62.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="289.3" y="17.2">Segment 1</text>
+  <text class="d-text" x="289.3" y="32.1">seq=1</text>
+  <text class="d-text" x="289.3" y="47.1">1460 bytes</text>
+  <rect class="d-box" transform="translate(289.3,143.3)" x="-44.1953125" y="-31.107666015625" width="88.390625" height="62.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="289.3" y="129.4">Segment 2</text>
+  <text class="d-text" x="289.3" y="144.3">seq=1461</text>
+  <text class="d-text" x="289.3" y="159.3">1460 bytes</text>
+  <rect class="d-box" transform="translate(289.3,255.5)" x="-43.7734375" y="-31.107666015625" width="87.546875" height="62.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="289.3" y="241.6">Segment 3</text>
+  <text class="d-text" x="289.3" y="256.5">seq=2921</text>
+  <text class="d-text" x="289.3" y="271.5">1160 bytes</text>
+</svg>

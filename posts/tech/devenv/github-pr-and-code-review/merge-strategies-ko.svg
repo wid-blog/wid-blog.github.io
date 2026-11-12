@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 1578 218.8" width="100%" style="display: block; max-width: 1578px; margin: 0 auto" role="img" aria-labelledby="merge-strategies-title">
+  <title id="merge-strategies-title">머지 전략</title>
+  <defs>
+    <marker id="merge-strategies-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="merge-strategies-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0.5" y="46.5" width="422.8" height="105.8" rx="6"/>
+  <text class="d-group-text" x="211.9" y="56.5">rebase merge</text>
+  <rect class="d-group" x="473.3" y="24.4" width="301.8" height="150.1" rx="6"/>
+  <text class="d-group-text" x="624.2" y="34.4">squash merge</text>
+  <rect class="d-group" x="825.1" y="0" width="440.9" height="198.8" rx="6"/>
+  <text class="d-group-text" x="1045.5" y="10.1">merge commit</text>
+  <rect class="d-group" x="1316" y="49" width="242.5" height="100.8" rx="6"/>
+  <text class="d-group-text" x="1437.3" y="59">PR 내부</text>
+  <path class="d-line" transform="translate(-7.5,38.5)" d="M68.844,60.922L73.01,60.922C77.177,60.922,85.51,60.922,92.96,60.922C100.41,60.922,106.977,60.922,110.26,60.922L113.544,60.922" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,38.5)" d="M154.688,60.922L158.854,60.922C163.021,60.922,171.354,60.922,178.804,60.922C186.254,60.922,192.821,60.922,196.104,60.922L199.388,60.922" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,38.5)" d="M238.406,60.922L242.573,60.922C246.74,60.922,255.073,60.922,262.523,60.922C269.973,60.922,276.54,60.922,279.823,60.922L283.106,60.922" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,38.5)" d="M322.125,60.922L326.292,60.922C330.458,60.922,338.792,60.922,346.242,60.922C353.692,60.922,360.258,60.922,363.542,60.922L366.825,60.922" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(465.3,16.4)" d="M68.844,83.031L73.01,83.031C77.177,83.031,85.51,83.031,92.96,83.031C100.41,83.031,106.977,83.031,110.26,83.031L113.544,83.031" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(465.3,16.4)" d="M154.688,83.031L158.854,83.031C163.021,83.031,171.354,83.031,178.804,83.031C186.254,83.031,192.821,83.031,196.104,83.031L199.388,83.031" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(817.1,-8)" d="M63.78,95.532L68.791,90.667C73.802,85.802,83.823,76.073,95.57,71.208C107.318,66.344,120.792,66.344,134.266,66.344C147.74,66.344,161.214,66.344,174.688,66.344C188.161,66.344,201.635,66.344,215.109,66.344C228.583,66.344,242.057,66.344,252.078,66.344C262.098,66.344,268.665,66.344,271.948,66.344L275.231,66.344" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(817.1,-8)" d="M316.375,66.344L320.542,66.344C324.708,66.344,333.042,66.344,341.682,69.811C350.322,73.278,359.269,80.213,363.742,83.68L368.215,87.147" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(817.1,-8)" d="M63.78,120.5L68.791,125.364C73.802,130.229,83.823,139.958,92.117,144.823C100.41,149.688,106.977,149.688,110.26,149.688L113.544,149.688" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(817.1,-8)" d="M149.688,149.688L153.854,149.688C158.021,149.688,166.354,149.688,173.804,149.688C181.254,149.688,187.821,149.688,191.104,149.688L194.388,149.688" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(817.1,-8)" d="M230.531,149.688L234.698,149.688C238.865,149.688,247.198,149.688,255.065,149.688C262.931,149.688,270.331,149.688,274.031,149.688L277.731,149.688" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(817.1,-8)" d="M313.875,149.688L318.458,149.688C323.042,149.688,332.208,149.688,341.265,146.22C350.322,142.753,359.269,135.819,363.742,132.352L368.215,128.884" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(1308,41)" d="M63.844,58.422L68.01,58.422C72.177,58.422,80.51,58.422,87.96,58.422C95.41,58.422,101.977,58.422,105.26,58.422L108.544,58.422" marker-end="url(#merge-strategies-arrow)"/>
+  <path class="d-line" transform="translate(1308,41)" d="M144.688,58.422L148.854,58.422C153.021,58.422,161.354,58.422,168.804,58.422C176.254,58.422,182.821,58.422,186.104,58.422L189.388,58.422" marker-end="url(#merge-strategies-arrow)"/>
+  <circle class="d-box" transform="translate(381.5,99.4)" width="33.71875" height="32" rx="0" ry="0" r="16.859375"/>
+  <text class="d-text" x="381.5" y="101">c3'</text>
+  <circle class="d-box" transform="translate(43.4,99.4)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="43.4" y="101">m1</text>
+  <circle class="d-box" transform="translate(129.3,99.4)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="129.3" y="101">m2</text>
+  <circle class="d-box" transform="translate(214,99.4)" width="33.71875" height="32" rx="0" ry="0" r="16.859375"/>
+  <text class="d-text" x="214" y="101">c1'</text>
+  <circle class="d-box" transform="translate(297.8,99.4)" width="33.71875" height="32" rx="0" ry="0" r="16.859375"/>
+  <text class="d-text" x="297.8" y="101">c2'</text>
+  <circle class="d-box" transform="translate(710.1,99.4)" width="80.0625" height="32.12744140625" rx="0" ry="0" r="40.03125"/>
+  <text class="d-text" x="710.1" y="100.9">squashed</text>
+  <circle class="d-box" transform="translate(516.3,99.4)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="516.3" y="101">m1</text>
+  <circle class="d-box" transform="translate(602.1,99.4)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="602.1" y="101">m2</text>
+  <circle class="d-box" transform="translate(1212.2,100)" width="57.53125" height="32.31787109375" rx="0" ry="0" r="28.765625"/>
+  <text class="d-text" x="1212.2" y="101.4">merge</text>
+  <circle class="d-box" transform="translate(868,100)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="868" y="101.6">m1</text>
+  <circle class="d-box" transform="translate(1115.5,58.3)" width="35.84375" height="32" rx="0" ry="0" r="17.921875"/>
+  <text class="d-text" x="1115.5" y="59.9">m2</text>
+  <circle class="d-box" transform="translate(951.4,141.7)" width="30.84375" height="32" rx="0" ry="0" r="15.421875"/>
+  <text class="d-text" x="951.4" y="143.3">c1</text>
+  <circle class="d-box" transform="translate(1032.2,141.7)" width="30.84375" height="32" rx="0" ry="0" r="15.421875"/>
+  <text class="d-text" x="1032.2" y="143.3">c2</text>
+  <circle class="d-box" transform="translate(1115.5,141.7)" width="30.84375" height="32" rx="0" ry="0" r="15.421875"/>
+  <text class="d-text" x="1115.5" y="143.3">c3</text>
+  <circle class="d-box" transform="translate(1518.1,99.4)" width="30.84375" height="32" rx="0" ry="0" r="15.421875"/>
+  <text class="d-text" x="1518.1" y="101">c3</text>
+  <circle class="d-box" transform="translate(1356.4,99.4)" width="30.84375" height="32" rx="0" ry="0" r="15.421875"/>
+  <text class="d-text" x="1356.4" y="101">c1</text>
+  <circle class="d-box" transform="translate(1437.3,99.4)" width="30.84375" height="32" rx="0" ry="0" r="15.421875"/>
+  <text class="d-text" x="1437.3" y="101">c2</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 654.2 180.1" width="100%" style="display: block; max-width: 654.2px; margin: 0 auto" role="img" aria-labelledby="nginx-tomcat-practice-title">
+  <title id="nginx-tomcat-practice-title">nginx + Tomcat 조합</title>
+  <defs>
+    <marker id="nginx-tomcat-practice-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="nginx-tomcat-practice-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M79.875,77.706L84.042,77.706C88.208,77.706,96.542,77.706,103.992,77.706C111.442,77.706,118.008,77.706,121.292,77.706L124.575,77.706" marker-end="url(#nginx-tomcat-practice-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M295.695,54.098L308.901,49.632C322.106,45.166,348.518,36.235,370.466,31.769C392.413,27.304,409.896,27.304,418.638,27.304L427.38,27.304" marker-end="url(#nginx-tomcat-practice-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M295.695,101.313L308.901,105.779C322.106,110.245,348.518,119.176,369.68,123.642C390.843,128.107,406.756,128.107,414.712,128.107L422.669,128.107" marker-end="url(#nginx-tomcat-practice-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M491.328,128.107L495.495,128.107C499.661,128.107,507.995,128.107,515.445,128.107C522.895,128.107,529.461,128.107,532.745,128.107L536.028,128.107" marker-end="url(#nginx-tomcat-practice-arrow)"/>
+  <rect class="d-label-bg" x="344.9" y="17.8" width="60" height="19" rx="3"/>
+  <text class="d-text" x="374.9" y="28.3">정적 파일</text>
+  <rect class="d-label-bg" x="344.9" y="118.6" width="60" height="19" rx="3"/>
+  <text class="d-text" x="374.9" y="129.1">동적 요청</text>
+  <rect class="d-box" transform="translate(39.9,77.7)" x="-39.9375" y="-16" width="79.875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="39.9" y="78.7">클라이언트</text>
+  <rect class="d-box" transform="translate(225.9,77.7)" x="-96.0078125" y="-23.607666015625" width="192.015625" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="225.9" y="71.3">nginx</text>
+  <text class="d-text" x="225.9" y="86.2">reverse proxy + 정적 컨텐츠</text>
+  <path class="d-box" transform="translate(432.7,0)" d="M 0,7.535801606706252 a 26.96875,7.535801606706252 0,0,0 53.9375 0 a 26.96875,7.535801606706252 0,0,0 -53.9375 0 l 0,39.53580160670625 a 26.96875,7.535801606706252 0,0,0 53.9375 0 l 0,-39.53580160670625"/>
+  <text class="d-text" x="459.6" y="28.3">디스크</text>
+  <rect class="d-box" transform="translate(459.6,128.1)" x="-31.6796875" y="-23.5" width="63.359375" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="459.6" y="121.6">Tomcat</text>
+  <text class="d-text" x="459.6" y="136.6">WAS</text>
+  <path class="d-box" transform="translate(541.3,96.1)" d="M 0,10.655884673312773 a 46.4296875,10.655884673312773 0,0,0 92.859375 0 a 46.4296875,10.655884673312773 0,0,0 -92.859375 0 l 0,42.65588467331277 a 46.4296875,10.655884673312773 0,0,0 92.859375 0 l 0,-42.65588467331277"/>
+  <text class="d-text" x="587.8" y="129.1">데이터베이스</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 378.7 75.1" width="100%" style="display: block; max-width: 378.7px; margin: 0 auto" role="img" aria-labelledby="refresh-ahead-title">
+  <title id="refresh-ahead-title">Refresh-ahead</title>
+  <defs>
+    <marker id="refresh-ahead-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="refresh-ahead-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M41.703,20.489L48.033,18.498C54.362,16.508,67.021,12.527,78.838,12.273C90.654,12.02,101.629,15.493,107.116,17.23L112.603,18.966" marker-end="url(#refresh-ahead-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M117.656,33.527L111.327,35.53C104.997,37.533,92.339,41.54,80.522,41.817C68.706,42.095,57.733,38.644,52.246,36.919L46.759,35.193" marker-end="url(#refresh-ahead-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M158.609,23.257L171.872,20.803C185.135,18.348,211.661,13.439,237.319,13.279C262.976,13.118,287.765,17.705,300.16,19.999L312.554,22.292" marker-end="url(#refresh-ahead-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M317.766,30.835L304.503,33.29C291.24,35.744,264.714,40.653,239.056,40.814C213.399,40.974,188.61,36.387,176.215,34.093L163.821,31.8" marker-end="url(#refresh-ahead-arrow)"/>
+  <rect class="d-label-bg" x="64.7" y="-1" width="29.9" height="19" rx="3"/>
+  <text class="d-text" x="79.7" y="9.5">조회</text>
+  <rect class="d-label-bg" x="69.8" y="36" width="19.8" height="19" rx="3"/>
+  <text class="d-text" x="79.7" y="46.5">hit</text>
+  <rect class="d-label-bg" x="181.6" y="-1" width="113.1" height="19.1" rx="3"/>
+  <text class="d-text" x="238.2" y="9.5">비동기 (만료 임박)</text>
+  <rect class="d-label-bg" x="223.2" y="36.1" width="29.9" height="19" rx="3"/>
+  <text class="d-text" x="238.2" y="46.6">갱신</text>
+  <rect class="d-box" transform="translate(20.9,27)" x="-20.8515625" y="-16.063720703125" width="41.703125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="20.9" y="28">App</text>
+  <rect class="d-box" transform="translate(138.1,27)" x="-20.4765625" y="-16" width="40.953125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="138.1" y="28">캐시</text>
+  <path class="d-box" transform="translate(317.8,1.8)" d="M 0,6.169381414179456 a 20.4765625,6.169381414179456 0,0,0 40.953125 0 a 20.4765625,6.169381414179456 0,0,0 -40.953125 0 l 0,38.169381414179455 a 20.4765625,6.169381414179456 0,0,0 40.953125 0 l 0,-38.169381414179455"/>
+  <text class="d-text" x="338.2" y="28">원본</text>
+</svg>

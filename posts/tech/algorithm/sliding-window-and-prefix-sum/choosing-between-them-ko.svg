@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 344 809.4" width="100%" style="display: block; max-width: 344px; margin: 0 auto" role="img" aria-labelledby="choosing-between-them-title">
+  <title id="choosing-between-them-title">도구 선택</title>
+  <defs>
+    <marker id="choosing-between-them-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="choosing-between-them-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M125.238,32L125.238,36.167C125.238,40.333,125.238,48.667,125.304,56.2C125.37,63.734,125.502,70.467,125.568,73.834L125.634,77.201" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M96.971,169.78L86.684,180.074C76.396,190.369,55.821,210.958,45.534,237.687C35.246,264.417,35.246,297.286,35.246,330.156C35.246,363.026,35.246,395.896,36.512,417.061C37.778,438.226,40.309,447.686,41.575,452.416L42.841,457.146" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M147.21,177.075L152.509,186.153C157.808,195.232,168.406,213.389,173.775,227.252C179.145,241.114,179.285,250.681,179.356,255.464L179.426,260.247" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M151.008,367.27L142.883,377.519C134.758,387.768,118.508,408.267,104.968,423.501C91.429,438.736,80.599,448.706,75.185,453.691L69.77,458.676" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M191.81,383.46L193.505,391.011C195.201,398.562,198.593,413.664,200.289,425.915C201.984,438.166,201.984,447.566,201.984,452.266L201.984,456.966" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M201.984,494.266L201.984,498.432C201.984,502.599,201.984,510.932,202.05,518.466C202.116,525.999,202.248,532.733,202.314,536.1L202.38,539.467" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M172.651,661.105L165.288,671.577C157.924,682.049,143.196,702.993,135.833,718.165C128.469,733.338,128.469,742.738,128.469,747.438L128.469,752.138" marker-end="url(#choosing-between-them-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M232.317,661.105L239.514,671.577C246.712,682.049,261.106,702.993,268.303,718.165C275.5,733.338,275.5,742.738,275.5,747.438L275.5,752.138" marker-end="url(#choosing-between-them-arrow)"/>
+  <rect class="d-label-bg" x="26.8" y="320.7" width="17" height="19" rx="3"/>
+  <text class="d-text" x="35.2" y="331.2">예</text>
+  <rect class="d-label-bg" x="157.5" y="222" width="42.9" height="19" rx="3"/>
+  <text class="d-text" x="179" y="232.5">아니오</text>
+  <rect class="d-label-bg" x="93.8" y="419.3" width="17" height="19" rx="3"/>
+  <text class="d-text" x="102.3" y="429.8">예</text>
+  <rect class="d-label-bg" x="180.5" y="419.3" width="42.9" height="19" rx="3"/>
+  <text class="d-text" x="202" y="429.8">아니오</text>
+  <rect class="d-label-bg" x="120" y="714.4" width="17" height="19" rx="3"/>
+  <text class="d-text" x="128.5" y="724.9">예</text>
+  <rect class="d-label-bg" x="254" y="714.4" width="42.9" height="19" rx="3"/>
+  <text class="d-text" x="275.5" y="724.9">아니오</text>
+  <rect class="d-box" transform="translate(125.2,16)" x="-59.1640625" y="-16" width="118.328125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="125.2" y="17">부분 배열 합 문제</text>
+  <polygon class="d-box" transform="translate(67.2,198)" points="58.0234375,0 116.046875,-58.0234375 58.0234375,-116.046875 0,-58.0234375"/>
+  <text class="d-text" x="125.2" y="141">음수가 있나</text>
+  <rect class="d-box" transform="translate(48.5,478.3)" x="-48.4921875" y="-16" width="96.984375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="48.5" y="479.3">누적합 + 해시</text>
+  <polygon class="d-box" transform="translate(113.9,395.3)" points="65.109375,0 130.21875,-65.109375 65.109375,-130.21875 0,-65.109375"/>
+  <text class="d-text" x="179" y="331.2">합이 정확히 K</text>
+  <rect class="d-box" transform="translate(202,478.3)" x="-55" y="-16" width="110" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="202" y="479.3">슬라이딩 윈도우</text>
+  <polygon class="d-box" transform="translate(128.9,690.4)" points="73.0859375,0 146.171875,-73.0859375 73.0859375,-146.171875 0,-73.0859375"/>
+  <text class="d-text" x="202" y="618.4">윈도우 크기 고정</text>
+  <rect class="d-box" transform="translate(128.5,773.4)" x="-48.515625" y="-16" width="97.03125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="128.5" y="774.4">고정 슬라이딩</text>
+  <rect class="d-box" transform="translate(275.5,773.4)" x="-48.515625" y="-16" width="97.03125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="275.5" y="774.4">가변 슬라이딩</text>
+</svg>

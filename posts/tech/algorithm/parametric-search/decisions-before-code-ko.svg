@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 297.5 645.1" width="100%" style="display: block; max-width: 297.5px; margin: 0 auto" role="img" aria-labelledby="decisions-before-code-title">
+  <title id="decisions-before-code-title">의사결정 흐름</title>
+  <defs>
+    <marker id="decisions-before-code-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="decisions-before-code-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M162.473,32L162.473,36.167C162.473,40.333,162.473,48.667,162.539,56.2C162.605,63.734,162.737,70.467,162.803,73.834L162.869,77.201" marker-end="url(#decisions-before-code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M127.399,229.88L119.99,241.309C112.581,252.738,97.763,275.595,90.354,291.724C82.945,307.853,82.945,317.253,82.945,321.953L82.945,326.653" marker-end="url(#decisions-before-code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M198.546,229.88L205.788,241.309C213.031,252.738,227.515,275.595,234.758,291.729C242,307.863,242,317.274,242,321.979L242,326.684" marker-end="url(#decisions-before-code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M82.945,364.015L82.945,368.181C82.945,372.348,82.945,380.681,82.945,388.131C82.945,395.581,82.945,402.148,82.945,405.431L82.945,408.715" marker-end="url(#decisions-before-code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M82.945,446.015L82.945,450.181C82.945,454.348,82.945,462.681,82.945,470.131C82.945,477.581,82.945,484.148,82.945,487.431L82.945,490.715" marker-end="url(#decisions-before-code-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M82.945,543.076L82.945,547.243C82.945,551.41,82.945,559.743,82.945,567.193C82.945,574.643,82.945,581.21,82.945,584.493L82.945,587.776" marker-end="url(#decisions-before-code-arrow)"/>
+  <rect class="d-label-bg" x="74.5" y="289" width="17" height="19" rx="3"/>
+  <text class="d-text" x="82.9" y="299.5">예</text>
+  <rect class="d-label-bg" x="220.5" y="289" width="42.9" height="19" rx="3"/>
+  <text class="d-text" x="242" y="299.5">아니오</text>
+  <rect class="d-box" transform="translate(162.5,16)" x="-72.140625" y="-16" width="144.28125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="162.5" y="17">답이 배열에 없는 문제</text>
+  <polygon class="d-box" transform="translate(71,265)" points="91.4765625,0 182.953125,-91.4765625 91.4765625,-182.953125 0,-91.4765625"/>
+  <text class="d-text" x="162.5" y="167">x 가 변하면</text>
+  <text class="d-text" x="162.5" y="182">일관되게 쉬워지는가</text>
+  <rect class="d-box" transform="translate(82.9,348)" x="-73.515625" y="-16.03076171875" width="147.03125" height="32.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="82.9" y="349">결정 함수 can(x) 정의</text>
+  <rect class="d-box" transform="translate(242,348)" x="-35.5390625" y="-16" width="71.078125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="242" y="349">다른 접근</text>
+  <rect class="d-box" transform="translate(82.9,430)" x="-44.890625" y="-16" width="89.78125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="82.9" y="431">lo, hi 정당화</text>
+  <rect class="d-box" transform="translate(82.9,519.5)" x="-82.9453125" y="-23.53076171875" width="165.890625" height="47.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="82.9" y="513">수렴 방향</text>
+  <text class="d-text" x="82.9" y="528">(find_min vs find_max)</text>
+  <rect class="d-box" transform="translate(82.9,609.1)" x="-33.453125" y="-16" width="66.90625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="82.9" y="610.1">이분탐색</text>
+</svg>

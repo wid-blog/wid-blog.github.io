@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 396 75" width="100%" style="display: block; max-width: 396px; margin: 0 auto" role="img" aria-labelledby="read-through-title">
+  <title id="read-through-title">Read-through</title>
+  <defs>
+    <marker id="read-through-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="read-through-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M41.703,21.763L50.504,19.552C59.305,17.342,76.906,12.921,93.651,12.716C110.396,12.511,126.285,16.522,134.229,18.528L142.174,20.533" marker-end="url(#read-through-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M188.266,22.965L200.499,20.554C212.732,18.143,237.198,13.322,260.797,13.151C284.397,12.98,307.13,17.46,318.496,19.7L329.863,21.94" marker-end="url(#read-through-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M335.063,31.035L322.829,33.446C310.596,35.857,286.13,40.678,262.531,40.849C238.931,41.02,216.198,36.54,204.832,34.3L193.466,32.06" marker-end="url(#read-through-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M147.313,32.169L138.512,34.391C129.711,36.613,112.109,41.056,95.365,41.283C78.62,41.509,62.732,37.519,54.788,35.524L46.843,33.528" marker-end="url(#read-through-arrow)"/>
+  <rect class="d-label-bg" x="71.2" y="-1" width="46.6" height="19" rx="3"/>
+  <text class="d-text" x="94.5" y="9.5">1. 조회</text>
+  <rect class="d-label-bg" x="211.3" y="-1" width="100.8" height="19" rx="3"/>
+  <text class="d-text" x="261.7" y="9.5">2. miss → 조회</text>
+  <rect class="d-label-bg" x="231.9" y="36" width="59.6" height="19" rx="3"/>
+  <text class="d-text" x="261.7" y="46.5">3. 데이터</text>
+  <rect class="d-label-bg" x="64.7" y="36" width="59.6" height="19" rx="3"/>
+  <text class="d-text" x="94.5" y="46.5">4. 데이터</text>
+  <rect class="d-box" transform="translate(20.9,27)" x="-20.8515625" y="-16.063720703125" width="41.703125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="20.9" y="28">App</text>
+  <rect class="d-box" transform="translate(167.8,27)" x="-20.4765625" y="-16" width="40.953125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="167.8" y="28">캐시</text>
+  <path class="d-box" transform="translate(335.1,1.7)" d="M 0,6.169381414179456 a 20.4765625,6.169381414179456 0,0,0 40.953125 0 a 20.4765625,6.169381414179456 0,0,0 -40.953125 0 l 0,38.169381414179455 a 20.4765625,6.169381414179456 0,0,0 40.953125 0 l 0,-38.169381414179455"/>
+  <text class="d-text" x="355.5" y="28">원본</text>
+</svg>

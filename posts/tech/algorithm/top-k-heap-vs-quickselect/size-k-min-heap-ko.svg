@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 315.8 568.9" width="100%" style="display: block; max-width: 315.8px; margin: 0 auto" role="img" aria-labelledby="size-k-min-heap-title">
+  <title id="size-k-min-heap-title">Heap 크기 K 유지</title>
+  <defs>
+    <marker id="size-k-min-heap-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="size-k-min-heap-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M123.215,32L123.215,36.167C123.215,40.333,123.215,48.667,123.281,56.2C123.347,63.734,123.48,70.467,123.546,73.834L123.612,77.201" marker-end="url(#size-k-min-heap-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M91.179,200.591L82.725,211.514C74.271,222.437,57.362,244.282,48.907,269.739C40.453,295.197,40.453,324.266,40.453,338.801L40.453,353.335" marker-end="url(#size-k-min-heap-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M156.252,200.591L164.539,211.514C172.827,222.437,189.402,244.282,197.76,259.988C206.118,275.694,206.259,285.261,206.33,290.045L206.4,294.828" marker-end="url(#size-k-min-heap-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M178.946,422.738L172.971,432.827C166.997,442.916,155.048,463.093,149.073,477.882C143.099,492.671,143.099,502.071,143.099,506.771L143.099,511.471" marker-end="url(#size-k-min-heap-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M234.01,422.738L239.818,432.827C245.626,442.916,257.241,463.093,263.049,477.892C268.857,492.692,268.857,502.113,268.857,506.824L268.857,511.534" marker-end="url(#size-k-min-heap-arrow)"/>
+  <rect class="d-label-bg" x="32" y="256.6" width="17" height="19" rx="3"/>
+  <text class="d-text" x="40.4" y="267.1">예</text>
+  <rect class="d-label-bg" x="184.5" y="256.6" width="42.9" height="19" rx="3"/>
+  <text class="d-text" x="206" y="267.1">아니오</text>
+  <rect class="d-label-bg" x="134.6" y="473.8" width="17" height="19" rx="3"/>
+  <text class="d-text" x="143.1" y="484.3">예</text>
+  <rect class="d-label-bg" x="247.4" y="473.8" width="42.9" height="19" rx="3"/>
+  <text class="d-text" x="268.8" y="484.3">아니오</text>
+  <rect class="d-box" transform="translate(123.2,16)" x="-42.578125" y="-16" width="85.15625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="123.2" y="17">새 값 value</text>
+  <polygon class="d-box" transform="translate(47.9,232.6)" points="75.313720703125,0 150.62744140625,-75.313720703125 75.313720703125,-150.62744140625 0,-75.313720703125"/>
+  <text class="d-text" x="123.2" y="158.3">heap 크기 &lt; K</text>
+  <rect class="d-box" transform="translate(40.5,374.7)" x="-40.453125" y="-16.063720703125" width="80.90625" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="40.5" y="375.7">heappush</text>
+  <polygon class="d-box" transform="translate(130.9,449.8)" points="75.071533203125,0 150.14306640625,-75.071533203125 75.071533203125,-150.14306640625 0,-75.071533203125"/>
+  <text class="d-text" x="206" y="375.7">value &gt; heap[0]</text>
+  <rect class="d-box" transform="translate(143.1,532.8)" x="-48.7890625" y="-16.063720703125" width="97.578125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="143.1" y="533.8">heapreplace</text>
+  <rect class="d-box" transform="translate(268.9,532.8)" x="-26.96875" y="-16" width="53.9375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="268.9" y="533.8">버린다</text>
+</svg>

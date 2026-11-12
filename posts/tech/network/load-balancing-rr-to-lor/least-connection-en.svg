@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 622 303.1" width="100%" style="display: block; max-width: 622px; margin: 0 auto" role="img" aria-labelledby="least-connection-title">
+  <title id="least-connection-title">Least Connection</title>
+  <defs>
+    <marker id="least-connection-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="least-connection-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0.5" y="0" width="289.3" height="184" rx="6"/>
+  <text class="d-group-text" x="145.2" y="9.5">Actual load under HTTP/2</text>
+  <rect class="d-group" x="339.8" y="0" width="262.6" height="184" rx="6"/>
+  <text class="d-group-text" x="471.1" y="9.6">What LC sees — connection count only</text>
+  <path class="d-line" transform="translate(0,0)" d="M470.633,184L470.633,189.583C470.633,195.167,470.633,206.333,470.633,216.617C470.633,226.9,470.633,236.3,470.633,241L470.633,245.7" marker-end="url(#least-connection-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M144.656,184L144.656,189.583C144.656,195.167,144.656,206.333,144.656,216.627C144.656,226.921,144.656,236.342,144.656,241.053L144.656,245.764" marker-end="url(#least-connection-arrow)"/>
+  <rect class="d-label-bg" x="433.2" y="208" width="74.8" height="19" rx="3"/>
+  <text class="d-text" x="470.6" y="218.5">conclusion</text>
+  <rect class="d-label-bg" x="122.6" y="208" width="44" height="19" rx="3"/>
+  <text class="d-text" x="144.6" y="218.5">actual</text>
+  <rect class="d-box" transform="translate(145.2,51)" x="-119.65625" y="-16" width="239.3125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="145.2" y="52">backend A — 1 conn / 50 streams</text>
+  <rect class="d-box" transform="translate(145.2,133)" x="-116.3125" y="-16" width="232.625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="145.2" y="134">backend B — 1 conn / 3 streams</text>
+  <rect class="d-box" transform="translate(471.1,51)" x="-89.234375" y="-16" width="178.46875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="471.1" y="52">backend A: 1 connection</text>
+  <rect class="d-box" transform="translate(471.1,133)" x="-89.6484375" y="-16" width="179.296875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="471.1" y="134">backend B: 1 connection</text>
+  <rect class="d-bad" transform="translate(470.6,267.1)" x="-92.5703125" y="-16.063720703125" width="185.140625" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="470.6" y="268.1">both backends look equal</text>
+  <rect class="d-ok" transform="translate(144.7,267.1)" x="-77.1328125" y="-16" width="154.265625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="144.7" y="268.1">A is about 16x busier</text>
+</svg>

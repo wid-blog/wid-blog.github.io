@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 441 392.8" width="100%" style="display: block; max-width: 441px; margin: 0 auto" role="img" aria-labelledby="fast-recovery-title">
+  <title id="fast-recovery-title">Fast Recovery</title>
+  <defs>
+    <marker id="fast-recovery-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="fast-recovery-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M329.402,32L329.402,36.167C329.402,40.333,329.402,48.667,329.402,56.117C329.402,63.567,329.402,70.133,329.402,73.417L329.402,76.7" marker-end="url(#fast-recovery-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M250.899,129.318L232.373,134.901C213.847,140.485,176.795,151.651,158.268,161.935C139.742,172.218,139.742,181.618,139.742,186.318L139.742,191.018" marker-end="url(#fast-recovery-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M319.713,129.318L317.426,134.901C315.139,140.485,310.566,151.651,308.279,166.761C305.992,181.871,305.992,200.924,305.992,219.987C305.992,239.051,305.992,258.125,310.437,273.791C314.881,289.457,323.77,301.715,328.215,307.844L332.659,313.973" marker-end="url(#fast-recovery-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M127.418,243.636L124.504,249.23C121.59,254.824,115.762,266.012,113.388,276.322C111.014,286.632,112.094,296.065,112.634,300.781L113.175,305.498" marker-end="url(#fast-recovery-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M221.758,242.003L243.6,247.869C265.443,253.735,309.128,265.467,330.97,277.294C352.813,289.121,352.813,301.042,352.813,307.003L352.813,312.963" marker-end="url(#fast-recovery-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M369.854,318.263L374.817,311.419C379.78,304.575,389.707,290.887,394.67,274.506C399.633,258.125,399.633,239.051,399.633,219.987C399.633,200.924,399.633,181.871,393.458,167.319C387.283,152.766,374.933,142.715,368.757,137.689L362.582,132.663" marker-end="url(#fast-recovery-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M150.092,310.763L156.005,305.169C161.917,299.575,173.742,288.387,175.727,277.889C177.711,267.391,169.856,257.582,165.929,252.677L162.001,247.773" marker-end="url(#fast-recovery-arrow)"/>
+  <rect class="d-label-bg" x="79" y="153.3" width="121.5" height="19" rx="3"/>
+  <text class="d-text" x="139.7" y="163.8">cwnd &gt;= ssthresh</text>
+  <rect class="d-label-bg" x="277.2" y="210.5" width="57.6" height="19" rx="3"/>
+  <text class="d-text" x="306" y="221">Timeout</text>
+  <rect class="d-label-bg" x="68.3" y="267.6" width="83.2" height="19.1" rx="3"/>
+  <text class="d-text" x="109.9" y="278.2">3 dup ACKs</text>
+  <rect class="d-label-bg" x="324" y="267.7" width="57.6" height="19" rx="3"/>
+  <text class="d-text" x="352.8" y="278.2">Timeout</text>
+  <rect class="d-box" transform="translate(329.4,16)" x="-62.1171875" y="-16" width="124.234375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="329.4" y="17">Connection start</text>
+  <rect class="d-box" transform="translate(329.4,105.7)" x="-90.0546875" y="-23.658935546875" width="180.109375" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="329.4" y="99">Slow Start</text>
+  <text class="d-text" x="329.4" y="114.2">cwnd exponential growth</text>
+  <rect class="d-box" transform="translate(139.7,220)" x="-82.015625" y="-23.658935546875" width="164.03125" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="139.7" y="213.5">Congestion Avoidance</text>
+  <text class="d-text" x="139.7" y="228.5">cwnd linear growth</text>
+  <rect class="d-box" transform="translate(352.8,341.8)" x="-68.15625" y="-23.5" width="136.3125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="352.8" y="335.3">ssthresh = cwnd/2</text>
+  <text class="d-text" x="352.8" y="350.3">cwnd = 1 MSS</text>
+  <rect class="d-box" transform="translate(117.3,341.8)" x="-117.328125" y="-31" width="234.65625" height="62" rx="4" ry="4"/>
+  <text class="d-text" x="117.3" y="327.9">Fast Retransmit + Fast Recovery</text>
+  <text class="d-text" x="117.3" y="342.8">ssthresh = cwnd/2</text>
+  <text class="d-text" x="117.3" y="357.8">cwnd = ssthresh</text>
+</svg>

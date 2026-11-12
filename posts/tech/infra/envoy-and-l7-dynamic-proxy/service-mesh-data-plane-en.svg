@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 350.1 432.8" width="100%" style="display: block; max-width: 350.1px; margin: 0 auto" role="img" aria-labelledby="service-mesh-data-plane-title">
+  <title id="service-mesh-data-plane-title">Service Mesh Data Plane</title>
+  <defs>
+    <marker id="service-mesh-data-plane-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="service-mesh-data-plane-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="10" y="149.1" width="320.1" height="263.6" rx="6"/>
+  <text class="d-group-text" x="170.1" y="158.6">Data Plane</text>
+  <rect class="d-group" x="0" y="0" width="308.2" height="82.1" rx="6"/>
+  <text class="d-group-text" x="154.1" y="9.5">Control Plane</text>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M187.707,57.127L196.504,61.294C205.301,65.461,222.895,73.794,231.691,83.544C240.488,93.294,240.488,104.461,240.488,115.627C240.488,126.794,240.488,137.961,240.488,146.827C240.488,155.694,240.488,162.261,240.488,165.544L240.488,168.827" marker-end="url(#service-mesh-data-plane-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M147.109,57.127L145.375,61.294C143.642,65.461,140.174,73.794,138.441,83.544C136.707,93.294,136.707,104.461,136.707,115.627C136.707,126.794,136.707,137.961,136.707,150.395C136.707,162.83,136.707,176.533,136.707,191.652C136.707,206.771,136.707,223.307,141.909,236.548C147.111,249.789,157.514,259.734,162.716,264.707L167.918,269.68" marker-end="url(#service-mesh-data-plane-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M122.898,57.127L114.885,61.294C106.871,65.461,90.844,73.794,82.83,83.544C74.816,93.294,74.816,104.461,74.816,115.627C74.816,126.794,74.816,137.961,74.816,150.395C74.816,162.83,74.816,176.533,74.816,191.652C74.816,206.771,74.816,223.307,74.816,239.843C74.816,256.379,74.816,272.915,74.816,288.034C74.816,303.153,74.816,316.856,82.038,327.466C89.259,338.076,103.702,345.593,110.924,349.352L118.145,353.111" marker-end="url(#service-mesh-data-plane-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M240.488,211.643L240.488,216.343C240.488,221.043,240.488,230.443,235.286,240.116C230.085,249.789,219.681,259.734,214.479,264.707L209.278,269.68" marker-end="url(#service-mesh-data-plane-arrow)" marker-start="url(#service-mesh-data-plane-arrow-start)"/>
+  <path class="d-line" transform="translate(0,0)" d="M188.598,310.858L188.598,314.141C188.598,317.425,188.598,323.991,185.641,330.767C182.684,337.543,176.77,344.528,173.813,348.021L170.856,351.513" marker-end="url(#service-mesh-data-plane-arrow)" marker-start="url(#service-mesh-data-plane-arrow-start)"/>
+  <rect class="d-label-bg" x="224.3" y="106.1" width="32.3" height="19" rx="3"/>
+  <text class="d-text" x="240.5" y="116.6">xDS</text>
+  <rect class="d-label-bg" x="120.5" y="180.7" width="32.3" height="19" rx="3"/>
+  <text class="d-text" x="136.7" y="191.2">xDS</text>
+  <rect class="d-label-bg" x="58.6" y="230.3" width="32.3" height="19" rx="3"/>
+  <text class="d-text" x="74.8" y="240.8">xDS</text>
+  <rect class="d-box" transform="translate(240.5,190.2)" x="-54.609375" y="-16.107666015625" width="109.21875" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="240.5" y="191.2">Envoy sidecar</text>
+  <rect class="d-box" transform="translate(188.6,289.5)" x="-54.609375" y="-16.107666015625" width="109.21875" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="188.6" y="290.4">Envoy sidecar</text>
+  <rect class="d-box" transform="translate(153.8,371.7)" x="-54.609375" y="-16.107666015625" width="109.21875" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="153.8" y="372.7">Envoy sidecar</text>
+  <rect class="d-box" transform="translate(153.8,41.1)" x="-94.6328125" y="-16.063720703125" width="189.265625" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="153.8" y="42.1">Istiod / Consul / App Mesh</text>
+</svg>

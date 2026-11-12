@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 119.2 358" width="100%" style="display: block; max-width: 119.2px; margin: 0 auto" role="img" aria-labelledby="dependency-injection-hierarchy-dip-title">
+  <title id="dependency-injection-hierarchy-dip-title">Dependency Injection — DIP, IoC, DI의 위계</title>
+  <defs>
+    <marker id="dependency-injection-hierarchy-dip-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="dependency-injection-hierarchy-dip-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M49.609,47L49.609,51.167C49.609,55.333,49.609,63.667,49.609,71.117C49.609,78.567,49.609,85.133,49.609,88.417L49.609,91.7" marker-end="url(#dependency-injection-hierarchy-dip-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M49.609,144L49.609,148.167C49.609,152.333,49.609,160.667,49.609,168.117C49.609,175.567,49.609,182.133,49.609,185.417L49.609,188.7" marker-end="url(#dependency-injection-hierarchy-dip-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M49.609,241L49.609,245.167C49.609,249.333,49.609,257.667,49.609,265.117C49.609,272.567,49.609,279.133,49.609,282.417L49.609,285.7" marker-end="url(#dependency-injection-hierarchy-dip-arrow)"/>
+  <rect class="d-box" transform="translate(49.6,23.5)" x="-35.5390625" y="-23.5" width="71.078125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="49.6" y="17">DIP</text>
+  <text class="d-text" x="49.6" y="32">설계 원칙</text>
+  <rect class="d-box" transform="translate(49.6,120.5)" x="-35.5390625" y="-23.5" width="71.078125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="49.6" y="114">IoC</text>
+  <text class="d-text" x="49.6" y="129">제어 패턴</text>
+  <rect class="d-box" transform="translate(49.6,217.5)" x="-35.5390625" y="-23.5" width="71.078125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="49.6" y="211">DI</text>
+  <text class="d-text" x="49.6" y="226">주입 기법</text>
+  <rect class="d-box" transform="translate(49.6,314.5)" x="-49.609375" y="-23.5" width="99.21875" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="49.6" y="308">DI Container</text>
+  <text class="d-text" x="49.6" y="323">자동화 도구</text>
+</svg>

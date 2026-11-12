@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 314.3 280.9" width="100%" style="display: block; max-width: 314.3px; margin: 0 auto" role="img" aria-labelledby="certificates-pki-title">
+  <title id="certificates-pki-title">Certificates and PKI</title>
+  <defs>
+    <marker id="certificates-pki-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="certificates-pki-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M87.749,47L85.908,52.61C84.067,58.22,80.385,69.439,80.351,79.833C80.317,90.226,83.931,99.793,85.738,104.576L87.544,109.36" marker-end="url(#certificates-pki-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M89.417,146.318L87.298,151.928C85.179,157.538,80.941,168.757,86.221,179.475C91.501,190.193,106.298,200.409,113.697,205.517L121.096,210.625" marker-end="url(#certificates-pki-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M267.602,146.318L267.602,151.928C267.602,157.538,267.602,168.757,257.807,179.563C248.013,190.369,228.424,200.76,218.63,205.956L208.835,211.152" marker-end="url(#certificates-pki-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M159.652,213.636L159.652,208.026C159.652,202.416,159.652,191.196,153.1,180.517C146.547,169.838,133.441,159.7,126.888,154.63L120.335,149.561" marker-end="url(#certificates-pki-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M101.505,114.318L103.624,108.708C105.743,103.098,109.981,91.879,110.534,81.498C111.088,71.118,107.957,61.577,106.391,56.806L104.826,52.036" marker-end="url(#certificates-pki-arrow)"/>
+  <rect class="d-label-bg" x="57.2" y="71" width="39" height="19.3" rx="3"/>
+  <text class="d-text" x="76.7" y="81.7">signs</text>
+  <rect class="d-label-bg" x="57.2" y="170.3" width="39" height="19.3" rx="3"/>
+  <text class="d-text" x="76.7" y="181">signs</text>
+  <rect class="d-label-bg" x="241.8" y="170.5" width="51.5" height="19" rx="3"/>
+  <text class="d-text" x="267.6" y="181">verifies</text>
+  <rect class="d-box" transform="translate(95.5,23.5)" x="-87.9609375" y="-23.5" width="175.921875" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="95.5" y="17">Root CA certificate</text>
+  <text class="d-text" x="95.5" y="32">bundled in OS · browser</text>
+  <rect class="d-box" transform="translate(95.5,130.3)" x="-95.4609375" y="-16" width="190.921875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="95.5" y="131.3">Intermediate CA certificate</text>
+  <rect class="d-box" transform="translate(159.7,237.2)" x="-67.5390625" y="-23.607666015625" width="135.078125" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="159.7" y="230.6">Server certificate</text>
+  <text class="d-text" x="159.7" y="245.7">domain public key</text>
+  <rect class="d-box" transform="translate(267.6,130.3)" x="-26.6796875" y="-16" width="53.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="267.6" y="131.3">Client</text>
+</svg>

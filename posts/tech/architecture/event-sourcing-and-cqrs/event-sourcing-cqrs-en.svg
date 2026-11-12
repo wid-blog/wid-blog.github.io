@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 529.4 261.2" width="100%" style="display: block; max-width: 529.4px; margin: 0 auto" role="img" aria-labelledby="event-sourcing-cqrs-title">
+  <title id="event-sourcing-cqrs-title">Event Sourcing and CQRS</title>
+  <defs>
+    <marker id="event-sourcing-cqrs-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="event-sourcing-cqrs-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M84.203,120.608L88.37,120.608C92.536,120.608,100.87,120.608,108.32,120.608C115.77,120.608,122.336,120.608,125.62,120.608L128.903,120.608" marker-end="url(#event-sourcing-cqrs-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M231.781,120.608L235.948,120.608C240.115,120.608,248.448,120.608,255.898,120.608C263.348,120.608,269.915,120.608,273.198,120.608L276.481,120.608" marker-end="url(#event-sourcing-cqrs-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M333.539,104.526L342.696,91.021C351.854,77.517,370.169,50.509,382.61,37.004C395.051,23.5,401.618,23.5,404.901,23.5L408.184,23.5" marker-end="url(#event-sourcing-cqrs-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M363.484,120.608L367.651,120.608C371.818,120.608,380.151,120.608,387.601,120.608C395.051,120.608,401.618,120.608,404.901,120.608L408.184,120.608" marker-end="url(#event-sourcing-cqrs-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M333.539,136.69L342.696,150.194C351.854,163.698,370.169,190.707,382.61,204.211C395.051,217.715,401.618,217.715,404.901,217.715L408.184,217.715" marker-end="url(#event-sourcing-cqrs-arrow)"/>
+  <rect class="d-box" transform="translate(42.1,120.6)" x="-42.1015625" y="-16" width="84.203125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="42.1" y="121.6">Command</text>
+  <path class="d-box" transform="translate(134.2,80.6)" d="M 0,10.95998595998596 a 48.7890625,10.95998595998596 0,0,0 97.578125 0 a 48.7890625,10.95998595998596 0,0,0 -97.578125 0 l 0,58.17531799123596 a 48.7890625,10.95998595998596 0,0,0 97.578125 0 l 0,-58.17531799123596"/>
+  <text class="d-text" x="183" y="114">Event Store</text>
+  <text class="d-text" x="183" y="129.1">append-only</text>
+  <rect class="d-box" transform="translate(322.6,120.6)" x="-40.8515625" y="-16.08203125" width="81.703125" height="32.1640625" rx="4" ry="4"/>
+  <text class="d-text" x="322.6" y="121.6">Projection</text>
+  <rect class="d-box" transform="translate(461.4,23.5)" x="-47.9453125" y="-23.5" width="95.890625" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="461.4" y="17">Read Model</text>
+  <text class="d-text" x="461.4" y="32">Search</text>
+  <rect class="d-box" transform="translate(461.4,120.6)" x="-47.9453125" y="-23.607666015625" width="95.890625" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="461.4" y="114">Read Model</text>
+  <text class="d-text" x="461.4" y="129.1">Analytics</text>
+  <rect class="d-box" transform="translate(461.4,217.7)" x="-47.9453125" y="-23.5" width="95.890625" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="461.4" y="211.2">Read Model</text>
+  <text class="d-text" x="461.4" y="226.2">UI</text>
+</svg>

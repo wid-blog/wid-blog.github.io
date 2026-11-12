@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 43.3 380" width="100%" style="display: block; max-width: 43.3px; margin: 0 auto" role="img" aria-labelledby="find-union-title">
+  <title id="find-union-title">find and union</title>
+  <defs>
+    <marker id="find-union-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="find-union-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M11.672,328L11.672,323.833C11.672,319.667,11.672,311.333,11.672,303.883C11.672,296.433,11.672,289.867,11.672,286.583L11.672,283.3" marker-end="url(#find-union-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M11.672,246L11.672,241.833C11.672,237.667,11.672,229.333,11.672,221.883C11.672,214.433,11.672,207.867,11.672,204.583L11.672,201.3" marker-end="url(#find-union-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M11.672,164L11.672,159.833C11.672,155.667,11.672,147.333,11.672,139.883C11.672,132.433,11.672,125.867,11.672,122.583L11.672,119.3" marker-end="url(#find-union-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M11.672,82L11.672,77.833C11.672,73.667,11.672,65.333,11.672,57.883C11.672,50.433,11.672,43.867,11.672,40.583L11.672,37.3" marker-end="url(#find-union-arrow)"/>
+  <rect class="d-box" transform="translate(11.7,344)" x="-11.671875" y="-16" width="23.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="11.7" y="345">0</text>
+  <rect class="d-box" transform="translate(11.7,262)" x="-11.671875" y="-16" width="23.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="11.7" y="263">1</text>
+  <rect class="d-box" transform="translate(11.7,180)" x="-11.671875" y="-16" width="23.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="11.7" y="181">2</text>
+  <rect class="d-box" transform="translate(11.7,98)" x="-11.671875" y="-16" width="23.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="11.7" y="99">3</text>
+  <rect class="d-box" transform="translate(11.7,16)" x="-11.671875" y="-16" width="23.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="11.7" y="17">4</text>
+</svg>

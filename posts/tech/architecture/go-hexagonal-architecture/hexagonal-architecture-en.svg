@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 1110.4 407.5" width="100%" style="display: block; max-width: 1110.4px; margin: 0 auto" role="img" aria-labelledby="hexagonal-architecture-title">
+  <title id="hexagonal-architecture-title">Hexagonal Architecture</title>
+  <defs>
+    <marker id="hexagonal-architecture-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="hexagonal-architecture-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="439.3" y="0" width="385.1" height="127.9" rx="6"/>
+  <text class="d-group-text" x="631.9" y="9.6">Domain + Application</text>
+  <rect class="d-group" x="222.6" y="147.9" width="601.9" height="102.3" rx="6"/>
+  <text class="d-group-text" x="523.5" y="157.4">Port</text>
+  <rect class="d-group" x="0" y="270.2" width="1090.4" height="117.3" rx="6"/>
+  <text class="d-group-text" x="545.2" y="279.7">Adapter</text>
+  <path class="d-line" transform="translate(0,0)" d="M142.563,328.834L149.23,328.834C155.898,328.834,169.234,328.834,182.57,328.834C195.906,328.834,209.242,328.834,225.943,310.665C242.643,292.495,262.709,256.155,272.741,237.985L282.774,219.815" marker-end="url(#hexagonal-architecture-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M340.938,199.017L349.135,199.017C357.333,199.017,373.729,199.017,390.125,199.017C406.521,199.017,422.917,199.017,444.412,180.828C465.907,162.64,492.502,126.263,505.799,108.075L519.096,89.886" marker-end="url(#hexagonal-architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M603.531,80.116L612.354,81.448C621.177,82.78,638.823,85.444,661.031,101.932C683.24,118.42,710.011,148.732,723.397,163.888L736.782,179.044" marker-end="url(#hexagonal-architecture-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M799.438,199.017L803.604,199.017C807.771,199.017,816.104,199.017,830.829,220.653C845.555,242.289,866.672,285.562,886.906,307.198C907.14,328.834,926.49,328.834,936.165,328.834L945.841,328.834" marker-end="url(#hexagonal-architecture-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M603.531,59.099L612.354,57.767C621.177,56.435,638.823,53.772,658.712,52.44C678.601,51.108,700.732,51.108,711.798,51.108L722.864,51.108" marker-end="url(#hexagonal-architecture-arrow)"/>
+  <rect class="d-label-bg" x="165.6" y="319.3" width="34" height="19" rx="3"/>
+  <text class="d-text" x="182.6" y="329.8">calls</text>
+  <rect class="d-label-bg" x="363.9" y="189.5" width="52.3" height="19" rx="3"/>
+  <text class="d-text" x="390.1" y="200">defines</text>
+  <rect class="d-label-bg" x="638.6" y="78.6" width="35.7" height="19" rx="3"/>
+  <text class="d-text" x="656.5" y="89.1">uses</text>
+  <rect class="d-label-bg" x="847.4" y="319.3" width="80.7" height="19.1" rx="3"/>
+  <text class="d-text" x="887.8" y="329.8">implements</text>
+  <rect class="d-label-bg" x="626.5" y="41.6" width="59.8" height="19" rx="3"/>
+  <text class="d-text" x="656.5" y="52.1">contains</text>
+  <rect class="d-box" transform="translate(754.4,51.1)" x="-26.2578125" y="-16.107666015625" width="52.515625" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="754.4" y="52.1">Entity</text>
+  <rect class="d-box" transform="translate(533.9,69.6)" x="-69.609375" y="-16" width="139.21875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="533.9" y="70.6">UseCase / Service</text>
+  <rect class="d-box" transform="translate(294.3,199)" x="-46.6796875" y="-16.158935546875" width="93.359375" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="294.3" y="200">Driving Port</text>
+  <rect class="d-box" transform="translate(754.4,199)" x="-45.015625" y="-16" width="90.03125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="754.4" y="200">Driven Port</text>
+  <rect class="d-box" transform="translate(83.8,328.8)" x="-58.78125" y="-23.658935546875" width="117.5625" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="83.8" y="322.3">Driving Adapter</text>
+  <text class="d-text" x="83.8" y="337.3">REST, gRPC</text>
+  <rect class="d-box" transform="translate(1008.3,328.8)" x="-57.1171875" y="-23.5" width="114.234375" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="1008.3" y="322.4">Driven Adapter</text>
+  <text class="d-text" x="1008.3" y="337.3">DB, Kafka</text>
+</svg>

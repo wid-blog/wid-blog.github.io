@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 333.4 376.2" width="100%" style="display: block; max-width: 333.4px; margin: 0 auto" role="img" aria-labelledby="segments-title">
+  <title id="segments-title">세그먼트</title>
+  <defs>
+    <marker id="segments-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="segments-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="121.1" y="0" width="192.3" height="356.2" rx="6"/>
+  <text class="d-group-text" x="217.2" y="9.5">Partition 0</text>
+  <path class="d-line" transform="translate(0,0)" d="M71.078,290.154L75.245,290.154C79.411,290.154,87.745,290.154,96.078,290.154C104.411,290.154,112.745,290.154,120.195,290.154C127.645,290.154,134.211,290.154,137.495,290.154L140.778,290.154" marker-end="url(#segments-arrow)"/>
+  <rect class="d-box" transform="translate(217.2,66)" x="-50.3203125" y="-31.03076171875" width="100.640625" height="62.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="217.2" y="52.2">Segment 1</text>
+  <text class="d-text" x="217.2" y="67">base offset 0</text>
+  <text class="d-text" x="217.2" y="82">(closed)</text>
+  <rect class="d-box" transform="translate(217.2,178.1)" x="-71.171875" y="-31.03076171875" width="142.34375" height="62.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="217.2" y="164.2">Segment 2</text>
+  <text class="d-text" x="217.2" y="179.1">base offset 170410</text>
+  <text class="d-text" x="217.2" y="194.1">(closed)</text>
+  <rect class="d-box" transform="translate(217.2,290.2)" x="-71.171875" y="-31.03076171875" width="142.34375" height="62.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="217.2" y="276.3">Segment 3</text>
+  <text class="d-text" x="217.2" y="291.1">base offset 340820</text>
+  <text class="d-text" x="217.2" y="306.2">(active)</text>
+  <rect class="d-box" transform="translate(35.5,290.2)" x="-35.5390625" y="-16" width="71.078125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="35.5" y="291.2">새 메시지</text>
+</svg>

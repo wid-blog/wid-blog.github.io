@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 774.6 149.2" width="100%" style="display: block; max-width: 774.6px; margin: 0 auto" role="img" aria-labelledby="go-gc-title">
+  <title id="go-gc-title">Go GC</title>
+  <defs>
+    <marker id="go-gc-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="go-gc-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-text-inverse { fill: #fff; }
+    .d-mute-dark { fill: rgb(66, 66, 66); stroke: rgb(30, 30, 30); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M96.734,52.74L111.741,47.885C126.747,43.029,156.76,33.318,185.89,28.463C215.02,23.608,243.266,23.608,257.389,23.608L271.513,23.608" marker-end="url(#go-gc-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M467.766,23.608L483.051,23.608C498.336,23.608,528.906,23.608,558.593,23.608C588.28,23.608,617.084,23.608,631.486,23.608L645.888,23.608" marker-end="url(#go-gc-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M96.734,84.039L111.741,88.894C126.747,93.75,156.76,103.461,195.134,108.316C233.507,113.171,280.24,113.171,303.607,113.171L326.973,113.171" marker-end="url(#go-gc-arrow)"/>
+  <rect class="d-label-bg" x="119.7" y="14.1" width="134" height="19" rx="3"/>
+  <text class="d-text" x="186.7" y="24.6">reachable from root</text>
+  <rect class="d-label-bg" x="490.8" y="14" width="137.3" height="19.1" rx="3"/>
+  <text class="d-text" x="559.4" y="24.6">all children explored</text>
+  <rect class="d-label-bg" x="124.7" y="103.6" width="124" height="19.2" rx="3"/>
+  <text class="d-text" x="186.7" y="114.2">stays white at end</text>
+  <rect class="d-mute" transform="translate(48.4,68.4)" x="-48.3671875" y="-23.607666015625" width="96.734375" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="48.4" y="61.8">White</text>
+  <text class="d-text" x="48.4" y="76.9">not yet seen</text>
+  <rect class="d-mute-strong" transform="translate(372.3,23.6)" x="-95.4765625" y="-23.563720703125" width="190.953125" height="47.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="372.3" y="17.1">Gray</text>
+  <text class="d-text" x="372.3" y="32.1">seen / children unexplored</text>
+  <rect class="d-mute-dark" transform="translate(702.9,23.6)" x="-51.6953125" y="-23.607666015625" width="103.390625" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text d-text-inverse" x="702.9" y="17">Black</text>
+  <text class="d-text d-text-inverse" x="702.9" y="32.1">fully explored</text>
+  <rect class="d-bad-strong" transform="translate(372.3,113.2)" x="-40.015625" y="-16" width="80.03125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="372.3" y="114.2">reclaimed</text>
+</svg>

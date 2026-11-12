@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 1055.6 150.4" width="100%" style="display: block; max-width: 1055.6px; margin: 0 auto" role="img" aria-labelledby="java-jit-title">
+  <title id="java-jit-title">Java JIT</title>
+  <defs>
+    <marker id="java-jit-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="java-jit-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M70.016,65.203L74.182,65.203C78.349,65.203,86.682,65.203,94.132,65.203C101.582,65.203,108.149,65.203,111.432,65.203L114.716,65.203" marker-end="url(#java-jit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M205.891,65.203L210.057,65.203C214.224,65.203,222.557,65.203,230.007,65.203C237.457,65.203,244.024,65.203,247.307,65.203L250.591,65.203" marker-end="url(#java-jit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M374.266,56.088L379.823,55.232C385.38,54.376,396.495,52.665,408.193,52.759C419.891,52.854,432.172,54.755,438.312,55.705L444.453,56.655" marker-end="url(#java-jit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M449.69,73.94L442.677,74.859C435.663,75.778,421.636,77.616,409.939,77.813C398.241,78.01,388.872,76.568,384.188,75.846L379.504,75.125" marker-end="url(#java-jit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M571.859,65.703L577.888,65.62C583.917,65.536,595.974,65.37,607.231,65.286C618.489,65.203,628.946,65.203,634.174,65.203L639.403,65.203" marker-end="url(#java-jit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M743.063,84.648L747.229,86.295C751.396,87.943,759.729,91.238,767.179,92.885C774.629,94.533,781.196,94.533,784.479,94.533L787.763,94.533" marker-end="url(#java-jit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M743.063,45.758L747.229,44.111C751.396,42.463,759.729,39.169,776.259,37.521C792.789,35.874,817.516,35.874,842.242,35.874C866.969,35.874,891.695,35.874,908.702,37.762C925.709,39.651,934.997,43.429,939.641,45.318L944.284,47.206" marker-end="url(#java-jit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M891.422,94.533L895.589,94.533C899.755,94.533,908.089,94.533,916.899,92.644C925.709,90.755,934.997,86.978,939.641,85.089L944.284,83.2" marker-end="url(#java-jit-arrow)"/>
+  <rect class="d-label-bg" x="397.3" y="70" width="20.7" height="19" rx="3"/>
+  <text class="d-text" x="407.6" y="80.5">no</text>
+  <rect class="d-label-bg" x="594.4" y="55.6" width="27.3" height="19.2" rx="3"/>
+  <text class="d-text" x="608" y="66.2">yes</text>
+  <rect class="d-box" transform="translate(35,65.2)" x="-35.0078125" y="-23.53076171875" width="70.015625" height="47.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="35" y="58.8">.java</text>
+  <text class="d-text" x="35" y="73.7">(source)</text>
+  <rect class="d-box" transform="translate(163,65.2)" x="-42.9375" y="-23.607666015625" width="85.875" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="163" y="58.6">.class</text>
+  <text class="d-text" x="163" y="73.7">(bytecode)</text>
+  <rect class="d-box" transform="translate(315.1,65.2)" x="-59.1875" y="-16.063720703125" width="118.375" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="315.1" y="66.2">JVM Interpreter</text>
+  <polygon class="d-box" transform="translate(441,130.4)" points="65.203125,0 130.40625,-65.203125 65.203125,-130.40625 0,-65.203125"/>
+  <text class="d-text" x="506.2" y="66.2">hot method?</text>
+  <rect class="d-box" transform="translate(693.9,65.2)" x="-49.1796875" y="-23.563720703125" width="98.359375" height="47.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="693.9" y="58.7">C1 Compiler</text>
+  <text class="d-text" x="693.9" y="73.7">(quick)</text>
+  <rect class="d-box" transform="translate(842.2,94.5)" x="-49.1796875" y="-23.658935546875" width="98.359375" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="842.2" y="87.9">C2 Compiler</text>
+  <text class="d-text" x="842.2" y="103">(aggressive)</text>
+  <rect class="d-box" transform="translate(988.5,65.2)" x="-47.109375" y="-16" width="94.21875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="988.5" y="66.2">Native code</text>
+</svg>

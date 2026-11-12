@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 345.1 315.9" width="100%" style="display: block; max-width: 345.1px; margin: 0 auto" role="img" aria-labelledby="power-two-choices-title">
+  <title id="power-two-choices-title">Power of Two Choices</title>
+  <defs>
+    <marker id="power-two-choices-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="power-two-choices-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M72.953,32.127L72.953,37.729C72.953,43.33,72.953,54.533,82.748,65.322C92.544,76.111,112.134,86.486,121.929,91.674L131.725,96.862" marker-end="url(#power-two-choices-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M260.523,32.127L260.523,37.729C260.523,43.33,260.523,54.533,250.728,65.322C240.933,76.111,221.343,86.486,211.547,91.674L201.752,96.862" marker-end="url(#power-two-choices-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M166.738,131.47L166.738,135.637C166.738,139.804,166.738,148.137,166.738,155.587C166.738,163.037,166.738,169.604,166.738,172.887L166.738,176.17" marker-end="url(#power-two-choices-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M166.738,213.788L166.738,217.955C166.738,222.121,166.738,230.455,166.738,237.905C166.738,245.355,166.738,251.921,166.738,255.205L166.738,258.488" marker-end="url(#power-two-choices-arrow)"/>
+  <rect class="d-label-bg" x="214.3" y="56.1" width="92.3" height="19.2" rx="3"/>
+  <text class="d-text" x="260.5" y="66.7">look at only 2</text>
+  <rect class="d-box" transform="translate(73,16.1)" x="-72.953125" y="-16.063720703125" width="145.90625" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="73" y="17.1">new request arrives</text>
+  <rect class="d-warm" transform="translate(166.7,115.4)" x="-134.65625" y="-16.063720703125" width="269.3125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="166.7" y="116.4">pick 2 random backends from the pool</text>
+  <rect class="d-box" transform="translate(260.5,16.1)" x="-64.6171875" y="-16.063720703125" width="129.234375" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="260.5" y="17.1">backend pool (N)</text>
+  <rect class="d-ok" transform="translate(166.7,197.6)" x="-135.5078125" y="-16.158935546875" width="271.015625" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="166.7" y="198.6">choose the one with fewer outstanding</text>
+  <rect class="d-box" transform="translate(166.7,279.9)" x="-64.2109375" y="-16.063720703125" width="128.421875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="166.7" y="280.9">route the request</text>
+</svg>

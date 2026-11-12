@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 269.6 280" width="100%" style="display: block; max-width: 269.6px; margin: 0 auto" role="img" aria-labelledby="certificates-pki-title">
+  <title id="certificates-pki-title">인증서와 PKI</title>
+  <defs>
+    <marker id="certificates-pki-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="certificates-pki-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M58.804,47L57.189,52.583C55.574,58.167,52.343,69.333,52.309,79.662C52.275,89.991,55.436,99.481,57.016,104.226L58.597,108.972" marker-end="url(#certificates-pki-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M60.272,146L58.412,151.583C56.552,157.167,52.833,168.333,56.629,178.915C60.425,189.497,71.736,199.493,77.392,204.492L83.048,209.49" marker-end="url(#certificates-pki-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M209.656,146L209.656,151.583C209.656,157.167,209.656,168.333,201.008,179.049C192.359,189.765,175.062,200.03,166.414,205.163L157.765,210.295" marker-end="url(#certificates-pki-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M113.609,213L113.609,207.417C113.609,201.833,113.609,190.667,108.809,180.134C104.009,169.602,94.409,159.703,89.609,154.754L84.809,149.805" marker-end="url(#certificates-pki-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M70.931,114L72.791,108.417C74.651,102.833,78.37,91.667,78.86,81.349C79.351,71.03,76.611,61.561,75.242,56.826L73.872,52.091" marker-end="url(#certificates-pki-arrow)"/>
+  <rect class="d-label-bg" x="34.1" y="71" width="30" height="19" rx="3"/>
+  <text class="d-text" x="49.1" y="81.5">서명</text>
+  <rect class="d-label-bg" x="34.1" y="170" width="30" height="19" rx="3"/>
+  <text class="d-text" x="49.1" y="180.5">서명</text>
+  <rect class="d-label-bg" x="179.6" y="170" width="60.1" height="19" rx="3"/>
+  <text class="d-text" x="209.7" y="180.5">검증 방향</text>
+  <rect class="d-box" transform="translate(65.6,23.5)" x="-65.6015625" y="-23.5" width="131.203125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="65.6" y="17">루트 CA 인증서</text>
+  <text class="d-text" x="65.6" y="32">OS · 브라우저 내장</text>
+  <rect class="d-box" transform="translate(65.6,130)" x="-54.1171875" y="-16" width="108.234375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="65.6" y="131">중간 CA 인증서</text>
+  <rect class="d-box" transform="translate(113.6,236.5)" x="-48.515625" y="-23.5" width="97.03125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="113.6" y="230">서버 인증서</text>
+  <text class="d-text" x="113.6" y="245">도메인 공개키</text>
+  <rect class="d-box" transform="translate(209.7,130)" x="-39.9375" y="-16" width="79.875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="209.7" y="131">클라이언트</text>
+</svg>

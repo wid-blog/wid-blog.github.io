@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 361.7 280.2" width="100%" style="display: block; max-width: 361.7px; margin: 0 auto" role="img" aria-labelledby="acme-title">
+  <title id="acme-title">ACME</title>
+  <defs>
+    <marker id="acme-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="acme-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M181.506,47L172.784,52.583C164.062,58.167,146.617,69.333,145.857,80.023C145.097,90.713,161.022,100.926,168.984,106.032L176.946,111.139" marker-end="url(#acme-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M218.219,114L218.219,108.417C218.219,102.833,218.219,91.667,218.219,81.383C218.219,71.1,218.219,61.7,218.219,57L218.219,52.3" marker-end="url(#acme-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M155.584,47L140.703,52.583C125.822,58.167,96.059,69.333,81.178,84.435C66.297,99.536,66.297,118.572,66.297,137.608C66.297,156.644,66.297,175.679,74.125,190.298C81.953,204.917,97.609,215.12,105.436,220.221L113.264,225.322" marker-end="url(#acme-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M218.219,161.215L218.219,166.799C218.219,172.382,218.219,183.549,210.391,194.233C202.563,204.917,186.907,215.12,179.079,220.221L171.251,225.322" marker-end="url(#acme-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M255.03,114L263.736,108.417C272.442,102.833,289.854,91.667,290.581,80.976C291.309,70.286,275.352,60.072,267.373,54.964L259.395,49.857" marker-end="url(#acme-arrow)"/>
+  <rect class="d-label-bg" x="92.6" y="71" width="73" height="19" rx="3"/>
+  <text class="d-text" x="129.1" y="81.5">인증서 요청</text>
+  <rect class="d-label-bg" x="181.7" y="71" width="73" height="19" rx="3"/>
+  <text class="d-text" x="218.2" y="81.5">챌린지 발급</text>
+  <rect class="d-label-bg" x="-2" y="113.1" width="136.5" height="49" rx="3"/>
+  <text class="d-text" x="28" y="123.6">토큰 배치</text>
+  <text class="d-text" x="56.1" y="138.6">HTTP-01: 웹 경로</text>
+  <text class="d-text" x="66.3" y="153.6">DNS-01: TXT 레코드</text>
+  <rect class="d-label-bg" x="203.2" y="185.2" width="29.9" height="19" rx="3"/>
+  <text class="d-text" x="218.2" y="195.7">검증</text>
+  <rect class="d-label-bg" x="270.7" y="71" width="73" height="19" rx="3"/>
+  <text class="d-text" x="307.2" y="81.5">인증서 발급</text>
+  <rect class="d-box" transform="translate(218.2,23.5)" x="-63.6953125" y="-23.5" width="127.390625" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="218.2" y="17">ACME 클라이언트</text>
+  <text class="d-text" x="218.2" y="32">certbot 등</text>
+  <rect class="d-box" transform="translate(218.2,137.6)" x="-50.625" y="-23.607666015625" width="101.25" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="218.2" y="131">CA</text>
+  <text class="d-text" x="218.2" y="146.1">Let's Encrypt</text>
+  <rect class="d-box" transform="translate(142.3,244.2)" x="-26.96875" y="-16" width="53.9375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="142.3" y="245.2">도메인</text>
+</svg>

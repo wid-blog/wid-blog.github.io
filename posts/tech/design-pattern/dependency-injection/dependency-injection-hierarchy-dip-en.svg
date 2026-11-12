@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 163.2 358.5" width="100%" style="display: block; max-width: 163.2px; margin: 0 auto" role="img" aria-labelledby="dependency-injection-hierarchy-dip-title">
+  <title id="dependency-injection-hierarchy-dip-title">Dependency Injection — The Hierarchy of DIP, IoC, and DI</title>
+  <defs>
+    <marker id="dependency-injection-hierarchy-dip-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="dependency-injection-hierarchy-dip-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M71.586,47.318L71.586,51.485C71.586,55.651,71.586,63.985,71.586,71.435C71.586,78.885,71.586,85.451,71.586,88.735L71.586,92.018" marker-end="url(#dependency-injection-hierarchy-dip-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M71.586,144.318L71.586,148.485C71.586,152.651,71.586,160.985,71.586,168.435C71.586,175.885,71.586,182.451,71.586,185.735L71.586,189.018" marker-end="url(#dependency-injection-hierarchy-dip-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M71.586,241.482L71.586,245.649C71.586,249.815,71.586,258.149,71.586,265.599C71.586,273.049,71.586,279.615,71.586,282.899L71.586,286.182" marker-end="url(#dependency-injection-hierarchy-dip-arrow)"/>
+  <rect class="d-box" transform="translate(71.6,23.7)" x="-61.6953125" y="-23.658935546875" width="123.390625" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="71.6" y="17">DIP</text>
+  <text class="d-text" x="71.6" y="32.2">Design Principle</text>
+  <rect class="d-box" transform="translate(71.6,120.8)" x="-57.9453125" y="-23.5" width="115.890625" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="71.6" y="114.3">IoC</text>
+  <text class="d-text" x="71.6" y="129.3">Control Pattern</text>
+  <rect class="d-box" transform="translate(71.6,217.9)" x="-71.5859375" y="-23.58203125" width="143.171875" height="47.1640625" rx="4" ry="4"/>
+  <text class="d-text" x="71.6" y="211.3">DI</text>
+  <text class="d-text" x="71.6" y="226.4">Injection Technique</text>
+  <rect class="d-box" transform="translate(71.6,315)" x="-61.15625" y="-23.5" width="122.3125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="71.6" y="308.5">DI Container</text>
+  <text class="d-text" x="71.6" y="323.5">Automation Tool</text>
+</svg>

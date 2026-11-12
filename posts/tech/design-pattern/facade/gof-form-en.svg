@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 313.4 298.8" width="100%" style="display: block; max-width: 313.4px; margin: 0 auto" role="img" aria-labelledby="gof-form-title">
+  <title id="gof-form-title">The GoF Form</title>
+  <defs>
+    <marker id="gof-form-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="gof-form-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M53.359,139.33L57.526,139.33C61.693,139.33,70.026,139.33,77.476,139.33C84.926,139.33,91.493,139.33,94.776,139.33L98.059,139.33" marker-end="url(#gof-form-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M143.349,123.33L151.692,105.452C160.035,87.575,176.721,51.819,188.486,33.941C200.252,16.064,207.097,16.064,210.52,16.064L213.942,16.064" marker-end="url(#gof-form-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M158.265,123.33L164.122,119.143C169.979,114.956,181.693,106.583,190.833,102.396C199.973,98.209,206.54,98.209,209.823,98.209L213.106,98.209" marker-end="url(#gof-form-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M158.265,155.33L164.122,159.517C169.979,163.703,181.693,172.077,192.499,176.264C203.306,180.45,213.206,180.45,218.156,180.45L223.106,180.45" marker-end="url(#gof-form-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M143.342,155.33L151.686,173.228C160.03,191.126,176.718,226.921,189.804,244.819C202.89,262.717,212.373,262.717,217.115,262.717L221.856,262.717" marker-end="url(#gof-form-arrow)"/>
+  <rect class="d-box" transform="translate(26.7,139.3)" x="-26.6796875" y="-16" width="53.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="26.7" y="140.3">Client</text>
+  <rect class="d-box" transform="translate(135.9,139.3)" x="-32.5234375" y="-16" width="65.046875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="135.9" y="140.3">Facade</text>
+  <rect class="d-box" transform="translate(255.9,16.1)" x="-36.6796875" y="-16.063720703125" width="73.359375" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="255.9" y="17.1">Amplifier</text>
+  <rect class="d-box" transform="translate(255.9,98.2)" x="-37.515625" y="-16.08203125" width="75.03125" height="32.1640625" rx="4" ry="4"/>
+  <text class="d-text" x="255.9" y="99.2">Projector</text>
+  <rect class="d-box" transform="translate(255.9,180.5)" x="-27.515625" y="-16.158935546875" width="55.03125" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="255.9" y="181.4">Lights</text>
+  <rect class="d-box" transform="translate(255.9,262.7)" x="-28.765625" y="-16.107666015625" width="57.53125" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="255.9" y="263.7">Player</text>
+</svg>

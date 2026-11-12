@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 488.2 280.5" width="100%" style="display: block; max-width: 488.2px; margin: 0 auto" role="img" aria-labelledby="acme-title">
+  <title id="acme-title">ACME</title>
+  <defs>
+    <marker id="acme-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="acme-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M208.866,47L198.602,52.61C188.338,58.22,167.81,69.439,170.736,80.659C173.663,91.879,200.045,103.1,213.236,108.71L226.427,114.32" marker-end="url(#acme-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M281.93,114.318L281.93,108.708C281.93,103.098,281.93,91.879,279.39,81.441C276.85,71.003,271.771,61.347,269.232,56.519L266.692,51.691" marker-end="url(#acme-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M203.098,38.667L180.596,45.666C158.094,52.664,113.09,66.662,90.588,83.205C68.086,99.748,68.086,118.837,68.086,137.899C68.086,156.961,68.086,175.997,79.547,190.821C91.009,205.645,113.932,216.258,125.393,221.564L136.854,226.87" marker-end="url(#acme-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M281.93,161.533L281.93,167.117C281.93,172.7,281.93,183.867,270.468,194.756C259.007,205.645,236.084,216.258,224.623,221.564L213.161,226.87" marker-end="url(#acme-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M332.555,115.776L345.932,109.923C359.31,104.071,386.065,92.365,381.577,80.167C377.088,67.97,341.356,55.28,323.489,48.936L305.623,42.591" marker-end="url(#acme-arrow)"/>
+  <rect class="d-label-bg" x="86.1" y="71.1" width="122.3" height="19.1" rx="3"/>
+  <text class="d-text" x="147.2" y="81.7">certificate request</text>
+  <rect class="d-label-bg" x="224.5" y="71" width="114.9" height="19.3" rx="3"/>
+  <text class="d-text" x="281.9" y="81.7">issues challenge</text>
+  <rect class="d-label-bg" x="-2" y="113.4" width="140.1" height="49" rx="3"/>
+  <text class="d-text" x="38.3" y="124">place token</text>
+  <text class="d-text" x="65" y="139">HTTP-01: web path</text>
+  <text class="d-text" x="68.1" y="153.9">DNS-01: TXT record</text>
+  <rect class="d-label-bg" x="256.2" y="185.5" width="51.5" height="19" rx="3"/>
+  <text class="d-text" x="281.9" y="196">verifies</text>
+  <rect class="d-label-bg" x="355.4" y="71.2" width="114.8" height="19" rx="3"/>
+  <text class="d-text" x="412.8" y="81.7">issues certificate</text>
+  <rect class="d-box" transform="translate(251.9,23.5)" x="-48.765625" y="-23.5" width="97.53125" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="251.9" y="17">ACME client</text>
+  <text class="d-text" x="251.9" y="32">certbot, etc.</text>
+  <rect class="d-box" transform="translate(281.9,137.9)" x="-50.625" y="-23.607666015625" width="101.25" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="281.9" y="131.3">CA</text>
+  <text class="d-text" x="281.9" y="146.4">Let's Encrypt</text>
+  <rect class="d-box" transform="translate(175,244.5)" x="-33.34375" y="-16" width="66.6875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="175" y="245.5">Domain</text>
+</svg>

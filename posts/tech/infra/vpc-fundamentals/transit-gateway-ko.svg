@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 480.9 580" width="100%" style="display: block; max-width: 480.9px; margin: 0 auto" role="img" aria-labelledby="transit-gateway-title">
+  <title id="transit-gateway-title">Transit Gateway</title>
+  <defs>
+    <marker id="transit-gateway-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="transit-gateway-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0.5" y="0" width="460.9" height="182" rx="6"/>
+  <text class="d-group-text" x="231" y="9.6">Transit Gateway: hub-spoke</text>
+  <rect class="d-group" x="111.8" y="232" width="238.4" height="328" rx="6"/>
+  <text class="d-group-text" x="231" y="241.7">Peering: mesh</text>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M72.602,65L72.602,69.167C72.602,73.333,72.602,81.667,96.085,92.957C119.568,104.248,166.535,118.495,190.019,125.619L213.502,132.743"/>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M182.211,65L182.211,69.167C182.211,73.333,182.211,81.667,188.325,91.37C194.439,101.073,206.667,112.146,212.781,117.683L218.895,123.219"/>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M292.641,65L292.641,69.167C292.641,73.333,292.641,81.667,286.527,91.37C280.413,101.073,268.185,112.146,262.071,117.683L255.957,123.219"/>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M403.484,65L403.484,69.167C403.484,73.333,403.484,81.667,379.798,92.965C356.111,104.264,308.738,118.528,285.051,125.66L261.364,132.792"/>
+  <path class="d-line" transform="translate(103.8,224)" d="M145.898,65L139.27,69.167C132.643,73.333,119.388,81.667,112.76,90C106.133,98.333,106.133,106.667,106.133,110.833L106.133,115"/>
+  <path class="d-line" transform="translate(103.8,224)" d="M93.368,147L90.043,151.167C86.719,155.333,80.07,163.667,76.746,172C73.422,180.333,73.422,188.667,73.422,192.833L73.422,197"/>
+  <path class="d-line" transform="translate(103.8,224)" d="M175.25,65L176.266,69.167C177.283,73.333,179.315,81.667,180.331,92.667C181.348,103.667,181.348,117.333,181.348,131C181.348,144.667,181.348,158.333,168.43,170.074C155.513,181.814,129.678,191.629,116.761,196.536L103.844,201.443"/>
+  <path class="d-line" transform="translate(103.8,224)" d="M73.422,229L73.422,233.167C73.422,237.333,73.422,245.667,81.024,254C88.626,262.333,103.83,270.667,111.432,274.833L119.034,279"/>
+  <path class="d-line" transform="translate(103.8,224)" d="M184.113,65L187.437,69.167C190.761,73.333,197.41,81.667,200.734,92.667C204.059,103.667,204.059,117.333,204.059,131C204.059,144.667,204.059,158.333,204.059,172C204.059,185.667,204.059,199.333,204.059,213C204.059,226.667,204.059,240.333,198.385,251.333C192.711,262.333,181.363,270.667,175.689,274.833L170.015,279"/>
+  <path class="d-line" transform="translate(103.8,224)" d="M118.898,147L122.222,151.167C125.547,155.333,132.195,163.667,135.519,174.667C138.844,185.667,138.844,199.333,138.844,213C138.844,226.667,138.844,240.333,139.797,251.333C140.751,262.333,142.658,270.667,143.611,274.833L144.565,279"/>
+  <circle class="d-box" transform="translate(229.9,132)" width="50" height="32" rx="0" ry="0" r="25"/>
+  <text class="d-text" x="229.9" y="133">TGW</text>
+  <rect class="d-box" transform="translate(65.1,41)" x="-29.6015625" y="-16" width="59.203125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="65.1" y="42">VPC A</text>
+  <rect class="d-box" transform="translate(174.7,41)" x="-30.0078125" y="-16" width="60.015625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="174.7" y="42">VPC B</text>
+  <rect class="d-box" transform="translate(285.1,41)" x="-30.421875" y="-16" width="60.84375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="285.1" y="42">VPC C</text>
+  <rect class="d-box" transform="translate(396,41)" x="-30.421875" y="-16" width="60.84375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="396" y="42">VPC D</text>
+  <rect class="d-box" transform="translate(209.9,355)" x="-30.0078125" y="-16" width="60.015625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="209.9" y="356">VPC B</text>
+  <rect class="d-box" transform="translate(275.1,273)" x="-29.6015625" y="-16" width="59.203125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="275.1" y="274">VPC A</text>
+  <rect class="d-box" transform="translate(177.2,437)" x="-30.421875" y="-16" width="60.84375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="177.2" y="438">VPC C</text>
+  <rect class="d-box" transform="translate(252,519)" x="-30.421875" y="-16" width="60.84375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="252" y="520">VPC D</text>
+</svg>

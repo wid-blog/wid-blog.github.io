@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 345.9 120.9" width="100%" style="display: block; max-width: 345.9px; margin: 0 auto" role="img" aria-labelledby="commit-title">
+  <title id="commit-title">Commit</title>
+  <defs>
+    <marker id="commit-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="commit-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M25.016,50.637L29.182,50.637C33.349,50.637,41.682,50.637,49.132,50.637C56.582,50.637,63.149,50.637,66.432,50.637L69.716,50.637" marker-end="url(#commit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M100.031,50.637L104.198,50.637C108.365,50.637,116.698,50.637,124.148,50.637C131.598,50.637,138.165,50.637,141.448,50.637L144.731,50.637" marker-end="url(#commit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M172.115,41.525L176.909,36.757C181.702,31.99,191.288,22.456,199.365,17.689C207.442,12.922,214.008,12.922,217.292,12.922L220.575,12.922" marker-end="url(#commit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M172.115,59.749L176.909,64.516C181.702,69.283,191.288,78.817,199.434,83.584C207.58,88.352,214.284,88.352,217.637,88.352L220.989,88.352" marker-end="url(#commit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M251.719,12.922L255.885,12.922C260.052,12.922,268.385,12.922,276.701,17.142C285.017,21.361,293.316,29.801,297.465,34.02L301.615,38.24" marker-end="url(#commit-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M251.305,88.352L255.54,88.352C259.776,88.352,268.247,88.352,276.632,84.132C285.017,79.912,293.316,71.473,297.465,67.253L301.615,63.033" marker-end="url(#commit-arrow)"/>
+  <circle class="d-box" transform="translate(12.5,50.6)" width="25.015625" height="32" rx="0" ry="0" r="12.5078125"/>
+  <text class="d-text" x="12.5" y="51.6">A</text>
+  <circle class="d-box" transform="translate(87.5,50.6)" width="25.015625" height="32" rx="0" ry="0" r="12.5078125"/>
+  <text class="d-text" x="87.5" y="51.6">B</text>
+  <circle class="d-box" transform="translate(163,50.6)" width="25.84375" height="32" rx="0" ry="0" r="12.921875"/>
+  <text class="d-text" x="163" y="51.6">C</text>
+  <circle class="d-box" transform="translate(238.8,12.9)" width="25.84375" height="32" rx="0" ry="0" r="12.921875"/>
+  <text class="d-text" x="238.8" y="13.9">D</text>
+  <circle class="d-box" transform="translate(238.8,88.4)" width="25.015625" height="32" rx="0" ry="0" r="12.5078125"/>
+  <text class="d-text" x="238.8" y="89.4">E</text>
+  <circle class="d-box" transform="translate(313.8,50.6)" width="24.171875" height="32" rx="0" ry="0" r="12.0859375"/>
+  <text class="d-text" x="313.8" y="51.6">F</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 823.4 67.3" width="100%" style="display: block; max-width: 823.4px; margin: 0 auto" role="img" aria-labelledby="pull-request-title">
+  <title id="pull-request-title">Pull Request</title>
+  <defs>
+    <marker id="pull-request-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="pull-request-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M93.953,23.659L98.12,23.659C102.286,23.659,110.62,23.659,118.07,23.659C125.52,23.659,132.086,23.659,135.37,23.659L138.653,23.659" marker-end="url(#pull-request-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M420.75,23.659L424.917,23.659C429.083,23.659,437.417,23.659,444.867,23.659C452.317,23.659,458.883,23.659,462.167,23.659L465.45,23.659" marker-end="url(#pull-request-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M595.797,23.659L599.964,23.659C604.13,23.659,612.464,23.659,619.914,23.659C627.364,23.659,633.93,23.659,637.214,23.659L640.497,23.659" marker-end="url(#pull-request-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M703.328,23.659L707.495,23.659C711.661,23.659,719.995,23.659,727.445,23.659C734.895,23.659,741.461,23.659,744.745,23.659L748.028,23.659" marker-end="url(#pull-request-arrow)"/>
+  <rect class="d-box" transform="translate(47,23.7)" x="-46.9765625" y="-23.53076171875" width="93.953125" height="47.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="47" y="17.2">PR opened</text>
+  <text class="d-text" x="47" y="32.2">(diff bundle)</text>
+  <rect class="d-box" transform="translate(282.4,23.7)" x="-138.3984375" y="-23.658935546875" width="276.796875" height="47.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="282.4" y="17">Review</text>
+  <text class="d-text" x="282.4" y="32.2">(comment / approve / request changes)</text>
+  <rect class="d-box" transform="translate(533.3,23.7)" x="-62.5234375" y="-23.53076171875" width="125.046875" height="47.0615234375" rx="4" ry="4"/>
+  <text class="d-text" x="533.3" y="17.1">CI status checks</text>
+  <text class="d-text" x="533.3" y="32.2">(test / build / lint)</text>
+  <rect class="d-box" transform="translate(674.6,23.7)" x="-28.765625" y="-16.158935546875" width="57.53125" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="674.6" y="24.7">merge</text>
+  <rect class="d-box" transform="translate(778.3,23.7)" x="-25.015625" y="-16" width="50.03125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="778.3" y="24.7">close</text>
+</svg>

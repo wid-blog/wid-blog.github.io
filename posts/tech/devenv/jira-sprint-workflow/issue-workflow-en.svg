@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 445.1 134.3" width="100%" style="display: block; max-width: 445.1px; margin: 0 auto" role="img" aria-labelledby="issue-workflow-title">
+  <title id="issue-workflow-title">Issue and Workflow</title>
+  <defs>
+    <marker id="issue-workflow-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="issue-workflow-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M45.737,41.175L50.898,37.005C56.059,32.836,66.381,24.498,74.825,20.328C83.27,16.159,89.836,16.159,93.12,16.159L96.403,16.159" marker-end="url(#issue-workflow-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M193.406,9.687L197.573,9.099C201.74,8.511,210.073,7.335,217.533,7.25C224.993,7.166,231.58,8.172,234.874,8.676L238.167,9.179" marker-end="url(#issue-workflow-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M324.266,16.159L328.432,16.159C332.599,16.159,340.932,16.159,348.382,16.159C355.832,16.159,362.399,16.159,365.682,16.159L368.966,16.159" marker-end="url(#issue-workflow-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M243.406,22.338L239.24,22.975C235.073,23.612,226.74,24.885,219.281,25.057C211.822,25.23,205.238,24.3,201.946,23.836L198.654,23.371" marker-end="url(#issue-workflow-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M45.737,73.302L50.898,77.471C56.059,81.641,66.381,89.979,77.325,94.149C88.27,98.318,99.836,98.318,105.62,98.318L111.403,98.318" marker-end="url(#issue-workflow-arrow)"/>
+  <rect class="d-box" transform="translate(25.9,57.2)" x="-25.8515625" y="-16.063720703125" width="51.703125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="25.9" y="58.2">Open</text>
+  <rect class="d-box" transform="translate(147.6,16.2)" x="-45.8515625" y="-16.158935546875" width="91.703125" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="147.6" y="17.2">In Progress</text>
+  <rect class="d-box" transform="translate(283.8,16.2)" x="-40.4296875" y="-16" width="80.859375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="283.8" y="17.2">In Review</text>
+  <rect class="d-box" transform="translate(399.7,16.2)" x="-25.4296875" y="-16" width="50.859375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="399.7" y="17.2">Done</text>
+  <rect class="d-box" transform="translate(147.6,98.3)" x="-30.8515625" y="-16" width="61.703125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="147.6" y="99.3">Closed</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 804.4 234" width="100%" style="display: block; max-width: 804.4px; margin: 0 auto" role="img" aria-labelledby="comparison-title">
+  <title id="comparison-title">비교</title>
+  <defs>
+    <marker id="comparison-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="comparison-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="2.6" y="0" width="676.8" height="82" rx="6"/>
+  <text class="d-group-text" x="341" y="9.5">UDP</text>
+  <rect class="d-group" x="0.5" y="132" width="680.9" height="82" rx="6"/>
+  <text class="d-group-text" x="341" y="141.5">TCP</text>
+  <path class="d-line" transform="translate(0,0)" d="M680.938,173L685.104,173C689.271,173,697.604,173,705.938,173C714.271,173,722.604,173,726.771,173L730.938,173"/>
+  <path class="d-line" transform="translate(0,0)" d="M678.875,41L683.385,41C687.896,41,696.917,41,706.676,41C716.435,41,726.932,41,732.181,41L737.43,41"/>
+  <rect class="d-box" transform="translate(64.5,41)" x="-26.96875" y="-16" width="53.9375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="64.5" y="42">비연결</text>
+  <rect class="d-box" transform="translate(192.1,41)" x="-50.59375" y="-16" width="101.1875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="192.1" y="42">순서 보장 없음</text>
+  <rect class="d-box" transform="translate(334.7,41)" x="-42.0234375" y="-16" width="84.046875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="334.7" y="42">재전송 없음</text>
+  <rect class="d-box" transform="translate(462.3,41)" x="-35.5390625" y="-16" width="71.078125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="462.3" y="42">제어 없음</text>
+  <rect class="d-box" transform="translate(596.1,41)" x="-48.28125" y="-16" width="96.5625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="596.1" y="42">8 바이트 헤더</text>
+  <rect class="d-box" transform="translate(71,173)" x="-35.5390625" y="-16" width="71.078125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="71" y="174">연결 지향</text>
+  <rect class="d-box" transform="translate(192.1,173)" x="-35.5390625" y="-16" width="71.078125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="192.1" y="174">순서 보장</text>
+  <rect class="d-box" transform="translate(304.6,173)" x="-26.96875" y="-16" width="53.9375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="304.6" y="174">재전송</text>
+  <rect class="d-box" transform="translate(432.2,173)" x="-50.59375" y="-16" width="101.1875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="432.2" y="174">흐름/혼잡 제어</text>
+  <rect class="d-box" transform="translate(589.6,173)" x="-56.828125" y="-16" width="113.65625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="589.6" y="174">20+ 바이트 헤더</text>
+  <rect class="d-box" transform="translate(757.9,173)" x="-26.96875" y="-16" width="53.9375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="757.9" y="174">신뢰성</text>
+  <rect class="d-box" transform="translate(757.9,41)" x="-20.4765625" y="-16" width="40.953125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="757.9" y="42">속도</text>
+</svg>

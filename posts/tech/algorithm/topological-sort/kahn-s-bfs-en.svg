@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 190 134" width="100%" style="display: block; max-width: 190px; margin: 0 auto" role="img" aria-labelledby="kahn-s-bfs-title">
+  <title id="kahn-s-bfs-title">Kahn's BFS</title>
+  <defs>
+    <marker id="kahn-s-bfs-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="kahn-s-bfs-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M23.344,43.951L27.51,39.292C31.677,34.634,40.01,25.317,47.46,20.658C54.91,16,61.477,16,64.76,16L68.044,16" marker-end="url(#kahn-s-bfs-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M23.344,70.049L27.51,74.708C31.677,79.366,40.01,88.683,47.46,93.342C54.91,98,61.477,98,64.76,98L68.044,98" marker-end="url(#kahn-s-bfs-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M96.688,16L100.854,16C105.021,16,113.354,16,121.099,20C128.843,24,135.999,32,139.576,36L143.154,40" marker-end="url(#kahn-s-bfs-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M96.688,98L100.854,98C105.021,98,113.354,98,121.099,94C128.843,90,135.999,82,139.576,78L143.154,74" marker-end="url(#kahn-s-bfs-arrow)"/>
+  <rect class="d-box" transform="translate(11.7,57)" x="-11.671875" y="-16" width="23.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="11.7" y="58">0</text>
+  <rect class="d-box" transform="translate(85,16)" x="-11.671875" y="-16" width="23.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="85" y="17">1</text>
+  <rect class="d-box" transform="translate(85,98)" x="-11.671875" y="-16" width="23.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="85" y="99">2</text>
+  <rect class="d-box" transform="translate(158.4,57)" x="-11.671875" y="-16" width="23.34375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="158.4" y="58">3</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 1330.8 209.9" width="100%" style="display: block; max-width: 1330.8px; margin: 0 auto" role="img" aria-labelledby="distributed-transactions-title">
+  <title id="distributed-transactions-title">Distributed Transactions</title>
+  <defs>
+    <marker id="distributed-transactions-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="distributed-transactions-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M199.297,94.94L203.464,94.94C207.63,94.94,215.964,94.94,223.414,94.94C230.864,94.94,237.43,94.94,240.714,94.94L243.997,94.94" marker-end="url(#distributed-transactions-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M491.922,94.94L496.089,94.94C500.255,94.94,508.589,94.94,516.122,95.006C523.656,95.072,530.389,95.204,533.756,95.27L537.123,95.336" marker-end="url(#distributed-transactions-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M717.54,80.678L741.281,76.209C765.021,71.739,812.501,62.8,860.798,58.33C909.095,53.861,958.209,53.861,982.766,53.861L1007.323,53.861" marker-end="url(#distributed-transactions-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M717.54,110.202L741.281,114.505C765.021,118.808,812.501,127.414,856.722,131.717C900.942,136.02,941.902,136.02,962.382,136.02L982.862,136.02" marker-end="url(#distributed-transactions-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M1081.271,136.02L1085.438,136.02C1089.604,136.02,1097.938,136.02,1105.388,136.02C1112.838,136.02,1119.404,136.02,1122.688,136.02L1125.971,136.02" marker-end="url(#distributed-transactions-arrow)"/>
+  <rect class="d-label-bg" x="776.3" y="44.3" width="167.4" height="18.7" rx="3"/>
+  <text class="d-text" x="860" y="55.1">Synchronous consensus</text>
+  <rect class="d-label-bg" x="754.8" y="126.5" width="210.4" height="18.6" rx="3"/>
+  <text class="d-text" x="860" y="137.3">Local commits + compensation</text>
+  <rect class="d-box" transform="translate(99.6,94.9)" x="-99.6484375" y="-23.5" width="199.296875" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="99.6" y="88.9">Monolith Single Transaction</text>
+  <text class="d-text" x="99.6" y="103.8">ACID</text>
+  <rect class="d-box" transform="translate(370.6,94.9)" x="-121.3125" y="-16.107666015625" width="242.625" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="370.6" y="96.2">Decomposed at Service Boundary</text>
+  <polygon class="d-box" transform="translate(541.9,189.9)" points="94.940185546875,0 189.88037109375,-94.940185546875 94.940185546875,-189.88037109375 0,-94.940185546875"/>
+  <text class="d-text" x="636.9" y="96.2">Reassembly Strategy</text>
+  <rect class="d-box" transform="translate(1034.7,53.9)" x="-22.09375" y="-16" width="44.1875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="1034.7" y="55.2">2PC</text>
+  <rect class="d-box" transform="translate(1034.7,136)" x="-46.5546875" y="-16.158935546875" width="93.109375" height="32.31787109375" rx="4" ry="4"/>
+  <text class="d-text" x="1034.7" y="137.3">Saga / TCC</text>
+  <rect class="d-box" transform="translate(1221.1,136)" x="-89.78125" y="-23.607666015625" width="179.5625" height="47.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="1221.1" y="129.7">Outbox</text>
+  <text class="d-text" x="1221.1" y="144.8">DB ↔ Event Consistency</text>
+</svg>

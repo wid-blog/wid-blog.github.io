@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 415.2 75.6" width="100%" style="display: block; max-width: 415.2px; margin: 0 auto" role="img" aria-labelledby="write-back-title">
+  <title id="write-back-title">Write-back</title>
+  <defs>
+    <marker id="write-back-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="write-back-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M41.703,22.111L49.9,19.946C58.096,17.781,74.49,13.45,90.023,13.017C105.557,12.584,120.23,16.048,127.567,17.78L134.904,19.513" marker-end="url(#write-back-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M140.063,34.509L131.866,36.444C123.669,38.379,107.276,42.249,91.737,42.245C76.198,42.24,61.513,38.361,54.17,36.421L46.827,34.481" marker-end="url(#write-back-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M198.422,27.62L210.232,27.62C222.042,27.62,245.661,27.62,268.398,27.62C291.134,27.62,312.988,27.62,323.914,27.62L334.841,27.62" marker-end="url(#write-back-arrow)"/>
+  <rect class="d-label-bg" x="64.7" y="-0.4" width="52.3" height="19" rx="3"/>
+  <text class="d-text" x="90.9" y="10.1">1. write</text>
+  <rect class="d-label-bg" x="68.9" y="36.6" width="44" height="19" rx="3"/>
+  <text class="d-text" x="90.9" y="47.1">2. ack</text>
+  <rect class="d-label-bg" x="221.4" y="18" width="95.7" height="19.2" rx="3"/>
+  <text class="d-text" x="269.3" y="28.6">3. async flush</text>
+  <rect class="d-box" transform="translate(20.9,27.6)" x="-20.8515625" y="-16.063720703125" width="41.703125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="20.9" y="28.6">App</text>
+  <rect class="d-box" transform="translate(169.2,27.6)" x="-29.1796875" y="-16" width="58.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="169.2" y="28.6">Cache</text>
+  <path class="d-box" transform="translate(340.1,0)" d="M 0,7.640395798975783 a 27.5078125,7.640395798975783 0,0,0 55.015625 0 a 27.5078125,7.640395798975783 0,0,0 -55.015625 0 l 0,39.95826689272578 a 27.5078125,7.640395798975783 0,0,0 55.015625 0 l 0,-39.95826689272578"/>
+  <text class="d-text" x="367.6" y="28.6">Origin</text>
+</svg>

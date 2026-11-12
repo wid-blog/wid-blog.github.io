@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9.5 -10 690.2 363.1" width="100%" style="display: block; max-width: 690.2px; margin: 0 auto" role="img" aria-labelledby="comparison-vms-title">
+  <title id="comparison-vms-title">VM과의 비교</title>
+  <defs>
+    <marker id="comparison-vms-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="comparison-vms-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="0.5" y="0" width="252.6" height="343.1" rx="6"/>
+  <text class="d-group-text" x="126.8" y="9.5">Container</text>
+  <rect class="d-group" x="303.1" y="48.4" width="367.7" height="246.3" rx="6"/>
+  <text class="d-group-text" x="486.9" y="57.9">VM</text>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M134.293,65L134.293,69.167C134.293,73.333,134.293,81.667,134.293,89.117C134.293,96.567,134.293,103.133,134.293,106.417L134.293,109.7" marker-end="url(#comparison-vms-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M134.293,162L134.293,166.167C134.293,170.333,134.293,178.667,134.293,186.117C134.293,193.567,134.293,200.133,134.293,203.417L134.293,206.7" marker-end="url(#comparison-vms-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M116.4,244L111.74,248.167C107.08,252.333,97.761,260.667,93.101,268.117C88.441,275.567,88.441,282.133,88.441,285.417L88.441,288.7" marker-end="url(#comparison-vms-arrow)"/>
+  <path class="d-line" transform="translate(-7.5,-8)" d="M152.186,244L156.846,248.167C161.506,252.333,170.825,260.667,175.485,268.117C180.145,275.567,180.145,282.133,180.145,285.417L180.145,288.7" marker-end="url(#comparison-vms-arrow)"/>
+  <path class="d-line" transform="translate(295.1,40.4)" d="M191.828,65L191.828,69.167C191.828,73.333,191.828,81.667,191.828,89.117C191.828,96.567,191.828,103.133,191.828,106.417L191.828,109.7" marker-end="url(#comparison-vms-arrow)"/>
+  <path class="d-line" transform="translate(295.1,40.4)" d="M157.772,147.215L148.962,151.382C140.152,155.549,122.533,163.882,113.724,171.332C104.914,178.782,104.914,185.349,104.914,188.632L104.914,191.915" marker-end="url(#comparison-vms-arrow)"/>
+  <path class="d-line" transform="translate(295.1,40.4)" d="M225.885,147.215L234.694,151.382C243.504,155.549,261.123,163.882,269.933,171.332C278.742,178.782,278.742,185.349,278.742,188.632L278.742,191.915" marker-end="url(#comparison-vms-arrow)"/>
+  <rect class="d-box" transform="translate(126.8,130.5)" x="-35.84375" y="-23.5" width="71.6875" height="47" rx="4" ry="4"/>
+  <text class="d-text" x="126.8" y="124">Host OS</text>
+  <text class="d-text" x="126.8" y="139">커널 공유</text>
+  <rect class="d-box" transform="translate(126.8,41)" x="-33.453125" y="-16" width="66.90625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="126.8" y="42">하드웨어</text>
+  <rect class="d-box" transform="translate(126.8,220)" x="-70.03125" y="-16" width="140.0625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="126.8" y="221">Container Runtime</text>
+  <rect class="d-box" transform="translate(80.9,302.1)" x="-20.8515625" y="-16.063720703125" width="41.703125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="80.9" y="303.1">App</text>
+  <rect class="d-box" transform="translate(172.6,302.1)" x="-20.8515625" y="-16.063720703125" width="41.703125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="172.6" y="303.1">App</text>
+  <rect class="d-box" transform="translate(486.9,171.5)" x="-43.34375" y="-16.107666015625" width="86.6875" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="486.9" y="172.5">Hypervisor</text>
+  <rect class="d-box" transform="translate(486.9,89.4)" x="-33.453125" y="-16" width="66.90625" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="486.9" y="90.4">하드웨어</text>
+  <rect class="d-box" transform="translate(400,253.7)" x="-61.9140625" y="-16.063720703125" width="123.828125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="400" y="254.7">Guest OS + App</text>
+  <rect class="d-box" transform="translate(573.8,253.7)" x="-61.9140625" y="-16.063720703125" width="123.828125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="573.8" y="254.7">Guest OS + App</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 1211.3 471.8" width="100%" style="display: block; max-width: 1211.3px; margin: 0 auto" role="img" aria-labelledby="osi-model-tcp-ip-title">
+  <title id="osi-model-tcp-ip-title">The OSI Model and the TCP/IP Model</title>
+  <defs>
+    <marker id="osi-model-tcp-ip-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="osi-model-tcp-ip-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <rect class="d-group" x="642" y="0" width="549.4" height="122.1" rx="6"/>
+  <text class="d-group-text" x="916.6" y="9.6">TCP/IP 4 Layers</text>
+  <rect class="d-group" x="0" y="142.1" width="1073.8" height="309.8" rx="6"/>
+  <text class="d-group-text" x="536.9" y="151.7">OSI 7 Layers</text>
+  <path class="d-line" transform="translate(0,0)" d="M129.11,269.213L133.995,270.786C138.881,272.359,148.651,275.504,157.703,277.077C166.755,278.649,175.089,278.649,179.255,278.649L183.422,278.649"/>
+  <path class="d-line" transform="translate(0,0)" d="M296.819,294.649L302.099,296.233C307.379,297.816,317.94,300.983,327.386,302.566C336.833,304.149,345.167,304.149,349.333,304.149L353.5,304.149"/>
+  <path class="d-line" transform="translate(0,0)" d="M442.719,316.987L446.885,318.186C451.052,319.385,459.385,321.783,467.719,322.982C476.052,324.181,484.385,324.181,488.552,324.181L492.719,324.181"/>
+  <path class="d-line" transform="translate(0,0)" d="M589.341,340.245L593.943,341.818C598.545,343.39,607.749,346.536,616.518,348.109C625.286,349.681,633.62,349.681,641.953,349.681C650.286,349.681,658.62,349.681,662.786,349.681L666.953,349.681"/>
+  <path class="d-line" transform="translate(0,0)" d="M756.587,365.681L760.96,367.265C765.334,368.848,774.081,372.015,782.621,373.598C791.161,375.181,799.495,375.181,803.661,375.181L807.828,375.181"/>
+  <path class="d-line" transform="translate(0,0)" d="M904.165,391.181L908.815,392.774C913.464,394.366,922.763,397.55,931.58,399.143C940.396,400.735,948.729,400.735,952.896,400.735L957.063,400.735"/>
+  <path class="d-line" transform="translate(0,0)" d="M756.586,51.064L760.96,51.064C765.333,51.064,774.081,51.064,784.337,51.064C794.594,51.064,806.359,51.064,812.242,51.064L818.125,51.064"/>
+  <path class="d-line" transform="translate(0,0)" d="M896.766,51.064L902.648,51.064C908.531,51.064,920.297,51.064,932.5,51.064C944.703,51.064,957.344,51.064,963.664,51.064L969.984,51.064"/>
+  <path class="d-line" transform="translate(0,0)" d="M1035.859,51.064L1042.18,51.064C1048.5,51.064,1061.141,51.064,1071.628,51.064C1082.115,51.064,1090.448,51.064,1098.781,52.865C1107.115,54.666,1115.448,58.268,1119.615,60.07L1123.781,61.871"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M94.909,237.086L105.495,226.254C116.08,215.422,137.251,193.759,162.01,182.927C186.768,172.096,215.115,172.096,243.461,172.096C271.807,172.096,300.154,172.096,325.928,172.096C351.703,172.096,374.906,172.096,398.109,172.096C421.313,172.096,444.516,172.096,468.553,172.096C492.591,172.096,517.464,172.096,542.336,172.096C567.208,172.096,592.081,172.096,608.684,172.096C625.286,172.096,633.62,172.096,647.524,155.364C661.427,138.633,680.902,105.171,690.639,88.439L700.376,71.708" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M262.61,262.649L273.592,253.474C284.573,244.298,306.537,225.947,329.12,216.771C351.703,207.596,374.906,207.596,398.109,207.596C421.313,207.596,444.516,207.596,468.553,207.596C492.591,207.596,517.464,207.596,542.336,207.596C567.208,207.596,592.081,207.596,608.684,207.596C625.286,207.596,633.62,207.596,647.959,184.99C662.298,162.384,682.643,117.172,692.815,94.566L702.987,71.961" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M416.351,288.149L424.913,280.64C433.474,273.131,450.596,258.114,471.594,250.605C492.591,243.096,517.464,243.096,542.336,243.096C567.208,243.096,592.081,243.096,608.684,243.096C625.286,243.096,633.62,243.096,648.24,214.597C662.86,186.098,683.767,129.101,694.22,100.602L704.673,72.103" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M568.648,308.118L576.699,303.203C584.75,298.288,600.852,288.457,613.069,283.542C625.286,278.627,633.62,278.627,649.526,278.627C665.432,278.627,688.911,278.627,712.391,278.627C735.87,278.627,759.349,278.627,782.372,244.217C805.394,209.806,827.961,140.985,839.244,106.574L850.527,72.164" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M744.089,333.681L750.546,330.422C757.002,327.163,769.915,320.645,788.808,317.386C807.701,314.127,832.573,314.127,857.445,314.127C882.318,314.127,907.19,314.127,930.488,273.803C953.786,233.479,975.51,152.83,986.372,112.506L997.234,72.181" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M904.165,359.181L908.815,357.589C913.464,355.997,922.763,352.812,939.223,351.22C955.682,349.627,979.302,349.627,1002.922,349.627C1026.542,349.627,1050.161,349.627,1066.138,303.2C1082.115,256.773,1090.448,163.918,1097.898,117.491C1105.348,71.064,1111.915,71.064,1115.198,71.064L1118.481,71.064" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M1048.781,400.735L1052.948,400.735C1057.115,400.735,1065.448,400.735,1073.781,349.123C1082.115,297.511,1090.448,194.288,1097.97,141.225C1105.493,88.162,1112.205,85.261,1115.56,83.81L1118.916,82.36" marker-end="url(#osi-model-tcp-ip-arrow)"/>
+  <rect class="d-box" transform="translate(712.4,51.1)" x="-44.1953125" y="-16.063720703125" width="88.390625" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="712.4" y="52.1">Application</text>
+  <rect class="d-ok" transform="translate(857.4,51.1)" x="-39.3203125" y="-16.063720703125" width="78.640625" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="857.4" y="52.1">Transport</text>
+  <rect class="d-warm" transform="translate(1002.9,51.1)" x="-32.9375" y="-16" width="65.875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="1002.9" y="52.1">Internet</text>
+  <rect class="d-box" transform="translate(1145,71.1)" x="-21.265625" y="-16" width="42.53125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="1145" y="72.1">Link</text>
+  <rect class="d-box" transform="translate(79.2,253.1)" x="-54.2109375" y="-16.063720703125" width="108.421875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="79.2" y="254.1">L7 Application</text>
+  <rect class="d-box" transform="translate(243.5,278.6)" x="-60.0390625" y="-16" width="120.078125" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="243.5" y="279.6">L6 Presentation</text>
+  <rect class="d-box" transform="translate(398.1,304.1)" x="-44.609375" y="-16" width="89.21875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="398.1" y="305.1">L5 Session</text>
+  <rect class="d-ok" transform="translate(542.3,324.2)" x="-49.6171875" y="-16.063720703125" width="99.234375" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="542.3" y="325.2">L4 Transport</text>
+  <rect class="d-warm" transform="translate(712.4,349.7)" x="-45.4375" y="-16" width="90.875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="712.4" y="350.7">L3 Network</text>
+  <rect class="d-box" transform="translate(857.4,375.2)" x="-49.6171875" y="-16" width="99.234375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="857.4" y="376.2">L2 Data Link</text>
+  <rect class="d-box" transform="translate(1002.9,400.7)" x="-45.859375" y="-16.107666015625" width="91.71875" height="32.21533203125" rx="4" ry="4"/>
+  <text class="d-text" x="1002.9" y="401.7">L1 Physical</text>
+</svg>

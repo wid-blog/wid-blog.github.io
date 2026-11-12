@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 433.5 75.7" width="100%" style="display: block; max-width: 433.5px; margin: 0 auto" role="img" aria-labelledby="refresh-ahead-title">
+  <title id="refresh-ahead-title">Refresh-ahead</title>
+  <defs>
+    <marker id="refresh-ahead-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="refresh-ahead-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M41.703,21.282L48.372,19.255C55.042,17.228,68.38,13.174,80.865,12.702C93.351,12.229,104.982,15.339,110.798,16.894L116.614,18.449" marker-end="url(#refresh-ahead-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M121.734,35.421L115.065,37.204C108.396,38.987,95.057,42.553,82.564,42.566C70.071,42.579,58.422,39.039,52.598,37.269L46.774,35.498" marker-end="url(#refresh-ahead-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M180.094,23.046L194.958,20.716C209.823,18.386,239.552,13.726,268.409,13.62C297.266,13.515,325.25,17.964,339.242,20.189L353.234,22.414" marker-end="url(#refresh-ahead-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M358.469,31.993L343.604,34.356C328.74,36.72,299.01,41.447,270.154,41.617C241.297,41.787,213.314,37.401,199.322,35.207L185.33,33.014" marker-end="url(#refresh-ahead-arrow)"/>
+  <rect class="d-label-bg" x="64.7" y="-0.4" width="34" height="19" rx="3"/>
+  <text class="d-text" x="81.7" y="10.1">read</text>
+  <rect class="d-label-bg" x="71.8" y="36.6" width="19.8" height="19" rx="3"/>
+  <text class="d-text" x="81.7" y="47.1">hit</text>
+  <rect class="d-label-bg" x="203.1" y="-0.5" width="132.3" height="19.2" rx="3"/>
+  <text class="d-text" x="269.2" y="10.1">async (near-expiry)</text>
+  <rect class="d-label-bg" x="243.9" y="36.7" width="50.7" height="19" rx="3"/>
+  <text class="d-text" x="269.3" y="47.2">refresh</text>
+  <rect class="d-box" transform="translate(20.9,27.6)" x="-20.8515625" y="-16.063720703125" width="41.703125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="20.9" y="28.6">App</text>
+  <rect class="d-box" transform="translate(150.9,27.6)" x="-29.1796875" y="-16" width="58.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="150.9" y="28.6">Cache</text>
+  <path class="d-box" transform="translate(358.5,0)" d="M 0,7.640395798975783 a 27.5078125,7.640395798975783 0,0,0 55.015625 0 a 27.5078125,7.640395798975783 0,0,0 -55.015625 0 l 0,39.95826689272578 a 27.5078125,7.640395798975783 0,0,0 55.015625 0 l 0,-39.95826689272578"/>
+  <text class="d-text" x="386" y="28.6">Origin</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 322.9 570.1" width="100%" style="display: block; max-width: 322.9px; margin: 0 auto" role="img" aria-labelledby="size-k-min-heap-title">
+  <title id="size-k-min-heap-title">Size-K Min-Heap</title>
+  <defs>
+    <marker id="size-k-min-heap-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="size-k-min-heap-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M123.215,32L123.215,36.167C123.215,40.333,123.215,48.667,123.281,56.2C123.347,63.734,123.48,70.467,123.546,73.834L123.612,77.201" marker-end="url(#size-k-min-heap-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M91.102,201.248L82.66,212.202C74.219,223.155,57.336,245.062,48.895,270.568C40.453,296.075,40.453,325.18,40.453,339.732L40.453,354.285" marker-end="url(#size-k-min-heap-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M156.329,201.248L164.604,212.202C172.879,223.155,189.428,245.062,197.773,260.817C206.119,276.572,206.259,286.175,206.33,290.976L206.4,295.778" marker-end="url(#size-k-min-heap-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M178.319,423.061L172.056,433.272C165.794,443.483,153.269,463.906,147.006,478.835C140.743,493.764,140.743,503.2,140.743,507.918L140.743,512.636" marker-end="url(#size-k-min-heap-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M234.637,423.061L240.733,433.272C246.829,443.483,259.02,463.906,265.116,478.845C271.212,493.785,271.212,503.242,271.212,507.971L271.212,512.699" marker-end="url(#size-k-min-heap-arrow)"/>
+  <rect class="d-label-bg" x="26.8" y="257.4" width="27.3" height="19.2" rx="3"/>
+  <text class="d-text" x="40.4" y="268">yes</text>
+  <rect class="d-label-bg" x="195.6" y="257.5" width="20.7" height="19" rx="3"/>
+  <text class="d-text" x="206" y="268">no</text>
+  <rect class="d-label-bg" x="127.1" y="474.7" width="27.3" height="19.2" rx="3"/>
+  <text class="d-text" x="140.7" y="485.3">yes</text>
+  <rect class="d-label-bg" x="260.9" y="474.8" width="20.7" height="19" rx="3"/>
+  <text class="d-text" x="271.2" y="485.3">no</text>
+  <rect class="d-box" transform="translate(123.2,16)" x="-41.2734375" y="-16" width="82.546875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="123.2" y="17">new value</text>
+  <polygon class="d-box" transform="translate(47.5,233.4)" points="75.680908203125,0 151.36181640625,-75.680908203125 75.680908203125,-151.36181640625 0,-75.680908203125"/>
+  <text class="d-text" x="123.2" y="158.7">heap size &lt; K</text>
+  <rect class="d-box" transform="translate(40.5,375.6)" x="-40.453125" y="-16.063720703125" width="80.90625" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="40.5" y="376.6">heappush</text>
+  <polygon class="d-box" transform="translate(130.9,450.7)" points="75.071533203125,0 150.14306640625,-75.071533203125 75.071533203125,-150.14306640625 0,-75.071533203125"/>
+  <text class="d-text" x="206" y="376.6">value &gt; heap[0]</text>
+  <rect class="d-box" transform="translate(140.7,534)" x="-48.7890625" y="-16.063720703125" width="97.578125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="140.7" y="535">heapreplace</text>
+  <rect class="d-box" transform="translate(271.2,534)" x="-31.6796875" y="-16" width="63.359375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="271.2" y="535">discard</text>
+</svg>

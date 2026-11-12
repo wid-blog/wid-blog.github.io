@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 398.1 134.1" width="100%" style="display: block; max-width: 398.1px; margin: 0 auto" role="img" aria-labelledby="gof-form-title">
+  <title id="gof-form-title">GoF 원형</title>
+  <defs>
+    <marker id="gof-form-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="gof-form-arrow-start" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,5 L10,10 L10,0 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-thick { stroke-width: 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-accent-strong { fill: rgba(70, 130, 220, 0.34); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-warm-strong { fill: rgba(220, 130, 40, 0.34); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-bad-strong { fill: rgba(210, 70, 70, 0.34); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-violet-strong { fill: rgba(150, 90, 200, 0.34); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-yellow { fill: rgba(200, 170, 30, 0.14); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-yellow-strong { fill: rgba(200, 170, 30, 0.34); stroke: rgb(200, 170, 30); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-mute-strong { fill: rgba(128, 128, 128, 0.34); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+  </style>
+
+  <path class="d-line" transform="translate(0,0)" d="M49.188,25.384L56.518,21.456C63.849,17.527,78.51,9.671,92.866,7.211C107.221,4.75,121.271,7.687,128.295,9.156L135.32,10.624" marker-end="url(#gof-form-arrow)"/>
+  <path class="d-line" transform="translate(0,0)" d="M182.18,12.43L192.326,10.661C202.471,8.891,222.763,5.352,241.622,4.873C260.482,4.393,277.908,6.972,286.622,8.261L295.335,9.551" marker-end="url(#gof-form-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M300.578,21.801L290.991,23.22C281.404,24.638,262.229,27.476,243.366,27.277C224.503,27.078,205.952,23.843,196.677,22.226L187.401,20.608" marker-end="url(#gof-form-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M140.508,22.941L132.618,25.544C124.729,28.148,108.951,33.356,94.614,35.96C80.277,38.564,67.382,38.564,60.935,38.564L54.488,38.564" marker-end="url(#gof-form-arrow)"/>
+  <path class="d-line d-dot" transform="translate(0,0)" d="M43.108,54.627L51.452,61.867C59.796,69.106,76.484,83.585,91.275,90.824C106.067,98.064,118.961,98.064,125.409,98.064L131.856,98.064" marker-end="url(#gof-form-arrow)"/>
+  <rect class="d-label-bg" x="208.5" y="20.8" width="69" height="19" rx="3"/>
+  <text class="d-text" x="243" y="31.3">cost 3000</text>
+  <rect class="d-label-bg" x="72.2" y="29.1" width="41.9" height="19" rx="3"/>
+  <text class="d-text" x="93.2" y="39.6">+ 500</text>
+  <rect class="d-label-bg" x="72.2" y="88.6" width="41.9" height="19" rx="3"/>
+  <text class="d-text" x="93.2" y="99.1">+ 700</text>
+  <rect class="d-box" transform="translate(24.6,38.6)" x="-24.59375" y="-16.063720703125" width="49.1875" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="24.6" y="39.6">Whip</text>
+  <rect class="d-box" transform="translate(161.3,16.1)" x="-20.8359375" y="-16" width="41.671875" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="161.3" y="17.1">Milk</text>
+  <rect class="d-box" transform="translate(339.3,16.1)" x="-38.765625" y="-16.063720703125" width="77.53125" height="32.12744140625" rx="4" ry="4"/>
+  <text class="d-text" x="339.3" y="17.1">Espresso</text>
+  <rect class="d-box" transform="translate(161.3,98.1)" x="-24.1875" y="-16" width="48.375" height="32" rx="4" ry="4"/>
+  <text class="d-text" x="161.3" y="99.1">4200</text>
+</svg>
