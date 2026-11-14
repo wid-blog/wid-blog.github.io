@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 398" width="100%" style="display: block; max-width: 600px; margin: 0 auto" role="img" aria-labelledby="token-lifetimes-title">
+  <title id="token-lifetimes-title">next_token 반환 타입에 따른 대여 구간</title>
+  <style>
+    .d-head { fill: var(--primary); font: bold 13px sans-serif; dominant-baseline: central; }
+    .d-code { fill: var(--primary); font: 12px monospace; dominant-baseline: central; }
+    .d-sub { fill: var(--secondary); font: 12px sans-serif; text-anchor: start; dominant-baseline: central; }
+    .d-col { fill: var(--secondary); font: 11px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-frame { fill: none; stroke: var(--tertiary); stroke-width: 1; }
+    .d-scope { fill: none; stroke: var(--secondary); stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .d-shared { fill: rgba(70, 130, 220, 0.55); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .d-mut { fill: rgba(220, 130, 40, 0.55); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .d-conflict { fill: rgba(210, 70, 70, 0.14); }
+  </style>
+  <rect class="d-frame" x="10" y="10" width="580" height="154" rx="6"/>
+  <rect class="d-conflict" x="11" y="100" width="578" height="28"/>
+  <text class="d-head" x="30" y="29.0">-&gt; Option&lt;&amp;str&gt; · 거부됨 (E0499)</text>
+  <text class="d-col" x="399.0" y="29.0">line</text>
+  <text class="d-col" x="439.0" y="29.0">#1</text>
+  <text class="d-col" x="479.0" y="29.0">#2</text>
+  <text class="d-code" x="30" y="58.0">let mut tokens = Tokens { rest: &amp;line };</text>
+  <text class="d-code" x="30" y="86.0">let method = tokens.next_token();</text>
+  <text class="d-code" x="30" y="114.0">let path = tokens.next_token();</text>
+  <text class="d-code" x="30" y="142.0">println!(&quot;{method:?} {path:?}&quot;);</text>
+  <rect class="d-shared" x="392" y="48" width="14" height="104" rx="3"/>
+  <rect class="d-mut" x="432" y="76" width="14" height="76" rx="3"/>
+  <rect class="d-mut" x="472" y="104" width="14" height="20" rx="3"/>
+  <rect class="d-frame" x="10" y="178" width="580" height="154" rx="6"/>
+  <text class="d-head" x="30" y="197.0">-&gt; Option&lt;&amp;&#x27;a str&gt; · 컴파일됨</text>
+  <text class="d-col" x="399.0" y="197.0">line</text>
+  <text class="d-col" x="439.0" y="197.0">#1</text>
+  <text class="d-col" x="479.0" y="197.0">#2</text>
+  <text class="d-code" x="30" y="226.0">let mut tokens = Tokens { rest: &amp;line };</text>
+  <text class="d-code" x="30" y="254.0">let method = tokens.next_token();</text>
+  <text class="d-code" x="30" y="282.0">let path = tokens.next_token();</text>
+  <text class="d-code" x="30" y="310.0">println!(&quot;{method:?} {path:?}&quot;);</text>
+  <rect class="d-shared" x="392" y="216" width="14" height="104" rx="3"/>
+  <rect class="d-mut" x="432" y="244" width="14" height="20" rx="3"/>
+  <rect class="d-mut" x="472" y="272" width="14" height="20" rx="3"/>
+  <rect class="d-shared" x="30" y="347" width="14" height="14" rx="3"/>
+  <text class="d-sub" x="54" y="354">line 의 불변 대여 (tokens · method · path)</text>
+  <rect class="d-mut" x="30" y="369" width="14" height="14" rx="3"/>
+  <text class="d-sub" x="54" y="376">next_token 호출마다 생기는 &amp;mut tokens 대여</text>
+</svg>

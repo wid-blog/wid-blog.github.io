@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="100%" style="display: block; max-width: 600px; margin: 0 auto" role="img" aria-labelledby="borrow-regions-title">
+  <title id="borrow-regions-title">Variable scope vs. borrow region (NLL)</title>
+  <style>
+    .d-head { fill: var(--primary); font: bold 13px sans-serif; dominant-baseline: central; }
+    .d-code { fill: var(--primary); font: 12px monospace; dominant-baseline: central; }
+    .d-sub { fill: var(--secondary); font: 12px sans-serif; text-anchor: start; dominant-baseline: central; }
+    .d-col { fill: var(--secondary); font: 11px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-frame { fill: none; stroke: var(--tertiary); stroke-width: 1; }
+    .d-scope { fill: none; stroke: var(--secondary); stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .d-shared { fill: rgba(70, 130, 220, 0.55); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .d-mut { fill: rgba(220, 130, 40, 0.55); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .d-conflict { fill: rgba(210, 70, 70, 0.14); }
+  </style>
+  <rect class="d-frame" x="10" y="10" width="580" height="154" rx="6"/>
+  <rect class="d-conflict" x="11" y="72" width="578" height="28"/>
+  <text class="d-head" x="30" y="29.0">Rejected (E0502)</text>
+  <text class="d-col" x="399.0" y="29.0">scope</text>
+  <text class="d-col" x="439.0" y="29.0">&amp;</text>
+  <text class="d-col" x="479.0" y="29.0">&amp;mut</text>
+  <text class="d-code" x="30" y="58.0">let first = &amp;scores[0];</text>
+  <text class="d-code" x="30" y="86.0">scores.push(40);</text>
+  <text class="d-code" x="30" y="114.0">println!(&quot;{first}&quot;);</text>
+  <text class="d-code" x="30" y="142.0">}</text>
+  <rect class="d-scope" x="392" y="48" width="14" height="104" rx="3"/>
+  <rect class="d-shared" x="432" y="48" width="14" height="76" rx="3"/>
+  <rect class="d-mut" x="472" y="76" width="14" height="20" rx="3"/>
+  <rect class="d-frame" x="10" y="178" width="580" height="154" rx="6"/>
+  <text class="d-head" x="30" y="197.0">Compiles</text>
+  <text class="d-col" x="399.0" y="197.0">scope</text>
+  <text class="d-col" x="439.0" y="197.0">&amp;</text>
+  <text class="d-col" x="479.0" y="197.0">&amp;mut</text>
+  <text class="d-code" x="30" y="226.0">let first = &amp;scores[0];</text>
+  <text class="d-code" x="30" y="254.0">println!(&quot;{first}&quot;);</text>
+  <text class="d-code" x="30" y="282.0">scores.push(40);</text>
+  <text class="d-code" x="30" y="310.0">}</text>
+  <rect class="d-scope" x="392" y="216" width="14" height="104" rx="3"/>
+  <rect class="d-shared" x="432" y="216" width="14" height="48" rx="3"/>
+  <rect class="d-mut" x="472" y="272" width="14" height="20" rx="3"/>
+  <rect class="d-scope" x="30" y="347" width="14" height="14" rx="3"/>
+  <text class="d-sub" x="54" y="354">scope of the variable first</text>
+  <rect class="d-shared" x="30" y="369" width="14" height="14" rx="3"/>
+  <text class="d-sub" x="54" y="376">immutable borrow by first — until its last use</text>
+  <rect class="d-mut" x="30" y="391" width="14" height="14" rx="3"/>
+  <text class="d-sub" x="54" y="398">mutable borrow by push</text>
+</svg>
