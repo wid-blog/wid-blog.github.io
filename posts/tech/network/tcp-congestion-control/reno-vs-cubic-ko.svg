@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" width="100%" style="display: block; max-width: 500px; margin: 0 auto" role="img" aria-labelledby="reno-vs-cubic-title">
+  <title id="reno-vs-cubic-title">Reno 와 CUBIC 의 cwnd 변화</title>
+  <defs>
+    <marker id="reno-vs-cubic-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+    <marker id="reno-vs-cubic-arrow-ai" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: rgb(60, 160, 90)"/>
+    </marker>
+    <marker id="reno-vs-cubic-arrow-md" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: rgb(220, 130, 40)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 13px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-text-start { fill: var(--primary); font: 13px sans-serif; text-anchor: start; dominant-baseline: central; }
+    .d-text-end { fill: var(--primary); font: 13px sans-serif; text-anchor: end; dominant-baseline: central; }
+    .d-sub { fill: var(--secondary); font: 12px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-sub-start { fill: var(--secondary); font: 12px sans-serif; text-anchor: start; dominant-baseline: central; }
+    .d-axis { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-guide { stroke: var(--tertiary); stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-ai { stroke: rgb(60, 160, 90); stroke-width: 2; fill: none; }
+    .d-md { stroke: rgb(220, 130, 40); stroke-width: 2; fill: none; }
+    .d-curve-a { stroke: rgb(70, 130, 220); stroke-width: 2.5; fill: none; }
+    .d-curve-b { stroke: rgb(220, 130, 40); stroke-width: 2.5; fill: none; }
+    .d-loss { fill: rgb(210, 70, 70); }
+    .d-point { fill: rgb(70, 130, 220); }
+    .d-ok-zone { fill: rgba(60, 160, 90, 0.10); }
+    .d-warm-zone { fill: rgba(220, 130, 40, 0.10); }
+    .d-bad-zone { fill: rgba(210, 70, 70, 0.10); }
+  </style>
+  <path class="d-axis" d="M60,34 L60,160 L478,160" marker-end="url(#reno-vs-cubic-arrow)"/>
+  <text class="d-text-start" x="68" y="36">Reno: RTT 마다 1 SMSS 증가, 손실 시 절반</text>
+  <text class="d-sub" x="38" y="100.0" transform="rotate(-90 38 100.0)">cwnd</text>
+  <path class="d-guide" d="M60,80.0 L470,80.0"/>
+  <text class="d-sub-start" x="420" y="71.0">W_max</text>
+  <path class="d-curve-a" d="M60.0,146.7 L196.7,80.0 L196.7,146.7 L333.3,80.0 L333.3,146.7 L470.0,80.0"/>
+  <circle class="d-loss" cx="196.7" cy="80.0" r="4"/>
+  <circle class="d-loss" cx="333.3" cy="80.0" r="4"/>
+  <circle class="d-loss" cx="470.0" cy="80.0" r="4"/>
+  <path class="d-axis" d="M60,224 L60,350 L478,350" marker-end="url(#reno-vs-cubic-arrow)"/>
+  <text class="d-text-start" x="68" y="226">CUBIC: 3차 곡선, 손실 시 0.7배</text>
+  <text class="d-sub" x="38" y="290.0" transform="rotate(-90 38 290.0)">cwnd</text>
+  <path class="d-curve-b" d="M60.0,310.0 L64.2,306.5 L68.5,303.2 L72.7,300.1 L76.9,297.3 L81.2,294.6 L85.4,292.1 L89.7,289.7 L93.9,287.6 L98.1,285.6 L102.4,283.7 L106.6,282.0 L110.8,280.5 L115.1,279.1 L119.3,277.8 L123.5,276.7 L127.8,275.6 L132.0,274.7 L136.3,273.9 L140.5,273.2 L144.7,272.6 L149.0,272.0 L153.2,271.6 L157.4,271.2 L161.7,270.9 L165.9,270.6 L170.2,270.4 L174.4,270.3 L178.6,270.2 L182.9,270.1 L187.1,270.0 L191.3,270.0 L195.6,270.0 L199.8,270.0 L204.0,270.0 L208.3,270.0 L212.5,270.0 L216.8,269.9 L221.0,269.9 L225.2,269.8 L229.5,269.7 L233.7,269.5 L237.9,269.3 L242.2,269.0 L246.4,268.7 L250.6,268.3 L254.9,267.8 L259.1,267.2 L263.4,266.6 L267.6,265.8 L271.8,265.0 L276.1,264.0 L280.3,263.0 L284.5,261.8 L288.8,260.5 L293.0,259.0 L297.3,257.4 L301.5,255.7 L305.7,253.8 L310.0,251.7 L314.2,249.5 L314.2,295.7 L316.8,293.2 L319.4,290.8 L322.0,288.4 L324.6,286.2 L327.2,284.1 L329.8,282.0 L332.4,280.0 L335.0,278.1 L337.6,276.3 L340.2,274.6 L342.8,272.9 L345.4,271.4 L348.0,269.9 L350.6,268.4 L353.1,267.0 L355.7,265.7 L358.3,264.5 L360.9,263.3 L363.5,262.2 L366.1,261.2 L368.7,260.2 L371.3,259.3 L373.9,258.4 L376.5,257.6 L379.1,256.8 L381.7,256.1 L384.3,255.4 L386.9,254.8 L389.5,254.2 L392.1,253.7 L394.7,253.2 L397.3,252.7 L399.9,252.3 L402.5,252.0 L405.1,251.6 L407.7,251.3 L410.3,251.0 L412.9,250.8 L415.5,250.6 L418.1,250.4 L420.7,250.2 L423.3,250.1 L425.9,249.9 L428.5,249.8 L431.1,249.8 L433.6,249.7 L436.2,249.6 L438.8,249.6 L441.4,249.6 L444.0,249.5 L446.6,249.5 L449.2,249.5 L451.8,249.5 L454.4,249.5 L457.0,249.5 L459.6,249.5 L462.2,249.5 L464.8,249.5 L467.4,249.5 L470.0,249.5"/>
+  <circle class="d-loss" cx="314.2" cy="249.5" r="4"/>
+  <path class="d-guide" d="M60.0,270.0 L314.2,270.0"/>
+  <path class="d-guide" d="M314.2,249.5 L470.0,249.5"/>
+  <text class="d-sub-start" x="68.2" y="261.0">W_max</text>
+  <text class="d-sub-start" x="72.3" y="334.0">concave: W_max 까지 빠르게 회복</text>
+  <text class="d-sub" x="201.0" y="284.7">W_max 근처에서 천천히</text>
+  <text class="d-text-end" style="font-size: 12px; fill: var(--secondary)" x="306.0" y="238.0">convex: 새 대역폭 탐색</text>
+  <text class="d-sub" x="265.0" y="372">시간 →</text>
+  <circle class="d-loss" cx="66" cy="400" r="4"/>
+  <text class="d-text-start" x="76" y="400">손실</text>
+</svg>
