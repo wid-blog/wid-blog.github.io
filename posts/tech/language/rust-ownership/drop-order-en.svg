@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="100%" style="display: block; max-width: 600px; margin: 0 auto" role="img" aria-labelledby="drop-order-title">
+  <title id="drop-order-title">Drop order in main: variables in reverse declaration order, fields in declaration order</title>
+  <style>
+    .d-head { fill: var(--primary); font: bold 13px sans-serif; dominant-baseline: central; }
+    .d-code { fill: var(--primary); font: 12px monospace; dominant-baseline: central; }
+    .d-note { fill: var(--secondary); font: 12px sans-serif; dominant-baseline: central; }
+    .d-sub { fill: var(--secondary); font: 12px sans-serif; text-anchor: start; dominant-baseline: central; }
+    .d-col { fill: var(--secondary); font: 11px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-num { fill: var(--primary); font: bold 12px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-frame { fill: none; stroke: var(--tertiary); stroke-width: 1; }
+    .d-scope { fill: none; stroke: var(--secondary); stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .d-var { fill: rgba(70, 130, 220, 0.55); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .d-field { fill: rgba(220, 130, 40, 0.55); stroke: rgb(220, 130, 40); stroke-width: 1; }
+  </style>
+  <rect class="d-frame" x="10" y="10" width="580" height="330" rx="6"/>
+  <text class="d-code" x="30" y="32">fn main() {</text>
+  <text class="d-col" x="520" y="32">drop order</text>
+  <rect class="d-scope" x="40" y="108" width="440" height="80" rx="4"/>
+  <text class="d-code" x="50" y="64">let _first = Connection { .. };</text>
+  <circle class="d-var" cx="520" cy="64" r="11"/>
+  <text class="d-num" x="520" y="64">5</text>
+  <text class="d-code" x="50" y="92">let _second = Connection { .. };</text>
+  <circle class="d-var" cx="520" cy="92" r="11"/>
+  <text class="d-num" x="520" y="92">4</text>
+  <text class="d-code" x="50" y="120">{</text>
+  <text class="d-code" x="74" y="148">let _inner = Connection { .. };</text>
+  <circle class="d-var" cx="520" cy="148" r="11"/>
+  <text class="d-num" x="520" y="148">1</text>
+  <text class="d-code" x="50" y="176">}</text>
+  <text class="d-note" x="90" y="176">inner scope ends: ①</text>
+  <text class="d-code" x="50" y="204">let _session = Session {</text>
+  <text class="d-code" x="74" y="232">conn: Connection { .. },</text>
+  <circle class="d-field" cx="520" cy="232" r="11"/>
+  <text class="d-num" x="520" y="232">2</text>
+  <text class="d-code" x="74" y="260">cache: Connection { .. },</text>
+  <circle class="d-field" cx="520" cy="260" r="11"/>
+  <text class="d-num" x="520" y="260">3</text>
+  <text class="d-code" x="50" y="288">};</text>
+  <text class="d-code" x="30" y="316">}</text>
+  <text class="d-note" x="90" y="316">main ends: ② → ⑤</text>
+  <circle class="d-var" cx="37" cy="364" r="7"/>
+  <text class="d-sub" x="54" y="364">variable — reverse declaration order</text>
+  <circle class="d-field" cx="37" cy="390" r="7"/>
+  <text class="d-sub" x="54" y="390">struct field — declaration order</text>
+</svg>
