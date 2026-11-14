@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 632" width="100%" style="display: block; max-width: 720px; margin: 0 auto" role="img" aria-labelledby="arc-job-lifecycle-title">
+  <title id="arc-job-lifecycle-title">ARC job 생애주기</title>
+  <defs>
+    <marker id="arc-job-lifecycle-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-small { fill: var(--secondary); font: 12px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-code { fill: var(--primary); font: bold 14px monospace; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 13px sans-serif; text-anchor: start; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-life { stroke: var(--tertiary); stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-band { fill: rgba(128, 128, 128, 0.05); stroke: none; }
+  </style>
+
+  <line class="d-life" x1="110" y1="50" x2="110" y2="622"/>
+  <line class="d-life" x1="290" y1="50" x2="290" y2="622"/>
+  <line class="d-life" x1="470" y1="50" x2="470" y2="622"/>
+  <line class="d-life" x1="630" y1="50" x2="630" y2="622"/>
+  <rect class="d-band" x="10" y="70" width="700" height="126" rx="4"/>
+  <text class="d-group-text" x="20" y="83">준비</text>
+  <path class="d-line" d="M470,100 L114,100" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="225.04" y="80" width="129.92000000000002" height="18" rx="3"/>
+  <text class="d-small" x="290.0" y="89">scale set 조회·생성</text>
+  <path class="d-line" d="M470,134 L294,134" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="320.32" y="114" width="119.36000000000001" height="18" rx="3"/>
+  <text class="d-small" x="380.0" y="123">listener pod 생성</text>
+  <path class="d-line" d="M290,168 L114,168" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="150.4" y="148" width="99.2" height="18" rx="3"/>
+  <text class="d-small" x="200.0" y="157">long poll 연결</text>
+  <rect class="d-band" x="10" y="208" width="700" height="160" rx="4"/>
+  <text class="d-group-text" x="20" y="221">스케일업</text>
+  <path class="d-line" d="M110,238 L286,238" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="152.32" y="218" width="95.36000000000001" height="18" rx="3"/>
+  <text class="d-small" x="200.0" y="227">Job Available</text>
+  <path class="d-line" d="M290,272 L466,272" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="265.12" y="252" width="229.76000000000002" height="18" rx="3"/>
+  <text class="d-small" x="380.0" y="261">EphemeralRunnerSet replicas patch</text>
+  <path class="d-line" d="M470,306 L114,306" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="245.2" y="286" width="89.60000000000001" height="18" rx="3"/>
+  <text class="d-small" x="290.0" y="295">JIT 토큰 요청</text>
+  <path class="d-line" d="M470,340 L626,340" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="497.04" y="320" width="105.92" height="18" rx="3"/>
+  <text class="d-small" x="550.0" y="329">runner pod 생성</text>
+  <rect class="d-band" x="10" y="380" width="700" height="126" rx="4"/>
+  <text class="d-group-text" x="20" y="393">실행</text>
+  <path class="d-line" d="M630,410 L114,410" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="279.6" y="390" width="180.8" height="18" rx="3"/>
+  <text class="d-small" x="370.0" y="399">JIT 토큰으로 등록·long poll</text>
+  <path class="d-line" d="M110,444 L626,444" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="325.2" y="424" width="89.60000000000001" height="18" rx="3"/>
+  <text class="d-small" x="370.0" y="433">job 상세 전달</text>
+  <path class="d-line" d="M630,478 L114,478" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="323.28" y="458" width="93.44" height="18" rx="3"/>
+  <text class="d-small" x="370.0" y="467">로그·상태 전송</text>
+  <rect class="d-band" x="10" y="518" width="700" height="92" rx="4"/>
+  <text class="d-group-text" x="20" y="531">정리</text>
+  <path class="d-line" d="M470,548 L114,548" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="227.92000000000002" y="528" width="124.16" height="18" rx="3"/>
+  <text class="d-small" x="290.0" y="537">삭제 가능 여부 확인</text>
+  <path class="d-line" d="M470,582 L626,582" marker-end="url(#arc-job-lifecycle-arrow)"/>
+  <rect class="d-label-bg" x="466.8" y="562" width="166.4" height="18" rx="3"/>
+  <text class="d-small" x="550.0" y="571">EphemeralRunner·pod 삭제</text>
+  <rect class="d-accent" x="39.19999999999999" y="10" width="141.60000000000002" height="40" rx="4" ry="4"/>
+  <text class="d-text" x="110.0" y="30.0">Actions Service</text>
+  <rect class="d-warm" x="246.64" y="10" width="86.72" height="40" rx="4" ry="4"/>
+  <text class="d-text" x="290.0" y="30.0">listener</text>
+  <rect class="d-mute" x="418.8" y="10" width="102.4" height="40" rx="4" ry="4"/>
+  <text class="d-text" x="470.0" y="30.0">controller</text>
+  <rect class="d-ok" x="578.8" y="10" width="102.4" height="40" rx="4" ry="4"/>
+  <text class="d-text" x="630.0" y="30.0">runner pod</text>
+</svg>

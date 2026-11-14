@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 470" width="100%" style="display: block; max-width: 680px; margin: 0 auto" role="img" aria-labelledby="arc-components-title">
+  <title id="arc-components-title">ARC runner scale set components</title>
+  <defs>
+    <marker id="arc-components-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-small { fill: var(--secondary); font: 12px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-code { fill: var(--primary); font: bold 14px monospace; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 13px sans-serif; text-anchor: start; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-life { stroke: var(--tertiary); stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-band { fill: rgba(128, 128, 128, 0.05); stroke: none; }
+  </style>
+
+  <rect class="d-accent" x="190" y="10" width="300" height="44" rx="4" ry="4"/>
+  <text class="d-text" x="340.0" y="32.0">GitHub Actions Service</text>
+  <rect class="d-group" x="10" y="110" width="660" height="350" rx="6" ry="6"/>
+  <text class="d-group-text" x="24" y="444">Kubernetes cluster</text>
+  <rect class="d-mute" x="160" y="130" width="360" height="50" rx="4" ry="4"/>
+  <text class="d-text" x="340.0" y="146.0">controller manager</text>
+  <text class="d-small" x="340.0" y="164.0">(gha-runner-scale-set-controller)</text>
+  <rect class="d-box" x="220" y="214" width="240" height="50" rx="4" ry="4"/>
+  <text class="d-text" x="340.0" y="230.0">AutoscalingRunnerSet</text>
+  <text class="d-small" x="340.0" y="248.0">(gha-runner-scale-set)</text>
+  <rect class="d-warm" x="50" y="304" width="230" height="50" rx="4" ry="4"/>
+  <text class="d-text" x="165.0" y="320.0">AutoscalingListener</text>
+  <text class="d-small" x="165.0" y="338.0">listener pod</text>
+  <rect class="d-ok" x="400" y="304" width="230" height="50" rx="4" ry="4"/>
+  <text class="d-text" x="515.0" y="320.0">EphemeralRunnerSet</text>
+  <text class="d-small" x="515.0" y="338.0">replicas: N</text>
+  <rect class="d-ok-strong" x="400" y="390" width="230" height="50" rx="4" ry="4"/>
+  <text class="d-text" x="515.0" y="406.0">EphemeralRunner × N</text>
+  <text class="d-small" x="515.0" y="424.0">one runner pod each</text>
+  <path class="d-line" d="M340,180 L340,214" marker-end="url(#arc-components-arrow)"/>
+  <path class="d-line" d="M290,264 L190,304" marker-end="url(#arc-components-arrow)"/>
+  <path class="d-line" d="M390,264 L490,304" marker-end="url(#arc-components-arrow)"/>
+  <path class="d-line" d="M515,354 L515,390" marker-end="url(#arc-components-arrow)"/>
+  <path class="d-line d-dot" d="M280,329 L400,329" marker-end="url(#arc-components-arrow)"/>
+  <rect class="d-label-bg" x="288.96" y="307" width="102.08000000000001" height="18" rx="3"/>
+  <text class="d-small" x="340" y="316">patch replicas</text>
+  <path class="d-line d-dot" d="M340,130 L340,54" marker-end="url(#arc-components-arrow)"/>
+  <rect class="d-label-bg" x="221.76" y="77" width="236.48000000000002" height="18" rx="3"/>
+  <text class="d-small" x="340" y="86">API: register scale set, JIT token</text>
+  <path class="d-line" d="M70,304 L70,32 L190,32" marker-start="url(#arc-components-arrow)" marker-end="url(#arc-components-arrow)"/>
+  <rect class="d-label-bg" x="65.35999999999999" y="77" width="169.28000000000003" height="18" rx="3"/>
+  <text class="d-small" x="150" y="86">long poll: Job Available</text>
+  <path class="d-line" d="M630,415 L650,415 L650,32 L490,32" marker-start="url(#arc-components-arrow)" marker-end="url(#arc-components-arrow)"/>
+  <rect class="d-label-bg" x="461.91999999999996" y="77" width="196.16000000000003" height="18" rx="3"/>
+  <text class="d-small" x="560" y="86">long poll: job details; logs</text>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 350" width="100%" style="display: block; max-width: 720px; margin: 0 auto" role="img" aria-labelledby="container-modes-title">
+  <title id="container-modes-title">ARC containerMode 비교</title>
+  <defs>
+    <marker id="container-modes-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--secondary)"/>
+    </marker>
+  </defs>
+  <style>
+    .d-text { fill: var(--primary); font: 14px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-small { fill: var(--secondary); font: 12px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-code { fill: var(--primary); font: bold 14px monospace; text-anchor: middle; dominant-baseline: central; }
+    .d-group-text { fill: var(--secondary); font: 13px sans-serif; text-anchor: start; dominant-baseline: central; }
+    .d-box { fill: var(--entry); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1.5; }
+    .d-label-bg { fill: var(--entry); }
+    .d-line { stroke: var(--secondary); stroke-width: 1.5; fill: none; }
+    .d-life { stroke: var(--tertiary); stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; }
+    .d-dot { stroke-dasharray: 4 3; }
+    .d-accent { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1.5; }
+    .d-ok { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-ok-strong { fill: rgba(60, 160, 90, 0.34); stroke: rgb(60, 160, 90); stroke-width: 1.5; }
+    .d-warm { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1.5; }
+    .d-bad { fill: rgba(210, 70, 70, 0.14); stroke: rgb(210, 70, 70); stroke-width: 1.5; }
+    .d-violet { fill: rgba(150, 90, 200, 0.14); stroke: rgb(150, 90, 200); stroke-width: 1.5; }
+    .d-mute { fill: rgba(128, 128, 128, 0.14); stroke: rgb(128, 128, 128); stroke-width: 1.5; }
+    .d-band { fill: rgba(128, 128, 128, 0.05); stroke: none; }
+  </style>
+
+  <text class="d-code" x="125.0" y="20">dind</text>
+  <rect class="d-group" x="10" y="40" width="230" height="300" rx="6" ry="6"/>
+  <text class="d-group-text" x="22" y="56">runner pod</text>
+  <rect class="d-ok" x="45" y="76" width="160" height="40" rx="4" ry="4"/>
+  <text class="d-text" x="125.0" y="96.0">runner</text>
+  <rect class="d-warm" x="45" y="176" width="160" height="150" rx="4" ry="4"/>
+  <text class="d-text" x="125.0" y="200.0">dind</text>
+  <text class="d-small" x="125.0" y="218.0">privileged</text>
+  <rect class="d-box" x="65" y="250" width="120" height="56" rx="4" ry="4"/>
+  <text class="d-text" x="125.0" y="278.0">job 컨테이너</text>
+  <path class="d-line" d="M125.0,116 L125.0,176" marker-end="url(#container-modes-arrow)"/>
+  <rect class="d-label-bg" x="77.32" y="137" width="95.36000000000001" height="18" rx="3"/>
+  <text class="d-small" x="125.0" y="146">Docker socket</text>
+  <text class="d-code" x="365.0" y="20">kubernetes</text>
+  <rect class="d-group" x="250" y="40" width="230" height="100" rx="6" ry="6"/>
+  <text class="d-group-text" x="262" y="56">runner pod</text>
+  <rect class="d-ok" x="285" y="74" width="160" height="50" rx="4" ry="4"/>
+  <text class="d-text" x="365.0" y="90.0">runner</text>
+  <text class="d-small" x="365.0" y="108.0">+ container hooks</text>
+  <rect class="d-group" x="250" y="240" width="230" height="100" rx="6" ry="6"/>
+  <text class="d-group-text" x="262" y="256">job pod</text>
+  <rect class="d-box" x="305" y="276" width="120" height="44" rx="4" ry="4"/>
+  <text class="d-text" x="365.0" y="298.0">job 컨테이너</text>
+  <path class="d-line" d="M310,140 L310,240" marker-end="url(#container-modes-arrow)"/>
+  <rect class="d-label-bg" x="280.56" y="181" width="58.88" height="18" rx="3"/>
+  <text class="d-small" x="310" y="190">pod 생성</text>
+  <rect class="d-violet" x="360" y="166" width="115" height="48" rx="4" ry="4"/>
+  <text class="d-small" x="417.5" y="181.0">persistent volume</text>
+  <text class="d-small" x="417.5" y="199.0">(작업 디렉터리)</text>
+  <path class="d-line d-dot" d="M417,140 L417,166" marker-start="url(#container-modes-arrow)" marker-end="url(#container-modes-arrow)"/>
+  <path class="d-line d-dot" d="M417,214 L417,240" marker-start="url(#container-modes-arrow)" marker-end="url(#container-modes-arrow)"/>
+  <text class="d-code" x="605.0" y="20">kubernetes-novolume</text>
+  <rect class="d-group" x="490" y="40" width="230" height="100" rx="6" ry="6"/>
+  <text class="d-group-text" x="502" y="56">runner pod</text>
+  <rect class="d-ok" x="525" y="74" width="160" height="50" rx="4" ry="4"/>
+  <text class="d-text" x="605.0" y="90.0">runner</text>
+  <text class="d-small" x="605.0" y="108.0">+ container hooks</text>
+  <rect class="d-group" x="490" y="240" width="230" height="100" rx="6" ry="6"/>
+  <text class="d-group-text" x="502" y="256">job pod</text>
+  <rect class="d-box" x="545" y="276" width="120" height="44" rx="4" ry="4"/>
+  <text class="d-text" x="605.0" y="298.0">job 컨테이너</text>
+  <path class="d-line" d="M605.0,140 L605.0,240" marker-end="url(#container-modes-arrow)"/>
+  <rect class="d-label-bg" x="575.56" y="157" width="58.88" height="18" rx="3"/>
+  <text class="d-small" x="605.0" y="166">pod 생성</text>
+  <rect class="d-label-bg" x="538.6" y="191" width="132.8" height="18" rx="3"/>
+  <text class="d-small" x="605.0" y="200">lifecycle hook 으로</text>
+  <rect class="d-label-bg" x="528.28" y="209" width="153.44" height="18" rx="3"/>
+  <text class="d-small" x="605.0" y="218">파일시스템 복원·내보내기</text>
+</svg>
