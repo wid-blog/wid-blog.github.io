@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 428" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="h12-grpc-patterns-title">
+  <title id="h12-grpc-patterns-title">gRPC 의 네 가지 통신 패턴 — 요청과 응답 메시지가 각각 하나인지 여러 개인지로 나뉜다</title>
+  <style>
+    .h12-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .h12-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .h12-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .h12-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .h12-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .h12-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .h12-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .h12-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .h12-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .h12-dash { stroke-dasharray: 5 4; }
+    .h12-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .h12-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="h12-grpc-patterns-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="h12-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="h12-group" x="20" y="20" width="440" height="88" rx="12"/>
+  <text class="h12-sub" x="36" y="40">단방향</text>
+  <rect class="h12-blue" x="36" y="56" width="96" height="36" rx="8"/>
+  <text class="h12-t" x="84" y="74">클라이언트</text>
+  <rect class="h12-green" x="348" y="56" width="96" height="36" rx="8"/>
+  <text class="h12-t" x="396" y="74">서버</text>
+  <text class="h12-msg" x="240" y="63">요청 1 / 응답 1</text>
+  <line class="h12-line" x1="132" y1="74" x2="347" y2="74" marker-end="url(#h12-grpc-patterns-arrow)"/>
+  <rect class="h12-group" x="20" y="120" width="440" height="88" rx="12"/>
+  <text class="h12-sub" x="36" y="140">서버 스트리밍</text>
+  <rect class="h12-blue" x="36" y="156" width="96" height="36" rx="8"/>
+  <text class="h12-t" x="84" y="174">클라이언트</text>
+  <rect class="h12-green" x="348" y="156" width="96" height="36" rx="8"/>
+  <text class="h12-t" x="396" y="174">서버</text>
+  <text class="h12-msg" x="240" y="163">요청 1 / 응답 N</text>
+  <line class="h12-line" x1="132" y1="174" x2="347" y2="174" marker-end="url(#h12-grpc-patterns-arrow)"/>
+  <rect class="h12-group" x="20" y="220" width="440" height="88" rx="12"/>
+  <text class="h12-sub" x="36" y="240">클라이언트 스트리밍</text>
+  <rect class="h12-blue" x="36" y="256" width="96" height="36" rx="8"/>
+  <text class="h12-t" x="84" y="274">클라이언트</text>
+  <rect class="h12-green" x="348" y="256" width="96" height="36" rx="8"/>
+  <text class="h12-t" x="396" y="274">서버</text>
+  <text class="h12-msg" x="240" y="263">요청 N / 응답 1</text>
+  <line class="h12-line" x1="132" y1="274" x2="347" y2="274" marker-end="url(#h12-grpc-patterns-arrow)"/>
+  <rect class="h12-group" x="20" y="320" width="440" height="88" rx="12"/>
+  <text class="h12-sub" x="36" y="340">양방향 스트리밍</text>
+  <rect class="h12-blue" x="36" y="356" width="96" height="36" rx="8"/>
+  <text class="h12-t" x="84" y="374">클라이언트</text>
+  <rect class="h12-green" x="348" y="356" width="96" height="36" rx="8"/>
+  <text class="h12-t" x="396" y="374">서버</text>
+  <text class="h12-msg" x="240" y="363">요청 N / 응답 N</text>
+  <line class="h12-line" x1="132" y1="374" x2="347" y2="374" marker-end="url(#h12-grpc-patterns-arrow)"/>
+</svg>
