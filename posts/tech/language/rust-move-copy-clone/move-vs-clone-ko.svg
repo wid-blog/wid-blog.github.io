@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 430" width="100%" style="display: block; max-width: 600px; margin: 0 auto" role="img" aria-labelledby="move-vs-clone-title">
+  <title id="move-vs-clone-title">move 와 clone 의 메모리 — move 는 스택의 24바이트만 복사하고, clone 은 힙 버퍼를 새로 할당한다</title>
+  <style>
+    .d-head { fill: var(--primary); font: bold 13px monospace; dominant-baseline: central; }
+    .d-code { fill: var(--primary); font: 12px monospace; dominant-baseline: central; }
+    .d-col { fill: var(--secondary); font: 12px sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .d-note { fill: var(--secondary); font: 12px sans-serif; dominant-baseline: central; }
+    .d-cell { fill: var(--primary); font: 12px monospace; text-anchor: middle; dominant-baseline: central; }
+    .d-frame { fill: none; stroke: var(--tertiary); stroke-width: 1; }
+    .d-stack { fill: rgba(70, 130, 220, 0.45); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .d-dead { fill: none; stroke: var(--secondary); stroke-width: 1; stroke-dasharray: 4 3; }
+    .d-heap { fill: rgba(220, 130, 40, 0.45); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .d-arrow { stroke: var(--primary); stroke-width: 1.5; fill: none; }
+    .d-arrowhead { fill: var(--primary); }
+  </style>
+  <defs>
+    <marker id="mc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path class="d-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+  <rect class="d-frame" x="10" y="10" width="580" height="196" rx="6"/>
+  <text class="d-head" x="26" y="32">let moved = original;</text>
+  <text class="d-col" x="123" y="58">스택</text>
+  <text class="d-col" x="460" y="58">힙</text>
+  <text class="d-code" x="30" y="78">original</text>
+  <rect class="d-dead" x="30" y="92" width="62" height="28"/>
+  <text class="d-cell" x="61" y="106">ptr</text>
+  <rect class="d-dead" x="92" y="92" width="62" height="28"/>
+  <text class="d-cell" x="123" y="106">len 5</text>
+  <rect class="d-dead" x="154" y="92" width="62" height="28"/>
+  <text class="d-cell" x="185" y="106">cap 5</text>
+  <text class="d-note" x="230" y="106">무효 (이동됨)</text>
+  <text class="d-code" x="30" y="140">moved</text>
+  <rect class="d-stack" x="30" y="154" width="62" height="28"/>
+  <text class="d-cell" x="61" y="168">ptr</text>
+  <rect class="d-stack" x="92" y="154" width="62" height="28"/>
+  <text class="d-cell" x="123" y="168">len 5</text>
+  <rect class="d-stack" x="154" y="154" width="62" height="28"/>
+  <text class="d-cell" x="185" y="168">cap 5</text>
+  <rect class="d-heap" x="390" y="154" width="28" height="28"/>
+  <text class="d-cell" x="404" y="168">h</text>
+  <rect class="d-heap" x="418" y="154" width="28" height="28"/>
+  <text class="d-cell" x="432" y="168">e</text>
+  <rect class="d-heap" x="446" y="154" width="28" height="28"/>
+  <text class="d-cell" x="460" y="168">l</text>
+  <rect class="d-heap" x="474" y="154" width="28" height="28"/>
+  <text class="d-cell" x="488" y="168">l</text>
+  <rect class="d-heap" x="502" y="154" width="28" height="28"/>
+  <text class="d-cell" x="516" y="168">o</text>
+  <path class="d-arrow" d="M61,182 V194 H404 V186" marker-end="url(#mc-arrow)"/>
+  <text class="d-note" x="390" y="132">같은 버퍼</text>
+  <rect class="d-frame" x="10" y="222" width="580" height="196" rx="6"/>
+  <text class="d-head" x="26" y="244">let cloned = moved.clone();</text>
+  <text class="d-code" x="30" y="276">moved</text>
+  <rect class="d-stack" x="30" y="290" width="62" height="28"/>
+  <text class="d-cell" x="61" y="304">ptr</text>
+  <rect class="d-stack" x="92" y="290" width="62" height="28"/>
+  <text class="d-cell" x="123" y="304">len 5</text>
+  <rect class="d-stack" x="154" y="290" width="62" height="28"/>
+  <text class="d-cell" x="185" y="304">cap 5</text>
+  <rect class="d-heap" x="390" y="290" width="28" height="28"/>
+  <text class="d-cell" x="404" y="304">h</text>
+  <rect class="d-heap" x="418" y="290" width="28" height="28"/>
+  <text class="d-cell" x="432" y="304">e</text>
+  <rect class="d-heap" x="446" y="290" width="28" height="28"/>
+  <text class="d-cell" x="460" y="304">l</text>
+  <rect class="d-heap" x="474" y="290" width="28" height="28"/>
+  <text class="d-cell" x="488" y="304">l</text>
+  <rect class="d-heap" x="502" y="290" width="28" height="28"/>
+  <text class="d-cell" x="516" y="304">o</text>
+  <path class="d-arrow" d="M61,318 V330 H404 V322" marker-end="url(#mc-arrow)"/>
+  <text class="d-code" x="30" y="348">cloned</text>
+  <rect class="d-stack" x="30" y="362" width="62" height="28"/>
+  <text class="d-cell" x="61" y="376">ptr</text>
+  <rect class="d-stack" x="92" y="362" width="62" height="28"/>
+  <text class="d-cell" x="123" y="376">len 5</text>
+  <rect class="d-stack" x="154" y="362" width="62" height="28"/>
+  <text class="d-cell" x="185" y="376">cap 5</text>
+  <rect class="d-heap" x="390" y="362" width="28" height="28"/>
+  <text class="d-cell" x="404" y="376">h</text>
+  <rect class="d-heap" x="418" y="362" width="28" height="28"/>
+  <text class="d-cell" x="432" y="376">e</text>
+  <rect class="d-heap" x="446" y="362" width="28" height="28"/>
+  <text class="d-cell" x="460" y="376">l</text>
+  <rect class="d-heap" x="474" y="362" width="28" height="28"/>
+  <text class="d-cell" x="488" y="376">l</text>
+  <rect class="d-heap" x="502" y="362" width="28" height="28"/>
+  <text class="d-cell" x="516" y="376">o</text>
+  <path class="d-arrow" d="M61,390 V402 H404 V394" marker-end="url(#mc-arrow)"/>
+  <text class="d-note" x="390" y="340">새 버퍼 할당</text>
+</svg>
