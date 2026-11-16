@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 282" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="tu-slow-start-title">
+  <title id="tu-slow-start-title">슬로우 스타트와 혼잡 회피 — cwnd 가 RTT 4 까지 두 배씩 늘다가 한 칸씩 늘고, RTT 9 에서 절반으로 준다</title>
+  <style>
+    .tu-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .tu-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .tu-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .tu-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .tu-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .tu-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .tu-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .tu-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .tu-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .tu-dash { stroke-dasharray: 5 4; }
+    .tu-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .tu-head { fill: var(--secondary); }
+    .tu-plot { stroke: rgb(70, 130, 220); stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="tu-slow-start-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="tu-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <line class="tu-line" x1="72" y1="20" x2="72" y2="220"/>
+  <line class="tu-line" x1="72" y1="220" x2="456" y2="220"/>
+  <line class="tu-line" x1="67" y1="220" x2="72" y2="220"/>
+  <text class="tu-msg" x="52" y="220">0</text>
+  <line class="tu-line" x1="67" y1="170" x2="72" y2="170"/>
+  <text class="tu-msg" x="52" y="170">10</text>
+  <line class="tu-line" x1="67" y1="120" x2="72" y2="120"/>
+  <text class="tu-msg" x="52" y="120">20</text>
+  <line class="tu-line" x1="67" y1="70" x2="72" y2="70"/>
+  <text class="tu-msg" x="52" y="70">30</text>
+  <line class="tu-line" x1="67" y1="20" x2="72" y2="20"/>
+  <text class="tu-msg" x="52" y="20">40</text>
+  <line class="tu-line" x1="72.0" y1="220" x2="72.0" y2="225"/>
+  <text class="tu-msg" x="72" y="238">0</text>
+  <line class="tu-line" x1="110.4" y1="220" x2="110.4" y2="225"/>
+  <text class="tu-msg" x="110.4" y="238">1</text>
+  <line class="tu-line" x1="148.8" y1="220" x2="148.8" y2="225"/>
+  <text class="tu-msg" x="148.8" y="238">2</text>
+  <line class="tu-line" x1="187.2" y1="220" x2="187.2" y2="225"/>
+  <text class="tu-msg" x="187.2" y="238">3</text>
+  <line class="tu-line" x1="225.6" y1="220" x2="225.6" y2="225"/>
+  <text class="tu-msg" x="225.6" y="238">4</text>
+  <line class="tu-line" x1="264.0" y1="220" x2="264.0" y2="225"/>
+  <text class="tu-msg" x="264" y="238">5</text>
+  <line class="tu-line" x1="302.4" y1="220" x2="302.4" y2="225"/>
+  <text class="tu-msg" x="302.4" y="238">6</text>
+  <line class="tu-line" x1="340.8" y1="220" x2="340.8" y2="225"/>
+  <text class="tu-msg" x="340.8" y="238">7</text>
+  <line class="tu-line" x1="379.2" y1="220" x2="379.2" y2="225"/>
+  <text class="tu-msg" x="379.2" y="238">8</text>
+  <line class="tu-line" x1="417.6" y1="220" x2="417.6" y2="225"/>
+  <text class="tu-msg" x="417.6" y="238">9</text>
+  <line class="tu-line" x1="456.0" y1="220" x2="456.0" y2="225"/>
+  <text class="tu-msg" x="456" y="238">10</text>
+  <polyline class="tu-plot" points="72.0,215 110.4,210 148.8,200 187.2,180 225.6,140 264.0,135 302.4,130 340.8,125 379.2,120 417.6,170 456.0,165"/>
+  <text class="tu-msg" x="264" y="262">RTT</text>
+  <text class="tu-msg" x="24" y="120" transform="rotate(-90 24 120)">cwnd (MSS)</text>
+</svg>

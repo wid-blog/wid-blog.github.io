@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 176" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="tu-window-waiting-title">
+  <title id="tu-window-waiting-title">ACK 대기 중 — rwnd = 4 인 송신 윈도우 안에서 3·4 는 전송, 5·6 은 전송 대기</title>
+  <style>
+    .tu-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .tu-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .tu-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .tu-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .tu-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .tu-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .tu-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .tu-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .tu-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .tu-dash { stroke-dasharray: 5 4; }
+    .tu-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .tu-head { fill: var(--secondary); }
+    .tu-plot { stroke: rgb(70, 130, 220); stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="tu-window-waiting-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="tu-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="tu-group" x="20" y="20" width="352" height="84" rx="12"/>
+  <text class="tu-sub" x="36" y="40">송신 윈도우 (rwnd = 4)</text>
+  <rect class="tu-blue" x="32" y="56" width="76" height="36" rx="8"/>
+  <text class="tu-t" x="70" y="74">3 전송</text>
+  <rect class="tu-blue" x="116" y="56" width="76" height="36" rx="8"/>
+  <text class="tu-t" x="154" y="74">4 전송</text>
+  <rect class="tu-group" x="200" y="56" width="76" height="36" rx="8"/>
+  <text class="tu-t" x="238" y="74">5 대기</text>
+  <rect class="tu-group" x="284" y="56" width="76" height="36" rx="8"/>
+  <text class="tu-t" x="322" y="74">6 대기</text>
+  <rect class="tu-group" x="384" y="56" width="76" height="36" rx="8"/>
+  <text class="tu-t" x="422" y="74">7</text>
+  <rect class="tu-group" x="32" y="120" width="76" height="36" rx="8"/>
+  <text class="tu-t" x="70" y="138">8</text>
+  <rect class="tu-group" x="116" y="120" width="76" height="36" rx="8"/>
+  <text class="tu-t" x="154" y="138">9</text>
+  <rect class="tu-group" x="200" y="120" width="76" height="36" rx="8"/>
+  <text class="tu-t" x="238" y="138">10</text>
+  <rect class="tu-group" x="284" y="120" width="76" height="36" rx="8"/>
+  <text class="tu-t" x="322" y="138">11</text>
+  <rect class="tu-group" x="384" y="120" width="76" height="36" rx="8"/>
+  <text class="tu-t" x="422" y="138">12</text>
+</svg>

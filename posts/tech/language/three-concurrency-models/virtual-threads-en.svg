@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 186" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="ccm-virtual-threads-title">
+  <title id="ccm-virtual-threads-title">Tens of thousands of virtual threads are multiplexed onto about as many carriers (OS threads) as there are cores</title>
+  <style>
+    .ccm-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ccm-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ccm-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ccm-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .ccm-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .ccm-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .ccm-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .ccm-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .ccm-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .ccm-dash { stroke-dasharray: 5 4; }
+    .ccm-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .ccm-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="ccm-virtual-threads-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="ccm-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="ccm-green" x="20" y="20" width="104" height="36" rx="8"/>
+  <text class="ccm-t" x="72" y="38">VT 1</text>
+  <rect class="ccm-green" x="132" y="20" width="104" height="36" rx="8"/>
+  <text class="ccm-t" x="184" y="38">VT 2</text>
+  <rect class="ccm-green" x="244" y="20" width="104" height="36" rx="8"/>
+  <text class="ccm-t" x="296" y="38">VT 3</text>
+  <rect class="ccm-green" x="356" y="20" width="104" height="36" rx="8"/>
+  <text class="ccm-t" x="408" y="38">VT N (10⁴+)</text>
+  <rect class="ccm-blue" x="20" y="92" width="104" height="74" rx="8"/>
+  <text class="ccm-t" x="72" y="120">Carrier</text>
+  <text class="ccm-t" x="72" y="138">(OS thread)</text>
+  <rect class="ccm-blue" x="132" y="92" width="104" height="74" rx="8"/>
+  <text class="ccm-t" x="184" y="129">Carrier</text>
+  <rect class="ccm-blue" x="244" y="92" width="104" height="74" rx="8"/>
+  <text class="ccm-t" x="296" y="129">Carrier</text>
+  <rect class="ccm-blue" x="356" y="92" width="104" height="74" rx="8"/>
+  <text class="ccm-t" x="408" y="111">Carrier</text>
+  <text class="ccm-t" x="408" y="129">(usually</text>
+  <text class="ccm-t" x="408" y="147"># of cores)</text>
+</svg>

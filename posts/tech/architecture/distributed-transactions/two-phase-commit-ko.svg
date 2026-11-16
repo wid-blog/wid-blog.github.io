@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 656" width="100%" style="display: block; max-width: 560px; margin: 0 auto" role="img" aria-labelledby="dtx-two-phase-commit-title">
+  <title id="dtx-two-phase-commit-title">2PC — coordinator 가 prepare 로 표를 모은 뒤 commit 을 보낸다</title>
+  <style>
+    .dtx-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .dtx-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .dtx-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .dtx-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .dtx-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .dtx-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .dtx-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .dtx-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .dtx-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .dtx-dash { stroke-dasharray: 5 4; }
+    .dtx-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .dtx-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="dtx-two-phase-commit-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="dtx-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <line class="dtx-life" x1="80" y1="56" x2="80" y2="636"/>
+  <line class="dtx-life" x1="213" y1="56" x2="213" y2="636"/>
+  <line class="dtx-life" x1="347" y1="56" x2="347" y2="636"/>
+  <line class="dtx-life" x1="480" y1="56" x2="480" y2="636"/>
+  <rect class="dtx-blue" x="22" y="20" width="116" height="36" rx="8"/>
+  <text class="dtx-t" x="80" y="38">Coordinator</text>
+  <rect class="dtx-green" x="155" y="20" width="116" height="36" rx="8"/>
+  <text class="dtx-t" x="213" y="38">참여자 1</text>
+  <rect class="dtx-green" x="289" y="20" width="116" height="36" rx="8"/>
+  <text class="dtx-t" x="347" y="38">참여자 2</text>
+  <rect class="dtx-green" x="422" y="20" width="116" height="36" rx="8"/>
+  <text class="dtx-t" x="480" y="38">참여자 3</text>
+  <rect class="dtx-group" x="22" y="84" width="516" height="30" rx="6"/>
+  <text class="dtx-msg" x="280" y="99">1단계 — Prepare (준비)</text>
+  <text class="dtx-msg" x="146.5" y="131">prepare</text>
+  <line class="dtx-line" x1="80" y1="142" x2="212" y2="142" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+  <text class="dtx-msg" x="146.5" y="171">prepare</text>
+  <line class="dtx-line" x1="80" y1="182" x2="346" y2="182" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+  <text class="dtx-msg" x="146.5" y="211">prepare</text>
+  <line class="dtx-line" x1="80" y1="222" x2="479" y2="222" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+  <text class="dtx-msg" x="146.5" y="251">vote yes</text>
+  <line class="dtx-line dtx-dash" x1="213" y1="262" x2="81" y2="262" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+  <text class="dtx-msg" x="280" y="291">vote yes</text>
+  <line class="dtx-line dtx-dash" x1="347" y1="302" x2="81" y2="302" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+  <text class="dtx-msg" x="413.5" y="331">vote yes</text>
+  <line class="dtx-line dtx-dash" x1="480" y1="342" x2="81" y2="342" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+  <rect class="dtx-group" x="22" y="358" width="516" height="30" rx="6"/>
+  <text class="dtx-msg" x="280" y="373">2단계 — Commit (결정)</text>
+  <text class="dtx-msg" x="146.5" y="405">commit</text>
+  <line class="dtx-line" x1="80" y1="416" x2="212" y2="416" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+  <text class="dtx-msg" x="146.5" y="445">commit</text>
+  <line class="dtx-line" x1="80" y1="456" x2="346" y2="456" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+  <text class="dtx-msg" x="146.5" y="485">commit</text>
+  <line class="dtx-line" x1="80" y1="496" x2="479" y2="496" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+  <text class="dtx-msg" x="146.5" y="525">ack</text>
+  <line class="dtx-line dtx-dash" x1="213" y1="536" x2="81" y2="536" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+  <text class="dtx-msg" x="280" y="565">ack</text>
+  <line class="dtx-line dtx-dash" x1="347" y1="576" x2="81" y2="576" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+  <text class="dtx-msg" x="413.5" y="605">ack</text>
+  <line class="dtx-line dtx-dash" x1="480" y1="616" x2="81" y2="616" marker-end="url(#dtx-two-phase-commit-arrow)"/>
+</svg>

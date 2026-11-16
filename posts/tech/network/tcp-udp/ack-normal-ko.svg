@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 244" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="tu-ack-normal-title">
+  <title id="tu-ack-normal-title">정상 흐름 — 세그먼트마다 다음에 받을 번호로 ACK 가 돌아온다</title>
+  <style>
+    .tu-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .tu-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .tu-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .tu-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .tu-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .tu-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .tu-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .tu-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .tu-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .tu-dash { stroke-dasharray: 5 4; }
+    .tu-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .tu-head { fill: var(--secondary); }
+    .tu-plot { stroke: rgb(70, 130, 220); stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="tu-ack-normal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="tu-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <line class="tu-life" x1="110" y1="56" x2="110" y2="224"/>
+  <line class="tu-life" x1="370" y1="56" x2="370" y2="224"/>
+  <rect class="tu-blue" x="50" y="20" width="120" height="36" rx="8"/>
+  <text class="tu-t" x="110" y="38">송신</text>
+  <rect class="tu-green" x="310" y="20" width="120" height="36" rx="8"/>
+  <text class="tu-t" x="370" y="38">수신</text>
+  <text class="tu-msg" x="240" y="73">Segment 1</text>
+  <line class="tu-line" x1="110" y1="84" x2="369" y2="84" marker-end="url(#tu-ack-normal-arrow)"/>
+  <text class="tu-msg" x="240" y="113">ACK 2</text>
+  <line class="tu-line" x1="370" y1="124" x2="111" y2="124" marker-end="url(#tu-ack-normal-arrow)"/>
+  <text class="tu-msg" x="240" y="153">Segment 2</text>
+  <line class="tu-line" x1="110" y1="164" x2="369" y2="164" marker-end="url(#tu-ack-normal-arrow)"/>
+  <text class="tu-msg" x="240" y="193">ACK 3</text>
+  <line class="tu-line" x1="370" y1="204" x2="111" y2="204" marker-end="url(#tu-ack-normal-arrow)"/>
+</svg>
