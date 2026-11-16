@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 324" width="100%" style="display: block; max-width: 560px; margin: 0 auto" role="img" aria-labelledby="opl-lost-update-title">
+  <title id="opl-lost-update-title">Lost Update — 두 요청이 같은 99 를 읽고 둘 다 100 으로 써서 한 자리에 두 건이 예약된다</title>
+  <style>
+    .opl-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .opl-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .opl-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .opl-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .opl-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .opl-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .opl-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .opl-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .opl-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .opl-dash { stroke-dasharray: 5 4; }
+    .opl-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .opl-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="opl-lost-update-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="opl-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <line class="opl-life" x1="100" y1="56" x2="100" y2="304"/>
+  <line class="opl-life" x1="280" y1="56" x2="280" y2="304"/>
+  <line class="opl-life" x1="460" y1="56" x2="460" y2="304"/>
+  <rect class="opl-blue" x="40" y="20" width="120" height="36" rx="8"/>
+  <text class="opl-t" x="100" y="38">요청 1</text>
+  <rect class="opl-green" x="220" y="20" width="120" height="36" rx="8"/>
+  <text class="opl-t" x="280" y="38">DB</text>
+  <rect class="opl-blue" x="400" y="20" width="120" height="36" rx="8"/>
+  <text class="opl-t" x="460" y="38">요청 2</text>
+  <text class="opl-msg" x="190" y="73">SELECT count → 99</text>
+  <line class="opl-line" x1="100" y1="84" x2="279" y2="84" marker-end="url(#opl-lost-update-arrow)"/>
+  <text class="opl-msg" x="370" y="113">SELECT count → 99</text>
+  <line class="opl-line" x1="460" y1="124" x2="281" y2="124" marker-end="url(#opl-lost-update-arrow)"/>
+  <rect class="opl-group" x="30" y="140" width="500" height="30" rx="6"/>
+  <text class="opl-msg" x="280" y="155">둘 다 99 &lt; 100 통과</text>
+  <text class="opl-msg" x="190" y="187">UPDATE count = 100</text>
+  <line class="opl-line" x1="100" y1="198" x2="279" y2="198" marker-end="url(#opl-lost-update-arrow)"/>
+  <text class="opl-msg" x="370" y="227">UPDATE count = 100</text>
+  <line class="opl-line" x1="460" y1="238" x2="281" y2="238" marker-end="url(#opl-lost-update-arrow)"/>
+  <rect class="opl-group" x="156" y="254" width="248" height="30" rx="6"/>
+  <text class="opl-msg" x="280" y="269">두 건 예약됐지만 count = 100 (초과 예약)</text>
+</svg>

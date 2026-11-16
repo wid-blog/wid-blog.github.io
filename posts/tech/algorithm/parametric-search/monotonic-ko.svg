@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 76" width="100%" style="display: block; max-width: 560px; margin: 0 auto" role="img" aria-labelledby="pms-monotonic-title">
+  <title id="pms-monotonic-title">단조 결정 함수 — lo 쪽은 can(x) 가 False, x* 부터 hi 까지는 True 이고 그 경계 x* 가 답이다</title>
+  <style>
+    .pms-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .pms-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .pms-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .pms-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .pms-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .pms-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .pms-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .pms-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .pms-red { fill: rgba(220, 70, 70, 0.14); stroke: rgb(220, 70, 70); stroke-width: 1; }
+    .pms-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .pms-dash { stroke-dasharray: 5 4; }
+    .pms-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .pms-head { fill: var(--secondary); }
+  </style>
+  <rect class="pms-red" x="20" y="20" width="61.5" height="36" rx="8"/>
+  <text class="pms-t" x="50.75" y="38">x = lo</text>
+  <rect class="pms-red" x="85.5" y="20" width="61.5" height="36" rx="8"/>
+  <rect class="pms-red" x="151" y="20" width="61.5" height="36" rx="8"/>
+  <rect class="pms-green" x="216.5" y="20" width="61.5" height="36" rx="8"/>
+  <text class="pms-t" x="247.25" y="38">x*</text>
+  <rect class="pms-green" x="282" y="20" width="61.5" height="36" rx="8"/>
+  <rect class="pms-green" x="347.5" y="20" width="61.5" height="36" rx="8"/>
+  <rect class="pms-green" x="413" y="20" width="61.5" height="36" rx="8"/>
+  <rect class="pms-green" x="478.5" y="20" width="61.5" height="36" rx="8"/>
+  <text class="pms-t" x="509.25" y="38">x = hi</text>
+</svg>
