@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 386" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="jpapc-entity-states-title">
+  <title id="jpapc-entity-states-title">JPA entity states — new is Transient, persist or a query makes it Managed, closing the context makes it Detached, and merge brings it back to Managed</title>
+  <style>
+    .jpapc-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .jpapc-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .jpapc-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .jpapc-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .jpapc-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .jpapc-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .jpapc-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .jpapc-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .jpapc-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .jpapc-dash { stroke-dasharray: 5 4; }
+    .jpapc-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .jpapc-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="jpapc-entity-states-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="jpapc-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <circle class="jpapc-head" cx="240" cy="32" r="8"/>
+  <rect class="jpapc-blue" x="40" y="90" width="120" height="36" rx="8"/>
+  <text class="jpapc-t" x="100" y="108">Transient</text>
+  <rect class="jpapc-green" x="180" y="200" width="120" height="36" rx="8"/>
+  <text class="jpapc-t" x="240" y="218">Managed</text>
+  <rect class="jpapc-amber" x="180" y="330" width="120" height="36" rx="8"/>
+  <text class="jpapc-t" x="240" y="348">Detached</text>
+  <path class="jpapc-line" d="M232,32 H100 V89" marker-end="url(#jpapc-entity-states-arrow)"/>
+  <text class="jpapc-msg" x="166" y="21">new</text>
+  <path class="jpapc-line" d="M100,126 V218 H179" marker-end="url(#jpapc-entity-states-arrow)"/>
+  <text class="jpapc-msg" x="140" y="207">persist</text>
+  <line class="jpapc-line" x1="240" y1="40" x2="240" y2="199" marker-end="url(#jpapc-entity-states-arrow)"/>
+  <text class="jpapc-msg" x="306.5" y="150">find / JPQL query</text>
+  <line class="jpapc-line" x1="220" y1="236" x2="220" y2="329" marker-end="url(#jpapc-entity-states-arrow)"/>
+  <text class="jpapc-msg" x="122.3" y="283">persistence context closes</text>
+  <line class="jpapc-line" x1="260" y1="330" x2="260" y2="237" marker-end="url(#jpapc-entity-states-arrow)"/>
+  <text class="jpapc-msg" x="285.875" y="283">merge</text>
+</svg>

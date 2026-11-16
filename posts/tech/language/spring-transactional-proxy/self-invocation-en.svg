@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 390" width="100%" style="display: block; max-width: 560px; margin: 0 auto" role="img" aria-labelledby="stp-self-invocation-title">
+  <title id="stp-self-invocation-title">@Transactional proxy — the proxy begins and ends the transaction, and a this call inside the target bypasses the proxy</title>
+  <style>
+    .stp-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .stp-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .stp-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .stp-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .stp-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .stp-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .stp-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .stp-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .stp-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .stp-dash { stroke-dasharray: 5 4; }
+    .stp-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .stp-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="stp-self-invocation-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="stp-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <line class="stp-life" x1="90" y1="56" x2="90" y2="370"/>
+  <line class="stp-life" x1="250" y1="56" x2="250" y2="370"/>
+  <line class="stp-life" x1="410" y1="56" x2="410" y2="370"/>
+  <rect class="stp-blue" x="30" y="20" width="120" height="36" rx="8"/>
+  <text class="stp-t" x="90" y="38">Caller</text>
+  <rect class="stp-green" x="190" y="20" width="120" height="36" rx="8"/>
+  <text class="stp-t" x="250" y="38">Proxy</text>
+  <rect class="stp-green" x="350" y="20" width="120" height="36" rx="8"/>
+  <text class="stp-t" x="410" y="38">Target</text>
+  <rect class="stp-group" x="405" y="158" width="10" height="118"/>
+  <rect class="stp-group" x="245" y="84" width="10" height="266"/>
+  <text class="stp-msg" x="170" y="73">reserve()</text>
+  <line class="stp-line" x1="90" y1="84" x2="244" y2="84" marker-end="url(#stp-self-invocation-arrow)"/>
+  <rect class="stp-group" x="170" y="100" width="160" height="30" rx="6"/>
+  <text class="stp-msg" x="250" y="115">begin transaction</text>
+  <text class="stp-msg" x="330" y="147">reserve()</text>
+  <line class="stp-line" x1="255" y1="158" x2="404" y2="158" marker-end="url(#stp-self-invocation-arrow)"/>
+  <text class="stp-msg" x="482" y="187">this.saveAll()</text>
+  <text class="stp-msg" x="482" y="205">bypasses the proxy</text>
+  <path class="stp-line" d="M415,216 H445 V236 H416" marker-end="url(#stp-self-invocation-arrow)"/>
+  <text class="stp-msg" x="330" y="265">return</text>
+  <line class="stp-line stp-dash" x1="405" y1="276" x2="256" y2="276" marker-end="url(#stp-self-invocation-arrow)"/>
+  <rect class="stp-group" x="170" y="292" width="160" height="30" rx="6"/>
+  <text class="stp-msg" x="250" y="307">commit or rollback</text>
+  <text class="stp-msg" x="170" y="339">return</text>
+  <line class="stp-line stp-dash" x1="245" y1="350" x2="91" y2="350" marker-end="url(#stp-self-invocation-arrow)"/>
+</svg>

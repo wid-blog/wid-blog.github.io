@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" width="100%" style="display: block; max-width: 560px; margin: 0 auto" role="img" aria-labelledby="authn-oidc-login-title">
+  <title id="authn-oidc-login-title">OIDC sign-in — exchange the authorization code for tokens and verify the ID Token to confirm the user's identity</title>
+  <style>
+    .authn-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .authn-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .authn-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .authn-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .authn-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .authn-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .authn-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .authn-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .authn-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .authn-dash { stroke-dasharray: 5 4; }
+    .authn-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .authn-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="authn-oidc-login-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="authn-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <line class="authn-life" x1="100" y1="76" x2="100" y2="460"/>
+  <line class="authn-life" x1="280" y1="76" x2="280" y2="460"/>
+  <line class="authn-life" x1="460" y1="76" x2="460" y2="460"/>
+  <rect class="authn-blue" x="25" y="20" width="150" height="56" rx="8"/>
+  <text class="authn-t" x="100" y="48">User</text>
+  <rect class="authn-green" x="205" y="20" width="150" height="56" rx="8"/>
+  <text class="authn-t" x="280" y="48">Application</text>
+  <rect class="authn-green" x="385" y="20" width="150" height="56" rx="8"/>
+  <text class="authn-t" x="460" y="39">Identity Provider</text>
+  <text class="authn-t" x="460" y="57">(e.g. Google)</text>
+  <text class="authn-msg" x="190" y="93">Click 'Sign in</text>
+  <text class="authn-msg" x="190" y="111">with Google'</text>
+  <circle class="authn-group" cx="100" cy="122" r="9"/>
+  <text class="authn-msg" x="100" y="122">1</text>
+  <line class="authn-line" x1="109" y1="122" x2="279" y2="122" marker-end="url(#authn-oidc-login-arrow)"/>
+  <text class="authn-msg" x="370" y="151">Auth request</text>
+  <text class="authn-msg" x="370" y="169">(redirect to consent)</text>
+  <circle class="authn-group" cx="280" cy="180" r="9"/>
+  <text class="authn-msg" x="280" y="180">2</text>
+  <line class="authn-line" x1="289" y1="180" x2="459" y2="180" marker-end="url(#authn-oidc-login-arrow)"/>
+  <text class="authn-msg" x="190" y="209">Enter credentials</text>
+  <text class="authn-msg" x="190" y="227">and grant consent</text>
+  <circle class="authn-group" cx="100" cy="238" r="9"/>
+  <text class="authn-msg" x="100" y="238">3</text>
+  <line class="authn-line" x1="109" y1="238" x2="459" y2="238" marker-end="url(#authn-oidc-login-arrow)"/>
+  <text class="authn-msg" x="370" y="267">Authorization code</text>
+  <circle class="authn-group" cx="460" cy="278" r="9"/>
+  <text class="authn-msg" x="460" y="278">4</text>
+  <line class="authn-line authn-dash" x1="451" y1="278" x2="281" y2="278" marker-end="url(#authn-oidc-login-arrow)"/>
+  <text class="authn-msg" x="370" y="307">Exchange code</text>
+  <text class="authn-msg" x="370" y="325">for tokens</text>
+  <circle class="authn-group" cx="280" cy="336" r="9"/>
+  <text class="authn-msg" x="280" y="336">5</text>
+  <line class="authn-line" x1="289" y1="336" x2="459" y2="336" marker-end="url(#authn-oidc-login-arrow)"/>
+  <text class="authn-msg" x="370" y="365">access token (authz) +</text>
+  <text class="authn-msg" x="370" y="383">ID Token (authn, JWT)</text>
+  <circle class="authn-group" cx="460" cy="394" r="9"/>
+  <text class="authn-msg" x="460" y="394">6</text>
+  <line class="authn-line authn-dash" x1="451" y1="394" x2="281" y2="394" marker-end="url(#authn-oidc-login-arrow)"/>
+  <rect class="authn-group" x="125" y="410" width="310" height="30" rx="6"/>
+  <text class="authn-msg" x="280" y="425">Verify ID Token to confirm user identity</text>
+</svg>
