@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="ebp-hooks-title">
+  <title id="ebp-hooks-title">Main hook points where eBPF programs run</title>
+  <style>
+    .ebp-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ebp-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ebp-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ebp-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .ebp-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .ebp-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .ebp-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .ebp-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .ebp-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .ebp-dash { stroke-dasharray: 5 4; }
+    .ebp-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .ebp-head { fill: var(--secondary); }
+  </style>
+
+  <rect class="ebp-group" x="16" y="12" width="448" height="88" rx="12"/>
+  <text class="ebp-sub" x="32" y="32">User space</text>
+  <rect class="ebp-group" x="16" y="112" width="448" height="232" rx="12"/>
+  <text class="ebp-sub" x="32" y="132">Kernel</text>
+  <rect class="ebp-blue" x="32" y="48" width="240" height="36" rx="8"/>
+  <text class="ebp-t" x="152" y="66">Application (dd · ls)</text>
+  <rect class="ebp-blue" x="32" y="148" width="240" height="36" rx="8"/>
+  <text class="ebp-t" x="152" y="166">Syscall entry · exit</text>
+  <line class="ebp-line ebp-dash" x1="272" y1="166" x2="296" y2="166"/>
+  <rect class="ebp-green" x="296" y="148" width="152" height="36" rx="8"/>
+  <text class="ebp-t" x="372" y="166">tracepoint</text>
+  <rect class="ebp-blue" x="32" y="196" width="240" height="36" rx="8"/>
+  <text class="ebp-t" x="152" y="214">Kernel function (vfs_read …)</text>
+  <line class="ebp-line ebp-dash" x1="272" y1="214" x2="296" y2="214"/>
+  <rect class="ebp-green" x="296" y="196" width="152" height="36" rx="8"/>
+  <text class="ebp-t" x="372" y="214">kprobe · kretprobe</text>
+  <rect class="ebp-blue" x="32" y="244" width="240" height="36" rx="8"/>
+  <text class="ebp-t" x="152" y="262">Traffic control (qdisc)</text>
+  <line class="ebp-line ebp-dash" x1="272" y1="262" x2="296" y2="262"/>
+  <rect class="ebp-green" x="296" y="244" width="152" height="36" rx="8"/>
+  <text class="ebp-t" x="372" y="262">tc</text>
+  <rect class="ebp-blue" x="32" y="292" width="240" height="36" rx="8"/>
+  <text class="ebp-t" x="152" y="310">NIC driver receive</text>
+  <line class="ebp-line ebp-dash" x1="272" y1="310" x2="296" y2="310"/>
+  <rect class="ebp-green" x="296" y="292" width="152" height="36" rx="8"/>
+  <text class="ebp-t" x="372" y="310">XDP</text>
+</svg>

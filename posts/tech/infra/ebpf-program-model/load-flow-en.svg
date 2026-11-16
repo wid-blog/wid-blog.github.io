@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="ebp-load-flow-title">
+  <title id="ebp-load-flow-title">How an eBPF program goes from source to a hook, and how maps connect it to user space</title>
+  <style>
+    .ebp-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ebp-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ebp-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ebp-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; }
+    .ebp-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .ebp-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .ebp-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .ebp-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .ebp-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .ebp-dash { stroke-dasharray: 5 4; }
+    .ebp-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .ebp-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="ebp-load-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="ebp-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+
+  <rect class="ebp-group" x="16" y="12" width="448" height="160" rx="12"/>
+  <text class="ebp-sub" x="32" y="32">User space</text>
+
+  <rect class="ebp-blue" x="32" y="48" width="200" height="36" rx="8"/>
+  <text class="ebp-t" x="132" y="66">C · bpftrace source</text>
+  <line class="ebp-line" x1="132" y1="84" x2="132" y2="119" marker-end="url(#ebp-load-flow-arrow)"/>
+  <text class="ebp-msg" x="192" y="102">clang · LLVM</text>
+  <rect class="ebp-blue" x="32" y="120" width="200" height="36" rx="8"/>
+  <text class="ebp-t" x="132" y="138">eBPF bytecode</text>
+
+  <rect class="ebp-blue" x="272" y="120" width="176" height="36" rx="8"/>
+  <text class="ebp-t" x="360" y="138">bpftrace · bpftool</text>
+
+  <rect class="ebp-group" x="16" y="184" width="448" height="240" rx="12"/>
+  <text class="ebp-sub" x="32" y="204">Kernel</text>
+
+  <line class="ebp-line" x1="132" y1="156" x2="132" y2="227" marker-end="url(#ebp-load-flow-arrow)"/>
+  <text class="ebp-msg" x="196" y="204">bpf() syscall</text>
+
+  <rect class="ebp-amber" x="32" y="228" width="200" height="36" rx="8"/>
+  <text class="ebp-t" x="132" y="246">Verifier</text>
+  <line class="ebp-line" x1="232" y1="246" x2="271" y2="246" marker-end="url(#ebp-load-flow-arrow)"/>
+  <rect class="ebp-group" x="272" y="228" width="128" height="36" rx="8"/>
+  <text class="ebp-t" x="336" y="246">Rejected</text>
+
+  <line class="ebp-line" x1="132" y1="264" x2="132" y2="299" marker-end="url(#ebp-load-flow-arrow)"/>
+  <text class="ebp-msg" x="176" y="282">passed</text>
+  <rect class="ebp-green" x="32" y="300" width="200" height="36" rx="8"/>
+  <text class="ebp-t" x="132" y="318">JIT → machine code</text>
+  <line class="ebp-line" x1="132" y1="336" x2="132" y2="371" marker-end="url(#ebp-load-flow-arrow)"/>
+  <text class="ebp-msg" x="170" y="354">attach</text>
+  <rect class="ebp-green" x="32" y="372" width="200" height="36" rx="8"/>
+  <text class="ebp-t" x="132" y="390">Runs at the hook</text>
+
+  <line class="ebp-line" x1="232" y1="390" x2="287" y2="390" marker-end="url(#ebp-load-flow-arrow)"/>
+  <text class="ebp-msg" x="260" y="379">helper</text>
+  <rect class="ebp-green" x="288" y="372" width="160" height="36" rx="8"/>
+  <text class="ebp-t" x="368" y="390">Map</text>
+
+  <line class="ebp-line ebp-dash" x1="424" y1="157" x2="424" y2="371" marker-start="url(#ebp-load-flow-arrow)" marker-end="url(#ebp-load-flow-arrow)"/>
+  <text class="ebp-msg" x="356" y="318">bpf() syscall</text>
+</svg>
