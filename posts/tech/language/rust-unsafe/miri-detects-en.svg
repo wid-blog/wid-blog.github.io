@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 648" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rus-miri-detects-title">
+  <title id="rus-miri-detects-title">What the Miri README says it detects, and its limits</title>
+  <style>
+    .rus-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rus-tl { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rus-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rus-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rus-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rus-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rus-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rus-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rus-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rus-dash { stroke-dasharray: 5 4; }
+    .rus-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rus-miri-detects-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rus-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rus-blue" x="120" y="20" width="240" height="36" rx="8"/>
+  <text class="rus-monoc" x="240.0" y="38.0">cargo +nightly miri test</text>
+  <line class="rus-line" x1="240" y1="56" x2="240" y2="83" marker-end="url(#rus-miri-detects-arrow)"/>
+  <rect class="rus-group" x="20" y="84" width="440" height="352" rx="12"/>
+  <text class="rus-sub" x="36" y="104">Detects (examples from the README)</text>
+  <rect class="rus-green" x="36" y="120" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="138">out-of-bounds access · use-after-free</text>
+  <rect class="rus-green" x="36" y="164" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="182">invalid use of uninitialized data</text>
+  <rect class="rus-green" x="36" y="208" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="226">violated intrinsic preconditions</text>
+  <rect class="rus-green" x="36" y="252" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="270">misaligned accesses · references</text>
+  <rect class="rus-green" x="36" y="296" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="314">broken type invariants (bool not 0 or 1)</text>
+  <rect class="rus-green" x="36" y="340" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="358">data races</text>
+  <rect class="rus-green" x="36" y="384" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="402">aliasing violations (Stacked/Tree Borrows, exp.)</text>
+  <rect class="rus-group" x="20" y="452" width="440" height="176" rx="12"/>
+  <text class="rus-sub" x="36" y="472">Limits</text>
+  <rect class="rus-amber" x="36" y="488" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="506">tests only the execution that ran</text>
+  <rect class="rus-amber" x="36" y="532" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="550">does not catch every spec violation</text>
+  <rect class="rus-amber" x="36" y="576" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="594">cannot prove the code is sound</text>
+</svg>

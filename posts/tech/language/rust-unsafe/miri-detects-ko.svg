@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 648" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rus-miri-detects-title">
+  <title id="rus-miri-detects-title">Miri README 가 적은 탐지 대상과 한계</title>
+  <style>
+    .rus-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rus-tl { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rus-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rus-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rus-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rus-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rus-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rus-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rus-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rus-dash { stroke-dasharray: 5 4; }
+    .rus-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rus-miri-detects-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rus-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rus-blue" x="120" y="20" width="240" height="36" rx="8"/>
+  <text class="rus-monoc" x="240.0" y="38.0">cargo +nightly miri test</text>
+  <line class="rus-line" x1="240" y1="56" x2="240" y2="83" marker-end="url(#rus-miri-detects-arrow)"/>
+  <rect class="rus-group" x="20" y="84" width="440" height="352" rx="12"/>
+  <text class="rus-sub" x="36" y="104">잡는 것 (README 의 예)</text>
+  <rect class="rus-green" x="36" y="120" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="138">범위 밖 접근 · 해제 후 사용</text>
+  <rect class="rus-green" x="36" y="164" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="182">초기화되지 않은 데이터 사용</text>
+  <rect class="rus-green" x="36" y="208" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="226">intrinsic 의 전제 위반</text>
+  <rect class="rus-green" x="36" y="252" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="270">정렬되지 않은 접근 · 참조</text>
+  <rect class="rus-green" x="36" y="296" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="314">타입 불변식 위반 (bool 이 0·1 아님 등)</text>
+  <rect class="rus-green" x="36" y="340" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="358">data race</text>
+  <rect class="rus-green" x="36" y="384" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="402">별칭 규칙 위반 (Stacked · Tree Borrows, 실험적)</text>
+  <rect class="rus-group" x="20" y="452" width="440" height="176" rx="12"/>
+  <text class="rus-sub" x="36" y="472">한계</text>
+  <rect class="rus-amber" x="36" y="488" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="506">실행한 한 경로만 본다</text>
+  <rect class="rus-amber" x="36" y="532" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="550">명세 위반을 모두 잡지는 않는다</text>
+  <rect class="rus-amber" x="36" y="576" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="594">코드가 sound 하다는 보장은 못 한다</text>
+</svg>

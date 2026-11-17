@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rus-split-at-mut-title">
+  <title id="rus-split-at-mut-title">한 슬라이스를 mid 에서 겹치지 않는 두 가변 슬라이스로 나눈다</title>
+  <style>
+    .rus-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rus-tl { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rus-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rus-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rus-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rus-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rus-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rus-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rus-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rus-dash { stroke-dasharray: 5 4; }
+    .rus-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rus-split-at-mut-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rus-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <text class="rus-sub" x="20" y="24">values: &amp;mut [i32]  (len 4, mid 2)</text>
+  <rect class="rus-blue" x="82" y="44" width="76" height="36" rx="8"/>
+  <text class="rus-monoc" x="120" y="62">1</text>
+  <rect class="rus-blue" x="162" y="44" width="76" height="36" rx="8"/>
+  <text class="rus-monoc" x="200" y="62">2</text>
+  <rect class="rus-green" x="242" y="44" width="76" height="36" rx="8"/>
+  <text class="rus-monoc" x="280" y="62">3</text>
+  <rect class="rus-green" x="322" y="44" width="76" height="36" rx="8"/>
+  <text class="rus-monoc" x="360" y="62">4</text>
+  <line class="rus-line" x1="82" y1="118" x2="82" y2="81" marker-end="url(#rus-split-at-mut-arrow)"/>
+  <line class="rus-line" x1="242" y1="118" x2="242" y2="81" marker-end="url(#rus-split-at-mut-arrow)"/>
+  <text class="rus-mono" x="82" y="130">ptr</text>
+  <text class="rus-mono" x="242" y="130">ptr.add(mid)</text>
+  <rect class="rus-blue" x="82" y="152" width="156" height="56" rx="8"/>
+  <text class="rus-t" x="160.0" y="171.0">left</text>
+  <text class="rus-t" x="160.0" y="189.0">[0, mid), 길이 2</text>
+  <rect class="rus-green" x="242" y="152" width="156" height="56" rx="8"/>
+  <text class="rus-t" x="320.0" y="171.0">right</text>
+  <text class="rus-t" x="320.0" y="189.0">[mid, len), 길이 2</text>
+  <rect class="rus-group" x="20" y="226" width="440" height="56" rx="8"/>
+  <text class="rus-monoc" x="240.0" y="245.0">assert!(mid &lt;= len)</text>
+  <text class="rus-msg" x="240.0" y="263.0">통과하면 두 범위는 values 안에 있고 서로 겹치지 않는다</text>
+</svg>

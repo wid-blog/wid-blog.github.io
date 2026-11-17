@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rus-unsafe-powers-title">
+  <title id="rus-unsafe-powers-title">unsafe 가 여는 연산은 다섯 가지이고, 대여·타입 검사는 그대로다</title>
+  <style>
+    .rus-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rus-tl { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rus-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rus-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rus-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rus-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rus-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rus-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rus-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rus-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rus-dash { stroke-dasharray: 5 4; }
+    .rus-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rus-unsafe-powers-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rus-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rus-group" x="20" y="16" width="440" height="264" rx="12"/>
+  <text class="rus-sub" x="36" y="36">unsafe 블록 안에서만</text>
+  <rect class="rus-amber" x="36" y="52" width="408" height="36" rx="8"/>
+  <text class="rus-tl" x="50" y="70">raw pointer 역참조</text>
+  <text class="rus-mono" x="270" y="70">*ptr += 1</text>
+  <rect class="rus-amber" x="36" y="96" width="408" height="36" rx="8"/>
+  <text class="rus-tl" x="50" y="114">unsafe fn 호출</text>
+  <text class="rus-mono" x="270" y="114">id_at(&amp;ids, 0)</text>
+  <rect class="rus-amber" x="36" y="140" width="408" height="36" rx="8"/>
+  <text class="rus-tl" x="50" y="158">static mut 읽기·쓰기</text>
+  <text class="rus-mono" x="270" y="158">REQUESTS += 1</text>
+  <rect class="rus-amber" x="36" y="184" width="408" height="36" rx="8"/>
+  <text class="rus-tl" x="50" y="202">unsafe trait 구현</text>
+  <text class="rus-mono" x="270" y="202">unsafe impl Zeroable</text>
+  <rect class="rus-amber" x="36" y="228" width="408" height="36" rx="8"/>
+  <text class="rus-tl" x="50" y="246">union 필드 읽기</text>
+  <text class="rus-mono" x="270" y="246">bits.int</text>
+  <rect class="rus-group" x="20" y="296" width="440" height="88" rx="12"/>
+  <text class="rus-sub" x="36" y="316">unsafe 안에서도 그대로</text>
+  <rect class="rus-green" x="36" y="332" width="408" height="36" rx="8"/>
+  <text class="rus-t" x="240" y="350">대여 규칙 · 타입 검사 · 라이프타임 검사</text>
+</svg>
