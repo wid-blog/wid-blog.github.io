@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 408" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rsp-rc-cycle-title">
+  <title id="rsp-rc-cycle-title">Two nodes pointing at each other with Rc stay at strong 1 after the variables drop, and leak</title>
+  <style>
+    .rsp-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-cell { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rsp-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rsp-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rsp-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rsp-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rsp-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rsp-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rsp-dash { stroke-dasharray: 5 4; }
+    .rsp-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rsp-rc-cycle-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rsp-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rsp-group" x="20" y="20" width="440" height="164" rx="12"/>
+  <text class="rsp-sub" x="32" y="40">Before drop</text>
+  <rect class="rsp-green" x="180" y="56" width="150" height="36" rx="8"/>
+  <text class="rsp-t" x="255" y="74">node a · strong 2</text>
+  <rect class="rsp-green" x="180" y="132" width="150" height="36" rx="8"/>
+  <text class="rsp-t" x="255" y="150">node b · strong 2</text>
+  <line class="rsp-line" x1="235" y1="92" x2="235" y2="131" marker-end="url(#rsp-rc-cycle-arrow)"/>
+  <line class="rsp-line" x1="275" y1="132" x2="275" y2="93" marker-end="url(#rsp-rc-cycle-arrow)"/>
+  <text class="rsp-msg" x="210" y="112">next</text>
+  <text class="rsp-msg" x="300" y="112">next</text>
+  <rect class="rsp-blue" x="40" y="56" width="80" height="36" rx="8"/>
+  <text class="rsp-monoc" x="80" y="74">a</text>
+  <rect class="rsp-blue" x="40" y="132" width="80" height="36" rx="8"/>
+  <text class="rsp-monoc" x="80" y="150">b</text>
+  <line class="rsp-line" x1="120" y1="74" x2="179" y2="74" marker-end="url(#rsp-rc-cycle-arrow)"/>
+  <line class="rsp-line" x1="120" y1="150" x2="179" y2="150" marker-end="url(#rsp-rc-cycle-arrow)"/>
+  <rect class="rsp-group" x="20" y="200" width="440" height="164" rx="12"/>
+  <text class="rsp-sub" x="32" y="220">After drop(a); drop(b)</text>
+  <rect class="rsp-amber" x="180" y="236" width="150" height="36" rx="8"/>
+  <text class="rsp-t" x="255" y="254">node a · strong 1</text>
+  <rect class="rsp-amber" x="180" y="312" width="150" height="36" rx="8"/>
+  <text class="rsp-t" x="255" y="330">node b · strong 1</text>
+  <line class="rsp-line" x1="235" y1="272" x2="235" y2="311" marker-end="url(#rsp-rc-cycle-arrow)"/>
+  <line class="rsp-line" x1="275" y1="312" x2="275" y2="273" marker-end="url(#rsp-rc-cycle-arrow)"/>
+  <text class="rsp-msg" x="210" y="292">next</text>
+  <text class="rsp-msg" x="300" y="292">next</text>
+  <text class="rsp-note" x="36" y="282">No variable</text>
+  <text class="rsp-note" x="36" y="302">points here</text>
+  <text class="rsp-note" x="20" y="388">Each keeps the other at strong 1, so Drop never runs</text>
+</svg>

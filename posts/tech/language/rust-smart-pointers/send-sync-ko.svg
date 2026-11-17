@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 296" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rsp-send-sync-title">
+  <title id="rsp-send-sync-title">Rc 와 Arc&lt;RefCell&gt; 은 스레드로 넘길 수 없고 Arc&lt;Mutex&gt; 는 넘길 수 있다</title>
+  <style>
+    .rsp-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-cell { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rsp-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rsp-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rsp-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rsp-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rsp-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rsp-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rsp-dash { stroke-dasharray: 5 4; }
+    .rsp-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rsp-send-sync-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rsp-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <text class="rsp-sub" x="20" y="20">캡처한 타입</text>
+  <text class="rsp-sub" x="280" y="20">thread::spawn 결과</text>
+  <rect class="rsp-blue" x="20" y="46" width="160" height="36" rx="8"/>
+  <text class="rsp-monoc" x="100" y="64">Rc&lt;i32&gt;</text>
+  <text class="rsp-msg" x="230" y="53">spawn</text>
+  <line class="rsp-line" x1="180" y1="64" x2="279" y2="64" marker-end="url(#rsp-send-sync-arrow)"/>
+  <rect class="rsp-amber" x="280" y="36" width="180" height="56" rx="8"/>
+  <text class="rsp-t" x="370" y="55">컴파일 에러 E0277</text>
+  <text class="rsp-t" x="370" y="73">Rc 는 Send 아님</text>
+  <rect class="rsp-blue" x="20" y="114" width="160" height="36" rx="8"/>
+  <text class="rsp-monoc" x="100" y="132">Arc&lt;RefCell&lt;i32&gt;&gt;</text>
+  <text class="rsp-msg" x="230" y="121">spawn</text>
+  <line class="rsp-line" x1="180" y1="132" x2="279" y2="132" marker-end="url(#rsp-send-sync-arrow)"/>
+  <rect class="rsp-amber" x="280" y="104" width="180" height="56" rx="8"/>
+  <text class="rsp-t" x="370" y="123">컴파일 에러 E0277</text>
+  <text class="rsp-t" x="370" y="141">RefCell 은 Sync 아님</text>
+  <rect class="rsp-blue" x="20" y="182" width="160" height="36" rx="8"/>
+  <text class="rsp-monoc" x="100" y="200">Arc&lt;Mutex&lt;i32&gt;&gt;</text>
+  <text class="rsp-msg" x="230" y="189">spawn</text>
+  <line class="rsp-line" x1="180" y1="200" x2="279" y2="200" marker-end="url(#rsp-send-sync-arrow)"/>
+  <rect class="rsp-green" x="280" y="172" width="180" height="56" rx="8"/>
+  <text class="rsp-t" x="370" y="191">컴파일됨</text>
+  <text class="rsp-t" x="370" y="209">Mutex 가 Sync 를 준다</text>
+  <text class="rsp-note" x="20" y="252">Send — 값을 다른 스레드로 옮겨도 된다</text>
+  <text class="rsp-note" x="20" y="274">Sync — 여러 스레드가 &amp;T 를 함께 가져도 된다</text>
+</svg>

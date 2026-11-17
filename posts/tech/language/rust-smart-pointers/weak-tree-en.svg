@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 488" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rsp-weak-tree-title">
+  <title id="rsp-weak-tree-title">With Rc to children and Weak to the parent, branch is freed when it leaves scope</title>
+  <style>
+    .rsp-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-cell { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rsp-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rsp-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rsp-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rsp-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rsp-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rsp-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rsp-dash { stroke-dasharray: 5 4; }
+    .rsp-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rsp-weak-tree-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rsp-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rsp-group" x="20" y="20" width="440" height="204" rx="12"/>
+  <text class="rsp-sub" x="32" y="40">Inside branch's scope</text>
+  <rect class="rsp-blue" x="40" y="66" width="90" height="36" rx="8"/>
+  <text class="rsp-monoc" x="85" y="84">branch</text>
+  <rect class="rsp-blue" x="40" y="162" width="90" height="36" rx="8"/>
+  <text class="rsp-monoc" x="85" y="180">leaf</text>
+  <rect class="rsp-green" x="220" y="56" width="180" height="56" rx="8"/>
+  <text class="rsp-monoc" x="310" y="75">branch</text>
+  <text class="rsp-t" x="310" y="93">strong 1 · weak 1</text>
+  <rect class="rsp-green" x="220" y="152" width="180" height="56" rx="8"/>
+  <text class="rsp-monoc" x="310" y="171">leaf</text>
+  <text class="rsp-t" x="310" y="189">strong 2 · weak 0</text>
+  <line class="rsp-line" x1="130" y1="84" x2="219" y2="84" marker-end="url(#rsp-weak-tree-arrow)"/>
+  <line class="rsp-line" x1="130" y1="180" x2="219" y2="180" marker-end="url(#rsp-weak-tree-arrow)"/>
+  <line class="rsp-line" x1="280" y1="112" x2="280" y2="151" marker-end="url(#rsp-weak-tree-arrow)"/>
+  <line class="rsp-line rsp-dash" x1="340" y1="152" x2="340" y2="113" marker-end="url(#rsp-weak-tree-arrow)"/>
+  <text class="rsp-msg" x="220" y="132">children: Rc</text>
+  <text class="rsp-msg" x="400" y="132">parent: Weak</text>
+  <rect class="rsp-group" x="20" y="240" width="440" height="204" rx="12"/>
+  <text class="rsp-sub" x="32" y="260">After branch's scope</text>
+  <rect class="rsp-group rsp-dash" x="220" y="276" width="180" height="56" rx="8"/>
+  <text class="rsp-t" x="310" y="304">branch dropped</text>
+  <rect class="rsp-blue" x="40" y="382" width="90" height="36" rx="8"/>
+  <text class="rsp-monoc" x="85" y="400">leaf</text>
+  <rect class="rsp-green" x="220" y="372" width="180" height="56" rx="8"/>
+  <text class="rsp-monoc" x="310" y="391">leaf</text>
+  <text class="rsp-t" x="310" y="409">strong 1 · weak 0</text>
+  <line class="rsp-line" x1="130" y1="400" x2="219" y2="400" marker-end="url(#rsp-weak-tree-arrow)"/>
+  <line class="rsp-line rsp-dash" x1="330" y1="372" x2="330" y2="333" marker-end="url(#rsp-weak-tree-arrow)"/>
+  <text class="rsp-monoc" x="260" y="352">upgrade() → None</text>
+  <text class="rsp-note" x="20" y="468">Weak does not bump strong, so no cycle forms</text>
+</svg>

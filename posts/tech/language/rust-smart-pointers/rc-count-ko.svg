@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 336" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rsp-rc-count-title">
+  <title id="rsp-rc-count-title">Rc::clone 마다 strong 이 오르고 drop 마다 내려가며, 0 이 되면 값이 해제된다</title>
+  <style>
+    .rsp-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-cell { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rsp-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rsp-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rsp-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rsp-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rsp-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rsp-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rsp-dash { stroke-dasharray: 5 4; }
+    .rsp-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rsp-rc-count-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rsp-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <text class="rsp-sub" x="20" y="20">코드</text>
+  <text class="rsp-sub" x="270" y="20">strong count</text>
+  <text class="rsp-mono" x="20" y="56">let a = Rc::new(..)</text>
+  <rect class="rsp-blue" x="270" y="42" width="28" height="28" rx="6"/>
+  <text class="rsp-msg" x="420" y="56">1</text>
+  <text class="rsp-mono" x="20" y="100">let b = Rc::clone(&amp;a)</text>
+  <rect class="rsp-blue" x="270" y="86" width="28" height="28" rx="6"/>
+  <rect class="rsp-blue" x="306" y="86" width="28" height="28" rx="6"/>
+  <text class="rsp-msg" x="420" y="100">2</text>
+  <text class="rsp-mono" x="20" y="144">let c = Rc::clone(&amp;a)</text>
+  <rect class="rsp-blue" x="270" y="130" width="28" height="28" rx="6"/>
+  <rect class="rsp-blue" x="306" y="130" width="28" height="28" rx="6"/>
+  <rect class="rsp-blue" x="342" y="130" width="28" height="28" rx="6"/>
+  <text class="rsp-msg" x="420" y="144">3</text>
+  <text class="rsp-mono" x="20" y="188">}  // c 스코프 끝</text>
+  <rect class="rsp-blue" x="270" y="174" width="28" height="28" rx="6"/>
+  <rect class="rsp-blue" x="306" y="174" width="28" height="28" rx="6"/>
+  <text class="rsp-msg" x="420" y="188">2</text>
+  <text class="rsp-mono" x="20" y="232">drop(a)</text>
+  <rect class="rsp-blue" x="270" y="218" width="28" height="28" rx="6"/>
+  <text class="rsp-msg" x="420" y="232">1</text>
+  <text class="rsp-mono" x="20" y="276">drop(b)</text>
+  <rect class="rsp-amber" x="270" y="262" width="190" height="28" rx="6"/>
+  <text class="rsp-msg" x="365" y="276">0 → 값 drop</text>
+  <text class="rsp-note" x="20" y="316">drop config 은 마지막 Rc 가 사라질 때 한 번 찍힌다</text>
+</svg>

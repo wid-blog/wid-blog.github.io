@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 256" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rsp-rc-share-title">
+  <title id="rsp-rc-share-title">세 값이 Rc 할당 하나를 가리키고 strong 이 3 이다</title>
+  <style>
+    .rsp-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-cell { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rsp-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rsp-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rsp-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rsp-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rsp-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rsp-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rsp-dash { stroke-dasharray: 5 4; }
+    .rsp-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rsp-rc-share-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rsp-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rsp-blue" x="20" y="60" width="150" height="36" rx="8"/>
+  <text class="rsp-monoc" x="95" y="78">shared</text>
+  <rect class="rsp-blue" x="20" y="116" width="150" height="36" rx="8"/>
+  <text class="rsp-monoc" x="95" y="134">b: Cons(3, ●)</text>
+  <rect class="rsp-blue" x="20" y="172" width="150" height="36" rx="8"/>
+  <text class="rsp-monoc" x="95" y="190">c: Cons(4, ●)</text>
+  <text class="rsp-sub" x="20" y="40">Rc 를 가진 값</text>
+  <rect class="rsp-group" x="240" y="44" width="220" height="164" rx="12"/>
+  <text class="rsp-sub" x="252" y="64">힙 · Rc 할당 하나</text>
+  <rect class="rsp-group" x="256" y="96" width="92" height="36" rx="8"/>
+  <text class="rsp-t" x="302" y="114">strong 3</text>
+  <rect class="rsp-group" x="352" y="96" width="92" height="36" rx="8"/>
+  <text class="rsp-t" x="398" y="114">weak 0</text>
+  <rect class="rsp-green" x="256" y="144" width="188" height="36" rx="8"/>
+  <text class="rsp-monoc" x="350" y="162">Cons(5, ●)</text>
+  <line class="rsp-line" x1="170" y1="78" x2="239" y2="78" marker-end="url(#rsp-rc-share-arrow)"/>
+  <line class="rsp-line" x1="170" y1="134" x2="239" y2="134" marker-end="url(#rsp-rc-share-arrow)"/>
+  <line class="rsp-line" x1="170" y1="190" x2="239" y2="190" marker-end="url(#rsp-rc-share-arrow)"/>
+  <text class="rsp-note" x="20" y="236">Rc::clone 은 값을 복사하지 않고 strong 만 1 올린다</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 276" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rsp-pointer-choice-title">
+  <title id="rsp-pointer-choice-title">Pick Box, Rc, RefCell, Arc, or Mutex by need; each checks at a different time and costs differently</title>
+  <style>
+    .rsp-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-cell { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rsp-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rsp-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rsp-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rsp-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rsp-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rsp-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rsp-dash { stroke-dasharray: 5 4; }
+    .rsp-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rsp-pointer-choice-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rsp-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rsp-group" x="20" y="20" width="440" height="36" rx="6"/>
+  <text class="rsp-sub" x="30" y="38">Need</text>
+  <text class="rsp-sub" x="200" y="38">Pointer</text>
+  <text class="rsp-sub" x="300" y="38">Check</text>
+  <text class="rsp-sub" x="375" y="38">Cost</text>
+  <rect class="rsp-group" x="20" y="60" width="440" height="36" rx="6"/>
+  <text class="rsp-cell" x="30" y="78">heap · recursive · dyn</text>
+  <rect class="rsp-blue" x="194" y="64" width="92" height="28" rx="6"/>
+  <text class="rsp-monoc" x="240" y="78">Box&lt;T&gt;</text>
+  <rect class="rsp-green" x="294" y="64" width="67" height="28" rx="6"/>
+  <text class="rsp-msg" x="327.5" y="78">compile</text>
+  <text class="rsp-cell" x="375" y="78">1 alloc</text>
+  <rect class="rsp-group" x="20" y="100" width="440" height="36" rx="6"/>
+  <text class="rsp-cell" x="30" y="118">owners, one thread</text>
+  <rect class="rsp-blue" x="194" y="104" width="92" height="28" rx="6"/>
+  <text class="rsp-monoc" x="240" y="118">Rc&lt;T&gt;</text>
+  <rect class="rsp-green" x="294" y="104" width="67" height="28" rx="6"/>
+  <text class="rsp-msg" x="327.5" y="118">compile</text>
+  <text class="rsp-cell" x="375" y="118">count ±1</text>
+  <rect class="rsp-group" x="20" y="140" width="440" height="36" rx="6"/>
+  <text class="rsp-cell" x="30" y="158">mutate shared value</text>
+  <rect class="rsp-blue" x="194" y="144" width="92" height="28" rx="6"/>
+  <text class="rsp-monoc" x="240" y="158">RefCell&lt;T&gt;</text>
+  <rect class="rsp-amber" x="294" y="144" width="67" height="28" rx="6"/>
+  <text class="rsp-msg" x="327.5" y="158">run time</text>
+  <text class="rsp-cell" x="375" y="158">borrow state</text>
+  <rect class="rsp-group" x="20" y="180" width="440" height="36" rx="6"/>
+  <text class="rsp-cell" x="30" y="198">owners across threads</text>
+  <rect class="rsp-blue" x="194" y="184" width="92" height="28" rx="6"/>
+  <text class="rsp-monoc" x="240" y="198">Arc&lt;T&gt;</text>
+  <rect class="rsp-green" x="294" y="184" width="67" height="28" rx="6"/>
+  <text class="rsp-msg" x="327.5" y="198">compile</text>
+  <text class="rsp-cell" x="375" y="198">atomic ±1</text>
+  <rect class="rsp-group" x="20" y="220" width="440" height="36" rx="6"/>
+  <text class="rsp-cell" x="30" y="238">mutate across threads</text>
+  <rect class="rsp-blue" x="194" y="224" width="92" height="28" rx="6"/>
+  <text class="rsp-monoc" x="240" y="238">Mutex&lt;T&gt;</text>
+  <rect class="rsp-amber" x="294" y="224" width="67" height="28" rx="6"/>
+  <text class="rsp-msg" x="327.5" y="238">run time</text>
+  <text class="rsp-cell" x="375" y="238">lock</text>
+</svg>

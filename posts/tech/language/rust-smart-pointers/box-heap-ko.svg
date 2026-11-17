@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 356" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rsp-box-heap-title">
+  <title id="rsp-box-heap-title">Box 는 스택에 포인터만 두고 값은 힙에 둔다. Box&lt;dyn Trait&gt; 는 vtable 포인터를 하나 더 갖는다</title>
+  <style>
+    .rsp-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-cell { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rsp-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rsp-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rsp-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rsp-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rsp-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rsp-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rsp-dash { stroke-dasharray: 5 4; }
+    .rsp-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rsp-box-heap-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rsp-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rsp-group" x="20" y="36" width="210" height="212" rx="12"/>
+  <text class="rsp-sub" x="32" y="56">스택</text>
+  <text class="rsp-mono" x="32" y="84">n: Box&lt;i32&gt;</text>
+  <rect class="rsp-blue" x="32" y="96" width="186" height="36" rx="8"/>
+  <text class="rsp-t" x="125" y="114">포인터 8B</text>
+  <text class="rsp-mono" x="32" y="152">shape: Box&lt;dyn Shape&gt;</text>
+  <rect class="rsp-blue" x="32" y="164" width="186" height="36" rx="8"/>
+  <text class="rsp-t" x="125" y="182">데이터 포인터 8B</text>
+  <rect class="rsp-blue" x="32" y="200" width="186" height="36" rx="8"/>
+  <text class="rsp-t" x="125" y="218">vtable 포인터 8B</text>
+  <rect class="rsp-group" x="262" y="36" width="198" height="176" rx="12"/>
+  <text class="rsp-sub" x="274" y="56">힙</text>
+  <rect class="rsp-green" x="278" y="96" width="166" height="36" rx="8"/>
+  <text class="rsp-monoc" x="361" y="114">5</text>
+  <rect class="rsp-green" x="278" y="164" width="166" height="36" rx="8"/>
+  <text class="rsp-monoc" x="361" y="182">Square(2.0)</text>
+  <rect class="rsp-group" x="262" y="228" width="198" height="84" rx="12"/>
+  <text class="rsp-sub" x="274" y="248">vtable (정적 영역)</text>
+  <rect class="rsp-amber" x="278" y="264" width="166" height="36" rx="8"/>
+  <text class="rsp-monoc" x="361" y="282">Square::area</text>
+  <line class="rsp-line" x1="218" y1="114" x2="277" y2="114" marker-end="url(#rsp-box-heap-arrow)"/>
+  <line class="rsp-line" x1="218" y1="182" x2="277" y2="182" marker-end="url(#rsp-box-heap-arrow)"/>
+  <path class="rsp-line" d="M218,218 H240 V282 H277" marker-end="url(#rsp-box-heap-arrow)"/>
+  <text class="rsp-note" x="20" y="336">Box 를 drop 하면 가리키던 힙 값도 함께 해제된다</text>
+</svg>

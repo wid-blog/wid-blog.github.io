@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 292" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rsp-arc-mutex-title">
+  <title id="rsp-arc-mutex-title">main and four threads share one Arc allocation, and the Mutex lets one thread at a time change the value</title>
+  <style>
+    .rsp-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rsp-cell { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rsp-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rsp-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rsp-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rsp-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rsp-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rsp-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rsp-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rsp-dash { stroke-dasharray: 5 4; }
+    .rsp-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rsp-arc-mutex-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rsp-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <text class="rsp-sub" x="20" y="36">Arc holders</text>
+  <rect class="rsp-blue" x="20" y="56" width="150" height="32" rx="8"/>
+  <text class="rsp-t" x="95" y="72">main</text>
+  <line class="rsp-line" x1="170" y1="72" x2="259" y2="72" marker-end="url(#rsp-arc-mutex-arrow)"/>
+  <rect class="rsp-blue" x="20" y="96" width="150" height="32" rx="8"/>
+  <text class="rsp-t" x="95" y="112">thread 1</text>
+  <line class="rsp-line" x1="170" y1="112" x2="259" y2="112" marker-end="url(#rsp-arc-mutex-arrow)"/>
+  <rect class="rsp-blue" x="20" y="136" width="150" height="32" rx="8"/>
+  <text class="rsp-t" x="95" y="152">thread 2</text>
+  <line class="rsp-line" x1="170" y1="152" x2="259" y2="152" marker-end="url(#rsp-arc-mutex-arrow)"/>
+  <rect class="rsp-blue" x="20" y="176" width="150" height="32" rx="8"/>
+  <text class="rsp-t" x="95" y="192">thread 3</text>
+  <line class="rsp-line" x1="170" y1="192" x2="259" y2="192" marker-end="url(#rsp-arc-mutex-arrow)"/>
+  <rect class="rsp-blue" x="20" y="216" width="150" height="32" rx="8"/>
+  <text class="rsp-t" x="95" y="232">thread 4</text>
+  <line class="rsp-line" x1="170" y1="232" x2="259" y2="232" marker-end="url(#rsp-arc-mutex-arrow)"/>
+  <rect class="rsp-group" x="260" y="44" width="200" height="204" rx="12"/>
+  <text class="rsp-sub" x="272" y="64">Heap · one Arc allocation</text>
+  <rect class="rsp-group" x="276" y="92" width="168" height="36" rx="8"/>
+  <text class="rsp-t" x="360" y="110">strong · atomic count</text>
+  <rect class="rsp-amber" x="276" y="140" width="168" height="36" rx="8"/>
+  <text class="rsp-t" x="360" y="158">lock · one at a time</text>
+  <rect class="rsp-green" x="276" y="188" width="168" height="36" rx="8"/>
+  <text class="rsp-t" x="360" y="206">value 0 → 4000</text>
+  <text class="rsp-note" x="20" y="272">The lock is released when the MutexGuard from lock() drops</text>
+</svg>
