@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 308" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rrb-dangling-ref-title">
+  <title id="rrb-dangling-ref-title">A local String's buffer is freed when the function returns, so return the owned String instead of a reference</title>
+  <style>
+    .rrb-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rrb-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rrb-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rrb-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rrb-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rrb-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; }
+    .rrb-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rrb-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rrb-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rrb-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rrb-ghost { fill: none; stroke: var(--secondary); stroke-width: 1; stroke-dasharray: 5 4; }
+    .rrb-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rrb-dash { stroke-dasharray: 5 4; }
+    .rrb-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rrb-dangling-ref-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rrb-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rrb-group" x="16" y="16" width="448" height="84" rx="12"/>
+  <text class="rrb-sub" x="32" y="36">Inside shout: upper owns the buffer</text>
+  <rect class="rrb-blue" x="32" y="52" width="180" height="36" rx="8"/>
+  <text class="rrb-monoc" x="122" y="70">upper: String</text>
+  <rect class="rrb-group" x="300" y="52" width="148" height="36" rx="8"/>
+  <text class="rrb-monoc" x="374" y="70">"HI"</text>
+  <line class="rrb-line" x1="213" y1="70" x2="299" y2="70" marker-end="url(#rrb-dangling-ref-arrow)"/>
+  <rect class="rrb-group" x="16" y="112" width="448" height="84" rx="12"/>
+  <text class="rrb-sub" x="32" y="132">If it returned a reference: after upper drops (E0515)</text>
+  <rect class="rrb-green" x="32" y="148" width="180" height="36" rx="8"/>
+  <text class="rrb-monoc" x="122" y="166">returned &amp;str</text>
+  <rect class="rrb-ghost" x="300" y="148" width="148" height="36" rx="8"/>
+  <text class="rrb-msg" x="374" y="166">freed buffer</text>
+  <line class="rrb-line rrb-dash" x1="213" y1="166" x2="299" y2="166" marker-end="url(#rrb-dangling-ref-arrow)"/>
+  <rect class="rrb-group" x="16" y="208" width="448" height="84" rx="12"/>
+  <text class="rrb-sub" x="32" y="228">Returning String: ownership moves to the caller</text>
+  <rect class="rrb-blue" x="32" y="244" width="180" height="36" rx="8"/>
+  <text class="rrb-monoc" x="122" y="262">returned String</text>
+  <rect class="rrb-group" x="300" y="244" width="148" height="36" rx="8"/>
+  <text class="rrb-monoc" x="374" y="262">"HI"</text>
+  <line class="rrb-line" x1="213" y1="262" x2="299" y2="262" marker-end="url(#rrb-dangling-ref-arrow)"/>
+</svg>

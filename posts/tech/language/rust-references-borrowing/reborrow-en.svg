@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 388" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rrb-reborrow-title">
+  <title id="rrb-reborrow-title">With a &amp;mut parameter each call gets a temporary reborrow; with a generic T the mutable reference moves</title>
+  <style>
+    .rrb-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rrb-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rrb-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rrb-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rrb-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rrb-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; }
+    .rrb-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rrb-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rrb-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rrb-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rrb-ghost { fill: none; stroke: var(--secondary); stroke-width: 1; stroke-dasharray: 5 4; }
+    .rrb-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rrb-dash { stroke-dasharray: 5 4; }
+    .rrb-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rrb-reborrow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rrb-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rrb-group" x="16" y="16" width="448" height="172" rx="12"/>
+  <text class="rrb-sub" x="32" y="36">append_item(items: &amp;mut Vec&lt;i32&gt;, ..)</text>
+  <text class="rrb-msg" x="352" y="60">items</text>
+  <text class="rrb-msg" x="420" y="60">reborrow</text>
+  <text class="rrb-mono" x="28" y="84">fn fill(items: &amp;mut Vec&lt;i32&gt;) {</text>
+  <text class="rrb-mono" x="28" y="112">    append_item(items, 1);</text>
+  <text class="rrb-mono" x="28" y="140">    append_item(items, 2);</text>
+  <text class="rrb-mono" x="28" y="168">}</text>
+  <rect class="rrb-amber" x="345" y="72" width="14" height="108" rx="3"/>
+  <rect class="rrb-green" x="413" y="102" width="14" height="20" rx="3"/>
+  <rect class="rrb-green" x="413" y="130" width="14" height="20" rx="3"/>
+  <rect class="rrb-group" x="16" y="200" width="448" height="172" rx="12"/>
+  <text class="rrb-sub" x="32" y="220">log_and_push&lt;T&gt;(target: T)</text>
+  <text class="rrb-msg" x="352" y="244">items</text>
+  <text class="rrb-msg" x="420" y="244">moved</text>
+  <text class="rrb-mono" x="28" y="268">fn fill(items: &amp;mut Vec&lt;i32&gt;) {</text>
+  <text class="rrb-mono" x="28" y="296">    log_and_push(items);</text>
+  <text class="rrb-mono" x="28" y="324">    log_and_push(items);</text>
+  <text class="rrb-mono" x="28" y="352">}</text>
+  <rect class="rrb-amber" x="345" y="256" width="14" height="50" rx="3"/>
+  <rect class="rrb-green" x="413" y="286" width="14" height="20" rx="3"/>
+  <rect class="rrb-ghost" x="345" y="314" width="14" height="20" rx="3"/>
+  <text class="rrb-note" x="366" y="324">E0382</text>
+</svg>

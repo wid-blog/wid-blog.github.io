@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 536" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rrb-shared-xor-mut-title">
+  <title id="rrb-shared-xor-mut-title">Many shared references or one mutable reference — overlapping them is E0502, two mutable references is E0499</title>
+  <style>
+    .rrb-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rrb-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rrb-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rrb-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rrb-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rrb-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; }
+    .rrb-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rrb-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rrb-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rrb-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rrb-ghost { fill: none; stroke: var(--secondary); stroke-width: 1; stroke-dasharray: 5 4; }
+    .rrb-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rrb-dash { stroke-dasharray: 5 4; }
+    .rrb-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rrb-shared-xor-mut-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rrb-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rrb-group" x="16" y="16" width="448" height="128" rx="12"/>
+  <text class="rrb-sub" x="32" y="36">Many &amp;T: allowed (read only)</text>
+  <rect class="rrb-blue" x="32" y="74.0" width="128" height="36" rx="8"/>
+  <text class="rrb-monoc" x="96" y="92.0">names</text>
+  <rect class="rrb-green" x="280" y="52" width="168" height="36" rx="8"/>
+  <text class="rrb-monoc" x="364" y="70">r1: &amp;names</text>
+  <line class="rrb-line" x1="279" y1="70" x2="161" y2="92.0" marker-end="url(#rrb-shared-xor-mut-arrow)"/>
+  <rect class="rrb-green" x="280" y="96" width="168" height="36" rx="8"/>
+  <text class="rrb-monoc" x="364" y="114">r2: &amp;names</text>
+  <line class="rrb-line" x1="279" y1="114" x2="161" y2="92.0" marker-end="url(#rrb-shared-xor-mut-arrow)"/>
+  <rect class="rrb-group" x="16" y="156" width="448" height="84" rx="12"/>
+  <text class="rrb-sub" x="32" y="176">One &amp;mut T: allowed (read and write)</text>
+  <rect class="rrb-blue" x="32" y="192.0" width="128" height="36" rx="8"/>
+  <text class="rrb-monoc" x="96" y="210.0">names</text>
+  <rect class="rrb-amber" x="280" y="192" width="168" height="36" rx="8"/>
+  <text class="rrb-monoc" x="364" y="210">w: &amp;mut names</text>
+  <line class="rrb-line" x1="279" y1="210" x2="161" y2="210.0" marker-end="url(#rrb-shared-xor-mut-arrow)"/>
+  <rect class="rrb-group" x="16" y="252" width="448" height="128" rx="12"/>
+  <text class="rrb-sub" x="32" y="272">&amp;T and &amp;mut T at once: rejected (E0502)</text>
+  <rect class="rrb-blue" x="32" y="310.0" width="128" height="36" rx="8"/>
+  <text class="rrb-monoc" x="96" y="328.0">names</text>
+  <rect class="rrb-green" x="280" y="288" width="168" height="36" rx="8"/>
+  <text class="rrb-monoc" x="364" y="306">r: &amp;names</text>
+  <line class="rrb-line rrb-dash" x1="279" y1="306" x2="161" y2="328.0" marker-end="url(#rrb-shared-xor-mut-arrow)"/>
+  <rect class="rrb-amber" x="280" y="332" width="168" height="36" rx="8"/>
+  <text class="rrb-monoc" x="364" y="350">w: &amp;mut names</text>
+  <line class="rrb-line rrb-dash" x1="279" y1="350" x2="161" y2="328.0" marker-end="url(#rrb-shared-xor-mut-arrow)"/>
+  <rect class="rrb-group" x="16" y="392" width="448" height="128" rx="12"/>
+  <text class="rrb-sub" x="32" y="412">Two &amp;mut T at once: rejected (E0499)</text>
+  <rect class="rrb-blue" x="32" y="450.0" width="128" height="36" rx="8"/>
+  <text class="rrb-monoc" x="96" y="468.0">names</text>
+  <rect class="rrb-amber" x="280" y="428" width="168" height="36" rx="8"/>
+  <text class="rrb-monoc" x="364" y="446">w1: &amp;mut names</text>
+  <line class="rrb-line rrb-dash" x1="279" y1="446" x2="161" y2="468.0" marker-end="url(#rrb-shared-xor-mut-arrow)"/>
+  <rect class="rrb-amber" x="280" y="472" width="168" height="36" rx="8"/>
+  <text class="rrb-monoc" x="364" y="490">w2: &amp;mut names</text>
+  <line class="rrb-line rrb-dash" x1="279" y1="490" x2="161" y2="468.0" marker-end="url(#rrb-shared-xor-mut-arrow)"/>
+</svg>
