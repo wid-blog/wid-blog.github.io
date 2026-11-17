@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rgd-fat-pointer-title">
+  <title id="rgd-fat-pointer-title">&amp;dyn Shape 는 값 포인터와 vtable 포인터 두 칸이고, vtable 에는 크기·정렬·drop 다음에 메서드 주소가 온다</title>
+  <style>
+    .rgd-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rgd-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rgd-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rgd-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rgd-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rgd-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; }
+    .rgd-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rgd-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rgd-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rgd-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rgd-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rgd-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rgd-fat-pointer-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rgd-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <text class="rgd-sub" x="20" y="20">shape: &amp;dyn Shape — 16바이트</text>
+  <rect class="rgd-green" x="30" y="36" width="120" height="32" rx="8"/>
+  <text class="rgd-t" x="90" y="52">data ptr</text>
+  <rect class="rgd-amber" x="150" y="36" width="120" height="32" rx="8"/>
+  <text class="rgd-t" x="210" y="52">vtable ptr</text>
+  <line class="rgd-line" x1="90" y1="69" x2="90" y2="119" marker-end="url(#rgd-fat-pointer-arrow)"/>
+  <line class="rgd-line" x1="230" y1="69" x2="290" y2="119" marker-end="url(#rgd-fat-pointer-arrow)"/>
+  <rect class="rgd-blue" x="20" y="120" width="140" height="56" rx="8"/>
+  <text class="rgd-t" x="90" y="139">UNIT: Circle</text>
+  <text class="rgd-t" x="90" y="157">radius 1.0</text>
+  <text class="rgd-note" x="20" y="212">앞 세 칸: drop·크기·정렬</text>
+  <text class="rgd-note" x="20" y="230">뒤 칸: trait 메서드 주소</text>
+  <text class="rgd-note" x="20" y="248">(rustc 1.94.1 에서 관찰)</text>
+  <rect class="rgd-group" x="220" y="120" width="240" height="32" rx="4"/>
+  <text class="rgd-mono" x="232" y="136">+0   drop = null</text>
+  <rect class="rgd-group" x="220" y="152" width="240" height="32" rx="4"/>
+  <text class="rgd-mono" x="232" y="168">+8   size = 8</text>
+  <rect class="rgd-group" x="220" y="184" width="240" height="32" rx="4"/>
+  <text class="rgd-mono" x="232" y="200">+16  align = 8</text>
+  <rect class="rgd-green" x="220" y="216" width="240" height="32" rx="4"/>
+  <text class="rgd-mono" x="232" y="232">+24  Circle::area</text>
+  <rect class="rgd-green" x="220" y="248" width="240" height="32" rx="4"/>
+  <text class="rgd-mono" x="232" y="264">+32  Circle::describe</text>
+</svg>

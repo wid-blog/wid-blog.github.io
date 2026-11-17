@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 368" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rgd-code-copies-title">
+  <title id="rgd-code-copies-title">제네릭 함수는 호출된 타입마다 사본이 생기고, dyn 함수는 하나만 생겨 vtable 로 구현을 고른다</title>
+  <style>
+    .rgd-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rgd-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rgd-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rgd-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rgd-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rgd-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; }
+    .rgd-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rgd-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rgd-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rgd-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rgd-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rgd-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rgd-code-copies-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rgd-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rgd-group" x="16" y="16" width="448" height="136" rx="12"/>
+  <text class="rgd-sub" x="32" y="36">제네릭 — 호출된 타입마다 사본</text>
+  <rect class="rgd-blue" x="32" y="52" width="416" height="32" rx="8"/>
+  <text class="rgd-monoc" x="240" y="68">fn print_area&lt;T: Shape&gt;(shape: &amp;T)</text>
+  <line class="rgd-line" x1="200" y1="85" x2="135" y2="103" marker-end="url(#rgd-code-copies-arrow)"/>
+  <line class="rgd-line" x1="280" y1="85" x2="345" y2="103" marker-end="url(#rgd-code-copies-arrow)"/>
+  <rect class="rgd-green" x="32" y="104" width="204" height="32" rx="8"/>
+  <text class="rgd-monoc" x="134" y="120">print_area::&lt;Circle&gt;</text>
+  <rect class="rgd-green" x="244" y="104" width="204" height="32" rx="8"/>
+  <text class="rgd-monoc" x="346" y="120">print_area::&lt;Rect&gt;</text>
+  <rect class="rgd-group" x="16" y="168" width="448" height="184" rx="12"/>
+  <text class="rgd-sub" x="32" y="188">dyn — 함수 하나, 구현은 실행 중에 선택</text>
+  <rect class="rgd-blue" x="32" y="204" width="416" height="32" rx="8"/>
+  <text class="rgd-monoc" x="240" y="220">fn print_area(shape: &amp;dyn Shape)</text>
+  <line class="rgd-line" x1="240" y1="237" x2="240" y2="255" marker-end="url(#rgd-code-copies-arrow)"/>
+  <rect class="rgd-green" x="32" y="256" width="416" height="32" rx="8"/>
+  <text class="rgd-monoc" x="240" y="272">print_area</text>
+  <line class="rgd-line" x1="200" y1="289" x2="135" y2="307" marker-end="url(#rgd-code-copies-arrow)"/>
+  <line class="rgd-line" x1="280" y1="289" x2="345" y2="307" marker-end="url(#rgd-code-copies-arrow)"/>
+  <text class="rgd-msg" x="240" y="298">vtable 로 선택</text>
+  <rect class="rgd-amber" x="32" y="308" width="204" height="32" rx="8"/>
+  <text class="rgd-monoc" x="134" y="324">&lt;Circle as Shape&gt;::area</text>
+  <rect class="rgd-amber" x="244" y="308" width="204" height="32" rx="8"/>
+  <text class="rgd-monoc" x="346" y="324">&lt;Rect as Shape&gt;::area</text>
+</svg>

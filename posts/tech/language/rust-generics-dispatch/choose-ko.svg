@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 396" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rgd-choose-title">
+  <title id="rgd-choose-title">여러 타입을 섞거나 반환 타입이 실행 중 갈리면 dyn, 아니면 제네릭이나 impl Trait</title>
+  <style>
+    .rgd-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rgd-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rgd-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rgd-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rgd-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rgd-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; }
+    .rgd-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rgd-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rgd-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rgd-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rgd-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rgd-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rgd-choose-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rgd-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rgd-group" x="20" y="20" width="270" height="56" rx="8"/>
+  <text class="rgd-t" x="155" y="39">여러 구체 타입을 한 변수·</text>
+  <text class="rgd-t" x="155" y="57">컬렉션에 담아야 하나?</text>
+  <text class="rgd-msg" x="310" y="37">예</text>
+  <line class="rgd-line" x1="291" y1="48" x2="329" y2="48" marker-end="url(#rgd-choose-arrow)"/>
+  <rect class="rgd-amber" x="330" y="20" width="130" height="56" rx="8"/>
+  <text class="rgd-monoc" x="395" y="48">dyn Trait</text>
+  <line class="rgd-line" x1="155" y1="77" x2="155" y2="111" marker-end="url(#rgd-choose-arrow)"/>
+  <text class="rgd-msg" x="190" y="94">아니오</text>
+  <rect class="rgd-group" x="20" y="112" width="270" height="56" rx="8"/>
+  <text class="rgd-t" x="155" y="131">반환 타입이 실행 중</text>
+  <text class="rgd-t" x="155" y="149">값에 따라 달라지나?</text>
+  <text class="rgd-msg" x="310" y="129">예</text>
+  <line class="rgd-line" x1="291" y1="140" x2="329" y2="140" marker-end="url(#rgd-choose-arrow)"/>
+  <rect class="rgd-amber" x="330" y="112" width="130" height="56" rx="8"/>
+  <text class="rgd-monoc" x="395" y="140">Box&lt;dyn Trait&gt;</text>
+  <line class="rgd-line" x1="155" y1="169" x2="155" y2="203" marker-end="url(#rgd-choose-arrow)"/>
+  <text class="rgd-msg" x="190" y="186">아니오</text>
+  <rect class="rgd-group" x="20" y="204" width="270" height="56" rx="8"/>
+  <text class="rgd-t" x="155" y="223">타입이 많아 사본 크기·</text>
+  <text class="rgd-t" x="155" y="241">빌드 시간이 부담인가?</text>
+  <text class="rgd-msg" x="310" y="221">예</text>
+  <line class="rgd-line" x1="291" y1="232" x2="329" y2="232" marker-end="url(#rgd-choose-arrow)"/>
+  <rect class="rgd-amber" x="330" y="204" width="130" height="56" rx="8"/>
+  <text class="rgd-monoc" x="395" y="232">dyn Trait</text>
+  <line class="rgd-line" x1="155" y1="261" x2="155" y2="295" marker-end="url(#rgd-choose-arrow)"/>
+  <text class="rgd-msg" x="190" y="278">아니오</text>
+  <rect class="rgd-green" x="20" y="296" width="270" height="56" rx="8"/>
+  <text class="rgd-t" x="155" y="315">제네릭 · impl Trait</text>
+  <text class="rgd-t" x="155" y="333">구현이 컴파일 때 정해짐</text>
+  <text class="rgd-note" x="20" y="376">dyn 을 고르면 trait 가 dyn compatible 해야 한다</text>
+</svg>

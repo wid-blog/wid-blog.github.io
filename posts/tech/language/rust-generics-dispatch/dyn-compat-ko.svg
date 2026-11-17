@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 296" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rgd-dyn-compat-title">
+  <title id="rgd-dyn-compat-title">Self 를 반환하거나 제네릭 매개변수가 있는 메서드는 dyn 을 막고, where Self: Sized 를 붙이면 vtable 에서 빠진다</title>
+  <style>
+    .rgd-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rgd-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rgd-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rgd-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rgd-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rgd-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; }
+    .rgd-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rgd-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rgd-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rgd-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rgd-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rgd-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rgd-dyn-compat-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rgd-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <text class="rgd-sub" x="20" y="20">trait Shape 의 메서드가 dyn Shape 에서 어떻게 되는가</text>
+  <rect class="rgd-blue" x="20" y="36" width="210" height="56" rx="8"/>
+  <text class="rgd-mono" x="32" y="64">fn area(&amp;self) -&gt; f64</text>
+  <line class="rgd-line" x1="231" y1="64" x2="249" y2="64" marker-end="url(#rgd-dyn-compat-arrow)"/>
+  <rect class="rgd-green" x="250" y="36" width="210" height="56" rx="8"/>
+  <text class="rgd-t" x="355" y="55">vtable 에 칸 생성</text>
+  <text class="rgd-t" x="355" y="73">dyn 으로 호출 가능</text>
+  <rect class="rgd-blue" x="20" y="100" width="210" height="56" rx="8"/>
+  <text class="rgd-mono" x="32" y="128">fn scaled(..) -&gt; Self</text>
+  <line class="rgd-line" x1="231" y1="128" x2="249" y2="128" marker-end="url(#rgd-dyn-compat-arrow)"/>
+  <rect class="rgd-amber" x="250" y="100" width="210" height="56" rx="8"/>
+  <text class="rgd-t" x="355" y="119">dyn 불가 (E0038)</text>
+  <text class="rgd-t" x="355" y="137">반환값 크기를 모름</text>
+  <rect class="rgd-blue" x="20" y="164" width="210" height="56" rx="8"/>
+  <text class="rgd-mono" x="32" y="192">fn scale_by&lt;F&gt;(.., F)</text>
+  <line class="rgd-line" x1="231" y1="192" x2="249" y2="192" marker-end="url(#rgd-dyn-compat-arrow)"/>
+  <rect class="rgd-amber" x="250" y="164" width="210" height="56" rx="8"/>
+  <text class="rgd-t" x="355" y="183">dyn 불가 (E0038)</text>
+  <text class="rgd-t" x="355" y="201">F 마다 사본이 필요</text>
+  <rect class="rgd-blue" x="20" y="228" width="210" height="56" rx="8"/>
+  <text class="rgd-mono" x="32" y="247">fn scaled(..) -&gt; Self</text>
+  <text class="rgd-mono" x="32" y="265">  where Self: Sized</text>
+  <line class="rgd-line" x1="231" y1="256" x2="249" y2="256" marker-end="url(#rgd-dyn-compat-arrow)"/>
+  <rect class="rgd-group" x="250" y="228" width="210" height="56" rx="8"/>
+  <text class="rgd-t" x="355" y="247">vtable 에서 제외</text>
+  <text class="rgd-t" x="355" y="265">구체 타입에서만 호출</text>
+</svg>

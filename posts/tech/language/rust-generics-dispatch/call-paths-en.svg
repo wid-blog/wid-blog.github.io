@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 376" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rgd-call-paths-title">
+  <title id="rgd-call-paths-title">A static call inlines the area body; a dyn call loads the address from the vtable and branches indirectly</title>
+  <style>
+    .rgd-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rgd-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rgd-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rgd-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rgd-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rgd-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; }
+    .rgd-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rgd-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rgd-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rgd-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rgd-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rgd-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rgd-call-paths-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rgd-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rgd-group" x="16" y="16" width="448" height="160" rx="12"/>
+  <text class="rgd-sub" x="32" y="36">area_static(shape: &amp;Circle)</text>
+  <rect class="rgd-green" x="32" y="52" width="196" height="26" rx="6"/>
+  <text class="rgd-mono" x="44" y="65">ldr  d0, [x0]</text>
+  <text class="rgd-note" x="240" y="65">load radius</text>
+  <rect class="rgd-green" x="32" y="82" width="196" height="26" rx="6"/>
+  <text class="rgd-mono" x="44" y="95">mov/movk ×4, fmov</text>
+  <text class="rgd-note" x="240" y="95">build constant 3.14</text>
+  <rect class="rgd-green" x="32" y="112" width="196" height="26" rx="6"/>
+  <text class="rgd-mono" x="44" y="125">fmul ×2</text>
+  <text class="rgd-note" x="240" y="125">3.14 × r × r</text>
+  <rect class="rgd-green" x="32" y="142" width="196" height="26" rx="6"/>
+  <text class="rgd-mono" x="44" y="155">ret</text>
+  <text class="rgd-note" x="240" y="155">return</text>
+  <rect class="rgd-group" x="16" y="192" width="448" height="168" rx="12"/>
+  <text class="rgd-sub" x="32" y="212">area_dyn(shape: &amp;dyn Shape)</text>
+  <text class="rgd-note" x="32" y="236">two argument registers: x0 = data, x1 = vtable</text>
+  <rect class="rgd-amber" x="32" y="252" width="196" height="26" rx="6"/>
+  <text class="rgd-mono" x="44" y="265">ldr  x1, [x1, #24]</text>
+  <text class="rgd-note" x="240" y="265">area address at vtable +24</text>
+  <rect class="rgd-amber" x="32" y="282" width="196" height="26" rx="6"/>
+  <text class="rgd-mono" x="44" y="295">br   x1</text>
+  <text class="rgd-note" x="240" y="295">indirect branch to it</text>
+  <line class="rgd-line" x1="130" y1="309" x2="130" y2="323" marker-end="url(#rgd-call-paths-arrow)"/>
+  <rect class="rgd-green" x="32" y="324" width="196" height="26" rx="6"/>
+  <text class="rgd-mono" x="44" y="337">Circle::area</text>
+  <text class="rgd-note" x="240" y="337">run body, return</text>
+</svg>
