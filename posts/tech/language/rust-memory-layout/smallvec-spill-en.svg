@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rml-smallvec-spill-title">
+  <title id="rml-smallvec-spill-title">SmallVec keeps up to 4 elements inside itself and allocates a heap buffer on the 5th push, moving the elements</title>
+  <style>
+    .rml-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rml-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rml-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rml-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rml-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rml-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rml-monor { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: end; dominant-baseline: central; white-space: pre; }
+    .rml-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rml-pad { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 3; }
+    .rml-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rml-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rml-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rml-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rml-dash { stroke-dasharray: 5 4; }
+    .rml-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rml-smallvec-spill-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rml-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rml-group" x="20" y="20" width="440" height="112" rx="12"/>
+  <text class="rml-sub" x="32" y="40">push 1-4 — inline (0 heap allocations)</text>
+  <text class="rml-mono" x="32" y="64">tags: SmallVec&lt;[u32; 4]&gt; (32B, stack)</text>
+  <rect class="rml-green" x="32" y="80" width="56" height="36" rx="8"/>
+  <text class="rml-monoc" x="60.0" y="98.0">1</text>
+  <rect class="rml-green" x="92" y="80" width="56" height="36" rx="8"/>
+  <text class="rml-monoc" x="120.0" y="98.0">2</text>
+  <rect class="rml-green" x="152" y="80" width="56" height="36" rx="8"/>
+  <text class="rml-monoc" x="180.0" y="98.0">3</text>
+  <rect class="rml-green" x="212" y="80" width="56" height="36" rx="8"/>
+  <text class="rml-monoc" x="240.0" y="98.0">4</text>
+  <rect class="rml-group" x="20" y="148" width="440" height="196" rx="12"/>
+  <text class="rml-sub" x="32" y="168">push 5 — spill (1 heap allocation)</text>
+  <text class="rml-mono" x="32" y="192">tags: SmallVec&lt;[u32; 4]&gt; (32B, stack)</text>
+  <rect class="rml-blue" x="32" y="208" width="116" height="36" rx="8"/>
+  <text class="rml-t" x="90.0" y="226.0">heap ptr</text>
+  <rect class="rml-green" x="152" y="208" width="116" height="36" rx="8"/>
+  <text class="rml-monoc" x="210.0" y="226.0">len 5</text>
+  <text class="rml-sub" x="32" y="270">heap</text>
+  <rect class="rml-green" x="32" y="284" width="48" height="36" rx="8"/>
+  <text class="rml-monoc" x="56.0" y="302.0">1</text>
+  <rect class="rml-green" x="84" y="284" width="48" height="36" rx="8"/>
+  <text class="rml-monoc" x="108.0" y="302.0">2</text>
+  <rect class="rml-green" x="136" y="284" width="48" height="36" rx="8"/>
+  <text class="rml-monoc" x="160.0" y="302.0">3</text>
+  <rect class="rml-green" x="188" y="284" width="48" height="36" rx="8"/>
+  <text class="rml-monoc" x="212.0" y="302.0">4</text>
+  <rect class="rml-green" x="240" y="284" width="48" height="36" rx="8"/>
+  <text class="rml-monoc" x="264.0" y="302.0">5</text>
+  <rect class="rml-pad" x="292" y="284" width="48" height="36" rx="8"/>
+  <text class="rml-t" x="316.0" y="302.0">free</text>
+  <rect class="rml-pad" x="344" y="284" width="48" height="36" rx="8"/>
+  <text class="rml-t" x="368.0" y="302.0">free</text>
+  <rect class="rml-pad" x="396" y="284" width="48" height="36" rx="8"/>
+  <text class="rml-t" x="420.0" y="302.0">free</text>
+  <path class="rml-line" d="M56,244 V283" marker-end="url(#rml-smallvec-spill-arrow)"/>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 454" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rml-wrapper-sizes-title">
+  <title id="rml-wrapper-sizes-title">참조와 컨테이너의 크기는 포인터·길이·용량처럼 8바이트 칸 몇 개로 정해진다</title>
+  <style>
+    .rml-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rml-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rml-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rml-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rml-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rml-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rml-monor { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: end; dominant-baseline: central; white-space: pre; }
+    .rml-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rml-pad { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 3; }
+    .rml-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rml-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rml-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rml-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rml-dash { stroke-dasharray: 5 4; }
+    .rml-head { fill: var(--secondary); }
+  </style>
+  <rect class="rml-group" x="20" y="20" width="440" height="392" rx="12"/>
+  <text class="rml-sub" x="32" y="40">한 칸 = 8B</text>
+  <text class="rml-mono" x="32" y="74">&amp;u64</text>
+  <rect class="rml-blue" x="150" y="56" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="197.0" y="74.0">ptr</text>
+  <text class="rml-mono" x="32" y="118">&amp;str</text>
+  <rect class="rml-blue" x="150" y="100" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="197.0" y="118.0">ptr</text>
+  <rect class="rml-green" x="248" y="100" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="295.0" y="118.0">len</text>
+  <text class="rml-mono" x="32" y="162">Box&lt;[u64]&gt;</text>
+  <rect class="rml-blue" x="150" y="144" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="197.0" y="162.0">ptr</text>
+  <rect class="rml-green" x="248" y="144" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="295.0" y="162.0">len</text>
+  <text class="rml-mono" x="32" y="206">Vec&lt;u64&gt;</text>
+  <rect class="rml-blue" x="150" y="188" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="197.0" y="206.0">ptr</text>
+  <rect class="rml-green" x="248" y="188" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="295.0" y="206.0">cap</text>
+  <rect class="rml-green" x="346" y="188" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="393.0" y="206.0">len</text>
+  <text class="rml-mono" x="32" y="250">String</text>
+  <rect class="rml-blue" x="150" y="232" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="197.0" y="250.0">ptr</text>
+  <rect class="rml-green" x="248" y="232" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="295.0" y="250.0">cap</text>
+  <rect class="rml-green" x="346" y="232" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="393.0" y="250.0">len</text>
+  <text class="rml-mono" x="32" y="294">Rc&lt;u64&gt;</text>
+  <rect class="rml-blue" x="150" y="276" width="94" height="36" rx="8"/>
+  <text class="rml-monoc" x="197.0" y="294.0">ptr</text>
+  <text class="rml-mono" x="32" y="338">RefCell&lt;u64&gt;</text>
+  <rect class="rml-amber" x="150" y="320" width="94" height="36" rx="8"/>
+  <text class="rml-t" x="197.0" y="338.0">대여 상태</text>
+  <rect class="rml-green" x="248" y="320" width="94" height="36" rx="8"/>
+  <text class="rml-t" x="295.0" y="338.0">값</text>
+  <text class="rml-mono" x="32" y="382">Mutex&lt;u64&gt;</text>
+  <rect class="rml-pad" x="150" y="364" width="290" height="36" rx="8"/>
+  <text class="rml-t" x="295.0" y="382.0">24B (구성은 플랫폼마다 다름)</text>
+  <text class="rml-note" x="20" y="436">칸 순서는 보장되지 않는다. 크기는 aarch64-apple-darwin 실측</text>
+</svg>

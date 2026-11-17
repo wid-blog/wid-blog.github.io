@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 386" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rml-enum-tag-title">
+  <title id="rml-enum-tag-title">An enum with data carries a tag that picks the variant plus room for its largest variant</title>
+  <style>
+    .rml-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rml-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rml-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rml-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rml-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rml-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rml-monor { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: end; dominant-baseline: central; white-space: pre; }
+    .rml-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rml-pad { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 3; }
+    .rml-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rml-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rml-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rml-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rml-dash { stroke-dasharray: 5 4; }
+    .rml-head { fill: var(--secondary); }
+  </style>
+  <rect class="rml-group" x="20" y="20" width="440" height="176" rx="12"/>
+  <text class="rml-sub" x="32" y="40">Shape — 24B (one cell 8B)</text>
+  <text class="rml-mono" x="32" y="74">Point</text>
+  <rect class="rml-amber" x="132" y="56" width="102" height="36" rx="8"/>
+  <text class="rml-t" x="183.0" y="74.0">tag+pad</text>
+  <rect class="rml-pad" x="238" y="56" width="102" height="36" rx="8"/>
+  <text class="rml-t" x="289.0" y="74.0">unused</text>
+  <rect class="rml-pad" x="344" y="56" width="102" height="36" rx="8"/>
+  <text class="rml-t" x="395.0" y="74.0">unused</text>
+  <text class="rml-mono" x="32" y="118">Circle(r)</text>
+  <rect class="rml-amber" x="132" y="100" width="102" height="36" rx="8"/>
+  <text class="rml-t" x="183.0" y="118.0">tag+pad</text>
+  <rect class="rml-blue" x="238" y="100" width="102" height="36" rx="8"/>
+  <text class="rml-monoc" x="289.0" y="118.0">r: f64</text>
+  <rect class="rml-pad" x="344" y="100" width="102" height="36" rx="8"/>
+  <text class="rml-t" x="395.0" y="118.0">unused</text>
+  <text class="rml-mono" x="32" y="162">Rect(w, h)</text>
+  <rect class="rml-amber" x="132" y="144" width="102" height="36" rx="8"/>
+  <text class="rml-t" x="183.0" y="162.0">tag+pad</text>
+  <rect class="rml-blue" x="238" y="144" width="102" height="36" rx="8"/>
+  <text class="rml-monoc" x="289.0" y="162.0">w: f64</text>
+  <rect class="rml-blue" x="344" y="144" width="102" height="36" rx="8"/>
+  <text class="rml-monoc" x="395.0" y="162.0">h: f64</text>
+  <rect class="rml-group" x="20" y="212" width="440" height="132" rx="12"/>
+  <text class="rml-sub" x="32" y="232">Option&lt;u32&gt; — 8B (one cell 4B)</text>
+  <text class="rml-mono" x="32" y="266">Some(v)</text>
+  <rect class="rml-amber" x="132" y="248" width="102" height="36" rx="8"/>
+  <text class="rml-t" x="183.0" y="266.0">tag+pad</text>
+  <rect class="rml-blue" x="238" y="248" width="102" height="36" rx="8"/>
+  <text class="rml-monoc" x="289.0" y="266.0">v: u32</text>
+  <text class="rml-mono" x="32" y="310">None</text>
+  <rect class="rml-amber" x="132" y="292" width="102" height="36" rx="8"/>
+  <text class="rml-t" x="183.0" y="310.0">tag+pad</text>
+  <rect class="rml-pad" x="238" y="292" width="102" height="36" rx="8"/>
+  <text class="rml-t" x="289.0" y="310.0">unused</text>
+  <text class="rml-note" x="20" y="368">The compiler picks the cell order; only the sizes are measured</text>
+</svg>
