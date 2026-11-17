@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rci-move-capture-title">
+  <title id="rci-move-capture-title">With move, the closure stores the String and the i32 by value even though the body only reads them, so 16 bytes become 32</title>
+  <style>
+    .rci-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rci-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rci-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rci-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rci-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rci-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rci-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rci-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rci-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rci-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rci-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rci-dash { stroke-dasharray: 5 4; }
+    .rci-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rci-move-capture-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rci-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <text class="rci-mono" x="20" y="20">|| println!("{name} {id}")</text>
+  <rect class="rci-green" x="20" y="36" width="80" height="36" rx="8"/>
+  <text class="rci-monoc" x="60" y="54">&amp;String</text>
+  <rect class="rci-green" x="100" y="36" width="80" height="36" rx="8"/>
+  <text class="rci-monoc" x="140" y="54">&amp;i32</text>
+  <text class="rci-note" x="356" y="54">16 bytes</text>
+  <text class="rci-mono" x="20" y="100">move || println!("{name} {id}")</text>
+  <rect class="rci-blue" x="20" y="116" width="240" height="36" rx="8"/>
+  <text class="rci-monoc" x="140" y="134">String</text>
+  <rect class="rci-blue" x="260" y="116" width="80" height="36" rx="8"/>
+  <text class="rci-t" x="300" y="134">i32 + pad</text>
+  <text class="rci-note" x="356" y="134">32 bytes</text>
+  <text class="rci-note" x="20" y="180">Sizes from size_of_val; field order is not guaranteed</text>
+  <text class="rci-note" x="20" y="200">id is Copy, so main can still use it after the move</text>
+</svg>

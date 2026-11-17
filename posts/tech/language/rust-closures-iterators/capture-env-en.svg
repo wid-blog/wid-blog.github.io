@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 264" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rci-capture-env-title">
+  <title id="rci-capture-env-title">A closure captures by reference when its body only reads, by mutable reference when it writes, and by value when it gives ownership away</title>
+  <style>
+    .rci-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rci-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rci-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rci-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rci-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rci-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rci-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rci-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rci-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rci-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rci-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rci-dash { stroke-dasharray: 5 4; }
+    .rci-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rci-capture-env-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rci-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <text class="rci-sub" x="20" y="20">closure</text>
+  <text class="rci-sub" x="276" y="20">struct the compiler builds</text>
+  <rect class="rci-group" x="20" y="40" width="220" height="36" rx="8"/>
+  <text class="rci-mono" x="32" y="58">|| println!("hello")</text>
+  <line class="rci-line" x1="240" y1="58" x2="275" y2="58" marker-end="url(#rci-capture-env-arrow)"/>
+  <rect class="rci-group" x="276" y="40" width="184" height="36" rx="8"/>
+  <text class="rci-t" x="368" y="58">no fields · 0 bytes</text>
+  <rect class="rci-group" x="20" y="88" width="220" height="36" rx="8"/>
+  <text class="rci-mono" x="32" y="106">|| println!("{name}")</text>
+  <line class="rci-line" x1="240" y1="106" x2="275" y2="106" marker-end="url(#rci-capture-env-arrow)"/>
+  <rect class="rci-green" x="276" y="88" width="184" height="36" rx="8"/>
+  <text class="rci-t" x="368" y="106">&amp;String · 8 bytes</text>
+  <rect class="rci-group" x="20" y="136" width="220" height="36" rx="8"/>
+  <text class="rci-mono" x="32" y="154">|| count += 1</text>
+  <line class="rci-line" x1="240" y1="154" x2="275" y2="154" marker-end="url(#rci-capture-env-arrow)"/>
+  <rect class="rci-amber" x="276" y="136" width="184" height="36" rx="8"/>
+  <text class="rci-t" x="368" y="154">&amp;mut i32 · 8 bytes</text>
+  <rect class="rci-group" x="20" y="184" width="220" height="36" rx="8"/>
+  <text class="rci-mono" x="32" y="202">|| drop(name)</text>
+  <line class="rci-line" x1="240" y1="202" x2="275" y2="202" marker-end="url(#rci-capture-env-arrow)"/>
+  <rect class="rci-blue" x="276" y="184" width="184" height="36" rx="8"/>
+  <text class="rci-t" x="368" y="202">String · 24 bytes</text>
+  <text class="rci-note" x="20" y="244">What the body does with a value decides the field type</text>
+</svg>

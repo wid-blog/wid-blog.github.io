@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 268" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="rci-iter-kinds-title">
+  <title id="rci-iter-kinds-title">iter 는 &amp;String, iter_mut 는 &amp;mut String, into_iter 는 String 을 꺼내고 into_iter 만 names 를 이동시킨다</title>
+  <style>
+    .rci-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rci-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .rci-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rci-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .rci-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .rci-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .rci-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .rci-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .rci-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .rci-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .rci-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .rci-dash { stroke-dasharray: 5 4; }
+    .rci-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="rci-iter-kinds-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="rci-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="rci-group" x="20" y="20" width="440" height="64" rx="12"/>
+  <text class="rci-mono" x="36" y="52">names: Vec&lt;String&gt;</text>
+  <rect class="rci-group" x="300" y="34" width="70" height="36" rx="8"/>
+  <text class="rci-monoc" x="335" y="52">"a"</text>
+  <rect class="rci-group" x="378" y="34" width="70" height="36" rx="8"/>
+  <text class="rci-monoc" x="413" y="52">"b"</text>
+  <line class="rci-line" x1="90" y1="84" x2="90" y2="109" marker-end="url(#rci-iter-kinds-arrow)"/>
+  <rect class="rci-group" x="20" y="110" width="140" height="36" rx="8"/>
+  <text class="rci-monoc" x="90" y="128">.iter()</text>
+  <line class="rci-line" x1="90" y1="146" x2="90" y2="171" marker-end="url(#rci-iter-kinds-arrow)"/>
+  <rect class="rci-green" x="20" y="172" width="140" height="36" rx="8"/>
+  <text class="rci-monoc" x="90" y="190">&amp;String</text>
+  <text class="rci-msg" x="90" y="230">읽기만</text>
+  <text class="rci-msg" x="90" y="248">names 유지</text>
+  <line class="rci-line" x1="240" y1="84" x2="240" y2="109" marker-end="url(#rci-iter-kinds-arrow)"/>
+  <rect class="rci-group" x="170" y="110" width="140" height="36" rx="8"/>
+  <text class="rci-monoc" x="240" y="128">.iter_mut()</text>
+  <line class="rci-line" x1="240" y1="146" x2="240" y2="171" marker-end="url(#rci-iter-kinds-arrow)"/>
+  <rect class="rci-amber" x="170" y="172" width="140" height="36" rx="8"/>
+  <text class="rci-monoc" x="240" y="190">&amp;mut String</text>
+  <text class="rci-msg" x="240" y="230">제자리에서 수정</text>
+  <text class="rci-msg" x="240" y="248">names 유지</text>
+  <line class="rci-line" x1="390" y1="84" x2="390" y2="109" marker-end="url(#rci-iter-kinds-arrow)"/>
+  <rect class="rci-group" x="320" y="110" width="140" height="36" rx="8"/>
+  <text class="rci-monoc" x="390" y="128">.into_iter()</text>
+  <line class="rci-line" x1="390" y1="146" x2="390" y2="171" marker-end="url(#rci-iter-kinds-arrow)"/>
+  <rect class="rci-blue" x="320" y="172" width="140" height="36" rx="8"/>
+  <text class="rci-monoc" x="390" y="190">String</text>
+  <text class="rci-msg" x="390" y="230">값을 꺼냄</text>
+  <text class="rci-msg" x="390" y="248">names 이동</text>
+</svg>
