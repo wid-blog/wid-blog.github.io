@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 252" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="kzc-billing-direction-title">
+  <title id="kzc-billing-direction-title">같은 region 의 zone 간 전송에서 과금되는 쪽</title>
+  <style>
+    .kzc-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .kzc-left { text-anchor: start; }
+    .kzc-right { text-anchor: end; }
+    .kzc-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .kzc-node { fill: rgba(128, 128, 128, 0.10); stroke: var(--secondary); stroke-width: 1; }
+    .kzc-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .kzc-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .kzc-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .kzc-bblue { fill: rgba(70, 130, 220, 0.55); }
+    .kzc-bgreen { fill: rgba(60, 160, 90, 0.55); }
+    .kzc-bamber { fill: rgba(220, 130, 40, 0.55); }
+    .kzc-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .kzc-pblue { stroke: rgb(70, 130, 220); stroke-width: 2; fill: none; }
+    .kzc-pgreen { stroke: rgb(60, 160, 90); stroke-width: 2; fill: none; }
+    .kzc-pamber { stroke: rgb(220, 130, 40); stroke-width: 2; fill: none; }
+    .kzc-dash { stroke-dasharray: 5 4; }
+    .kzc-head { fill: var(--secondary); }
+    .kzc-hblue { fill: rgb(70, 130, 220); }
+    .kzc-hgreen { fill: rgb(60, 160, 90); }
+    .kzc-hamber { fill: rgb(220, 130, 40); }
+  </style>
+  <defs>
+    <marker id="kzc-billing-direction-line" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path class="kzc-head" d="M0,1 L10,5 L0,9 z"/></marker>
+  </defs>
+  <rect class="kzc-group" x="16" y="16" width="448" height="106" rx="12"/>
+  <text class="kzc-sub kzc-left" x="28" y="36">GCP</text>
+  <rect class="kzc-node" x="40" y="50" width="120" height="36" rx="8"/>
+  <text class="kzc-t" x="100.0" y="68.0">VM · zone a</text>
+  <rect class="kzc-node" x="320" y="50" width="120" height="36" rx="8"/>
+  <text class="kzc-t" x="380.0" y="68.0">VM · zone b</text>
+  <path class="kzc-line" d="M 160 68 L 319 68" marker-end="url(#kzc-billing-direction-line)"/>
+  <text class="kzc-msg" x="240" y="57">1 GB 전송</text>
+  <text class="kzc-msg" x="100" y="104">보내는 쪽 $0.01/GiB</text>
+  <text class="kzc-msg" x="380" y="104">받는 쪽 과금 없음</text>
+  <rect class="kzc-group" x="16" y="134" width="448" height="106" rx="12"/>
+  <text class="kzc-sub kzc-left" x="28" y="154">AWS</text>
+  <rect class="kzc-node" x="40" y="168" width="120" height="36" rx="8"/>
+  <text class="kzc-t" x="100.0" y="186.0">VM · zone a</text>
+  <rect class="kzc-node" x="320" y="168" width="120" height="36" rx="8"/>
+  <text class="kzc-t" x="380.0" y="186.0">VM · zone b</text>
+  <path class="kzc-line" d="M 160 186 L 319 186" marker-end="url(#kzc-billing-direction-line)"/>
+  <text class="kzc-msg" x="240" y="175">1 GB 전송</text>
+  <text class="kzc-msg" x="100" y="222">보내는 쪽 $0.01/GB</text>
+  <text class="kzc-msg" x="380" y="222">받는 쪽 $0.01/GB</text>
+</svg>

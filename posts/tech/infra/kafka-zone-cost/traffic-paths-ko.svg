@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 330" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="kzc-traffic-paths-title">
+  <title id="kzc-traffic-paths-title">produce·복제·consume 세 경로가 zone 경계를 넘는 모습</title>
+  <style>
+    .kzc-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .kzc-left { text-anchor: start; }
+    .kzc-right { text-anchor: end; }
+    .kzc-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .kzc-node { fill: rgba(128, 128, 128, 0.10); stroke: var(--secondary); stroke-width: 1; }
+    .kzc-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .kzc-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .kzc-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .kzc-bblue { fill: rgba(70, 130, 220, 0.55); }
+    .kzc-bgreen { fill: rgba(60, 160, 90, 0.55); }
+    .kzc-bamber { fill: rgba(220, 130, 40, 0.55); }
+    .kzc-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .kzc-pblue { stroke: rgb(70, 130, 220); stroke-width: 2; fill: none; }
+    .kzc-pgreen { stroke: rgb(60, 160, 90); stroke-width: 2; fill: none; }
+    .kzc-pamber { stroke: rgb(220, 130, 40); stroke-width: 2; fill: none; }
+    .kzc-dash { stroke-dasharray: 5 4; }
+    .kzc-head { fill: var(--secondary); }
+    .kzc-hblue { fill: rgb(70, 130, 220); }
+    .kzc-hgreen { fill: rgb(60, 160, 90); }
+    .kzc-hamber { fill: rgb(220, 130, 40); }
+  </style>
+  <defs>
+    <marker id="kzc-traffic-paths-amber" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path class="kzc-hamber" d="M0,1 L10,5 L0,9 z"/></marker>
+    <marker id="kzc-traffic-paths-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path class="kzc-hblue" d="M0,1 L10,5 L0,9 z"/></marker>
+    <marker id="kzc-traffic-paths-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path class="kzc-hgreen" d="M0,1 L10,5 L0,9 z"/></marker>
+  </defs>
+  <rect class="kzc-group" x="16" y="16" width="144" height="270" rx="12"/>
+  <text class="kzc-sub kzc-left" x="28" y="36">zone a</text>
+  <rect class="kzc-group" x="168" y="16" width="144" height="270" rx="12"/>
+  <text class="kzc-sub kzc-left" x="180" y="36">zone b</text>
+  <rect class="kzc-group" x="320" y="16" width="144" height="270" rx="12"/>
+  <text class="kzc-sub kzc-left" x="332" y="36">zone c</text>
+  <rect class="kzc-blue" x="180" y="60" width="120" height="36" rx="8"/>
+  <text class="kzc-t" x="240.0" y="78.0">producer</text>
+  <rect class="kzc-green" x="332" y="60" width="120" height="36" rx="8"/>
+  <text class="kzc-t" x="392.0" y="78.0">consumer</text>
+  <rect class="kzc-node" x="28" y="170" width="120" height="56" rx="8"/>
+  <text class="kzc-t" x="88.0" y="189.0">broker 1</text>
+  <text class="kzc-t" x="88.0" y="207.0">leader</text>
+  <rect class="kzc-node" x="180" y="170" width="120" height="56" rx="8"/>
+  <text class="kzc-t" x="240.0" y="189.0">broker 2</text>
+  <text class="kzc-t" x="240.0" y="207.0">follower</text>
+  <rect class="kzc-node" x="332" y="170" width="120" height="56" rx="8"/>
+  <text class="kzc-t" x="392.0" y="189.0">broker 3</text>
+  <text class="kzc-t" x="392.0" y="207.0">follower</text>
+  <path class="kzc-pblue" d="M 210 96 L 210 120 L 118 120 L 118 169" marker-end="url(#kzc-traffic-paths-blue)"/>
+  <text class="kzc-msg" x="164" y="109">produce</text>
+  <path class="kzc-pgreen" d="M 88 169 L 88 140 L 362 140 L 362 97" marker-end="url(#kzc-traffic-paths-green)"/>
+  <text class="kzc-msg" x="400" y="120">consume</text>
+  <path class="kzc-pamber" d="M 148 197 L 179 197" marker-end="url(#kzc-traffic-paths-amber)"/>
+  <path class="kzc-pamber" d="M 88 226 L 88 250 L 392 250 L 392 227" marker-end="url(#kzc-traffic-paths-amber)"/>
+  <line class="kzc-pblue" x1="28" y1="308" x2="56" y2="308"/>
+  <text class="kzc-msg kzc-left" x="64" y="308">produce</text>
+  <line class="kzc-pamber" x1="156" y1="308" x2="184" y2="308"/>
+  <text class="kzc-msg kzc-left" x="192" y="308">복제</text>
+  <line class="kzc-pgreen" x1="244" y1="308" x2="272" y2="308"/>
+  <text class="kzc-msg kzc-left" x="280" y="308">consume</text>
+</svg>

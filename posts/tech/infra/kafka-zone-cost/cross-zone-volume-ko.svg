@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 278" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="kzc-cross-zone-volume-title">
+  <title id="kzc-cross-zone-volume-title">produce 1 GB 당 zone 을 넘는 양 (RF3, zone 3개, 클라이언트 균등 분포)</title>
+  <style>
+    .kzc-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .kzc-left { text-anchor: start; }
+    .kzc-right { text-anchor: end; }
+    .kzc-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .kzc-node { fill: rgba(128, 128, 128, 0.10); stroke: var(--secondary); stroke-width: 1; }
+    .kzc-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .kzc-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .kzc-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .kzc-bblue { fill: rgba(70, 130, 220, 0.55); }
+    .kzc-bgreen { fill: rgba(60, 160, 90, 0.55); }
+    .kzc-bamber { fill: rgba(220, 130, 40, 0.55); }
+    .kzc-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .kzc-pblue { stroke: rgb(70, 130, 220); stroke-width: 2; fill: none; }
+    .kzc-pgreen { stroke: rgb(60, 160, 90); stroke-width: 2; fill: none; }
+    .kzc-pamber { stroke: rgb(220, 130, 40); stroke-width: 2; fill: none; }
+    .kzc-dash { stroke-dasharray: 5 4; }
+    .kzc-head { fill: var(--secondary); }
+    .kzc-hblue { fill: rgb(70, 130, 220); }
+    .kzc-hgreen { fill: rgb(60, 160, 90); }
+    .kzc-hamber { fill: rgb(220, 130, 40); }
+  </style>
+  <defs>
+  </defs>
+  <text class="kzc-sub kzc-left" x="16" y="24">produce 1 GB 당 zone 간 전송량 (RF3, zone 3개)</text>
+  <text class="kzc-msg kzc-right" x="140" y="64">기본</text>
+  <rect class="kzc-bblue" x="150" y="50" width="34.666666666666664" height="28" rx="3"/>
+  <rect class="kzc-bamber" x="184.66666666666666" y="50" width="104.0" height="28" rx="3"/>
+  <rect class="kzc-bgreen" x="288.66666666666663" y="50" width="34.666666666666664" height="28" rx="3"/>
+  <text class="kzc-msg kzc-left" x="331.3333333333333" y="64">3.33 GB</text>
+  <text class="kzc-msg kzc-right" x="140" y="86">consumer group 1개</text>
+  <text class="kzc-msg kzc-right" x="140" y="122">기본</text>
+  <rect class="kzc-bblue" x="150" y="108" width="34.666666666666664" height="28" rx="3"/>
+  <rect class="kzc-bamber" x="184.66666666666666" y="108" width="104.0" height="28" rx="3"/>
+  <rect class="kzc-bgreen" x="288.66666666666663" y="108" width="104.0" height="28" rx="3"/>
+  <text class="kzc-msg kzc-left" x="400.66666666666663" y="122">4.67 GB</text>
+  <text class="kzc-msg kzc-right" x="140" y="144">consumer group 3개</text>
+  <text class="kzc-msg kzc-right" x="140" y="180">follower fetching</text>
+  <rect class="kzc-bblue" x="150" y="166" width="34.666666666666664" height="28" rx="3"/>
+  <rect class="kzc-bamber" x="184.66666666666666" y="166" width="104.0" height="28" rx="3"/>
+  <text class="kzc-msg kzc-left" x="296.66666666666663" y="180">2.67 GB</text>
+  <text class="kzc-msg kzc-right" x="140" y="202">consumer group 3개</text>
+  <line class="kzc-pblue" x1="28" y1="254" x2="56" y2="254"/>
+  <text class="kzc-msg kzc-left" x="64" y="254">produce</text>
+  <line class="kzc-pamber" x1="156" y1="254" x2="184" y2="254"/>
+  <text class="kzc-msg kzc-left" x="192" y="254">복제</text>
+  <line class="kzc-pgreen" x1="244" y1="254" x2="272" y2="254"/>
+  <text class="kzc-msg kzc-left" x="280" y="254">consume</text>
+</svg>

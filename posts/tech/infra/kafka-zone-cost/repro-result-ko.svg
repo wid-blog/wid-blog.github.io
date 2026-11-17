@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 290" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="kzc-repro-result-title">
+  <title id="kzc-repro-result-title">consume 단계 broker 별 송신량: follower fetching 을 켜자 leader 대신 rack c broker 가 보냈다</title>
+  <style>
+    .kzc-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .kzc-left { text-anchor: start; }
+    .kzc-right { text-anchor: end; }
+    .kzc-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .kzc-node { fill: rgba(128, 128, 128, 0.10); stroke: var(--secondary); stroke-width: 1; }
+    .kzc-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .kzc-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .kzc-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .kzc-bblue { fill: rgba(70, 130, 220, 0.55); }
+    .kzc-bgreen { fill: rgba(60, 160, 90, 0.55); }
+    .kzc-bamber { fill: rgba(220, 130, 40, 0.55); }
+    .kzc-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .kzc-pblue { stroke: rgb(70, 130, 220); stroke-width: 2; fill: none; }
+    .kzc-pgreen { stroke: rgb(60, 160, 90); stroke-width: 2; fill: none; }
+    .kzc-pamber { stroke: rgb(220, 130, 40); stroke-width: 2; fill: none; }
+    .kzc-dash { stroke-dasharray: 5 4; }
+    .kzc-head { fill: var(--secondary); }
+    .kzc-hblue { fill: rgb(70, 130, 220); }
+    .kzc-hgreen { fill: rgb(60, 160, 90); }
+    .kzc-hamber { fill: rgb(220, 130, 40); }
+  </style>
+  <defs>
+  </defs>
+  <text class="kzc-sub kzc-left" x="16" y="24">consume 단계 broker 송신량 (consumer client.rack=c, 47.7 MiB 읽음)</text>
+  <text class="kzc-msg kzc-right" x="140" y="60">broker 1 · rack a</text>
+  <text class="kzc-msg kzc-right" x="140" y="78">leader</text>
+  <rect class="kzc-bamber" x="150" y="48" width="256.0" height="18" rx="3"/>
+  <text class="kzc-msg kzc-left" x="414.0" y="57">51.2 MB</text>
+  <rect class="kzc-bgreen" x="150" y="72" width="2.0" height="18" rx="3"/>
+  <text class="kzc-msg kzc-left" x="160.0" y="81">0.4 MB</text>
+  <text class="kzc-msg kzc-right" x="140" y="126">broker 2 · rack b</text>
+  <text class="kzc-msg kzc-right" x="140" y="144">follower</text>
+  <rect class="kzc-bamber" x="150" y="114" width="2" height="18" rx="3"/>
+  <text class="kzc-msg kzc-left" x="160" y="123">0.3 MB</text>
+  <rect class="kzc-bgreen" x="150" y="138" width="3.0" height="18" rx="3"/>
+  <text class="kzc-msg kzc-left" x="161.0" y="147">0.6 MB</text>
+  <text class="kzc-msg kzc-right" x="140" y="192">broker 3 · rack c</text>
+  <text class="kzc-msg kzc-right" x="140" y="210">follower · 같은 rack</text>
+  <rect class="kzc-bamber" x="150" y="180" width="2" height="18" rx="3"/>
+  <text class="kzc-msg kzc-left" x="160" y="189">0.3 MB</text>
+  <rect class="kzc-bgreen" x="150" y="204" width="255.5" height="18" rx="3"/>
+  <text class="kzc-msg kzc-left" x="413.5" y="213">51.1 MB</text>
+  <rect class="kzc-bamber" x="28" y="260" width="16" height="16" rx="4"/>
+  <text class="kzc-msg kzc-left" x="52" y="268">기본 selector</text>
+  <rect class="kzc-bgreen" x="250" y="260" width="16" height="16" rx="4"/>
+  <text class="kzc-msg kzc-left" x="274" y="268">RackAwareReplicaSelector</text>
+</svg>

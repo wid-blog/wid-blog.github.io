@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 414" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="kzc-cluster-topology-title">
+  <title id="kzc-cluster-topology-title">Replication paths: one rack-aware cluster vs one cluster per zone</title>
+  <style>
+    .kzc-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .kzc-left { text-anchor: start; }
+    .kzc-right { text-anchor: end; }
+    .kzc-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .kzc-node { fill: rgba(128, 128, 128, 0.10); stroke: var(--secondary); stroke-width: 1; }
+    .kzc-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .kzc-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .kzc-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .kzc-bblue { fill: rgba(70, 130, 220, 0.55); }
+    .kzc-bgreen { fill: rgba(60, 160, 90, 0.55); }
+    .kzc-bamber { fill: rgba(220, 130, 40, 0.55); }
+    .kzc-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .kzc-pblue { stroke: rgb(70, 130, 220); stroke-width: 2; fill: none; }
+    .kzc-pgreen { stroke: rgb(60, 160, 90); stroke-width: 2; fill: none; }
+    .kzc-pamber { stroke: rgb(220, 130, 40); stroke-width: 2; fill: none; }
+    .kzc-dash { stroke-dasharray: 5 4; }
+    .kzc-head { fill: var(--secondary); }
+    .kzc-hblue { fill: rgb(70, 130, 220); }
+    .kzc-hgreen { fill: rgb(60, 160, 90); }
+    .kzc-hamber { fill: rgb(220, 130, 40); }
+  </style>
+  <defs>
+    <marker id="kzc-cluster-topology-amber" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path class="kzc-hamber" d="M0,1 L10,5 L0,9 z"/></marker>
+  </defs>
+  <text class="kzc-sub kzc-left" x="16" y="26">One cluster · zone as broker.rack</text>
+  <rect class="kzc-group" x="16" y="40" width="144" height="130" rx="12"/>
+  <text class="kzc-sub kzc-left" x="28" y="60">zone a</text>
+  <rect class="kzc-group" x="168" y="40" width="144" height="130" rx="12"/>
+  <text class="kzc-sub kzc-left" x="180" y="60">zone b</text>
+  <rect class="kzc-group" x="320" y="40" width="144" height="130" rx="12"/>
+  <text class="kzc-sub kzc-left" x="332" y="60">zone c</text>
+  <rect class="kzc-node" x="28" y="76" width="120" height="36" rx="8"/>
+  <text class="kzc-t" x="88.0" y="94.0">broker 1</text>
+  <rect class="kzc-node" x="180" y="76" width="120" height="36" rx="8"/>
+  <text class="kzc-t" x="240.0" y="94.0">broker 2</text>
+  <rect class="kzc-node" x="332" y="76" width="120" height="36" rx="8"/>
+  <text class="kzc-t" x="392.0" y="94.0">broker 3</text>
+  <path class="kzc-pamber" d="M 148 94 L 179 94" marker-end="url(#kzc-cluster-topology-amber)"/>
+  <path class="kzc-pamber" d="M 88 112 L 88 140 L 392 140 L 392 113" marker-end="url(#kzc-cluster-topology-amber)"/>
+  <text class="kzc-msg" x="240" y="186">replication crosses zones</text>
+  <text class="kzc-sub kzc-left" x="16" y="214">One cluster per zone · RF3 in each</text>
+  <rect class="kzc-group" x="16" y="226" width="144" height="150" rx="12"/>
+  <text class="kzc-sub kzc-left" x="28" y="246">zone a</text>
+  <rect class="kzc-group" x="168" y="226" width="144" height="150" rx="12"/>
+  <text class="kzc-sub kzc-left" x="180" y="246">zone b</text>
+  <rect class="kzc-group" x="320" y="226" width="144" height="150" rx="12"/>
+  <text class="kzc-sub kzc-left" x="332" y="246">zone c</text>
+  <rect class="kzc-node" x="32" y="258" width="112" height="28" rx="6"/>
+  <text class="kzc-msg" x="88" y="272">broker 1</text>
+  <rect class="kzc-node" x="32" y="292" width="112" height="28" rx="6"/>
+  <text class="kzc-msg" x="88" y="306">broker 2</text>
+  <rect class="kzc-node" x="32" y="326" width="112" height="28" rx="6"/>
+  <text class="kzc-msg" x="88" y="340">broker 3</text>
+  <rect class="kzc-node" x="184" y="258" width="112" height="28" rx="6"/>
+  <text class="kzc-msg" x="240" y="272">broker 1</text>
+  <rect class="kzc-node" x="184" y="292" width="112" height="28" rx="6"/>
+  <text class="kzc-msg" x="240" y="306">broker 2</text>
+  <rect class="kzc-node" x="184" y="326" width="112" height="28" rx="6"/>
+  <text class="kzc-msg" x="240" y="340">broker 3</text>
+  <rect class="kzc-node" x="336" y="258" width="112" height="28" rx="6"/>
+  <text class="kzc-msg" x="392" y="272">broker 1</text>
+  <rect class="kzc-node" x="336" y="292" width="112" height="28" rx="6"/>
+  <text class="kzc-msg" x="392" y="306">broker 2</text>
+  <rect class="kzc-node" x="336" y="326" width="112" height="28" rx="6"/>
+  <text class="kzc-msg" x="392" y="340">broker 3</text>
+  <text class="kzc-msg" x="240" y="394">replication stays in the zone · 3x brokers</text>
+</svg>

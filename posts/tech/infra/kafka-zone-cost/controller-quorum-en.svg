@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 318" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="kzc-controller-quorum-title">
+  <title id="kzc-controller-quorum-title">Whether the quorum survives one zone failure, by how three controllers are placed</title>
+  <style>
+    .kzc-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .kzc-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .kzc-left { text-anchor: start; }
+    .kzc-right { text-anchor: end; }
+    .kzc-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .kzc-node { fill: rgba(128, 128, 128, 0.10); stroke: var(--secondary); stroke-width: 1; }
+    .kzc-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .kzc-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .kzc-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .kzc-bblue { fill: rgba(70, 130, 220, 0.55); }
+    .kzc-bgreen { fill: rgba(60, 160, 90, 0.55); }
+    .kzc-bamber { fill: rgba(220, 130, 40, 0.55); }
+    .kzc-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .kzc-pblue { stroke: rgb(70, 130, 220); stroke-width: 2; fill: none; }
+    .kzc-pgreen { stroke: rgb(60, 160, 90); stroke-width: 2; fill: none; }
+    .kzc-pamber { stroke: rgb(220, 130, 40); stroke-width: 2; fill: none; }
+    .kzc-dash { stroke-dasharray: 5 4; }
+    .kzc-head { fill: var(--secondary); }
+    .kzc-hblue { fill: rgb(70, 130, 220); }
+    .kzc-hgreen { fill: rgb(60, 160, 90); }
+    .kzc-hamber { fill: rgb(220, 130, 40); }
+  </style>
+  <defs>
+  </defs>
+  <text class="kzc-sub" x="194" y="26">zone a</text>
+  <text class="kzc-sub" x="302" y="26">zone b</text>
+  <text class="kzc-sub" x="410" y="26">zone c</text>
+  <text class="kzc-msg kzc-right" x="124" y="72">3 in one zone</text>
+  <rect class="kzc-amber" x="140" y="44" width="108" height="56" rx="10"/>
+  <circle class="kzc-node" cx="170.0" cy="72" r="8"/>
+  <circle class="kzc-node" cx="194.0" cy="72" r="8"/>
+  <circle class="kzc-node" cx="218.0" cy="72" r="8"/>
+  <rect class="kzc-green" x="248" y="44" width="108" height="56" rx="10"/>
+  <rect class="kzc-green" x="356" y="44" width="108" height="56" rx="10"/>
+  <text class="kzc-msg kzc-right" x="124" y="146">2 + 1</text>
+  <rect class="kzc-amber" x="140" y="118" width="108" height="56" rx="10"/>
+  <circle class="kzc-node" cx="182.0" cy="146" r="8"/>
+  <circle class="kzc-node" cx="206.0" cy="146" r="8"/>
+  <rect class="kzc-green" x="248" y="118" width="108" height="56" rx="10"/>
+  <circle class="kzc-node" cx="302.0" cy="146" r="8"/>
+  <rect class="kzc-green" x="356" y="118" width="108" height="56" rx="10"/>
+  <text class="kzc-msg kzc-right" x="124" y="220">1 + 1 + 1</text>
+  <rect class="kzc-green" x="140" y="192" width="108" height="56" rx="10"/>
+  <circle class="kzc-node" cx="194.0" cy="220" r="8"/>
+  <rect class="kzc-green" x="248" y="192" width="108" height="56" rx="10"/>
+  <circle class="kzc-node" cx="302.0" cy="220" r="8"/>
+  <rect class="kzc-green" x="356" y="192" width="108" height="56" rx="10"/>
+  <circle class="kzc-node" cx="410.0" cy="220" r="8"/>
+  <rect class="kzc-green" x="28" y="270" width="16" height="16" rx="4"/>
+  <text class="kzc-msg kzc-left" x="52" y="278">zone down: quorum kept</text>
+  <rect class="kzc-amber" x="250" y="270" width="16" height="16" rx="4"/>
+  <text class="kzc-msg kzc-left" x="274" y="278">zone down: quorum lost</text>
+</svg>
