@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 388" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="ras-self-ref-title">
+  <title id="ras-self-ref-title">Moving a future that points at its own field leaves the reference on the old address, so Pin forbids the move</title>
+  <style>
+    .ras-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ras-tl { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ras-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ras-msgl { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ras-msge { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: end; dominant-baseline: central; }
+    .ras-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ras-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ras-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .ras-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .ras-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .ras-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .ras-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .ras-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .ras-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .ras-dash { stroke-dasharray: 5 4; }
+    .ras-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .ras-axis { stroke: var(--tertiary); stroke-width: 1; }
+    .ras-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="ras-self-ref-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="ras-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="ras-group" x="120" y="20" width="240" height="118" rx="12"/>
+  <text class="ras-sub" x="136" y="40">future after first poll (address A)</text>
+  <rect class="ras-green" x="136" y="56" width="208" height="30" rx="8"/>
+  <text class="ras-monoc" x="240" y="71">buf: [u8; 16]</text>
+  <rect class="ras-blue" x="136" y="96" width="208" height="30" rx="8"/>
+  <text class="ras-monoc" x="240" y="111">head: &amp;buf[..4]</text>
+  <path class="ras-line" d="M344,111 C372,111 372,71 345,71" marker-end="url(#ras-self-ref-arrow)"/>
+  <line class="ras-line" x1="240" y1="138" x2="240" y2="171" marker-end="url(#ras-self-ref-arrow)"/>
+  <text class="ras-msgl" x="250" y="155">move it</text>
+  <rect class="ras-amber" x="20" y="172" width="200" height="118" rx="12" stroke-dasharray="5 4"/>
+  <text class="ras-sub" x="36" y="192">address A (vacated)</text>
+  <rect class="ras-group" x="36" y="208" width="168" height="30" rx="8"/>
+  <text class="ras-note" x="120" y="223">where buf used to be</text>
+  <rect class="ras-group" x="260" y="172" width="200" height="118" rx="12"/>
+  <text class="ras-sub" x="276" y="192">address B (moved future)</text>
+  <rect class="ras-green" x="276" y="208" width="168" height="30" rx="8"/>
+  <text class="ras-monoc" x="360" y="223">buf: [u8; 16]</text>
+  <rect class="ras-blue" x="276" y="248" width="168" height="30" rx="8"/>
+  <text class="ras-monoc" x="360" y="263">head: &amp;buf[..4]</text>
+  <path class="ras-line ras-dash" d="M276,263 C240,263 240,223 205,223" marker-end="url(#ras-self-ref-arrow)"/>
+  <text class="ras-note" x="120" y="266">head still points here</text>
+  <rect class="ras-green" x="20" y="310" width="440" height="58" rx="8"/>
+  <text class="ras-monoc" x="240" y="329">poll(self: Pin&lt;&amp;mut Self&gt;, ...)</text>
+  <text class="ras-msg" x="240" y="350">a promise not to move it until it is dropped</text>
+</svg>

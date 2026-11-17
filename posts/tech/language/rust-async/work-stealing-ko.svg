@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 362" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="ras-work-stealing-title">
+  <title id="ras-work-stealing-title">tokio worker 는 local queue, global queue 순으로 태스크를 꺼내고, 비면 다른 worker 의 local queue 에서 훔친다</title>
+  <style>
+    .ras-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ras-tl { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ras-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ras-msgl { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ras-msge { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: end; dominant-baseline: central; }
+    .ras-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ras-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ras-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .ras-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .ras-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .ras-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .ras-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .ras-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .ras-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .ras-dash { stroke-dasharray: 5 4; }
+    .ras-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .ras-axis { stroke: var(--tertiary); stroke-width: 1; }
+    .ras-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="ras-work-stealing-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="ras-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="ras-blue" x="20" y="20" width="196" height="40" rx="8"/>
+  <text class="ras-msg" x="118" y="40">worker 밖 스레드의 wake</text>
+  <line class="ras-line" x1="216" y1="40" x2="255" y2="40" marker-end="url(#ras-work-stealing-arrow)"/>
+  <rect class="ras-group" x="256" y="16" width="204" height="48" rx="12"/>
+  <text class="ras-sub" x="270" y="40">global queue</text>
+  <rect class="ras-group" x="382" y="30" width="16" height="20" rx="3"/>
+  <rect class="ras-group" x="404" y="30" width="16" height="20" rx="3"/>
+  <rect class="ras-group" x="426" y="30" width="16" height="20" rx="3"/>
+  <rect class="ras-group" x="20" y="108" width="200" height="200" rx="12"/>
+  <text class="ras-sub" x="34" y="128">worker 0</text>
+  <rect class="ras-green" x="34" y="144" width="172" height="36" rx="8"/>
+  <text class="ras-t" x="120" y="162">실행 중인 태스크</text>
+  <line class="ras-line" x1="120" y1="180" x2="120" y2="195" marker-end="url(#ras-work-stealing-arrow)"/>
+  <rect class="ras-amber" x="34" y="196" width="172" height="36" rx="8"/>
+  <text class="ras-msg" x="120" y="214">lifo slot (훔칠 수 없음)</text>
+  <rect class="ras-group" x="34" y="244" width="172" height="52" rx="8"/>
+  <text class="ras-msg" x="120" y="258">local queue (최대 256)</text>
+  <rect class="ras-group" x="50" y="272" width="20" height="16" rx="3"/>
+  <rect class="ras-group" x="78" y="272" width="20" height="16" rx="3"/>
+  <rect class="ras-group" x="106" y="272" width="20" height="16" rx="3"/>
+  <rect class="ras-group" x="134" y="272" width="20" height="16" rx="3"/>
+  <rect class="ras-group" x="162" y="272" width="20" height="16" rx="3"/>
+  <rect class="ras-group" x="260" y="108" width="200" height="200" rx="12"/>
+  <text class="ras-sub" x="274" y="128">worker 1</text>
+  <rect class="ras-green" x="274" y="144" width="172" height="36" rx="8"/>
+  <text class="ras-t" x="360" y="162">실행 중인 태스크</text>
+  <line class="ras-line" x1="360" y1="180" x2="360" y2="195" marker-end="url(#ras-work-stealing-arrow)"/>
+  <rect class="ras-amber" x="274" y="196" width="172" height="36" rx="8"/>
+  <text class="ras-msg" x="360" y="214">lifo slot (훔칠 수 없음)</text>
+  <rect class="ras-group" x="274" y="244" width="172" height="52" rx="8"/>
+  <text class="ras-msg" x="360" y="258">local queue (최대 256)</text>
+  <rect class="ras-group" x="290" y="272" width="20" height="16" rx="3"/>
+  <rect class="ras-group" x="318" y="272" width="20" height="16" rx="3"/>
+  <rect class="ras-group" x="346" y="272" width="20" height="16" rx="3"/>
+  <rect class="ras-group" x="374" y="272" width="20" height="16" rx="3"/>
+  <rect class="ras-group" x="402" y="272" width="20" height="16" rx="3"/>
+  <text class="ras-msgl" x="126" y="188">깨움</text>
+  <text class="ras-msgl" x="366" y="188">깨움</text>
+  <path class="ras-line" d="M300,64 C300,74 140,74 120,107" marker-end="url(#ras-work-stealing-arrow)"/>
+  <line class="ras-line" x1="358" y1="64" x2="358" y2="107" marker-end="url(#ras-work-stealing-arrow)"/>
+  <text class="ras-msg" x="238" y="94">local 이 비었거나 주기적으로</text>
+  <path class="ras-line" d="M120,296 L120,330 L340,330 L340,297" marker-end="url(#ras-work-stealing-arrow)"/>
+  <text class="ras-msg" x="230" y="346">local·global 이 비면 다른 worker 의 local 에서 절반</text>
+</svg>

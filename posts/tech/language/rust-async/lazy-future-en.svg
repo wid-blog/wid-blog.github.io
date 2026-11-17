@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 244" width="100%" style="display: block; max-width: 480px; margin: 0 auto" role="img" aria-labelledby="ras-lazy-future-title">
+  <title id="ras-lazy-future-title">Calling an async fn only creates a Future value; the body runs when it is polled</title>
+  <style>
+    .ras-t { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ras-tl { fill: var(--primary); font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ras-msg { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ras-msgl { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ras-msge { fill: var(--primary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: end; dominant-baseline: central; }
+    .ras-note { fill: var(--secondary); font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-anchor: middle; dominant-baseline: central; }
+    .ras-sub { fill: var(--secondary); font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; dominant-baseline: central; }
+    .ras-mono { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; dominant-baseline: central; white-space: pre; }
+    .ras-monoc { fill: var(--primary); font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-anchor: middle; dominant-baseline: central; white-space: pre; }
+    .ras-group { fill: rgba(128, 128, 128, 0.06); stroke: var(--tertiary); stroke-width: 1; }
+    .ras-blue { fill: rgba(70, 130, 220, 0.14); stroke: rgb(70, 130, 220); stroke-width: 1; }
+    .ras-green { fill: rgba(60, 160, 90, 0.14); stroke: rgb(60, 160, 90); stroke-width: 1; }
+    .ras-amber { fill: rgba(220, 130, 40, 0.14); stroke: rgb(220, 130, 40); stroke-width: 1; }
+    .ras-line { stroke: var(--secondary); stroke-width: 1.25; fill: none; }
+    .ras-dash { stroke-dasharray: 5 4; }
+    .ras-life { stroke: var(--tertiary); stroke-width: 1; stroke-dasharray: 3 4; }
+    .ras-axis { stroke: var(--tertiary); stroke-width: 1; }
+    .ras-head { fill: var(--secondary); }
+  </style>
+  <defs>
+    <marker id="ras-lazy-future-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="ras-head" d="M0,1 L10,5 L0,9 z"/>
+    </marker>
+  </defs>
+  <rect class="ras-blue" x="140" y="20" width="200" height="36" rx="8"/>
+  <text class="ras-monoc" x="240" y="38">fetch_user(7)</text>
+  <text class="ras-msgl" x="248" y="76">call</text>
+  <line class="ras-line" x1="240" y1="56" x2="240" y2="95" marker-end="url(#ras-lazy-future-arrow)"/>
+  <rect class="ras-group" x="100" y="96" width="280" height="54" rx="8"/>
+  <text class="ras-monoc" x="240" y="113">impl Future&lt;Output = String&gt;</text>
+  <text class="ras-note" x="240" y="134">the body has not run yet</text>
+  <line class="ras-line" x1="180" y1="150" x2="120" y2="187" marker-end="url(#ras-lazy-future-arrow)"/>
+  <text class="ras-msge" x="140" y="164">dropped</text>
+  <line class="ras-line" x1="300" y1="150" x2="360" y2="187" marker-end="url(#ras-lazy-future-arrow)"/>
+  <text class="ras-msgl" x="340" y="164">.await · poll</text>
+  <rect class="ras-amber" x="20" y="188" width="200" height="36" rx="8"/>
+  <text class="ras-t" x="120" y="206">gone, body never ran</text>
+  <rect class="ras-green" x="260" y="188" width="200" height="36" rx="8"/>
+  <text class="ras-t" x="360" y="206">the body runs</text>
+</svg>
