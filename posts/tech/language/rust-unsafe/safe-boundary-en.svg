@@ -41,5 +41,5 @@
   <text class="rus-t" x="240.0" y="385.0">returned value</text>
   <text class="rus-t" x="240.0" y="403.0">two non-overlapping &amp;mut [i32]</text>
   <text class="rus-note" x="20" y="444">If unsafe relies on a struct field, safe code in the module</text>
-  <text class="rus-note" x="20" y="464">that can change that field is in scope too — keep it private</text>
+  <text class="rus-note" x="20" y="464">that can change that field is in scope too. Keep it private.</text>
 </svg>

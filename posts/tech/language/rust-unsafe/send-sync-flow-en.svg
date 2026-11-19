@@ -42,8 +42,8 @@
   <text class="rus-msg" x="300" y="256">no</text>
   <line class="rus-line" x1="270" y1="267" x2="329" y2="267" marker-end="url(#rus-send-sync-flow-arrow)"/>
   <rect class="rus-group" x="330" y="240" width="134" height="56" rx="8"/>
-  <text class="rus-t" x="397.0" y="259.0">redesign</text>
-  <text class="rus-monoc" x="397.0" y="277.0">Arc · Mutex</text>
+  <text class="rus-t" x="397.0" y="259.0">leave it !Send</text>
+  <text class="rus-t" x="397.0" y="277.0">one thread only</text>
   <text class="rus-note" x="160" y="308">yes</text>
   <line class="rus-line" x1="150" y1="294" x2="150" y2="321" marker-end="url(#rus-send-sync-flow-arrow)"/>
   <rect class="rus-amber" x="30" y="322" width="240" height="56" rx="8"/>

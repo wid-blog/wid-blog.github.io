@@ -41,5 +41,5 @@
   <text class="rus-t" x="240.0" y="385.0">돌려받는 값</text>
   <text class="rus-t" x="240.0" y="403.0">겹치지 않는 &amp;mut [i32] 두 개</text>
   <text class="rus-note" x="20" y="444">unsafe 의 전제가 struct 필드에 있으면 그 필드를 바꾸는</text>
-  <text class="rus-note" x="20" y="464">모듈 안 safe 코드까지 책임 범위가 된다 — 필드는 private</text>
+  <text class="rus-note" x="20" y="464">모듈 안 safe 코드까지 책임 범위가 된다. 필드는 private 으로 둔다</text>
 </svg>

@@ -22,7 +22,7 @@
     </marker>
   </defs>
   <rect class="rus-group" x="20" y="16" width="440" height="264" rx="12"/>
-  <text class="rus-sub" x="36" y="36">Only inside unsafe</text>
+  <text class="rus-sub" x="36" y="36">Only with unsafe</text>
   <rect class="rus-amber" x="36" y="52" width="408" height="36" rx="8"/>
   <text class="rus-tl" x="50" y="70">deref a raw pointer</text>
   <text class="rus-mono" x="270" y="70">*ptr += 1</text>
