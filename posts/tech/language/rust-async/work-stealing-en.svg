@@ -26,7 +26,7 @@
     </marker>
   </defs>
   <rect class="ras-blue" x="20" y="20" width="196" height="40" rx="8"/>
-  <text class="ras-msg" x="118" y="40">wake from another thread</text>
+  <text class="ras-msg" x="118" y="40">wake outside the workers</text>
   <line class="ras-line" x1="216" y1="40" x2="255" y2="40" marker-end="url(#ras-work-stealing-arrow)"/>
   <rect class="ras-group" x="256" y="16" width="204" height="48" rx="12"/>
   <text class="ras-sub" x="270" y="40">global queue</text>
